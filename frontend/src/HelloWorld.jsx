@@ -30,7 +30,7 @@ export class HelloWorld extends React.Component {
             this.setState({message: "Det fungerte ikke...!"})
             return;
         }
-        this.setState({message: "Det fungerte!"})
+        this.setState({message: "Det fungerte! Hurra! EN FINGER I VÆRET HVIS DU KOSER DEG!"})
     }
 
     render() {
