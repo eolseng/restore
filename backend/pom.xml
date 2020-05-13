@@ -102,7 +102,19 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <finalName>restore-application</finalName>
+                    <classifier>exec</classifier>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
@@ -196,6 +208,24 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!-- For cloud deployment on Heroku -->
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>2.0.2</version>
+                <configuration>
+                    <appName>repairable-restore</appName>
+                    <includeTarget>false</includeTarget>
+                    <includes>
+                        <include>target/restore-application-exec.jar</include>
+                    </includes>
+                    <processTypes>
+                        <web>java -Dserver.port=$PORT -jar target/restore-application-exec.jar</web>
+                    </processTypes>
+                    <jdkVersion>11</jdkVersion>
+                </configuration>
             </plugin>
         </plugins>
     </build>
