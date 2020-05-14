@@ -14,4 +14,8 @@
 
 #Base point for reaching API
 # localhost:8080/api
-spring.data.rest.base-path=/api
+spring:
+    data:
+      rest:
+        base-path:
+                  /api
