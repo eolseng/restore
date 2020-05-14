@@ -96,6 +96,7 @@
     </dependencies>
 
     <build>
+        <!-- TODO: Fiks disse røde greiene her! -->
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
         <plugins>
