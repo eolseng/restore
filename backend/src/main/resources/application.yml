@@ -19,3 +19,4 @@ spring:
       rest:
         base-path:
                   /api
+

@@ -1,33 +1,30 @@
 package no.repairable.entity
 
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
-public class Product {
+data class Product (
 
     @Id
     @GeneratedValue
     @Column(name = "id")
-    private var id: Long? = null
+    private var id: Long? = null,
 
     @Column(name = "name")
-    private val name: String? = null
+    private var name: String? = "",
 
     @Column(name = "category_id")
-    private var cataegoryId: Long? = null
+    private var cataegoryId: Long? = null,
 
     @Column(name = "sub_category_id")
-    private var subCategoryId: Long? = null
+    private var subCategoryId: Long? = null,
 
     @Column(name = "brand_id")
-    private var brandId: Long? = null
+    private var brandId: Long? = null,
 
     @Column(name = "description")
-    private var description: String? = null
+    private var description: String? = null,
 
     @Column(name = "gender")
-    private var gender: Int? = null
-}
+    private var gender: Char? = null
+)
