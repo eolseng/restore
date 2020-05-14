@@ -1,15 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <BrowserRouter>
+            <Switch>
+                <Route path={"/hello"}>
+                    <Hello/>
+                </Route>
+                <Route path={"/"}>
+                    <App/>
+                </Route>
+            </Switch>
+        </BrowserRouter>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
+
+function Hello() {
+    return <h2>HELLO!</h2>
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

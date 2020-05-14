@@ -1,9 +1,9 @@
-package no.repairable
+package no.repairable.backend
 
-import no.repairable.entity.Gender
-import no.repairable.entity.Product
-import no.repairable.repository.GenderRepository
-import no.repairable.repository.ProductRepository
+import no.repairable.backend.entity.Gender
+import no.repairable.backend.entity.Product
+import no.repairable.backend.repository.GenderRepository
+import no.repairable.backend.repository.ProductRepository
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
 

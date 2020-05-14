@@ -1,4 +1,4 @@
-package no.repairable.entity
+package no.repairable.backend.entity
 
 import javax.persistence.*
 
