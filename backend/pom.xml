@@ -67,7 +67,6 @@
             <artifactId>spring-boot-starter-data-rest</artifactId>
         </dependency>
 
-
         <!-- Database dependencies -->
         <dependency>
             <groupId>com.h2database</groupId>
@@ -81,7 +80,15 @@
             <artifactId>jackson-module-kotlin</artifactId>
         </dependency>
 
+        <!--- Dependency for api-endpoint documentation -->
+        <dependency>
+            <groupId>org.springframework.restdocs</groupId>
+            <artifactId>spring-restdocs-mockmvc</artifactId>
+            <scope>test</scope>
+        </dependency>
         <!-- Test dependencies -->
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
