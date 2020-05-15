@@ -4,6 +4,9 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 const client = require('./client'); // <3>
 
+const follow = require('./follow'); // function to hop multiple links by "rel"
+const root = '/api';
+
 export class ProductPage extends React.Component{
     constructor(props){
         super(props)
@@ -17,6 +20,29 @@ export class ProductPage extends React.Component{
         });
         console.log("Did mount!")
     }
+
+    /*Todo: Implement this.
+    loadFromServer(pageSize) {
+        follow(client, root, [
+            {rel: 'employees', params: {size: pageSize}}]
+        ).then(employeeCollection => {
+            return client({
+                method: 'GET',
+                path: employeeCollection.entity._links.profile.href,
+                headers: {'Accept': 'application/schema+json'}
+            }).then(schema => {
+                this.schema = schema.entity;
+                return employeeCollection;
+            });
+        }).done(employeeCollection => {
+            this.setState({
+                employees: employeeCollection.entity._embedded.employees,
+                attributes: Object.keys(this.schema.properties),
+                pageSize: pageSize,
+                links: employeeCollection.entity._links});
+        });
+    }
+    */
 
 
     render() { // <3>
