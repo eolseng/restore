@@ -24,6 +24,7 @@ class App extends React.Component{
 
 
     render() {
+        console.log("Router loaded")
         return (
             <div className="App">
                 <BrowserRouter>

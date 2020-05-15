@@ -11,7 +11,7 @@ data class Product (
     private var id: Long? = null,
 
     @Column(name = "name")
-    private var name: String? = "",
+    var name: String? = "",
 
     @Column(name = "category_id")
     private var cataegoryId: Long? = null,
@@ -27,4 +27,8 @@ data class Product (
 
     @Column(name = "gender")
     private var gender: Char? = null
+
+
+
+
 )
