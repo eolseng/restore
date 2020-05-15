@@ -16,16 +16,14 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 @SpringBootTest
 @AutoConfigureRestDocs
 @AutoConfigureMockMvc
-class ProductTest {
+class GenderTest {
     @Autowired
     private var mockMvc: MockMvc? = null
-
-
 
     @Test
     @Throws(Exception::class)
     fun checkReturnedValue() {
-        mockMvc!!.perform(MockMvcRequestBuilders.get("/api/products")).andDo(MockMvcResultHandlers.print()).andExpect(MockMvcResultMatchers.status().isOk)
-                .andDo(MockMvcRestDocumentation.document("products"))
+        mockMvc!!.perform(MockMvcRequestBuilders.get("/api/genders")).andDo(MockMvcResultHandlers.print()).andExpect(MockMvcResultMatchers.status().isOk)
+                .andDo(MockMvcRestDocumentation.document("genders"))
     }
 }

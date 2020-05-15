@@ -10,12 +10,16 @@
 
 This is an example output for a service running at http://localhost:8080:
 
-[[overview_http_requests]]
 == Requests
-==== /helloWorld
-include::{snippets}/home/http-request.adoc[]
-include::{snippets}/home/http-response.adoc[]
 
+==== api/products
+include::{snippets}/products/http-request.adoc[]
+include::{snippets}/products/http-response.adoc[]
 
+==== api/gender
+include::{snippets}/genders/http-request.adoc[]
+include::{snippets}/genders/http-response.adoc[]
 
-
+==== api/categories
+include::{snippets}/categories/http-request.adoc[]
+include::{snippets}/categories/http-response.adoc[]
