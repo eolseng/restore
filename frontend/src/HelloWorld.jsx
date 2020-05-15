@@ -31,16 +31,6 @@ export class HelloWorld extends React.Component {
             return;
         }
         this.setState({message: "Det fungerte! Hurra! EN FINGER I VÆRET HVIS DU KOSER DEG!"})
-
-        var xhr = new XMLHttpRequest();
-        xhr.addEventListener('load', () => {
-            // update the state of the component with the result here
-            console.log(xhr.responseText)
-        });
-        // open the request with the verb and the url
-        xhr.open('GET', 'http://localhost:3000/products')
-        // send the request
-        xhr.send();
     }
 
     render() {
