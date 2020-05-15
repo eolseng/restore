@@ -32,8 +32,9 @@
     align-items: center;
 }
 
-.link {
-
+.link:hover {
+    cursor: pointer;
+    color: #168A9E;
 }
 
 

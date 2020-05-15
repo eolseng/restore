@@ -17,7 +17,7 @@ export class Header extends React.Component {
                     </div>
                 </div>
                 <div className="header-right col-3">
-                    <div onClick="showMenu()" id="menu-button" style={{color: 'black'}}>&#9776;</div>
+                    <div onClick="showMenu()" id="menu-button" className="link" style={{color: 'black'}}>&#9776;</div>
                     <Link to="./" className="link">
                         <i className="far fa-user-circle"/>
                     </Link>
