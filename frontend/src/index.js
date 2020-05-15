@@ -12,8 +12,8 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
-            <div>
-                <Header/>
+            <div id="main-container">
+                <Header />
                 <Switch>
                     <Route path={"/hello"}>
                         <Hello/>
