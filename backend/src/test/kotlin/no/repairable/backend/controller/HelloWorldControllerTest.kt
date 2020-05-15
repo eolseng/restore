@@ -13,7 +13,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 
 
 @WebMvcTest(HelloWorldController::class)
-@AutoConfigureRestDocs(outputDir = "target/snippets")
+@AutoConfigureRestDocs
 class HelloWorldControllerTest {
     @Autowired
     private val mockMvc: MockMvc? = null
