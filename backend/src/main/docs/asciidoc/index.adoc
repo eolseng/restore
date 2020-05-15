@@ -1,4 +1,4 @@
-= restore API Reference
+= restore API Guide
 :doctype: book
 :icons: font
 :source-highlighter: highlightjs
