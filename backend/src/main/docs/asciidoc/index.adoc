@@ -1,0 +1,21 @@
+= restore API Guide
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:operation-curl-request-title: Example request
+:operation-http-response-title: Example response
+
+This is an example output for a service running at http://localhost:8080:
+
+[[overview_http_requests]]
+== Requests
+==== /helloWorld
+include::{snippets}/home/http-request.adoc[]
+include::{snippets}/home/http-response.adoc[]
+
+
+
+
