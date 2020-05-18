@@ -2,14 +2,17 @@ package no.repairable.backend
 
 import no.repairable.backend.entity.Gender
 import no.repairable.backend.entity.Product
+import no.repairable.backend.entity.Size
 import no.repairable.backend.repository.GenderRepository
 import no.repairable.backend.repository.ProductRepository
+import no.repairable.backend.repository.SizeRepository
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
 
 @Component
 class DatabaseLoader(private val productRepository: ProductRepository,
-                     private val genderRepository: GenderRepository
+                     private val genderRepository: GenderRepository,
+                     private val sizeRepository: SizeRepository
 ) : CommandLineRunner {
 
     override fun run(vararg args: String?) {
@@ -33,5 +36,22 @@ class DatabaseLoader(private val productRepository: ProductRepository,
             add(Gender(gender = 'f'))
         }
         genderRepository.saveAll(list)
+    }
+
+    fun saveProductSize() {
+        val list = mutableListOf<Gender>().apply {
+            add(Gender(gender = 'm'))
+            add(Gender(gender = 'f'))
+        }
+        genderRepository.saveAll(list)
+    }
+
+    fun saveSize() {
+        val list = mutableListOf<Size>().apply {
+            add(Size(size= "small"))
+            add(Size(size= "medium"))
+            add(Size(size= "large"))
+        }
+        sizeRepository.saveAll(list)
     }
 }

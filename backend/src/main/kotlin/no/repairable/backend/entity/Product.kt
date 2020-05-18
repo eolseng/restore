@@ -29,5 +29,10 @@ data class Product (
     var description: String? = null,
 
     @ManyToOne(fetch = FetchType.LAZY)
-    val gender: Gender? = null
+    val gender: Gender? = null,
+
+    @ManyToOne
+    @Column(name = "productSizesProd")
+    val productSizesProd: ProductSizes? = null
+
 )
