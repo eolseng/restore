@@ -4,7 +4,7 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 const client = require('./client'); // <3>
 
-const follow = require('./follow'); // function to hop multiple links by "rel"
+//const follow = require('./follow'); // function to hop multiple links by "rel"
 const root = '/api';
 
 export class ProductPage extends React.Component{
