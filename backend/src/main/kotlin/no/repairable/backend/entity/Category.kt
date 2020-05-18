@@ -8,8 +8,8 @@ data class Category(
         @Id
         @GeneratedValue
         @Column(name = "id")
-        private var id: Long? = null,
+        var id: Long? = null,
 
         @Column
-        private val name: String? = ""
+        val name: String? = ""
 )

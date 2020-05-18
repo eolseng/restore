@@ -12,13 +12,13 @@ data class SubCategory(
         @Id
         @GeneratedValue
         @Column(name = "id")
-        private var id: Long? = null, //PK
+        var id: Long? = null, //PK
 
         @Column
-        private val category_id: Long? = null, //FK
+        val category_id: Long? = null, //FK
 
         @Column
-        private val name: String? = ""
+        val name: String? = ""
 
         //@OneToMany(mappedBy = "sub_category", cascade = arrayOf(CascadeType.ALL))
         //val items: List<Product> = mutableListOf()
