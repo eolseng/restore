@@ -1,43 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
 
-import App from './App';
 import Header from './header/header';
 import Footer from './footer/footer';
-import WelcomeText from "./main-content-pages/welcomeText";
+import Home from "./home";
 
-import * as serviceWorker from './serviceWorker';
-
-ReactDOM.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <div id="main-container">
-                <Header/>
-                <Switch>
-                    <Route path={"/hello"}>
-                        <Hello/>
-                    </Route>
-                    <Route path={"/"}>
-                        <App/>
-                    </Route>
-                </Switch>
-                <Footer/>
-            </div>
-        </BrowserRouter>
-    </React.StrictMode>,
-    document.getElementById('root')
-);
-
-function Hello() {
+function App() {
     return (
-        <div>
-            <h2>HELLO!</h2>
-        </div>
+        <React.StrictMode>
+            <BrowserRouter>
+                <div id="main-container">
+                    <Header/>
+                    <Switch>
+                        <Route path={"/"}>
+                            {Home}
+                        </Route>
+                    </Switch>
+                    <Footer/>
+                </div>
+            </BrowserRouter>
+        </React.StrictMode>
     )
 }
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<App/>, document.getElementById('root'));
