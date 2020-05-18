@@ -17,13 +17,14 @@ data class Product (
     var name: String? = "",
 
     @Column(name = "category_id")
-    var cataegoryId: Long? = null,
+    var cataegoryId: Category? = null,
 
     @Column(name = "sub_category_id")
-    var subCategoryId: Long? = null,
+    var subCategoryId: SubCategory? = null,
 
-    @Column(name = "brand_id")
-    var brandId: Long? = null,
+    //@Column(name = "brand_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    var brandId: Brand? = null,
 
     @Column(name = "description")
     var description: String? = null,
