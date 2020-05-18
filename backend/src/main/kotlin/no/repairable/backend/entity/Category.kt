@@ -1,11 +1,9 @@
 package no.repairable.backend.entity
 
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
+@Table(name = "category")
 data class Category(
         @Id
         @GeneratedValue

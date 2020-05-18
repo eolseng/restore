@@ -3,6 +3,7 @@ package no.repairable.backend.entity
 import javax.persistence.*
 
 @Entity
+@Table(name = "product")
 data class Product (
 
     @Id
@@ -25,6 +26,9 @@ data class Product (
     @Column(name = "description")
     private var description: String? = null,
 
-    @Column(name = "gender")
-    private var gender: Char? = null
+    @Column(name = "gender_id", updatable = false)
+    private var genderId: Char? = null
+/*
+    @ManyToOne(fetch = FetchType.LAZY)
+    private val gender: Gender = Gender()*/
 )

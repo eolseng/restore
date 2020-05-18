@@ -14,7 +14,7 @@
     <artifactId>backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>restore-backend</name>
-    <description>Back end module for Restore made with Spring Boot, written in Kotlin</description>
+    <description>Backend module for Restore made with Spring Boot, written in Kotlin</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
