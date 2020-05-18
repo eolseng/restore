@@ -16,6 +16,6 @@ data class Size (
         var size: String = "",
 
         @ManyToOne
-        @Column(name = "productSizes")
+        //@Column(name = "productSizes")
         var productSizesSize : ProductSizes? = null
 )

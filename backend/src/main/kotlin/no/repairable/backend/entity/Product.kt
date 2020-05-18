@@ -32,7 +32,7 @@ data class Product (
     val gender: Gender? = null,
 
     @ManyToOne
-    @Column(name = "productSizesProd")
+    //@Column(name = "productSizesProd")
     val productSizesProd: ProductSizes? = null
 
 )
