@@ -16,7 +16,6 @@ data class Gender(
         @Column(name = "gender")
         var gender: Char? = null,
 
-
-        @OneToMany(mappedBy = "gender", cascade = [(CascadeType.ALL)])
+        @OneToMany(mappedBy = "gender", cascade = arrayOf(CascadeType.ALL), orphanRemoval = true)
         val genderId: List<Product> = mutableListOf()
 )
