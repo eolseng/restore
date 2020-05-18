@@ -28,6 +28,11 @@ data class Product (
     @Column(name = "description")
     var description: String? = null,
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = arrayOf(CascadeType.ALL))
-    val gender: Gender = Gender()
+    @ManyToOne(fetch = FetchType.LAZY)
+    val gender: Gender? = null,
+
+    @ManyToOne
+    @Column(name = "productSizesProd")
+    val productSizesProd: ProductSizes? = null
+
 )
