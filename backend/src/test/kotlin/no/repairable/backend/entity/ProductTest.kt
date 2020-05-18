@@ -1,6 +1,7 @@
 package no.repairable.no.repairable.backend.entity
 
-
+import no.repairable.backend.entity.Product
+import no.repairable.backend.repository.ProductRepository
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs
@@ -16,16 +17,33 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 @SpringBootTest
 @AutoConfigureRestDocs
 @AutoConfigureMockMvc
-class ProductTest {
+class ProductTest(
+        @Autowired
+        val mockMvc: MockMvc
+
+) {
+
     @Autowired
-    private var mockMvc: MockMvc? = null
-
-
+    final val productRepo: ProductRepository? = null
 
     @Test
     @Throws(Exception::class)
-    fun checkReturnedValue() {
-        mockMvc!!.perform(MockMvcRequestBuilders.get("/api/products")).andDo(MockMvcResultHandlers.print()).andExpect(MockMvcResultMatchers.status().isOk)
+    fun checkProductEndpoint() {
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/products")).andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("products"))
+
+
     }
+
+    @Test
+    @Throws(Exception::class)
+    fun checkQueries() {
+        productRepo?.save(Product(name = "Test"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/products/search/findByName?name=Test")).andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isOk)
+                .andDo(MockMvcRestDocumentation.document("findByName"))
+    }
+
 }

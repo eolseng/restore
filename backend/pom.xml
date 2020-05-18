@@ -104,6 +104,12 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -126,6 +132,16 @@
                         <configuration>
                             <backend>html</backend>
                             <doctype>book</doctype>
+                            <outputDirectory>
+                                ${project.build.outputDirectory}/static/docs
+                            </outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>
+                                        ${project.build.directory}/generated-docs
+                                    </directory>
+                                </resource>
+                            </resources>
                         </configuration>
                     </execution>
             </executions>
