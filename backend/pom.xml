@@ -89,6 +89,7 @@
         <!-- Test dependencies -->
 
 
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -106,7 +107,7 @@
     <build>
         <!-- TODO: Fiks disse røde greiene her! -->
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
-        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+         <!-- <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory> -->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

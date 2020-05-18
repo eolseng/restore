@@ -4,45 +4,43 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 const client = require('./client'); // <3>
 
-//const follow = require('./follow'); // function to hop multiple links by "rel"
+const follow = require('./api/follow'); // function to hop multiple links by "rel"
 const root = '/api';
 
 export class ProductPage extends React.Component{
     constructor(props){
         super(props)
-        this.state = {products: []};
+        this.state = {products: [], attributes: [], pageSize: 2, links: {}};
 
     }
 
     componentDidMount() { // <2>
-        client({method: 'GET', path: '/api/products'}).done(response => {
-            this.setState({products: response.entity._embedded.products});
-        });
+        this.loadFromServer(this.state.pageSize);
         console.log("Did mount!")
     }
 
-    /*Todo: Implement this.
+
     loadFromServer(pageSize) {
         follow(client, root, [
-            {rel: 'employees', params: {size: pageSize}}]
-        ).then(employeeCollection => {
+            {rel: 'products', params: {size: pageSize}}]
+        ).then(productCollection => {
             return client({
                 method: 'GET',
-                path: employeeCollection.entity._links.profile.href,
+                path: productCollection.entity._links.profile.href,
                 headers: {'Accept': 'application/schema+json'}
             }).then(schema => {
                 this.schema = schema.entity;
-                return employeeCollection;
+                return productCollection;
             });
-        }).done(employeeCollection => {
+        }).done(productCollection => {
             this.setState({
-                employees: employeeCollection.entity._embedded.employees,
+                products: productCollection.entity._embedded.products,
                 attributes: Object.keys(this.schema.properties),
                 pageSize: pageSize,
-                links: employeeCollection.entity._links});
+                links: productCollection.entity._links});
         });
     }
-    */
+
 
 
     render() { // <3>
