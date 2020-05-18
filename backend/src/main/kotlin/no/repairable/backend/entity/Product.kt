@@ -1,6 +1,7 @@
 package no.repairable.backend.entity
 
 import javax.persistence.*
+import javax.validation.constraints.NotNull
 
 @Entity
 @Table(name = "product")
@@ -9,26 +10,24 @@ data class Product (
     @Id
     @GeneratedValue
     @Column(name = "id")
-    private var id: Long? = null,
+    var id: Long? = null,
 
+    @NotNull
     @Column(name = "name")
-    private var name: String? = "",
+    var name: String? = "",
 
     @Column(name = "category_id")
-    private var cataegoryId: Long? = null,
+    var cataegoryId: Long? = null,
 
     @Column(name = "sub_category_id")
-    private var subCategoryId: Long? = null,
+    var subCategoryId: Long? = null,
 
     @Column(name = "brand_id")
-    private var brandId: Long? = null,
+    var brandId: Long? = null,
 
     @Column(name = "description")
-    private var description: String? = null,
+    var description: String? = null,
 
-    @Column(name = "gender_id", updatable = false)
-    private var genderId: Char? = null
-/*
     @ManyToOne(fetch = FetchType.LAZY)
-    private val gender: Gender = Gender()*/
+    val gender: Gender = Gender()
 )

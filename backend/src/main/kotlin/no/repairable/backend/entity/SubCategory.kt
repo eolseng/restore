@@ -14,10 +14,10 @@ data class SubCategory(
         @Column(name = "id")
         var id: Long? = null, //PK
 
-        @Column
+        @Column(name = "category_id")
         val category_id: Long? = null, //FK
 
-        @Column
+        @Column(name = "name")
         val name: String? = ""
 
         //@OneToMany(mappedBy = "sub_category", cascade = arrayOf(CascadeType.ALL))

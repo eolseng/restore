@@ -19,7 +19,7 @@ class DatabaseLoader(private val productRepository: ProductRepository,
 
     fun saveProducts() {
         val list = mutableListOf<Product>().apply {
-            add(Product(name = "Jacket"))
+            add(Product(name = "Jacket", gender = Gender(id = 1)))
             add(Product(name = "Shirt"))
             add(Product(name = "Pants"))
             add(Product(name = "Socks"))
