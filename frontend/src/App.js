@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 function App() {
     return (
-        <div>
+        <div className="test col flex-grow-1">
             <Link to={"/hello"}>Hello</Link>
             <HelloWorld/>
         </div>

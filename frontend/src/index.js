@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import App from './App';
-import {Header} from './header/header';
+import Header from './header/header';
+import Footer from './footer/footer';
+import WelcomeText from "./main-content-pages/welcomeText";
 
 import * as serviceWorker from './serviceWorker';
 
@@ -11,7 +13,7 @@ ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
             <div id="main-container">
-                <Header />
+                <Header/>
                 <Switch>
                     <Route path={"/hello"}>
                         <Hello/>
@@ -20,6 +22,7 @@ ReactDOM.render(
                         <App/>
                     </Route>
                 </Switch>
+                <Footer/>
             </div>
         </BrowserRouter>
     </React.StrictMode>,
@@ -27,7 +30,11 @@ ReactDOM.render(
 );
 
 function Hello() {
-    return <h2>HELLO!</h2>
+    return (
+        <div>
+            <h2>HELLO!</h2>
+        </div>
+    )
 }
 
 // If you want your app to work offline and load faster, you can change
