@@ -29,5 +29,5 @@ data class Product (
     var description: String? = null,
 
     @ManyToOne(fetch = FetchType.LAZY)
-    val gender: Gender = Gender()
+    val gender: Gender? = null
 )
