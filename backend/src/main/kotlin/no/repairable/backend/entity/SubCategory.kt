@@ -14,12 +14,12 @@ data class SubCategory(
         @Column(name = "id")
         var id: Long? = null, //PK
 
-        @Column(name = "category_id")
-        val category_id: Long? = null, //FK
+        //@Column(name = "category_id")
+        //val categoryId: Long? = null, //FK
 
         @Column(name = "name")
-        val name: String? = ""
+        val name: String? = "",
 
-        //@OneToMany(mappedBy = "sub_category", cascade = arrayOf(CascadeType.ALL))
-        //val items: List<Product> = mutableListOf()
+        @OneToMany(mappedBy = "subCategory",cascade = [(CascadeType.ALL)])
+        val subCategory: List<Product> = mutableListOf()
 )

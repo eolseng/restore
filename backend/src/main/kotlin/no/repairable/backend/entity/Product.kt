@@ -5,35 +5,36 @@ import javax.validation.constraints.NotNull
 
 @Entity
 @Table(name = "product")
-data class Product (
+data class Product(
 
-    @Id
-    @GeneratedValue
-    @Column(name = "id")
-    var id: Long? = null,
+        @Id
+        @GeneratedValue
+        @Column(name = "id")
+        var id: Long? = null,
 
-    @NotNull
-    @Column(name = "name")
-    var name: String? = "",
+        @NotNull
+        @Column(name = "name")
+        var name: String? = "",
 
-    @Column(name = "category_id")
-    var cataegoryId: Category? = null,
+        @Column(name = "description")
+        var description: String? = null,
 
-    @Column(name = "sub_category_id")
-    var subCategoryId: SubCategory? = null,
+        //@Column(name = "category_id")
+        @ManyToOne(fetch = FetchType.LAZY)
+        var category: Category? = null,
 
-    //@Column(name = "brand_id")
-    @ManyToOne(fetch = FetchType.LAZY)
-    var brandId: Brand? = null,
+        @ManyToOne(fetch = FetchType.LAZY)
+        //@Column(name = "sub_category_id")
+        var subCategory: SubCategory? = null,
 
-    @Column(name = "description")
-    var description: String? = null,
+        //@Column(name = "brand_id")
+        @ManyToOne(fetch = FetchType.LAZY)
+        var brand: Brand? = null,
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    val gender: Gender? = null,
+        @ManyToOne(fetch = FetchType.LAZY)
+        val gender: Gender? = null,
 
-    @ManyToOne
-    //@Column(name = "productSizesProd")
-    val productSizesProd: ProductSizes? = null
-
+        @ManyToOne(fetch = FetchType.LAZY)
+        //@Column(name = "productSizesProd")
+        val productSizesProd: ProductSizes? = null
 )

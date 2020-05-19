@@ -13,8 +13,11 @@ data class Category(
         @Column(name = "id")
         var id: Long? = null,
 
-        @NotNull
+        //@NotNull
         @Size(max = 256)
         @Column(name = "name")
-        val name: String? = ""
+        val name: String? = "",
+
+        @OneToMany(mappedBy = "category", cascade = [(CascadeType.ALL)])
+        val category: List<Product> = mutableListOf()
 )

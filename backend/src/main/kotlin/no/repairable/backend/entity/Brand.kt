@@ -4,7 +4,6 @@ import javax.persistence.*
 import javax.validation.constraints.NotNull
 import javax.validation.constraints.Size
 
-
 @Entity
 @Table(name = "brand")
 data class Brand(
@@ -13,11 +12,11 @@ data class Brand(
         @Column(name = "id")
         var id: Long? = null,
 
-        @NotNull
+        //@NotNull
         @Size(max = 256)
         @Column(name = "name")
         val name: String? = "",
 
         @OneToMany(mappedBy = "brand", cascade = [(CascadeType.ALL)])
-        val brandId: List<Product> = mutableListOf()
+        val brand: List<Product> = mutableListOf()
 )

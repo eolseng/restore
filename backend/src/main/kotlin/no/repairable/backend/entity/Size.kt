@@ -11,11 +11,11 @@ data class Size (
         @Column(name = "id")
         var id: Long? = null,
 
-        @NotNull
+        //@NotNull
         @Column(name = "size")
         var size: String = "",
 
-        @ManyToOne
+        @ManyToOne(fetch = FetchType.LAZY,cascade = [(CascadeType.ALL)])
         //@Column(name = "productSizes")
         var productSizesSize : ProductSizes? = null
 )

@@ -12,10 +12,10 @@ data class Gender(
         @Column(name = "id")
         var id: Long? = null,
 
-        @NotNull
+       // @NotNull
         @Column(name = "gender")
-        var gender: Char? = null,
+        var genderType: Char? = null,
 
         @OneToMany(mappedBy = "gender", cascade = [(CascadeType.ALL)])
-        val genderId: List<Product> = mutableListOf()
+        val gender: List<Product> = mutableListOf()
 )

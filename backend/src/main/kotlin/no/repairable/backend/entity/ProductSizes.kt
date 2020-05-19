@@ -15,5 +15,4 @@ data class ProductSizes (
 
         @OneToMany(mappedBy = "productSizesSize", cascade = [(CascadeType.ALL)])
         val sizeId: List<Size> = mutableListOf()
-
 )
