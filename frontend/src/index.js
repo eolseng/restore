@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
+import {BrowserRouter, Route, Switch, Link, Redirect} from 'react-router-dom'
 
 import Header from './header/header';
 import Footer from './footer/footer';
@@ -23,13 +23,15 @@ function App() {
                 <div id="main-container">
                     <Header/>
                     <Switch>
+                        {/* Husk å legge inn routen i no.repairable.backend.controller.ReactForwardController */}
                         <Route path={"/"}>
                             {Home}
                         </Route>
                         {/*
                         <Route exact path="/product"
                                render={(props) => (<ProductPage{...props}/>)}/> */}
-                        <Route component={notFound} />
+                        <Route path="/404" component={notFound} />
+                        <Redirect to="/404" />
                     </Switch>
                     <Footer/>
                 </div>
