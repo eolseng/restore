@@ -15,8 +15,17 @@ class DatabaseLoader(private val productRepository: ProductRepository,
                      private val productSizeRepository: ProductSizeRepository
 ) : CommandLineRunner {
 
+    lateinit var genders: List<Gender>
+    lateinit var brands: List<Brand>
+    lateinit var categories: List<Category>
+    lateinit var subCategories: List<SubCategory>
+    lateinit var sizes : List<Size>
+    lateinit var productSizes : List<ProductSizes>
+    lateinit var products : List<Product>
+
     override fun run(vararg args: String?) {
         saveGender()
+
         saveBrand()
         saveSubCat()
         saveCategory()
@@ -26,57 +35,58 @@ class DatabaseLoader(private val productRepository: ProductRepository,
     }
 
     fun saveGender() {
-        val list = mutableListOf<Gender>().apply {
+        genders = mutableListOf<Gender>().apply {
             add(Gender(genderType = 'm'))
             add(Gender(genderType = 'f'))
         }
-        genderRepository.saveAll(list)
+
+        genderRepository.saveAll(genders)
     }
 
     fun saveBrand(){
-        val list = mutableListOf<Brand>().apply {
+        brands = mutableListOf<Brand>().apply {
             add(Brand(name = "Helly Hansen"))
             add(Brand(name = "Norrøna"))
         }
-        brandRepository.saveAll(list)
+        brandRepository.saveAll(brands)
     }
 
     fun saveCategory(){
-        val list = mutableListOf<Category>().apply {
+        categories = mutableListOf<Category>().apply {
             add(Category(name = "Jacket"))
             add(Category(name = "Trousers"))
         }
-        categoryRepository.saveAll(list)
+        categoryRepository.saveAll(categories)
     }
 
     fun saveSubCat(){
-        val list = mutableListOf<SubCategory>().apply {
+        subCategories = mutableListOf<SubCategory>().apply {
             add(SubCategory(name = "Skiing"))
             add(SubCategory(name = "Raining"))
         }
-        subCategoryRepository.saveAll(list)
+        subCategoryRepository.saveAll(subCategories)
     }
 
     fun saveSize() {
-        val list = mutableListOf<Size>().apply {
+        sizes = mutableListOf<Size>().apply {
             add(Size(size= "small"))
             add(Size(size= "medium"))
             add(Size(size= "large"))
         }
-        sizeRepository.saveAll(list)
+        sizeRepository.saveAll(sizes)
     }
 
     fun saveProductSize(){
-        val list = mutableListOf<ProductSizes>().apply {
+        productSizes = mutableListOf<ProductSizes>().apply {
             add(ProductSizes(sizeId = listOf()))
         }
-        productSizeRepository.saveAll(list)
+        productSizeRepository.saveAll(productSizes)
     }
 
     fun saveProducts() {
-        val list = mutableListOf<Product>().apply {
-            add(Product(name = "Skagen", description = "Jacket", gender = Gender(id = 1)))
+        products = mutableListOf<Product>().apply {
+            add(Product(name = "Skagen", description = "Jacket", gender = genders[1],brand = brands[0], subCategory = subCategories[0], category = categories[0]))
         }
-        productRepository.saveAll(list)
+        productRepository.saveAll(products)
     }
 }
