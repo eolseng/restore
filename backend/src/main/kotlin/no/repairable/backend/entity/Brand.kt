@@ -19,10 +19,4 @@ data class Brand(
 
         @OneToMany(mappedBy = "brand", cascade = [(CascadeType.ALL)])
         val brand: List<Product> = mutableListOf()
-
-
-) {
-        override fun toString(): String {
-                return "$name"
-        }
-}
+)
