@@ -12,7 +12,7 @@ data class Product (
     private var id: Long? = null,
 
     @Column(name = "name")
-    private var name: String? = "",
+    var name: String? = "",
 
     @Column(name = "category_id")
     private var cataegoryId: Long? = null,
@@ -26,9 +26,10 @@ data class Product (
     @Column(name = "description")
     private var description: String? = null,
 
-    @Column(name = "gender_id", updatable = false)
-    private var genderId: Char? = null
 /*
     @ManyToOne(fetch = FetchType.LAZY)
     private val gender: Gender = Gender()*/
+    @Column(name = "gender")
+    private var gender: Char? = null
+
 )
