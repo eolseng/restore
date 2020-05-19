@@ -21,18 +21,26 @@ export class ProductPage extends React.Component{
 
 
     loadFromServer(pageSize) {
-        follow(client, root, [
-            {rel: 'products', params: {size: pageSize}}]
+        follow(client //Object used to make REST calls
+            , root //Root API url
+            , [
+                //Array of API relations to navigate through
+                //(In this case, looks in _links for relation (rel) 'products, finds it HREF and navigates too it.
+                {rel: 'products', params: {size: pageSize}}
+            ]
         ).then(productCollection => {
+            //Found the API path of Products. Send request to get all products.
             return client({
                 method: 'GET',
                 path: productCollection.entity._links.profile.href,
                 headers: {'Accept': 'application/schema+json'}
             }).then(schema => {
+                //Collect meta-data about the response products like e.g if the product properties is string, readonly etc.
                 this.schema = schema.entity;
                 return productCollection;
             });
         }).done(productCollection => {
+            //Push the collected products into the REACT state.
             this.setState({
                 products: productCollection.entity._embedded.products,
                 attributes: Object.keys(this.schema.properties),
