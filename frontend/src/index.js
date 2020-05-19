@@ -5,6 +5,7 @@ import {BrowserRouter, Route, Switch, Link, Redirect} from 'react-router-dom'
 import Header from './header/header';
 import Footer from './footer/footer';
 import Home from "./home";
+import {ProductPage} from "./ProductPage";
 
 function notFound() {
     return (
@@ -27,9 +28,9 @@ function App() {
                         <Route path={"/"}>
                             {Home}
                         </Route>
-                        {/*
+                        {
                         <Route exact path="/product"
-                               render={(props) => (<ProductPage{...props}/>)}/> */}
+                               render={(props) => (<ProductPage{...props}/>)}/> }
                         <Route path="/404" component={notFound} />
                         <Redirect to="/404" />
                     </Switch>
