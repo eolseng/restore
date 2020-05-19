@@ -6,6 +6,7 @@ import clothing2 from "../img/homePage/clothing-2.jpg";
 function WelcomeText() {
 
 
+
     return (
         <div className="welcome-text-container" style={{ backgroundImage: `url(${clothing2})` }}>
             <div className="row welcome-content">

@@ -6,7 +6,17 @@ import Header from './header/header';
 import Footer from './footer/footer';
 import Home from "./home";
 
+function notFound() {
+    return (
+        <div>
+            <h2>NOT FOUND: 404</h2>
+            <p>ERROR: the page you requested in not available.</p>
+        </div>
+    );
+}
+
 function App() {
+
     return (
         <React.StrictMode>
             <BrowserRouter>
@@ -16,6 +26,10 @@ function App() {
                         <Route path={"/"}>
                             {Home}
                         </Route>
+                        {/*
+                        <Route exact path="/product"
+                               render={(props) => (<ProductPage{...props}/>)}/> */}
+                        <Route component={notFound} />
                     </Switch>
                     <Footer/>
                 </div>
