@@ -17,5 +17,5 @@ data class Size (
 
         @ManyToOne(fetch = FetchType.LAZY,cascade = [(CascadeType.ALL)])
         //@Column(name = "productSizes")
-        var productSizesSize : ProductSizes? = null
+        val productSizesSize : ProductSizes? = null
 )

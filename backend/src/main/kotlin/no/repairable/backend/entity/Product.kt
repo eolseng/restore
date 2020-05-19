@@ -19,22 +19,18 @@ data class Product(
         @Column(name = "description")
         var description: String? = null,
 
-        //@Column(name = "category_id")
         @ManyToOne(fetch = FetchType.LAZY)
-        var category: Category? = null,
+        val category: Category? = null,
 
         @ManyToOne(fetch = FetchType.LAZY)
-        //@Column(name = "sub_category_id")
-        var subCategory: SubCategory? = null,
+        val subCategory: SubCategory? = null,
 
-        //@Column(name = "brand_id")
         @ManyToOne(fetch = FetchType.LAZY)
-        var brand: Brand? = null,
+        val brand: Brand? = null,
 
         @ManyToOne(fetch = FetchType.LAZY)
         val gender: Gender? = null,
 
         @ManyToOne(fetch = FetchType.LAZY)
-        //@Column(name = "productSizesProd")
         val productSizesProd: ProductSizes? = null
 )

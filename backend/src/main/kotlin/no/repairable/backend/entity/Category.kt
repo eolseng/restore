@@ -16,7 +16,7 @@ data class Category(
         //@NotNull
         @Size(max = 256)
         @Column(name = "name")
-        val name: String? = "",
+        var name: String? = "",
 
         @OneToMany(mappedBy = "category", cascade = [(CascadeType.ALL)])
         val category: List<Product> = mutableListOf()

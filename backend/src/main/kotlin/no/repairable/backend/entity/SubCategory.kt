@@ -18,7 +18,7 @@ data class SubCategory(
         //val categoryId: Long? = null, //FK
 
         @Column(name = "name")
-        val name: String? = "",
+        var name: String? = "",
 
         @OneToMany(mappedBy = "subCategory",cascade = [(CascadeType.ALL)])
         val subCategory: List<Product> = mutableListOf()

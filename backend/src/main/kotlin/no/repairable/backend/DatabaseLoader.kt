@@ -17,12 +17,12 @@ class DatabaseLoader(private val productRepository: ProductRepository,
 
     override fun run(vararg args: String?) {
         saveGender()
-        saveProducts()
         saveBrand()
         saveSubCat()
         saveCategory()
         saveSize()
         saveProductSize()
+        saveProducts()
     }
 
     fun saveGender() {
@@ -75,7 +75,7 @@ class DatabaseLoader(private val productRepository: ProductRepository,
 
     fun saveProducts() {
         val list = mutableListOf<Product>().apply {
-            add(Product(name = "Skagen", description = "Jacket", gender = Gender(id = 1),brand = Brand(id = 1), subCategory = SubCategory(id=1), category = Category(id=1)))
+            add(Product(name = "Skagen", description = "Jacket", gender = Gender(id = 1)))
         }
         productRepository.saveAll(list)
     }
