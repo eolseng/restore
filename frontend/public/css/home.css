@@ -1,0 +1,61 @@
+.welcome-text-container {
+    margin: 0 auto !important;
+    padding: 2rem;
+    display: flex;
+    width: 100% !important;
+    height: 400px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-container img {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 1rem;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #E7F3F5;
+    box-shadow: inset 0 0 3px 0;
+}
+
+.flow-container {
+    display: flex;
+    justify-content: center;
+    background-color: #E7F3F5;
+    box-shadow: inset 0 0 3px 0;
+}
+
+.icon-title {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 !important;
+}
+
+.icon-container h3 {
+    margin: 0.5rem 1rem;
+    text-align: center;
+}
+
+.icon-container p {
+    margin: 0 1rem;
+    text-align: center;
+}

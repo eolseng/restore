@@ -69,6 +69,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-rest</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>2.2.7.RELEASE</version>
+        </dependency>
 
 
         <!-- Database dependencies -->
@@ -105,12 +110,18 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+        </dependency>
+
     </dependencies>
 
     <build>
         <!-- TODO: Fiks disse røde greiene her! -->
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
-        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+         <!-- <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory> -->
         <plugins>
             <!-- Plugin for asciidoctor used for documentation generation -->
             <plugin>
@@ -127,6 +138,16 @@
                         <configuration>
                             <backend>html</backend>
                             <doctype>book</doctype>
+                            <outputDirectory>
+                                ${project.build.outputDirectory}/static/docs
+                            </outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>
+                                        ${project.build.directory}/generated-docs
+                                    </directory>
+                                </resource>
+                            </resources>
                         </configuration>
                     </execution>
             </executions>
