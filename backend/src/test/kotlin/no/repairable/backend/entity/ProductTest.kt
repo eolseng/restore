@@ -17,14 +17,13 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 @SpringBootTest
 @AutoConfigureRestDocs
 @AutoConfigureMockMvc
-class ProductTest(
-        @Autowired
-        val mockMvc: MockMvc
+class ProductTest @Autowired constructor(
+
+        val mockMvc: MockMvc,
+        val productRepo: ProductRepository
 
 ) {
 
-    @Autowired
-    final val productRepo: ProductRepository? = null
 
     @Test
     @Throws(Exception::class)
@@ -34,6 +33,10 @@ class ProductTest(
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("products"))
 
+        val prod = productRepo.findAll()
+        val prod1 = productRepo.findAll()
+
+
 
     }
 
@@ -41,9 +44,11 @@ class ProductTest(
     @Throws(Exception::class)
     fun checkQueries() {
         productRepo?.save(Product(name = "Test"))
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/products/search/findByName?name=Test")).andDo(MockMvcResultHandlers.print())
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/products/search/findByName?name=Skagen")).andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("findByName"))
     }
+
+
 
 }
