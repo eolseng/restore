@@ -25,7 +25,7 @@ function App() {
                     <Header/>
                     <Switch>
                         {/* Husk å legge inn routen i no.repairable.backend.controller.ReactForwardController */}
-                        <Route path={"/"}>
+                        <Route exact path={"/"}>
                             {Home}
                         </Route>
                         {
