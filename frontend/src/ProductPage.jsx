@@ -95,41 +95,11 @@ export class ProductPage extends React.Component{
         return (
             <div>
                 <ProductsListHook products={this.state.products}/>
-                <ProductsList products={this.state.products}/>
             </div>
         )
     }
 }
 
-// tag::employee-list[]
-class ProductsList extends React.Component{
-    render() {
-        const products = this.props.products.map(product =>
-            <Product key={product._links.self.href} product={product}/>
-        );
-        return (
-            <table>
-                 <tbody>
-                  <tr>
-                    <th>Name</th>
-                  </tr>
-                 {products}
-                </tbody>
-            </table>
-        )
-    }
-}
-// end::employee-list[]
 
-// tag::employee[]
-class Product extends React.Component{
-    render() {
-        return (
-            <tr>
-                <td>{this.props.product.name}</td>
-            </tr>
-        )
-    }
-}
 
 
