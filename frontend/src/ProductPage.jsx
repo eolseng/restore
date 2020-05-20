@@ -47,7 +47,8 @@ export function ProductPage(){
     const [attributes, setAttributes] = useState([])
     const [pageSize, setPageSize] = useState(2)
     const [links, setLinks] = useState({})
-    const [schema, setSchema] = useState({})
+    let schema = {}
+
 
 
 
@@ -69,15 +70,15 @@ export function ProductPage(){
                 method: 'GET',
                 path: productCollection.entity._links.profile.href,
                 headers: {'Accept': 'application/schema+json'}
-            }).then(schema => {
+            }).then(pageSchema => {
                 //Collect meta-data about the response products like e.g if the product properties is string, readonly etc.
-                productCollection.schema = schema.entity
+                schema = pageSchema.entity
                 return productCollection;
             });
         }).done(productCollection => {
             //Push the collected products into the REACT state.
             setProducts(productCollection.entity._embedded.products)
-            setAttributes(Object.keys(productCollection.schema))
+            setAttributes(Object.keys(schema))
             setPageSize(pageSize)
             setLinks(productCollection.entity._links)
         });
