@@ -1,11 +1,51 @@
 'use strict';
 
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link, withRouter } from "react-router-dom";
 const client = require('./client'); // <3>
 
 const follow = require('./api/follow'); // function to hop multiple links by "rel"
 const root = '/api';
+
+
+function ProductsListHook(props){
+    //Current state value, and an update for updating current state value.
+    const [count,setCount] = useState(0); //0 is initial state (used for first render)
+    const [products, setProducts] = useState(null)
+    const [attributes, setAttributes] = useState(null)
+    const [pageSize, setPageSize] = useState(2)
+    const [links, setLinks] = useState(2)
+
+    //Run "effect" function after flushing changes to the DOM
+    //By default, React runs the effects after every render.
+    //useEffect(() => {
+
+
+    //})
+    const productsLi = props.products.map(product =>
+        <ProductHook key={product._links.self.href} product={product}/>
+    );
+
+    return (
+        <table>
+            <tbody>
+            <tr>
+                <th>Name</th>
+            </tr>
+            {productsLi}
+            </tbody>
+        </table>
+    )
+
+}
+
+function ProductHook(props){
+    return (
+        <tr>
+            <td>{props.product.name}</td>
+        </tr>
+    )
+}
 
 export class ProductPage extends React.Component{
     constructor(props){
@@ -53,7 +93,10 @@ export class ProductPage extends React.Component{
 
     render() { // <3>
         return (
-            <ProductsList products={this.state.products}/>
+            <div>
+                <ProductsListHook products={this.state.products}/>
+                <ProductsList products={this.state.products}/>
+            </div>
         )
     }
 }
