@@ -4,8 +4,9 @@ import {BrowserRouter, Route, Switch, Link, Redirect} from 'react-router-dom'
 
 import Header from './header/header';
 import Footer from './footer/footer';
-import Home from "./home";
+import Home from "./home/home";
 import {ProductPage} from "./ProductPage";
+import Profile from "./profile/profile";
 
 function notFound() {
     return (
@@ -28,7 +29,9 @@ function App() {
                         <Route exact path={"/"}>
                             {Home}
                         </Route>
-                        {
+                        <Route exact path={"/profile"}>
+                            {Profile}
+                        </Route>
                         <Route exact path="/product"
                                render={(props) => (<ProductPage{...props}/>)}/> }
                         <Route path="/404" component={notFound} />

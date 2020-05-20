@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 
-import WelcomeText from "./main-content-pages/welcomeText";
-import Flow from "./main-content-pages/flow"
+import WelcomeText from "./welcomeText";
+import Flow from "./flow"
 
 function Home() {
 
