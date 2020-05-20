@@ -5,10 +5,10 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.data.rest.core.config.Projection
 
 @Projection(
-        name = "compact",
+        name = "excerpt",
         types = [Product::class]
 )
-interface CompactProductProjection {
+interface ExcerptProductProjection {
 
     fun getId(): Long
     fun getName(): String

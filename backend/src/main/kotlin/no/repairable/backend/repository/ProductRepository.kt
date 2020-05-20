@@ -3,14 +3,15 @@ package no.repairable.backend.repository
 import com.querydsl.core.types.dsl.StringPath
 import no.repairable.backend.entity.Product
 import no.repairable.backend.entity.QProduct
+import no.repairable.backend.entity.projection.ExcerptProductProjection
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.querydsl.QuerydslPredicateExecutor
 
 import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer
 import org.springframework.data.querydsl.binding.QuerydslBindings
-import org.springframework.stereotype.Repository
+import org.springframework.data.rest.core.annotation.RepositoryRestResource
 
-@Repository
+@RepositoryRestResource(excerptProjection = ExcerptProductProjection::class)
 interface ProductRepository : JpaRepository<Product, Long>,
         QuerydslPredicateExecutor<Product>,
         QuerydslBinderCustomizer<QProduct> {
