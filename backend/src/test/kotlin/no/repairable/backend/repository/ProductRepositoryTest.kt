@@ -2,25 +2,29 @@ package no.repairable.no.repairable.backend.repository
 
 import no.repairable.backend.entity.Product
 import no.repairable.backend.repository.ProductRepository
-import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager
 
 
 @DataJpaTest
-class ProductRepositoryTest {
+class ProductRepositoryTest @Autowired constructor(
+        val productRepo: ProductRepository,
+        val entityManager: TestEntityManager
 
-    @Autowired
-    final val productRepo: ProductRepository? = null
+) {
+
+
 
     @Test
     fun testProductRepo() {
-
         val productTestData = Product(name = "Racklet")
         val productTestData2 = Product(name = "Pants")
-        productRepo?.save(productTestData)
-        productRepo?.save(productTestData2)
+        entityManager.persist(productTestData)
+        entityManager.persist(productTestData2)
+        productRepo.save(productTestData)
+        productRepo.save(productTestData2)
 /*
         val found = productRepo?.findByName("Racklet")
         assertThat(found?.name == productTestData.name)
