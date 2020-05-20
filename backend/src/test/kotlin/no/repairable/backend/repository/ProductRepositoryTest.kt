@@ -4,7 +4,6 @@ import no.repairable.backend.entity.Product
 import no.repairable.backend.entity.Size
 import no.repairable.backend.repository.ProductRepository
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest

@@ -4,13 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.7.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <artifactId>restore</artifactId>
+        <groupId>no.repairable</groupId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>no.repairable</groupId>
     <artifactId>backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>restore-backend</name>
@@ -24,14 +22,15 @@
         <java.version>11</java.version>
         <kotlin.version>1.3.72</kotlin.version>
         <kotlin.code.style>official</kotlin.code.style>
+
         <asciidoctor.version>1.5.8</asciidoctor.version>
+        <querydsl.version>4.2.2</querydsl.version>
 
         <!-- Frontend Build Properties -->
         <frontend-src-dir>../frontend</frontend-src-dir>
         <frontend-mavnen-plugin-version>1.10.0</frontend-mavnen-plugin-version>
         <node.version>v12.16.3</node.version>
         <yarn.version>v1.22.4</yarn.version>
-        <querydsl.version>4.2.2</querydsl.version>
 
     </properties>
 
@@ -75,16 +74,15 @@
         </dependency>
 
         <!-- Querydsl dependencies-->
-
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-apt</artifactId>
-            <version>4.2.2</version>
+            <version>${querydsl.version}</version>
         </dependency>
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-jpa</artifactId>
-            <version>4.2.2</version>
+            <version>${querydsl.version}</version>
         </dependency>
 
         <!-- Database dependencies -->
@@ -120,14 +118,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.10</version>
         </dependency>
-
-
     </dependencies>
 
     <build>
@@ -261,7 +256,6 @@
                         </configuration>
                     </execution>
                 </executions>
-
                 <dependencies>
                     <dependency>
                         <groupId>org.jetbrains.kotlin</groupId>
@@ -281,23 +275,19 @@
                 <groupId>com.github.eirslett</groupId>
                 <artifactId>frontend-maven-plugin</artifactId>
                 <version>${frontend-mavnen-plugin-version}</version>
-
                 <configuration>
                     <nodeVersion>${node.version}</nodeVersion>
                     <yarnVersion>${yarn.version}</yarnVersion>
                     <workingDirectory>${frontend-src-dir}</workingDirectory>
                     <installDirectory>${project.build.directory}</installDirectory>
                 </configuration>
-
                 <executions>
-
                     <execution>
                         <id>install-frontend-tools</id>
                         <goals>
                             <goal>install-node-and-yarn</goal>
                         </goals>
                     </execution>
-
                     <execution>
                         <id>yarn install</id>
                         <goals>
@@ -307,7 +297,6 @@
                             <arguments>install</arguments>
                         </configuration>
                     </execution>
-
                     <execution>
                         <id>build-frontend</id>
                         <phase>prepare-package</phase>
@@ -340,7 +329,6 @@
                                     <directory>${frontend-src-dir}/build</directory>
                                     <filtering>false</filtering>
                                 </resource>
-
                             </resources>
                         </configuration>
                     </execution>
@@ -366,5 +354,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

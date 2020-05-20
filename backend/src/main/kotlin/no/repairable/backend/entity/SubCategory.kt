@@ -2,10 +2,6 @@ package no.repairable.backend.entity
 
 import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
 
 @Entity
 @Table(name = "sub_category")

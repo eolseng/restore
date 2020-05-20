@@ -3,7 +3,6 @@ package no.repairable.backend.entity
 
 import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
-import javax.validation.constraints.NotNull
 import javax.validation.constraints.Size
 
 @Entity
