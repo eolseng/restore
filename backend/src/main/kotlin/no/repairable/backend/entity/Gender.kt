@@ -1,6 +1,9 @@
 package no.repairable.backend.entity
 
+
+import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
+import javax.validation.constraints.NotNull
 
 @Entity
 @Table(name = "gender")
@@ -10,11 +13,21 @@ data class Gender(
         @Column(name = "id")
         var id: Long? = null,
 
+       // @NotNull
         @Column(name = "gender")
-        var gender: Char? = null
+        var genderType: Char? = null,
 
-
-/*
-        @OneToMany(mappedBy = "gender", cascade = arrayOf(CascadeType.ALL), orphanRemoval = true)
-        val genderId: List<Product> = mutableListOf()*/
+        @OneToMany(mappedBy = "gender", cascade = [(CascadeType.ALL)])
+        val gender: List<Product> = mutableListOf()
 )
+
+@Projection(
+        name = "excerpt",
+        types = [Brand::class]
+)
+interface ExcerptGenderProjection {
+
+        fun getId(): Long
+        fun getGenderType(): String
+
+}

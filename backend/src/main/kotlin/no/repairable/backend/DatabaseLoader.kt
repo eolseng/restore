@@ -1,48 +1,86 @@
 package no.repairable.backend
 
-import no.repairable.backend.entity.Category
-import no.repairable.backend.entity.Gender
-import no.repairable.backend.entity.Product
-import no.repairable.backend.repository.CategoryRepository
-import no.repairable.backend.repository.GenderRepository
-import no.repairable.backend.repository.ProductRepository
+import no.repairable.backend.entity.*
+import no.repairable.backend.repository.*
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
 
 @Component
-class DatabaseLoader(private val productRepository: ProductRepository,
-                     private val genderRepository: GenderRepository,
-                     private val categoryRepository: CategoryRepository
+class DatabaseLoader @Autowired constructor(
+        private val productRepository: ProductRepository,
+        private val genderRepository: GenderRepository,
+        private val sizeRepository: SizeRepository,
+        private val brandRepository: BrandRepository,
+        private val categoryRepository: CategoryRepository,
+        private val subCategoryRepository: SubCategoryRepository
 ) : CommandLineRunner {
 
-    override fun run(vararg args: String?) {
-        saveProducts()
-        saveGender()
-        saveCategory()
-    }
+    lateinit var genders: List<Gender>
+    lateinit var brands: List<Brand>
+    lateinit var categories: List<Category>
+    lateinit var subCategories: List<SubCategory>
+    lateinit var sizes: List<Size>
+    lateinit var products: List<Product>
 
-    fun saveProducts() {
-        val list = mutableListOf<Product>().apply {
-            add(Product(name = "Jacket"))
-            add(Product(name = "Shirt"))
-            add(Product(name = "Pants"))
-            add(Product(name = "Socks"))
-        }
-        productRepository.saveAll(list)
+    override fun run(vararg args: String?) {
+        saveGender()
+        saveBrand()
+        saveSubCat()
+        saveCategory()
+        saveSize()
+        saveProducts()
     }
 
     fun saveGender() {
-        val list = mutableListOf<Gender>().apply {
-            add(Gender(gender = 'm'))
-            add(Gender(gender = 'f'))
+        genders = mutableListOf<Gender>().apply {
+            add(Gender(genderType = 'm'))
+            add(Gender(genderType = 'f'))
         }
-        genderRepository.saveAll(list)
+        genderRepository.saveAll(genders)
+    }
+
+    fun saveBrand() {
+        brands = mutableListOf<Brand>().apply {
+            add(Brand(name = "Helly Hansen"))
+            add(Brand(name = "Norrøna"))
+        }
+        brandRepository.saveAll(brands)
     }
 
     fun saveCategory() {
-        var ctg0 = Category()
-        ctg0.name = "Pants";
-        categoryRepository.save(ctg0);
+        categories = mutableListOf<Category>().apply {
+            add(Category(name = "Jacket"))
+            add(Category(name = "Trousers"))
+        }
+        categoryRepository.saveAll(categories)
+    }
 
+    fun saveSubCat() {
+        subCategories = mutableListOf<SubCategory>().apply {
+            add(SubCategory(name = "Skiing"))
+            add(SubCategory(name = "Raining"))
+        }
+        subCategoryRepository.saveAll(subCategories)
+    }
+
+    fun saveSize() {
+        sizes = mutableListOf<Size>().apply {
+            add(Size(size = "small"))
+            add(Size(size = "medium"))
+            add(Size(size = "large"))
+        }
+        sizeRepository.saveAll(sizes)
+    }
+
+    fun saveProducts() {
+        products = mutableListOf<Product>().apply {
+            add(Product(name = "Skagen", description = "Jacket", gender = genders[1], brand = brands[0], subCategory = subCategories[0], category = categories[0], sizes = listOf(sizes[0], sizes[1])))
+            add(Product(name = "Yallah", description = "Flis", gender = genders[0], brand = brands[1], subCategory = subCategories[1], category = categories[1]))
+            add(Product(name = "Rælle", description = "Vest", gender = genders[1], brand = brands[0], subCategory = subCategories[1], category = categories[0]))
+            add(Product(name = "Fjoning", description = "Sigg +", gender = genders[1], brand = brands[1], subCategory = subCategories[0], category = categories[0]))
+            add(Product(name = "Jordmor", description = "Person", gender = genders[0], brand = brands[0], subCategory = subCategories[0], category = categories[1]))
+        }
+        productRepository.saveAll(products)
     }
 }

@@ -1,5 +1,6 @@
 package no.repairable.backend.entity
 
+import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 import javax.persistence.Column
 import javax.persistence.Entity
@@ -14,12 +15,23 @@ data class SubCategory(
         @Column(name = "id")
         var id: Long? = null, //PK
 
-        @Column
-        val category_id: Long? = null, //FK
+        //@Column(name = "category_id")
+        //val categoryId: Long? = null, //FK
 
-        @Column
-        val name: String? = ""
+        @Column(name = "name")
+        var name: String? = "",
 
-        //@OneToMany(mappedBy = "sub_category", cascade = arrayOf(CascadeType.ALL))
-        //val items: List<Product> = mutableListOf()
+        @OneToMany(mappedBy = "subCategory",cascade = [(CascadeType.ALL)])
+        val subCategory: List<Product> = mutableListOf()
 )
+
+@Projection(
+        name = "excerpt",
+        types = [Brand::class]
+)
+interface ExcerptSubCategoryProjection {
+
+        fun getId(): Long
+        fun getName(): String
+
+}
