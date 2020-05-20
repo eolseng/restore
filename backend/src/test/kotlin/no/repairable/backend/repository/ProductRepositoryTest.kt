@@ -1,6 +1,7 @@
 package no.repairable.no.repairable.backend.repository
 
 import no.repairable.backend.entity.Product
+import no.repairable.backend.entity.Size
 import no.repairable.backend.repository.ProductRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeAll
@@ -34,7 +35,7 @@ class ProductRepositoryTest @Autowired constructor(
         assertThat(found2.id == productTestData2.id)
         assertThat(found2.id != found.id)
 
-
+        productRepo.findAll().get(0).sizes?.map { size: Size -> size.size }
 
     }
 

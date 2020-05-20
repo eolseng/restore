@@ -1,6 +1,7 @@
 package no.repairable.backend.entity
 
 
+import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 import javax.validation.constraints.NotNull
 import javax.validation.constraints.Size
@@ -21,3 +22,14 @@ data class Category(
         @OneToMany(mappedBy = "category", cascade = [(CascadeType.ALL)])
         val category: List<Product> = mutableListOf()
 )
+
+@Projection(
+        name = "excerpt",
+        types = [Brand::class]
+)
+interface ExcerptCategoryProjection {
+
+        fun getId(): Long
+        fun getName(): String
+
+}

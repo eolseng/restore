@@ -1,5 +1,6 @@
 package no.repairable.backend.entity
 
+import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 import javax.validation.constraints.NotNull
 
@@ -15,7 +16,17 @@ data class Size (
         @Column(name = "size")
         var size: String = "",
 
-        @ManyToOne(fetch = FetchType.LAZY,cascade = [(CascadeType.ALL)])
-        //@Column(name = "productSizes")
-        val productSizesSize : ProductSizes? = null
+        @ManyToMany(mappedBy = "sizes")
+        var products: List<Product>? = null
 )
+
+@Projection(
+        name = "excerpt",
+        types = [Brand::class]
+)
+interface ExcerptSizeProjection {
+
+        fun getId(): Long
+        fun getSize(): String
+
+}

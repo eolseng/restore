@@ -33,7 +33,28 @@ data class Product(
         @ManyToOne(fetch = FetchType.LAZY)
         val gender: Gender? = null,
 
-        @ManyToOne(fetch = FetchType.LAZY)
-        val productSizesProd: ProductSizes? = null
+        @ManyToMany(fetch = FetchType.LAZY)
+        val sizes: List<Size>? = null
 
 )
+
+@Projection(
+        name = "excerpt",
+        types = [Product::class]
+)
+interface ExcerptProductProjection {
+
+        fun getId(): Long
+        fun getName(): String
+        fun getDescription(): String
+        @Value("#{target.brand.name}")
+        fun getBrand(): String
+        @Value("#{target.category.name}")
+        fun getCategory(): String
+        @Value("#{target.subCategory.name}")
+        fun getSubCategory(): String
+        @Value("#{target.gender.genderType}")
+        fun getGender(): Char
+        fun getSizes(): List<Size>
+
+}

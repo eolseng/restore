@@ -41,7 +41,7 @@ class ProductTest @Autowired constructor(
     @Throws(Exception::class)
     fun checkQueries() {
         productRepo.save(Product(name = "Test"))
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/products/search/findByName?name=Skagen")).andDo(MockMvcResultHandlers.print())
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/products/search/findByName?name=Test")).andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("findByName"))
     }

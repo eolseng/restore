@@ -13,8 +13,7 @@ class DatabaseLoader @Autowired constructor(
         private val sizeRepository: SizeRepository,
         private val brandRepository: BrandRepository,
         private val categoryRepository: CategoryRepository,
-        private val subCategoryRepository: SubCategoryRepository,
-        private val productSizeRepository: ProductSizeRepository
+        private val subCategoryRepository: SubCategoryRepository
 ) : CommandLineRunner {
 
     lateinit var genders: List<Gender>
@@ -22,17 +21,14 @@ class DatabaseLoader @Autowired constructor(
     lateinit var categories: List<Category>
     lateinit var subCategories: List<SubCategory>
     lateinit var sizes: List<Size>
-    lateinit var productSizes: List<ProductSizes>
     lateinit var products: List<Product>
 
     override fun run(vararg args: String?) {
         saveGender()
-
         saveBrand()
         saveSubCat()
         saveCategory()
         saveSize()
-        saveProductSize()
         saveProducts()
     }
 
@@ -41,7 +37,6 @@ class DatabaseLoader @Autowired constructor(
             add(Gender(genderType = 'm'))
             add(Gender(genderType = 'f'))
         }
-
         genderRepository.saveAll(genders)
     }
 
@@ -78,16 +73,9 @@ class DatabaseLoader @Autowired constructor(
         sizeRepository.saveAll(sizes)
     }
 
-    fun saveProductSize() {
-        productSizes = mutableListOf<ProductSizes>().apply {
-            add(ProductSizes(sizeId = listOf()))
-        }
-        productSizeRepository.saveAll(productSizes)
-    }
-
     fun saveProducts() {
         products = mutableListOf<Product>().apply {
-            add(Product(name = "Skagen", description = "Jacket", gender = genders[1], brand = brands[0], subCategory = subCategories[0], category = categories[0]))
+            add(Product(name = "Skagen", description = "Jacket", gender = genders[1], brand = brands[0], subCategory = subCategories[0], category = categories[0], sizes = listOf(sizes[0], sizes[1])))
             add(Product(name = "Yallah", description = "Flis", gender = genders[0], brand = brands[1], subCategory = subCategories[1], category = categories[1]))
             add(Product(name = "Rælle", description = "Vest", gender = genders[1], brand = brands[0], subCategory = subCategories[1], category = categories[0]))
             add(Product(name = "Fjoning", description = "Sigg +", gender = genders[1], brand = brands[1], subCategory = subCategories[0], category = categories[0]))
