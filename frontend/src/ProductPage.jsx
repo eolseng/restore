@@ -16,12 +16,7 @@ function ProductsListHook(props){
     const [pageSize, setPageSize] = useState(2)
     const [links, setLinks] = useState(2)
 
-    //Run "effect" function after flushing changes to the DOM
-    //By default, React runs the effects after every render.
-    //useEffect(() => {
 
-
-    //})
     const productsLi = props.products.map(product =>
         <ProductHook key={product._links.self.href} product={product}/>
     );
@@ -47,20 +42,20 @@ function ProductHook(props){
     )
 }
 
-export class ProductPage extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {products: [], attributes: [], pageSize: 2, links: {}};
-
-    }
-
-    componentDidMount() { // <2>
-        this.loadFromServer(this.state.pageSize);
-        console.log("Did mount!")
-    }
+export function ProductPage(){
+    const [products, setProducts] = useState([])
+    const [attributes, setAttributes] = useState([])
+    const [pageSize, setPageSize] = useState(2)
+    const [links, setLinks] = useState({})
+    const [schema, setSchema] = useState({})
 
 
-    loadFromServer(pageSize) {
+
+    useEffect(() => {
+        loadFromServer(2)
+    }, [])
+
+    const loadFromServer = (pageSize) =>  {
         follow(client //Object used to make REST calls
             , root //Root API url
             , [
@@ -76,28 +71,25 @@ export class ProductPage extends React.Component{
                 headers: {'Accept': 'application/schema+json'}
             }).then(schema => {
                 //Collect meta-data about the response products like e.g if the product properties is string, readonly etc.
-                this.schema = schema.entity;
+                productCollection.schema = schema.entity
                 return productCollection;
             });
         }).done(productCollection => {
             //Push the collected products into the REACT state.
-            this.setState({
-                products: productCollection.entity._embedded.products,
-                attributes: Object.keys(this.schema.properties),
-                pageSize: pageSize,
-                links: productCollection.entity._links});
+            setProducts(productCollection.entity._embedded.products)
+            setAttributes(Object.keys(productCollection.schema))
+            setPageSize(pageSize)
+            setLinks(productCollection.entity._links)
         });
     }
 
 
 
-    render() { // <3>
-        return (
-            <div>
-                <ProductsListHook products={this.state.products}/>
-            </div>
-        )
-    }
+    return (
+        <div>
+            <ProductsListHook products = {products}/>
+        </div>
+    )
 }
 
 
