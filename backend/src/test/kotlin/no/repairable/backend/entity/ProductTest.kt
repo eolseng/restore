@@ -33,9 +33,6 @@ class ProductTest @Autowired constructor(
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("products"))
 
-        val prod = productRepo.findAll()
-        val prod1 = productRepo.findAll()
-
 
 
     }
@@ -43,8 +40,8 @@ class ProductTest @Autowired constructor(
     @Test
     @Throws(Exception::class)
     fun checkQueries() {
-        productRepo?.save(Product(name = "Test"))
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/products/search/findByName?name=Skagen")).andDo(MockMvcResultHandlers.print())
+        productRepo.save(Product(name = "Test"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/products/search/findByName?name=Test")).andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("findByName"))
     }
