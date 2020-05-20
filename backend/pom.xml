@@ -31,7 +31,6 @@
         <frontend-mavnen-plugin-version>1.10.0</frontend-mavnen-plugin-version>
         <node.version>v12.16.3</node.version>
         <yarn.version>v1.22.4</yarn.version>
-
     </properties>
 
     <dependencies>
@@ -335,23 +334,23 @@
                 </executions>
             </plugin>
 
-            <!-- For cloud deployment on Heroku -->
-            <plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>2.0.2</version>
-                <configuration>
-                    <appName>repairable-restore</appName>
-                    <includeTarget>false</includeTarget>
-                    <includes>
-                        <include>target/restore-application-exec.jar</include>
-                    </includes>
-                    <processTypes>
-                        <web>java -Dserver.port=$PORT -jar target/restore-application-exec.jar</web>
-                    </processTypes>
-                    <jdkVersion>11</jdkVersion>
-                </configuration>
-            </plugin>
+<!--            &lt;!&ndash; For cloud deployment on Heroku &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>com.heroku.sdk</groupId>-->
+<!--                <artifactId>heroku-maven-plugin</artifactId>-->
+<!--                <version>2.0.2</version>-->
+<!--                <configuration>-->
+<!--                    <appName>repairable-restore</appName>-->
+<!--                    <includeTarget>false</includeTarget>-->
+<!--                    <includes>-->
+<!--                        <include>target/restore-application-exec.jar</include>-->
+<!--                    </includes>-->
+<!--                    <processTypes>-->
+<!--                        <web>java -Dserver.port=$PORT -jar target/restore-application-exec.jar</web>-->
+<!--                    </processTypes>-->
+<!--                    <jdkVersion>11</jdkVersion>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 </project>
