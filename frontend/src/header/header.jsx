@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import {Link, withRouter} from "react-router-dom";
+import React, { useState } from "react";
+import { Link, withRouter } from "react-router-dom";
 
 import logo from "../img/logo/restore.png";
 
-function Progress( {progress} ) {
-    /* Logikk for å kun displaye på relevante sider */
+function Progress({ progress }) {
     const progressbarShow = window.location.pathname;
 
     return (
         <div className="progress-bar-container">
-            {progressbarShow == "/filter"
+            {progressbarShow === "/filter" || progressbarShow === "/condition" || progressbarShow === "/delivery"
+                || progressbarShow === "/confirmation"
                 ? <div>
                     <div>{progress.one}</div>
                     <div>{progress.two}</div>
@@ -24,7 +24,7 @@ function Progress( {progress} ) {
 
 function Header() {
 
-    const [progressState, setProgressState] =useState([
+    const [progressState, setProgressState] = useState([
         {
             one: "1. Finn produkt",
             current: false,

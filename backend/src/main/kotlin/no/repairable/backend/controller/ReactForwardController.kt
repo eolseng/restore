@@ -16,6 +16,9 @@ class ReactForwardController {
             "/",
             "/profile",
             "/filter",
+            "/condition",
+            "/delivery",
+            "/confirmation",
             "/product",
             "/404"
     )
