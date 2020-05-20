@@ -7,6 +7,7 @@ import Footer from './footer/footer';
 import Home from "./home/home";
 import {ProductPage} from "./ProductPage";
 import Profile from "./profile/profile";
+import Filter from "./filter/filter";
 
 function notFound() {
     return (
@@ -31,6 +32,9 @@ function App() {
                         </Route>
                         <Route exact path={"/profile"}>
                             {Profile}
+                        </Route>
+                        <Route extact path={"/filter"}>
+                            {Filter}
                         </Route>
                         <Route exact path="/product"
                                render={(props) => (<ProductPage{...props}/>)}/> }

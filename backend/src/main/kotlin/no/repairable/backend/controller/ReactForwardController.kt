@@ -15,6 +15,7 @@ class ReactForwardController {
     @GetMapping(
             "/",
             "/profile",
+            "/filter",
             "/product",
             "/404"
     )

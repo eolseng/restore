@@ -5,12 +5,19 @@ import logo from "../img/logo/restore.png";
 
 function Progress( {progress} ) {
     /* Logikk for å kun displaye på relevante sider */
+    const progressbarShow = window.location.pathname;
+
     return (
         <div className="progress-bar-container">
-            <div>{progress.one}</div>
-            <div>{progress.two}</div>
-            <div>{progress.three}</div>
-            <div>{progress.four}</div>
+            {progressbarShow == "/filter"
+                ? <div>
+                    <div>{progress.one}</div>
+                    <div>{progress.two}</div>
+                    <div>{progress.three}</div>
+                    <div>{progress.four}</div>
+                </div>
+                : <div/>
+                }
         </div>
     );
 }
@@ -20,19 +27,23 @@ function Header() {
     const [progressState, setProgressState] =useState([
         {
             one: "1. Finn produkt",
-            current: false
+            current: false,
+            path: ""
         },
         {
             two: "2. Vurder tilstand",
-            current: false
+            current: false,
+            path: ""
         },
         {
             three: "3. Velg leveransemetode",
-            current: false
+            current: false,
+            path: ""
         },
         {
             four: "4. Få bekreftelse",
-            current: false
+            current: false,
+            path: ""
         }
     ]);
 
@@ -67,4 +78,4 @@ function Header() {
     )
 }
 
-export default Header;
+export default withRouter(Header);

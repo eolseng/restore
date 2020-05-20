@@ -39,7 +39,7 @@ function Flow() {
                 </div>
                 <div className="row">
                     <div className="col-12 button-container">
-                        <Link to="">
+                        <Link to="./filter">
                             <button className="cta-button">Kom igang nå</button>
                         </Link>
                     </div>
