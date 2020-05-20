@@ -2,7 +2,6 @@ package no.repairable.backend.entity
 
 import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
-import javax.validation.constraints.NotNull
 
 @Entity
 @Table(name = "Size")
