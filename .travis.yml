@@ -1,0 +1,11 @@
+# Specify that we use Java as the primary language of the project
+language: java
+
+# Test against OpenJDK 11
+jdk: openjdk11
+
+# Specify what script we want to use to run the tests
+# --fae is short for --fail-at-end so all tests will run even when some tests fail
+script: mvn clean verify -fae
+
+# TODO: Must find a way to run tests against React as well as Spring Boot!
