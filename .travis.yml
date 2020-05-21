@@ -6,8 +6,9 @@ matrix:
       node_js: 12
       before_script:
         - cd frontend
-      script:
         - yarn install
+      script:
+        - yarn build
 #    - language: java
 #      jdk: openjdk11
 #      before_script: cd backend
