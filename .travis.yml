@@ -3,9 +3,11 @@ dist: trusty
 matrix:
   include:
     - language: node.js
-      node_js: "12.16.3"
+      node_js: 12
       before_script:
         - cd frontend
+      script:
+        - yarn install
 #    - language: java
 #      jdk: openjdk11
 #      before_script: cd backend
