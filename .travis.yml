@@ -1,15 +1,22 @@
 dist: trusty
 
+cache:
+  directories:
+    - .autoconf
+    - $HOME/.m2
+
 matrix:
   include:
-    - language: node.js
+    - name: "Test frontend"
+      language: node_js
       node_js: 12
       before_script:
         - cd frontend
         - yarn install
-      script:
-        - yarn build
-#    - language: java
-#      jdk: openjdk11
-#      before_script: cd backend
-#      script: mvn clean verify --fae
+      script: yarn test
+    - name: "Test backend"
+      language: java
+      jdk: openjdk11
+      before_script: cd backend
+      script: mvn clean verify --fae
+
