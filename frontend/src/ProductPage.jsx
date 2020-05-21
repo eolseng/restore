@@ -43,6 +43,8 @@ function ProductHook(props){
 
 export function ProductPage(){
     const dtoProducts = useFetch('products');
+    const dtoCategories = useFetch('categories');
+
 
 
 
