@@ -12,9 +12,13 @@ function ProductsListHook(props){
     //Current state value, and an update for updating current state value.
 
 
-    const productsLi = props.products.products.map(product =>
-        <ProductHook key={product._links.self.href} product={product}/>
-    );
+
+    const productsLi = props.products.embedded ?
+        props.products.embedded.products.map(product =>
+            <ProductHook key={product._links.self.href} product={product}/>
+        ):
+        <div>No products</div>
+
 
     return (
         <table>
@@ -38,20 +42,20 @@ function ProductHook(props){
 }
 
 export function ProductPage(){
-    const dto = useFetch(root);
+    const dtoProducts = useFetch('products');
 
 
 
     return (
         <div>
-            <ProductsListHook products = {dto}/>
+            <ProductsListHook products = {dtoProducts}/>
         </div>
     )
 }
 
 
-export default function useFetch(url){
-    const [data, setData] = useState({products:[]})
+export default function useFetch(subPath){
+    const [data, setData] = useState({})
     let schema = {}
 
 
@@ -62,11 +66,11 @@ export default function useFetch(url){
 
     const loadFromServer = (pageSize) =>  {
         follow(client //Object used to make REST calls
-            , url //Root API url
+            , root //Root API url
             , [
                 //Array of API relations to navigate through
                 //(In this case, looks in _links for relation (rel) 'products, finds it HREF and navigates too it.
-                {rel: 'products', params: {size: pageSize}}
+                {rel: subPath, params: {size: pageSize}}
             ]
         ).then(productCollection => {
             //Found the API path of Products. Send request to get all products.
@@ -82,9 +86,9 @@ export default function useFetch(url){
         }).done(productCollection => {
             //Push the collected products into the REACT state.
             setData({
-                products: productCollection.entity._embedded.products,
+                //products: productCollection.entity._embedded.products,
                 attributes: Object.keys(schema),
-                pageSize: pageSize,
+                embedded: productCollection.entity._embedded,
                 links: productCollection.entity._links
             })
         });
