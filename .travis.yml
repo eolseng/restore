@@ -1,4 +1,4 @@
-os: osx
+dist: trusty
 
 matrix:
   include:
@@ -6,9 +6,6 @@ matrix:
       node_js: "12.16.3"
       before_script:
         - cd frontend
-        - yarn install
-      script:
-        - yarn build
 #    - language: java
 #      jdk: openjdk11
 #      before_script: cd backend
