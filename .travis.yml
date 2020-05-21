@@ -13,7 +13,7 @@ matrix:
       before_script:
         - cd frontend
         - yarn install
-      script: yarn test
+      script: yarn test --passWithNoTests
     - name: "Test backend"
       language: java
       jdk: openjdk11
