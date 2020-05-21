@@ -10,14 +10,9 @@ const root = '/api';
 
 function ProductsListHook(props){
     //Current state value, and an update for updating current state value.
-    const [count,setCount] = useState(0); //0 is initial state (used for first render)
-    const [products, setProducts] = useState(null)
-    const [attributes, setAttributes] = useState(null)
-    const [pageSize, setPageSize] = useState(2)
-    const [links, setLinks] = useState(2)
 
 
-    const productsLi = props.products.map(product =>
+    const productsLi = props.products.products.map(product =>
         <ProductHook key={product._links.self.href} product={product}/>
     );
 
@@ -27,7 +22,7 @@ function ProductsListHook(props){
             <tr>
                 <th>Name</th>
             </tr>
-            {productsLi}
+                {productsLi}
             </tbody>
         </table>
     )
@@ -43,22 +38,31 @@ function ProductHook(props){
 }
 
 export function ProductPage(){
-    const [products, setProducts] = useState([])
-    const [attributes, setAttributes] = useState([])
-    const [pageSize, setPageSize] = useState(2)
-    const [links, setLinks] = useState({})
+    const dto = useFetch(root);
+
+
+
+    return (
+        <div>
+            <ProductsListHook products = {dto}/>
+        </div>
+    )
+}
+
+
+export default function useFetch(url){
+    const [data, setData] = useState({products:[]})
     let schema = {}
 
 
-
-
-    useEffect(() => {
+    useEffect(() =>{
         loadFromServer(2)
-    }, [])
+        },[]
+    )
 
     const loadFromServer = (pageSize) =>  {
         follow(client //Object used to make REST calls
-            , root //Root API url
+            , url //Root API url
             , [
                 //Array of API relations to navigate through
                 //(In this case, looks in _links for relation (rel) 'products, finds it HREF and navigates too it.
@@ -77,22 +81,17 @@ export function ProductPage(){
             });
         }).done(productCollection => {
             //Push the collected products into the REACT state.
-            setProducts(productCollection.entity._embedded.products)
-            setAttributes(Object.keys(schema))
-            setPageSize(pageSize)
-            setLinks(productCollection.entity._links)
+            setData({
+                products: productCollection.entity._embedded.products,
+                attributes: Object.keys(schema),
+                pageSize: pageSize,
+                links: productCollection.entity._links
+            })
         });
     }
 
-
-
-    return (
-        <div>
-            <ProductsListHook products = {products}/>
-        </div>
-    )
+    return data;
 }
-
 
 
 
