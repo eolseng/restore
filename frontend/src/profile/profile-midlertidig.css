@@ -1,0 +1,15 @@
+#instruction-progress {
+    margin: 0 auto;
+    padding: 10px 10px 5px 10px;
+
+    height: 40px;
+}
+
+.filter-progress {
+    padding: 5px 0;
+    line-height: 20px;
+}
+
+.progress-next {
+    border-bottom: 5px solid rgb(118, 173, 195);
+}
