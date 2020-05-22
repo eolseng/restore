@@ -17,7 +17,6 @@ function notFound() {
 }
 
 function App() {
-
     return (
         <React.StrictMode>
             <BrowserRouter>
