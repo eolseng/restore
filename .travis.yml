@@ -15,7 +15,6 @@ matrix:
         - yarn install
       script: yarn test --passWithNoTests
     - name: "Test backend"
-      os: osx
       language: java
       jdk: openjdk11
       before_script: cd backend

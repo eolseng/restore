@@ -25,7 +25,7 @@ function Progress({ progress }) {
 
 function Header() {
 
-    const [progressState, setProgressState] = useState([
+    const [progressState] = useState([
         {
             one: "1. Finn produkt",
             current: false,
