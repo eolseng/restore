@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 
 import logo from "../img/logo/restore.png";
 
+/* To only show the progressbar in the header on certain the pages */
 function Progress({ progress }) {
     const progressbarShow = window.location.pathname;
 
