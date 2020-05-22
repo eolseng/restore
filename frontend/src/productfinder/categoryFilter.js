@@ -7,9 +7,9 @@ export function CategoryFilter(props){
     const [{data, isLoading, isError}, doFetch] = useFetch('categories', "")
 
 
-    const selectCategory = (ctg) => {
+    const selectCategory = (value) => {
         //Todo: don't hardcode category
-        props.addSearchParam("category=" + ctg)
+        props.addSearchParam("category.name", value)
     }
 
     const allCategories =

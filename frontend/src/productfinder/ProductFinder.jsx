@@ -12,7 +12,7 @@ const root = '/api';
 
 
 export function ProductFinder(){
-    const [searchState, setSearchState] = useState("")
+    const [searchState, setSearchState] = useState({})
     const [{data, isLoading, isError}, setParams] = useFetch("products", searchState)
 
     /*
@@ -40,28 +40,18 @@ export function ProductFinder(){
     ]
     */
 
-    const addSearchParam = (newParam) => {
+    const addSearchParam = (searchVal, val) => {
         //Todo: Only allowing one param atm
 
-        const tmpSearchState = searchState
-        let newSearchState = ""
+        //Copy values of previous search state
+        let tmpSearchState = searchState;
+        tmpSearchState[searchVal] = val;
 
-        if (tmpSearchState !== ""){
-            return
-        }
+        //Todo: Merge the 2 follow set's?
+        setSearchState(tmpSearchState)
 
-
-
-        if (tmpSearchState === ""){
-            newSearchState = "?" + newParam
-        }
-        else{
-            newSearchState = tmpSearchState + "&" + newParam
-        }
-        setSearchState(newSearchState)
         //Invoke a new fetch to API
-        setParams(newSearchState)
-
+        setParams(tmpSearchState)
     }
 
     return (
@@ -74,9 +64,9 @@ export function ProductFinder(){
 
 
 
-export default function useFetch(subPath, searchParams){
+export default function useFetch(subPath){
     const [data, setData] = useState({})
-    const [params, setParams] = useState(searchParams)
+    const [params, setParams] = useState({})
     const [isError, setIsError] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
     let schema = {}
@@ -84,24 +74,29 @@ export default function useFetch(subPath, searchParams){
 
 
 
+
+
     useEffect(() =>{
-        loadFromServer(2) //TOdo: DOn't hardcore 2.
+        //TOdo: Adding size
+
+
+        loadFromServer()
         },[params]  //Re-fetches when url is changed is changed.
     )
 
-    const loadFromServer = (pageSize) =>  {
+    const loadFromServer = () =>  {
         follow(client //Object used to make REST calls
             , root //Root API url
             , [
                 //Array of API relations to navigate through
                 //(In this case, looks in _links for relation (rel) 'products, finds it HREF and navigates too it.
-                {rel: subPath, params: {size: pageSize}}
+                {rel: subPath, params: params}
             ]
         ).then(productCollection => {
             //Found the API path of Products. Send request to get all products.
             return client({
                 method: 'GET',
-                path: productCollection.entity._links.profile.href + searchParams,
+                path: productCollection.entity._links.profile.href,
                 headers: {'Accept': 'application/schema+json'}
             }).then(pageSchema => {
                 //Collect meta-data about the response products like e.g if the product properties is string, readonly etc.
