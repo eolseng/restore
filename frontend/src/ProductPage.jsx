@@ -1,7 +1,5 @@
-'use strict';
-
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+
 const client = require('./client'); // <3>
 
 const follow = require('./api/follow'); // function to hop multiple links by "rel"
