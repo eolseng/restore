@@ -34,8 +34,8 @@ class DatabaseLoader @Autowired constructor(
 
     fun saveGender() {
         genders = mutableListOf<Gender>().apply {
-            add(Gender(genderType = 'm'))
-            add(Gender(genderType = 'f'))
+            add(Gender(genderType = "male"))
+            add(Gender(genderType = "female"))
         }
         genderRepository.saveAll(genders)
     }
@@ -75,7 +75,7 @@ class DatabaseLoader @Autowired constructor(
 
     fun saveProducts() {
         products = mutableListOf<Product>().apply {
-            add(Product(name = "Skagen", description = "Jacket", gender = genders[1], brand = brands[0], subCategory = subCategories[0], category = categories[0], sizes = listOf(sizes[0], sizes[1])))
+            add(Product(name = "Skagen", description = "Jacket", gender = genders[0], brand = brands[0], subCategory = subCategories[0], category = categories[0], sizes = listOf(sizes[0], sizes[1])))
             add(Product(name = "Yallah", description = "Flis", gender = genders[0], brand = brands[1], subCategory = subCategories[1], category = categories[1]))
             add(Product(name = "Rælle", description = "Vest", gender = genders[1], brand = brands[0], subCategory = subCategories[1], category = categories[0]))
             add(Product(name = "Fjoning", description = "Sigg +", gender = genders[1], brand = brands[1], subCategory = subCategories[0], category = categories[0]))
