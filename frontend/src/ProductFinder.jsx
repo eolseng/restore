@@ -10,14 +10,14 @@ const follow = require('./api/follow'); // function to hop multiple links by "re
 const root = '/api';
 
 
-function ProductsListHook(props){
+function ProductList(props){
     //Current state value, and an update for updating current state value.
 
 
 
     const productsLi = props.products.embedded ?
         props.products.embedded.products.map(product =>
-            <ProductHook key={product._links.self.href} product={product}/>
+            <ProductCard key={product._links.self.href} product={product}/>
         ):
         <div>No products</div>
 
@@ -35,7 +35,7 @@ function ProductsListHook(props){
 
 }
 
-function ProductHook(props){
+function ProductCard(props){
     return (
         <tr>
             <td>{props.product.name}</td>
@@ -43,7 +43,7 @@ function ProductHook(props){
     )
 }
 
-export function ProductPage(){
+export function ProductFinder(){
     const dtoProducts = useFetch('products');
     const dtoCategories = useFetch('categories');
 
@@ -52,7 +52,7 @@ export function ProductPage(){
 
     return (
         <div>
-            <ProductsListHook products = {dtoProducts}/>
+            <ProductList products = {dtoProducts}/>
         </div>
     )
 }
@@ -61,9 +61,6 @@ function ProductFilter(){
     const [query, setQuery] = useState("")
     const filters = useFetch('categories')
 
-    
-
-    return (
 }
 
 
