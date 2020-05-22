@@ -4,11 +4,12 @@ import useFetch from "./ProductFinder";
 
 export function CategoryFilter(props){
     const [categories, setCategories] = useState([])
-    const [{data, isLoading, isError}, doFetch] = useFetch('categories')
+    const [{data, isLoading, isError}, doFetch] = useFetch('categories', "")
 
 
     const selectCategory = (ctg) => {
-        props.addSearchParam(ctg)
+        //Todo: don't hardcode category
+        props.addSearchParam("category=" + ctg)
     }
 
     const allCategories =

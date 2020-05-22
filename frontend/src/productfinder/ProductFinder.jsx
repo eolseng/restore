@@ -3,7 +3,7 @@
 import React, {useState, useEffect} from "react";
 import { Link, withRouter } from "react-router-dom";
 import {ProductFilter} from "./productFilter";
-import {ProductList} from "./productlist";
+import {ProductList} from "./productList";
 
 const client = require('../client'); // <3>
 
@@ -15,20 +15,59 @@ export function ProductFinder(){
     const [searchState, setSearchState] = useState("")
     const [{data, isLoading, isError}, setParams] = useFetch("products", searchState)
 
+    /*
+    const mockProductList = [
+        {
+            "id": 0,
+            "brand": "Helly Hansen",
+            "category": "Jacket",
+            "subCategory": "Sailing Jacket",
+            "name": "Skagen Offshore Jacket",
+            "description": "The best jacket ever.",
+            "imgUrl": "https://www.hellyhansen.com/media/catalog/product/3/3/33907_222-2-main.jpg",
+            "_links": {}
+        },
+        {
+            "id": 1,
+            "brand": "Helly Hansen",
+            "category": "Jacket",
+            "subCategory": "Sailing Jacket",
+            "name": "Salt Flag Jacket",
+            "description": "Almost the best jacket ever.",
+            "imgUrl": "https://www.hellyhansen.com/media/catalog/product/3/3/33909_603-2-main.jpg",
+            "_links": {}
+        }
+    ]
+    */
+
     const addSearchParam = (newParam) => {
-        if (searchState === ""){
-            setParams("?" + newParam)
+        //Todo: Only allowing one param atm
+
+        const tmpSearchState = searchState
+        let newSearchState = ""
+
+        if (tmpSearchState !== ""){
+            return
+        }
+
+
+
+        if (tmpSearchState === ""){
+            newSearchState = "?" + newParam
         }
         else{
-            setParams(searchState + "&" + newParam);
+            newSearchState = tmpSearchState + "&" + newParam
         }
-    }
+        setSearchState(newSearchState)
+        //Invoke a new fetch to API
+        setParams(newSearchState)
 
+    }
 
     return (
         <div>
-            <ProductFilter searchState={searchState} addSearchParam={addSearchParam}></ProductFilter>
-            <ProductList products={data}></ProductList>
+            <ProductFilter searchState={searchState} addSearchParam={addSearchParam} ></ProductFilter>
+            <ProductList products={data}/>
         </div>
     )
 }
@@ -41,6 +80,7 @@ export default function useFetch(subPath, searchParams){
     const [isError, setIsError] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
     let schema = {}
+
 
 
 
@@ -61,7 +101,7 @@ export default function useFetch(subPath, searchParams){
             //Found the API path of Products. Send request to get all products.
             return client({
                 method: 'GET',
-                path: productCollection.entity._links.profile.href,
+                path: productCollection.entity._links.profile.href + searchParams,
                 headers: {'Accept': 'application/schema+json'}
             }).then(pageSchema => {
                 //Collect meta-data about the response products like e.g if the product properties is string, readonly etc.
