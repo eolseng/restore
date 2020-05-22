@@ -2,7 +2,6 @@
 
 import React, {useState, useEffect} from "react";
 import { Link, withRouter } from "react-router-dom";
-import React from "react";
 
 const client = require('./client'); // <3>
 
@@ -44,34 +43,44 @@ function ProductCard(props){
 }
 
 export function ProductFinder(){
-    const dtoProducts = useFetch('products');
-    const dtoCategories = useFetch('categories');
-
-
-
+    const [products, setProducts] = useState([])
+    const [searchState, setSearchState] = useState("")
 
     return (
         <div>
-            <ProductList products = {dtoProducts}/>
+            <ProductFilter searchState={searchState}></ProductFilter>
         </div>
     )
 }
 
-function ProductFilter(){
-    const [query, setQuery] = useState("")
-    const filters = useFetch('categories')
+function ProductFilter(props){
+    const [filters, setFilters] = useState([])
+    const categoryDto = useFetch('categories',filters)
 
+
+    const categories =
+        categoryDto.embedded ?
+            categoryDto.embedded.categories.map(function (category, index){
+                return <div>{category.name}</div>
+            })
+            :
+            <div>Categories are loading</div>
+    return (
+        <div>
+            {categories}
+        </div>
+    )
 }
 
 
-export default function useFetch(subPath){
+export default function useFetch(subPath, filter){
     const [data, setData] = useState({})
     let schema = {}
 
 
     useEffect(() =>{
-        loadFromServer(2)
-        },[]
+        loadFromServer(2) //TOdo: DOn't hardcore 2.
+        },[filter]  //Re-fetches when searchState is changed.
     )
 
     const loadFromServer = (pageSize) =>  {
