@@ -1,6 +1,7 @@
 package no.repairable.backend.repository
 
 import com.querydsl.core.types.dsl.StringPath
+import no.repairable.backend.entity.Brand
 import no.repairable.backend.entity.ExcerptProductProjection
 import no.repairable.backend.entity.Product
 import no.repairable.backend.entity.QProduct
@@ -22,6 +23,7 @@ interface ProductRepository : JpaRepository<Product, Long>,
 
     fun findByName(name: String): Product
 
+    fun existsByBrandAndName(brand: Brand, name: String): Boolean
 
 }
 

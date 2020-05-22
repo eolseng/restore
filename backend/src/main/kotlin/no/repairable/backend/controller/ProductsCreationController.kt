@@ -12,12 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody
 class ProductsCreationController @Autowired constructor(
         private val productRepository: ProductRepository,
         private val genderRepository: GenderRepository,
-        private val sizeRepository: SizeRepository,
         private val brandRepository: BrandRepository,
         private val categoryRepository: CategoryRepository,
         private val subCategoryRepository: SubCategoryRepository
-
-
 ) {
 
     val genders: HashMap<String, Gender> = HashMap()
@@ -31,8 +28,11 @@ class ProductsCreationController @Autowired constructor(
         val productList = mutableListOf<Product>()
 
         for (product in products) {
-            val gender = getGender(product)
+
             val brand = getBrand(product)
+            // Skip rest if product already exists
+            if (productRepository.existsByBrandAndName(brand, product.name)) continue
+            val gender = getGender(product)
             val category = getCategory(product)
             val subCategory = getSubCategory(product)
             val newProduct = Product(
@@ -45,9 +45,17 @@ class ProductsCreationController @Autowired constructor(
             )
             productList.add(newProduct)
         }
-
         productRepository.saveAll(productList)
     }
+
+    data class ProductPostClass(
+            val name: String,
+            val description: String,
+            val gender: String,
+            val brand: String,
+            val category: String,
+            val subCategory: String
+    )
 
     private fun getGender(product: ProductPostClass): Gender {
         var gender = genders[product.gender]
@@ -101,12 +109,3 @@ class ProductsCreationController @Autowired constructor(
         return subCategory
     }
 }
-
-data class ProductPostClass(
-        val name: String,
-        val description: String,
-        val gender: String,
-        val brand: String,
-        val category: String,
-        val subCategory: String
-)
