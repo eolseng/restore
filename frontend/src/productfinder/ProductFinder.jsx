@@ -3,6 +3,7 @@
 import React, {useState, useEffect} from "react";
 import { Link, withRouter } from "react-router-dom";
 import {ProductFilter} from "./productFilter";
+import {ProductList} from "./productlist";
 
 const client = require('../client'); // <3>
 
@@ -11,31 +12,32 @@ const root = '/api';
 
 
 export function ProductFinder(){
-    const [products, setProducts] = useState([])
     const [searchState, setSearchState] = useState("")
+    const [{data, isLoading, isError}, setParams] = useFetch("products", searchState)
 
     const addSearchParam = (newParam) => {
         if (searchState === ""){
-            setSearchState("?" + newParam)
+            setParams("?" + newParam)
         }
         else{
-            setSearchState(searchState + "&" + newParam);
+            setParams(searchState + "&" + newParam);
         }
     }
 
 
     return (
         <div>
-            <ProductFilter searchState={searchState} setSearchState={addSearchParam} ></ProductFilter>
+            <ProductFilter searchState={searchState} addSearchParam={addSearchParam}></ProductFilter>
+            <ProductList products={data}></ProductList>
         </div>
     )
 }
 
 
 
-export default function useFetch(subPath){
+export default function useFetch(subPath, searchParams){
     const [data, setData] = useState({})
-    const [relUrl, setRelUrl] = useState(subPath)
+    const [params, setParams] = useState(searchParams)
     const [isError, setIsError] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
     let schema = {}
@@ -44,7 +46,7 @@ export default function useFetch(subPath){
 
     useEffect(() =>{
         loadFromServer(2) //TOdo: DOn't hardcore 2.
-        },[relUrl]  //Re-fetches when url is changed is changed.
+        },[params]  //Re-fetches when url is changed is changed.
     )
 
     const loadFromServer = (pageSize) =>  {
@@ -77,7 +79,7 @@ export default function useFetch(subPath){
         });
     }
 
-    return [{data, isLoading, isError},setRelUrl ];
+    return [{data, isLoading, isError}, setParams];
 }
 
 

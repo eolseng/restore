@@ -7,10 +7,14 @@ export function CategoryFilter(props){
     const [{data, isLoading, isError}, doFetch] = useFetch('categories')
 
 
+    const selectCategory = (ctg) => {
+        props.addSearchParam(ctg)
+    }
+
     const allCategories =
         data.embedded ?
             data.embedded.categories.map(function (category, index){
-                return <div>{category.name}</div>
+                return <div key={index} onClick={() => (selectCategory(category.name))}>{category.name}</div>
             })
             :
             <div>Categories are loading</div>

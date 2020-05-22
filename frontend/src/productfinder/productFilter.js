@@ -3,6 +3,6 @@ import {CategoryFilter} from "./categoryFilter";
 
 export function ProductFilter(props){
     return <div>
-        <CategoryFilter searchState={props.searchState} setSearchState={props.addSearchParam}></CategoryFilter>
+        <CategoryFilter searchState={props.searchState} addSearchParam={props.addSearchParam}></CategoryFilter>
     </div>
 }

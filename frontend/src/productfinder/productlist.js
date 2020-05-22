@@ -1,8 +1,9 @@
 import React from "react";
+import {ProductCard} from "./productCard";
 
 export function ProductList(props){
     //Current state value, and an update for updating current state value.
-    const productsLi = props.products.embedded ?
+    const productsLi = props.products.embedded?
         props.products.embedded.products.map(product =>
             <ProductCard key={product._links.self.href} product={product}/>
         ):
