@@ -2,6 +2,8 @@
 
 import React, {useState, useEffect} from "react";
 import { Link, withRouter } from "react-router-dom";
+import React from "react";
+
 const client = require('./client'); // <3>
 
 const follow = require('./api/follow'); // function to hop multiple links by "rel"

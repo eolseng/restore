@@ -1,6 +1,5 @@
 /* eslint no-undef: "off"*/
 define(function(require) {
-	'use strict';
 
 	const interceptor = require('rest/interceptor');
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route, Switch, Link, Redirect} from 'react-router-dom'
+import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom'
 
 import Header from './header/header';
 import Footer from './footer/footer';
@@ -17,7 +17,6 @@ function notFound() {
 }
 
 function App() {
-
     return (
         <React.StrictMode>
             <BrowserRouter>

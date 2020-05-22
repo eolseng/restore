@@ -4,13 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.7.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <artifactId>restore</artifactId>
+        <groupId>no.repairable</groupId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>no.repairable</groupId>
     <artifactId>backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>restore-backend</name>
@@ -24,15 +22,15 @@
         <java.version>11</java.version>
         <kotlin.version>1.3.72</kotlin.version>
         <kotlin.code.style>official</kotlin.code.style>
+
         <asciidoctor.version>1.5.8</asciidoctor.version>
+        <querydsl.version>4.2.2</querydsl.version>
 
         <!-- Frontend Build Properties -->
         <frontend-src-dir>../frontend</frontend-src-dir>
         <frontend-mavnen-plugin-version>1.10.0</frontend-mavnen-plugin-version>
         <node.version>v12.16.3</node.version>
         <yarn.version>v1.22.4</yarn.version>
-
-
     </properties>
 
     <dependencies>
@@ -74,6 +72,17 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
+        <!-- Querydsl dependencies-->
+        <dependency>
+            <groupId>com.querydsl</groupId>
+            <artifactId>querydsl-apt</artifactId>
+            <version>${querydsl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.querydsl</groupId>
+            <artifactId>querydsl-jpa</artifactId>
+            <version>${querydsl.version}</version>
+        </dependency>
 
         <!-- Database dependencies -->
         <dependency>
@@ -108,19 +117,17 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.10</version>
         </dependency>
-
     </dependencies>
 
     <build>
         <!-- TODO: Fiks disse røde greiene her! -->
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
-         <!-- <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory> -->
+        <!-- <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory> -->
         <plugins>
             <!-- Plugin for asciidoctor used for documentation generation -->
             <plugin>
@@ -149,7 +156,7 @@
                             </resources>
                         </configuration>
                     </execution>
-            </executions>
+                </executions>
                 <dependencies>
                     <dependency>
                         <groupId>org.springframework.restdocs</groupId>
@@ -157,6 +164,24 @@
                         <version>2.0.4.RELEASE</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+
+            <!-- Q-type generation -->
+            <plugin>
+                <groupId>com.mysema.maven</groupId>
+                <artifactId>apt-maven-plugin</artifactId>
+                <version>1.1.3</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>process</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>target/generated-sources/kotlin</outputDirectory>
+                            <processor>com.query.apt.jpa.JPAAnnotationProcessor</processor>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
 
             <plugin>
@@ -181,12 +206,55 @@
                 <configuration>
                     <args>
                         <arg>-Xjsr305=strict</arg>
+                        <arg>-Xjvm-default=enable</arg>
                     </args>
                     <compilerPlugins>
                         <plugin>spring</plugin>
                         <plugin>jpa</plugin>
                     </compilerPlugins>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>kapt</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>kapt</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirs>
+                                <sourceDir>src/main/kotlin</sourceDir>
+                            </sourceDirs>
+                            <annotationProcessorPaths>
+                                <annotationProcessorPath>
+                                    <groupId>com.querydsl</groupId>
+                                    <artifactId>querydsl-apt</artifactId>
+                                    <version>${querydsl.version}</version>
+                                    <classifier>jpa</classifier>
+                                </annotationProcessorPath>
+                            </annotationProcessorPaths>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>test-compile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>test-compile</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirs>
+                                <sourceDir>src/test/kotlin</sourceDir>
+                                <sourceDir>target/generated-sources/kapt/test</sourceDir>
+                            </sourceDirs>
+                        </configuration>
+                    </execution>
+                </executions>
                 <dependencies>
                     <dependency>
                         <groupId>org.jetbrains.kotlin</groupId>
@@ -206,14 +274,12 @@
                 <groupId>com.github.eirslett</groupId>
                 <artifactId>frontend-maven-plugin</artifactId>
                 <version>${frontend-mavnen-plugin-version}</version>
-
                 <configuration>
                     <nodeVersion>${node.version}</nodeVersion>
                     <yarnVersion>${yarn.version}</yarnVersion>
                     <workingDirectory>${frontend-src-dir}</workingDirectory>
                     <installDirectory>${project.build.directory}</installDirectory>
                 </configuration>
-
                 <executions>
                     <execution>
                         <id>install-frontend-tools</id>
@@ -221,7 +287,6 @@
                             <goal>install-node-and-yarn</goal>
                         </goals>
                     </execution>
-
                     <execution>
                         <id>yarn install</id>
                         <goals>
@@ -231,7 +296,6 @@
                             <arguments>install</arguments>
                         </configuration>
                     </execution>
-
                     <execution>
                         <id>build-frontend</id>
                         <phase>prepare-package</phase>
@@ -264,31 +328,11 @@
                                     <directory>${frontend-src-dir}/build</directory>
                                     <filtering>false</filtering>
                                 </resource>
-
                             </resources>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-
-            <!-- For cloud deployment on Heroku -->
-            <plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>2.0.2</version>
-                <configuration>
-                    <appName>repairable-restore</appName>
-                    <includeTarget>false</includeTarget>
-                    <includes>
-                        <include>target/restore-application-exec.jar</include>
-                    </includes>
-                    <processTypes>
-                        <web>java -Dserver.port=$PORT -jar target/restore-application-exec.jar</web>
-                    </processTypes>
-                    <jdkVersion>11</jdkVersion>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
-
 </project>

@@ -19,4 +19,6 @@ spring:
       rest:
         base-path:
                   /api
+    jpa:
+      show-sql: true
 
