@@ -3,6 +3,7 @@
 import React, {useState, useEffect} from "react";
 import { Link, withRouter } from "react-router-dom";
 import {ProductFilter} from "./productFilter";
+import {ProductList} from "./productList";
 
 const client = require('../client'); // <3>
 
@@ -13,6 +14,29 @@ const root = '/api';
 export function ProductFinder(){
     const [products, setProducts] = useState([])
     const [searchState, setSearchState] = useState("")
+
+    const mockProductList = [
+        {
+            "id": 0,
+            "brand": "Helly Hansen",
+            "category": "Jacket",
+            "subCategory": "Sailing Jacket",
+            "name": "Skagen Offshore Jacket",
+            "description": "The best jacket ever.",
+            "imgUrl": "https://www.hellyhansen.com/media/catalog/product/3/3/33907_222-2-main.jpg",
+            "_links": {}
+        },
+        {
+            "id": 1,
+            "brand": "Helly Hansen",
+            "category": "Jacket",
+            "subCategory": "Sailing Jacket",
+            "name": "Salt Flag Jacket",
+            "description": "Almost the best jacket ever.",
+            "imgUrl": "https://www.hellyhansen.com/media/catalog/product/3/3/33909_603-2-main.jpg",
+            "_links": {}
+        }
+    ]
 
     const addSearchParam = (newParam) => {
         if (searchState === ""){
@@ -27,6 +51,7 @@ export function ProductFinder(){
     return (
         <div>
             <ProductFilter searchState={searchState} setSearchState={addSearchParam} ></ProductFilter>
+            <ProductList products={mockProductList}/>
         </div>
     )
 }
