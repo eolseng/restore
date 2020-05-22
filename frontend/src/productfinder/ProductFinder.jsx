@@ -2,85 +2,35 @@
 
 import React, {useState, useEffect} from "react";
 import { Link, withRouter } from "react-router-dom";
+import {ProductFilter} from "./productFilter";
 
-const client = require('./client'); // <3>
+const client = require('../client'); // <3>
 
-const follow = require('./api/follow'); // function to hop multiple links by "rel"
+const follow = require('../api/follow'); // function to hop multiple links by "rel"
 const root = '/api';
 
-
-function ProductList(props){
-    //Current state value, and an update for updating current state value.
-
-
-
-    const productsLi = props.products.embedded ?
-        props.products.embedded.products.map(product =>
-            <ProductCard key={product._links.self.href} product={product}/>
-        ):
-        <div>No products</div>
-
-
-    return (
-        <table>
-            <tbody>
-            <tr>
-                <th>Name</th>
-            </tr>
-                {productsLi}
-            </tbody>
-        </table>
-    )
-
-}
-
-function ProductCard(props){
-    return (
-        <tr>
-            <td>{props.product.name}</td>
-        </tr>
-    )
-}
 
 export function ProductFinder(){
     const [products, setProducts] = useState([])
     const [searchState, setSearchState] = useState("")
 
+    const addSearchParam = (newParam) => {
+        if (searchState === ""){
+            setSearchState("?" + newParam)
+        }
+        else{
+            setSearchState(searchState + "&" + newParam);
+        }
+    }
+
+
     return (
         <div>
-            <ProductFilter searchState={searchState}></ProductFilter>
+            <ProductFilter searchState={searchState} setSearchState={addSearchParam} ></ProductFilter>
         </div>
     )
 }
 
-function ProductFilter(props){
-    return <div>
-        <CategoryFilter></CategoryFilter>
-
-    </div>
-}
-
-function CategoryFilter(props){
-    const [categories, setCategories] = useState([])
-    const [{data, isLoading, isError}, doFetch] = useFetch('categories')
-
-
-
-    const allCategories =
-        data.embedded ?
-            data.embedded.categories.map(function (category, index){
-                return <div>{category.name}</div>
-            })
-            :
-            <div>Categories are loading</div>
-    return (
-        <div>
-            {allCategories}
-        </div>
-    )
-
-
-}
 
 
 export default function useFetch(subPath){
