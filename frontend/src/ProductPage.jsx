@@ -55,6 +55,15 @@ export function ProductPage(){
     )
 }
 
+function ProductFilter(){
+    const [query, setQuery] = useState("")
+    const filters = useFetch('categories')
+
+    
+
+    return (
+}
+
 
 export default function useFetch(subPath){
     const [data, setData] = useState({})
