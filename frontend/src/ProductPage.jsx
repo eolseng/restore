@@ -51,7 +51,9 @@ export class ProductPage extends React.Component{
 
     render() { // <3>
         return (
-            <ProductsList products={this.state.products}/>
+            <div className="content-container col flex-grow-1">
+                <ProductsList products={this.state.products}/>
+            </div>
         )
     }
 }
