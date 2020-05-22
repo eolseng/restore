@@ -54,33 +54,47 @@ export function ProductFinder(){
 }
 
 function ProductFilter(props){
-    const [filters, setFilters] = useState([])
-    const categoryDto = useFetch('categories',filters)
+    return <div>
+        <CategoryFilter></CategoryFilter>
+
+    </div>
+}
+
+function CategoryFilter(props){
+    const [categories, setCategories] = useState([])
+    const [{data, isLoading, isError}, doFetch] = useFetch('categories')
 
 
-    const categories =
-        categoryDto.embedded ?
-            categoryDto.embedded.categories.map(function (category, index){
+
+    const allCategories =
+        data.embedded ?
+            data.embedded.categories.map(function (category, index){
                 return <div>{category.name}</div>
             })
             :
             <div>Categories are loading</div>
     return (
         <div>
-            {categories}
+            {allCategories}
         </div>
     )
+
+
 }
 
 
-export default function useFetch(subPath, filter){
+export default function useFetch(subPath){
     const [data, setData] = useState({})
+    const [relUrl, setRelUrl] = useState(subPath)
+    const [isError, setIsError] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
     let schema = {}
+
 
 
     useEffect(() =>{
         loadFromServer(2) //TOdo: DOn't hardcore 2.
-        },[filter]  //Re-fetches when searchState is changed.
+        },[relUrl]  //Re-fetches when url is changed is changed.
     )
 
     const loadFromServer = (pageSize) =>  {
@@ -113,7 +127,7 @@ export default function useFetch(subPath, filter){
         });
     }
 
-    return data;
+    return [{data, isLoading, isError},setRelUrl ];
 }
 
 
