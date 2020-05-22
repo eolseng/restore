@@ -20,6 +20,6 @@ interface BrandRepository : JpaRepository<Brand, Long>,
         bindings.bind(String::class.java).first { path: StringPath, value: String? -> path.containsIgnoreCase(value) }
     }
 
-    fun findBrandByName(name: String): Brand
+    fun findBrandByName(name: String): Brand?
 
 }

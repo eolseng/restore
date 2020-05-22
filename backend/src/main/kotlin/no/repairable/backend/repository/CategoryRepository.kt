@@ -20,5 +20,5 @@ interface CategoryRepository : JpaRepository<Category, Long>,
         bindings.bind(String::class.java).first { path: StringPath, value: String? -> path.containsIgnoreCase(value) }
     }
 
-    fun findCategoriesByName(name : String) : Category
+    fun findCategoryByName(name : String) : Category?
 }
