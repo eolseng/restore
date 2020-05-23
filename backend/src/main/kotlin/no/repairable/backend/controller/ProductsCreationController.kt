@@ -3,12 +3,14 @@ package no.repairable.backend.controller
 import no.repairable.backend.entity.*
 import no.repairable.backend.repository.*
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.data.rest.webmvc.RepositoryRestController
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
 
 
-@RepositoryRestController
+@RestController
+@RequestMapping("api/insert")
 class ProductsCreationController @Autowired constructor(
         private val productRepository: ProductRepository,
         private val genderRepository: GenderRepository,
@@ -22,13 +24,15 @@ class ProductsCreationController @Autowired constructor(
     val categories: HashMap<String, Category> = HashMap()
     val subCategories: HashMap<String, SubCategory> = HashMap()
 
-    @PostMapping("/api/products")
-    private fun insertProducts(@RequestBody products: List<ProductPostClass>) {
+
+
+   @PostMapping("/products")
+    fun insertProducts(@RequestBody products: ProductsPost) {
 
         val productList = mutableListOf<Product>()
 
-        for (product in products) {
-
+        for (product in products.productCollection) {
+            println(product.name)
             val brand = getBrand(product)
             // Skip rest if product already exists
             if (productRepository.existsByBrandAndName(brand, product.name)) continue
@@ -48,13 +52,18 @@ class ProductsCreationController @Autowired constructor(
         productRepository.saveAll(productList)
     }
 
+
+    data class ProductsPost(
+            val productCollection: List<ProductPostClass>
+    )
+
     data class ProductPostClass(
-            val name: String,
-            val description: String,
+            val category: String,
+            val subCategory: String,
             val gender: String,
             val brand: String,
-            val category: String,
-            val subCategory: String
+            val description: String,
+            val name: String
     )
 
     private fun getGender(product: ProductPostClass): Gender {
@@ -109,3 +118,4 @@ class ProductsCreationController @Autowired constructor(
         return subCategory
     }
 }
+

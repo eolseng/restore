@@ -54,7 +54,7 @@ interface ExcerptProductProjection {
         @Value("#{target.subCategory.name}")
         fun getSubCategory(): String
         @Value("#{target.gender.genderType}")
-        fun getGender(): Char
+        fun getGender(): String
         fun getSizes(): List<Size>
 
 }
