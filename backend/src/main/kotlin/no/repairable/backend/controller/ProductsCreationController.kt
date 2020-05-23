@@ -32,7 +32,6 @@ class ProductsCreationController @Autowired constructor(
         val productList = mutableListOf<Product>()
 
         for (product in products.productCollection) {
-            println(product.name)
             val brand = getBrand(product)
             // Skip rest if product already exists
             if (productRepository.existsByBrandAndName(brand, product.name)) continue
@@ -118,4 +117,3 @@ class ProductsCreationController @Autowired constructor(
         return subCategory
     }
 }
-
