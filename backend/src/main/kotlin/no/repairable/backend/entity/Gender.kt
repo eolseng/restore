@@ -17,7 +17,7 @@ data class Gender(
         var genderType: Char? = null,
 
         @OneToMany(mappedBy = "gender", cascade = [(CascadeType.ALL)])
-        val gender: List<Product> = mutableListOf()
+        val products: List<Product> = mutableListOf()
 )
 
 @Projection(
