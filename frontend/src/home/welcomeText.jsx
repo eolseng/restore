@@ -15,7 +15,7 @@ function WelcomeText() {
                     <p className="text">Registrer dine plagg og motta gavekort hos våre samarbeidspartnere.
                         Spar tiden du ellers ville brukt på å undersøke priser, beskrive dine plagg og avtale møtested
                         med kjøper. Vi gjør jobben for deg!</p>
-                    <Link to=""> {/* link til filter siden*/}
+                    <Link to="./filter">
                         <button className="cta-button">Kom igang nå</button>
                     </Link>
                 </div>

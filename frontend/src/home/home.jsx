@@ -1,7 +1,7 @@
 import React from "react";
 
-import WelcomeText from "./main-content-pages/welcomeText";
-import Flow from "./main-content-pages/flow"
+import WelcomeText from "./welcomeText";
+import Flow from "./flow"
 
 function Home() {
 

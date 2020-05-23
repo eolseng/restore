@@ -37,4 +37,12 @@
     color: #168A9E;
 }
 
+.progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
 

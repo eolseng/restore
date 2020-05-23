@@ -4,8 +4,13 @@ import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom'
 
 import Header from './header/header';
 import Footer from './footer/footer';
-import Home from "./home";
+import Home from "./home/home";
 import {ProductPage} from "./ProductPage";
+import Profile from "./profile/profile";
+import Filter from "./filter/filter";
+import Condition from "./condition/condition";
+import Delivery from "./delivery/delivery";
+import Confirmation from "./confirmation/confirmation";
 
 function notFound() {
     return (
@@ -27,7 +32,21 @@ function App() {
                         <Route exact path={"/"}>
                             {Home}
                         </Route>
-                        {
+                        <Route exact path={"/profile"}>
+                            {Profile}
+                        </Route>
+                        <Route exact path={"/filter"}>
+                            {Filter}
+                        </Route>
+                        <Route exact path={"/condition"}>
+                            {Condition}
+                        </Route>
+                        <Route exact path={"/delivery"}>
+                            {Delivery}
+                        </Route>
+                        <Route exact path={"/confirmation"}>
+                            {Confirmation}
+                        </Route>
                         <Route exact path="/product"
                                render={(props) => (<ProductPage{...props}/>)}/> }
                         <Route path="/404" component={notFound} />
