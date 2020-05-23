@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 /** CSS Imports */
 import "../../css/layout/footer.css";
@@ -44,13 +45,13 @@ function Footer() {
         <div className='footer-wrapper'>
           <div className='socialMediaIcons'>
             <Link to=''>
-              <i className='fa fa-facebook-square bigFont'></i>
+              <FontAwesomeIcon className='' icon={["fab", "facebook-square"]} />
             </Link>
             <Link to=''>
-              <i className='fa fa-twitter-square bigFont'></i>
+              <FontAwesomeIcon className='' icon={["fab", "twitter-square"]} />
             </Link>
             <Link to=''>
-              <i className='fa fa-linkedin bigFont'></i>
+              <FontAwesomeIcon className='' icon={["fab", "linkedin"]} />
             </Link>
           </div>
         </div>

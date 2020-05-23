@@ -23,11 +23,22 @@ import {
   faLaptop,
   faSave,
   faEdit,
-  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
+import { faFacebookSquare, faTwitterSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 /** Font Awesome Icon Library */
-library.add(faBars, faTimes, faLaptop, faSave, faEdit, faUserCircle);
+library.add(
+  faBars,
+  faTimes,
+  faLaptop,
+  faSave,
+  faEdit,
+  faUserCircle,
+  faFacebookSquare,
+  faTwitterSquare,
+  faLinkedin
+);
 
 function notFound() {
   return (

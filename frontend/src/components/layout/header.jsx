@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import logo from "../../img/logo/restore.png";
 
@@ -70,15 +71,18 @@ function Header() {
       </div>
 
       <div className='header-right col-3'>
-        <div /*onClick="showMenu()"*/ id='menu-button' className='link' style={{ color: "black" }}>
-          &#9776;
-        </div>
+        <FontAwesomeIcon
+          id='menu-button'
+          className='link'
+          icon={["fas", "bars"]}
+          /*onClick="showMenu()"*/
+        />
         {/* Må
                 legge inn funksjonalitet på burger ikonet hvis vi skal ha det med videre. Må også legge inn funkjonalitet
                 på at den er display: none og at den kommer frem når den skal*/}
         {/* Icon to profile page*/}
         <Link to='./profile' className='link'>
-          <i className='far fa-user-circle' />
+          <FontAwesomeIcon className='' icon={["far", "user-circle"]} />
         </Link>
         <Link to='' className='link'>
           Logg inn / Registrer
