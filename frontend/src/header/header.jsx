@@ -1,108 +1,16 @@
 import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 
+import Progress from "./progressbar";
 import logo from "../img/logo/restore.png";
 
 /* To only show the progressbar in the header on certain the pages */
 
-function Progress({ progress, index }) {
-    const progressShow = window.location.pathname;
-    let showProgressBar;
 
-    if(progressShow === "/filter") {
-        if(progress.id === 1) {
-            showProgressBar =
-                <div>
-                    <div>{progress.progressbar}</div>
-                </div>
-        } else {
-            showProgressBar =
-                <div>
-                    <div style={{display: "none"} }>{progress.progressbar}</div>
-                </div>
-        }
-    } else if(progressShow === "/condition") {
-        if(progress.id === 2) {
-            showProgressBar =
-                <div>
-                    <div>{progress.progressbar}</div>
-                </div>
-        } else {
-            showProgressBar =
-                <div>
-                    <div style={{display: "none"} }>{progress.progressbar}</div>
-                </div>
-        }
-    } else if(progressShow === "/delivery") {
-        if (progress.id === 3) {
-            showProgressBar =
-                <div>
-                    <div>{progress.progressbar}</div>
-                </div>
-        } else {
-            showProgressBar =
-                <div>
-                    <div style={{display: "none"} }>{progress.progressbar}</div>
-                </div>
-        }
-    }else if(progressShow === "/confirmation") {
-        if (progress.id === 4) {
-            showProgressBar =
-                <div>
-                    <div>{progress.progressbar}</div>
-                </div>
-        } else {
-            showProgressBar =
-                <div>
-                    <div style={{display: "none"} }>{progress.progressbar}</div>
-                </div>
-        }
-    }
-
-
-    return (
-        <div className="progress-bar-container">
-
-            {progressShow === "/filter" || progressShow === "/condition" || progressShow === "/delivery"
-                || progressShow === "/confirmation"
-                ? <div>
-                    <div>{progress.id + progress.text}</div>
-                    {showProgressBar}
-                    {/*
-                    <div>{progress.progressbar}</div>
-                    */}
-                </div>
-                : <div/>
-                }
-
-            {/*
-            {progressShow === "/filter" ?
-                progress.progressbar :
-                progress.progressbarNone
-            }
-
-            {progressShow === "/condition" ?
-                progress.progressbar :
-                progress.progressbarNone
-            }
-
-            {progressShow === "/delivery" ?
-                progress.progressbar :
-                progress.progressbarNone
-            }
-
-            {progressShow === "/confirmation" ?
-                progress.progressbar :
-                progress.progressbarNone
-            }
-*/}
-        </div>
-    );
-}
 
 function Header() {
 
-    const [progressState, setProgressState] = useState([
+    const [progressState] = useState([
         {
             id: 1,
             text: ". Finn produkt",
@@ -144,7 +52,6 @@ function Header() {
                     <Progress key={progress.id} index={index} progress={progress} />
                 ))}
             </div>
-
 
             <div className="header-right col-3">
                 <div onClick="showMenu()" id="menu-button" className="link" style={{color: 'black'}}>&#9776;</div>{/* Må
