@@ -18,7 +18,7 @@ data class SubCategory(
         var name: String? = "",
 
         @OneToMany(mappedBy = "subCategory",cascade = [(CascadeType.ALL)])
-        val subCategory: List<Product> = mutableListOf()
+        val products: List<Product> = mutableListOf()
 )
 
 @Projection(

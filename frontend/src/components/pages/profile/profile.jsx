@@ -2,7 +2,7 @@ import React from "react";
 import "./profile-midlertidig.css";
 import {Link} from "react-router-dom";
 
-import profilePicture from "../img/profilePicture/profile-picture.jpg"
+import profilePicture from "../../../img/profilePicture/profile-picture.jpg"
 
 function Profile() {
     // Tingene på denne siden bør trekkes ut til egne komponenter, men det får gjøres i neste sprint

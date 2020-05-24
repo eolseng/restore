@@ -19,4 +19,6 @@ interface CategoryRepository : JpaRepository<Category, Long>,
     override fun customize(bindings: QuerydslBindings, root: QCategory) {
         bindings.bind(String::class.java).first { path: StringPath, value: String? -> path.containsIgnoreCase(value) }
     }
+
+    fun findCategoryByName(name : String) : Category?
 }

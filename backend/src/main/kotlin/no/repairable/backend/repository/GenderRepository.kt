@@ -5,6 +5,7 @@ import no.repairable.backend.entity.ExcerptGenderProjection
 import no.repairable.backend.entity.Gender
 import no.repairable.backend.entity.QGender
 import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.data.jpa.repository.Query
 import org.springframework.data.querydsl.QuerydslPredicateExecutor
 import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer
 import org.springframework.data.querydsl.binding.QuerydslBindings
@@ -19,5 +20,7 @@ interface GenderRepository : JpaRepository<Gender, Long>,
     override fun customize(bindings: QuerydslBindings, root: QGender) {
         bindings.bind(String::class.java).first { path: StringPath, value: String? -> path.containsIgnoreCase(value) }
     }
+
+    fun findGenderByGenderType(inputGender: String): Gender?
 
 }
