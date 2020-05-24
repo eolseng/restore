@@ -14,10 +14,10 @@ data class Gender(
 
        // @NotNull
         @Column(name = "gender")
-        var genderType: Char? = null,
+        var genderType: String? = null,
 
         @OneToMany(mappedBy = "gender", cascade = [(CascadeType.ALL)])
-        val gender: List<Product> = mutableListOf()
+        val products: List<Product> = mutableListOf()
 )
 
 @Projection(
