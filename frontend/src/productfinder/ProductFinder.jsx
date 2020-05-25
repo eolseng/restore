@@ -32,7 +32,7 @@ export function ProductFinder(){
 
     return (
         <div>
-            <ProductFilter searchState={searchState} addSearchParam={addSearchParam}></ProductFilter>
+            <ProductFilter className="product-filter-wrapper" searchState={searchState} addSearchParam={addSearchParam}></ProductFilter>
             <ProductList products={data}/>
         </div>
     )

@@ -12,16 +12,27 @@ export function CategoryFilter(props){
     }
 
 
-    const allFilters =
-        data.embedded ?
-            data.embedded[subPath].map(function (types, index){
-                return <div key={index} onClick={() => (selectFilter(types.name))}>{types.name}</div>
-            })
-            :
-            <div>{filterName} is loading...</div>
+    const renderFilters = () => {
+        let filters =
+                data.embedded ?
+                     data.embedded[subPath].map(function (types, index){
+                         return (<div>
+                                    <label>{types.name}</label>
+                                     <input type={"checkbox"} name={types.name} className="product-filter-alt" key={index} onClick={() => (selectFilter(types.name))}/>
+                                 </div>)
+                     })
+                    :
+                     <div>{filterName} is loading...</div>
+        return filters
+    }
+
     return (
         <div>
-            {allFilters}
+            <form>
+                <label>{filterName}
+                    {renderFilters()}
+                </label>
+            </form>
         </div>
     )
 }
