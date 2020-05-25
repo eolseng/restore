@@ -1,14 +1,23 @@
-import React from "react";
-import {CategoryFilter} from "./categoryFilter";
+import React from 'react'
+import { CategoryFilter } from './categoryFilter'
 
-export function ProductFilter(props){
-    return <div>
-        <div>
-            <CategoryFilter className="product-filter-type" addSearchParam={props.addSearchParam} subPath={"categories"} filterName={"category"} ></CategoryFilter>
+import '../css/pages/product-finder/product-filter.css'
+
+export function ProductFilter(props) {
+    return (
+        <div className='product-filter-wrapper col-sm-3'>
+            <CategoryFilter
+                className='product-filter-type'
+                addSearchParam={props.addSearchParam}
+                subPath={'categories'}
+                filterName={'category'}
+            ></CategoryFilter>
+            <CategoryFilter
+                className='product-filter-type'
+                addSearchParam={props.addSearchParam}
+                subPath={'brands'}
+                filterName={'brand'}
+            ></CategoryFilter>
         </div>
-        <br/>
-        <div>
-            <CategoryFilter className="product-filter-type" addSearchParam={props.addSearchParam} subPath={"brands"} filterName={"brand"} ></CategoryFilter>
-        </div>
-    </div>
+    )
 }

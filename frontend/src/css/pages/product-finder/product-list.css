@@ -1,0 +1,30 @@
+.product-list-wrapper {
+    padding: 0 2rem;
+}
+
+.product-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.product-card {
+    padding: 0 1rem 1rem;
+}
+
+.product-card:hover {
+    box-shadow: 0px 0px 4px 0px #00000030;
+}
+
+.product-card-image {}
+
+.product-card-brand {
+    padding: 1rem 0 0.5rem;
+    font-weight: bold;
+    border-top: 1px solid lightgray;
+}
+
+.product-card-name {}
+
+.product-card-color {}
