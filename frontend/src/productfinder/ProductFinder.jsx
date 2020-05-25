@@ -19,12 +19,12 @@ export function ProductFinder(){
 
     const addSearchParam = (searchVal, val) => {
         //Copy values of previous search state
-        let tmpSearchState = searchState;
+        let tmpSearchState = {...searchState};
         tmpSearchState[searchVal] = val;
 
         //Todo: Merge setSearchState and setParams.
         //Update search state
-        setSearchState({tmpSearchState})
+        setSearchState(tmpSearchState)
 
         //Invoke a new fetch to API
         setParams([tmpSearchState])
