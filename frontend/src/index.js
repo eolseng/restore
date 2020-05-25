@@ -6,7 +6,7 @@ import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
 import Home from "./components/pages/home/home";
-import { ProductPage } from "./ProductPage";
+import { ProductFinder } from "./productfinder/ProductFinder";
 import Profile from "./components/pages/profile/profile";
 import Filter from "./components/pages/filter/filter";
 import Condition from "./components/pages/condition/condition";
@@ -76,7 +76,7 @@ function App() {
             <Route exact path={"/confirmation"}>
               {Confirmation}
             </Route>
-            <Route exact path='/product' render={(props) => <ProductPage {...props} />} /> }
+            <Route exact path='/product' render={(props) => <ProductFinder {...props} />} /> }
             <Route path='/404' component={notFound} />
             <Redirect to='/404' />
           </Switch>
