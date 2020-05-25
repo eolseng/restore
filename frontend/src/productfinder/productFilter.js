@@ -3,6 +3,11 @@ import {CategoryFilter} from "./categoryFilter";
 
 export function ProductFilter(props){
     return <div>
-        <CategoryFilter addSearchParam={props.addSearchParam}></CategoryFilter>
+        <div>
+            <CategoryFilter addSearchParam={props.addSearchParam} subPath={"categories"} filterName={"category"} ></CategoryFilter>
+        </div>
+        <div>
+            <CategoryFilter addSearchParam={props.addSearchParam} subPath={"brands"} filterName={"brand"} ></CategoryFilter>
+        </div>
     </div>
 }

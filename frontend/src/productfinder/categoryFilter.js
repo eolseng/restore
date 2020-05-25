@@ -3,25 +3,25 @@ import React from "react";
 import useFetch from "./ProductFinder";
 
 export function CategoryFilter(props){
-    const {addSearchParam } = props;
-    const [{data, isLoading, isError}, doFetch] = useFetch('categories')
+    const {addSearchParam, subPath, filterName} = props;
+    const [{data, isLoading, isError}, doFetch] = useFetch(subPath)
 
 
-    const selectCategory = (value) => {
-        addSearchParam("category.name", value)
+    const selectFilter = (value) => {
+        addSearchParam(filterName + ".name", value)
     }
 
 
-    const allCategories =
+    const allFilters =
         data.embedded ?
-            data.embedded.categories.map(function (category, index){
-                return <div key={index} onClick={() => (selectCategory(category.name))}>{category.name}</div>
+            data.embedded[subPath].map(function (types, index){
+                return <div key={index} onClick={() => (selectFilter(types.name))}>{types.name}</div>
             })
             :
-            <div>Categories are loading</div>
+            <div>{filterName} is loading...</div>
     return (
         <div>
-            {allCategories}
+            {allFilters}
         </div>
     )
 }

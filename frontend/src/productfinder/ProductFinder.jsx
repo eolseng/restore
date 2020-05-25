@@ -22,7 +22,7 @@ export function ProductFinder(){
         let tmpSearchState = searchState;
         tmpSearchState[searchVal] = val;
 
-        //Todo: Merge setState and setParams.
+        //Todo: Merge setSearchState and setParams.
         //Update search state
         setSearchState({tmpSearchState})
 
