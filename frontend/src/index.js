@@ -11,6 +11,7 @@ import Filter from "./components/pages/filter/filter";
 import Condition from "./components/pages/condition/condition";
 import Delivery from "./components/pages/delivery/delivery";
 import Confirmation from "./components/pages/confirmation/confirmation";
+import Restore from "./components/pages/restore/Restore";
 
 /** CSS Imports */
 import "./css/style.css";
@@ -74,6 +75,9 @@ function App() {
             </Route>
             <Route exact path={"/confirmation"}>
               {Confirmation}
+            </Route>
+            <Route exact path={"/restore"}>
+              {Restore}
             </Route>
             <Route exact path='/product' render={(props) => <ProductPage {...props} />} /> }
             <Route path='/404' component={notFound} />
