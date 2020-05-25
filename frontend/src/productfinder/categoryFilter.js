@@ -3,14 +3,14 @@ import React from "react";
 import useFetch from "./ProductFinder";
 
 export function CategoryFilter(props){
-    const [categories, setCategories] = useState([])
-    const [{data, isLoading, isError}, doFetch] = useFetch('categories', "")
+    const {addSearchParam } = props;
+    const [{data, isLoading, isError}, doFetch] = useFetch('categories')
 
 
     const selectCategory = (value) => {
-        //Todo: don't hardcode category
-        props.addSearchParam("category.name", value)
+        addSearchParam("category.name", value)
     }
+
 
     const allCategories =
         data.embedded ?

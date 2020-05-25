@@ -13,50 +13,26 @@ const root = '/api';
 
 export function ProductFinder(){
     const [searchState, setSearchState] = useState({})
-    const [{data, isLoading, isError}, setParams] = useFetch("products", searchState)
+    const [{data, isLoading, isError}, setParams] = useFetch("products")
 
-    /*
-    const mockProductList = [
-        {
-            "id": 0,
-            "brand": "Helly Hansen",
-            "category": "Jacket",
-            "subCategory": "Sailing Jacket",
-            "name": "Skagen Offshore Jacket",
-            "description": "The best jacket ever.",
-            "imgUrl": "https://www.hellyhansen.com/media/catalog/product/3/3/33907_222-2-main.jpg",
-            "_links": {}
-        },
-        {
-            "id": 1,
-            "brand": "Helly Hansen",
-            "category": "Jacket",
-            "subCategory": "Sailing Jacket",
-            "name": "Salt Flag Jacket",
-            "description": "Almost the best jacket ever.",
-            "imgUrl": "https://www.hellyhansen.com/media/catalog/product/3/3/33909_603-2-main.jpg",
-            "_links": {}
-        }
-    ]
-    */
+
 
     const addSearchParam = (searchVal, val) => {
-        //Todo: Only allowing one param atm
-
         //Copy values of previous search state
         let tmpSearchState = searchState;
         tmpSearchState[searchVal] = val;
 
-        //Todo: Merge the 2 follow set's?
-        setSearchState(tmpSearchState)
+        //Todo: Merge setState and setParams.
+        //Update search state
+        setSearchState({tmpSearchState})
 
         //Invoke a new fetch to API
-        setParams(tmpSearchState)
+        setParams([tmpSearchState])
     }
 
     return (
         <div>
-            <ProductFilter searchState={searchState} addSearchParam={addSearchParam} ></ProductFilter>
+            <ProductFilter searchState={searchState} addSearchParam={addSearchParam}></ProductFilter>
             <ProductList products={data}/>
         </div>
     )
@@ -74,11 +50,8 @@ export default function useFetch(subPath){
 
 
 
-
-
     useEffect(() =>{
-        //TOdo: Adding size
-
+        //Todo: add page param.
 
         loadFromServer()
         },[params]  //Re-fetches when url is changed is changed.
@@ -90,7 +63,7 @@ export default function useFetch(subPath){
             , [
                 //Array of API relations to navigate through
                 //(In this case, looks in _links for relation (rel) 'products, finds it HREF and navigates too it.
-                {rel: subPath, params: params}
+                {rel: subPath, params: params[0]}
             ]
         ).then(productCollection => {
             //Found the API path of Products. Send request to get all products.
@@ -117,5 +90,31 @@ export default function useFetch(subPath){
     return [{data, isLoading, isError}, setParams];
 }
 
+
+
+/*
+ const mockProductList = [
+     {
+         "id": 0,
+         "brand": "Helly Hansen",
+         "category": "Jacket",
+         "subCategory": "Sailing Jacket",
+         "name": "Skagen Offshore Jacket",
+         "description": "The best jacket ever.",
+         "imgUrl": "https://www.hellyhansen.com/media/catalog/product/3/3/33907_222-2-main.jpg",
+         "_links": {}
+     },
+     {
+         "id": 1,
+         "brand": "Helly Hansen",
+         "category": "Jacket",
+         "subCategory": "Sailing Jacket",
+         "name": "Salt Flag Jacket",
+         "description": "Almost the best jacket ever.",
+         "imgUrl": "https://www.hellyhansen.com/media/catalog/product/3/3/33909_603-2-main.jpg",
+         "_links": {}
+     }
+ ]
+ */
 
 
