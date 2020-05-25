@@ -24,6 +24,10 @@ function RestoreProgress() {
     return (
         <div className={"restore-progress"}>
             <div className={"restore-progress-items"}>
+                <div className={"restore-progress-navigation-button restore-progress-navigation-button-prev"}
+                     onClick={prevStep}>
+                    Previous Step
+                </div>
                 <div className={"restore-progress-item " + isPastStep(1) + isActiveStep(1)}
                      onClick={goToStep(1)}>
                     1. ProductFinder
@@ -39,12 +43,6 @@ function RestoreProgress() {
                 <div className={"restore-progress-item " + isPastStep(4) + isActiveStep(4)}
                      onClick={goToStep(4)}>
                     4. OrderConfirmation
-                </div>
-            </div>
-            <div className={"restore-progress-navigation"}>
-                <div className={"restore-progress-navigation-button restore-progress-navigation-button-next"}
-                     onClick={prevStep}>
-                    Previous Step
                 </div>
                 <div className={"restore-progress-navigation-button restore-progress-navigation-button-next"}
                      onClick={nextStep}>

@@ -7,6 +7,9 @@ import DeliverySelector from "./DeliverySelector";
 import OrderConfirmation from "./OrderConfirmation";
 import RestoreProgress from "./RestoreProgress";
 
+/** CSS Imports */
+import "../../../css/pages/restore/restore.css";
+
 function Restore() {
 
     const {state, dispatch} = useContext(RestoreContext);
