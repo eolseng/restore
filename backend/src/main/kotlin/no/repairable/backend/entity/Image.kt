@@ -1,6 +1,14 @@
 package no.repairable.backend.entity
 
-class Image {
+import javax.persistence.Column
+import javax.persistence.GeneratedValue
+import javax.persistence.Id
 
-    val imgUrl: String? = null
-}
+class Image(
+        @Id
+        @GeneratedValue
+        @Column(name = "id")
+        val id: Long? = null,
+        val imgUrl: String? = null
+)
+

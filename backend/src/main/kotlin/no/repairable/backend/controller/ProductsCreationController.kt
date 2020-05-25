@@ -1,9 +1,13 @@
 package no.repairable.backend.controller
 
+
+import org.springframework.beans.factory.annotation.Value
 import com.google.cloud.storage.StorageOptions
+
 import no.repairable.backend.entity.*
 import no.repairable.backend.repository.*
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.core.io.Resource
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -18,7 +22,8 @@ class ProductsCreationController @Autowired constructor(
         private val brandRepository: BrandRepository,
         private val categoryRepository: CategoryRepository,
         private val subCategoryRepository: SubCategoryRepository,
-        private val colorRepository: ColorRepository
+        private val colorRepository: ColorRepository,
+        private val imageRepository: ImageRepository
 ) {
 
     val genders: HashMap<String, Gender> = HashMap()
@@ -26,12 +31,16 @@ class ProductsCreationController @Autowired constructor(
     val categories: HashMap<String, Category> = HashMap()
     val subCategories: HashMap<String, SubCategory> = HashMap()
     val colors: HashMap<String, Color> = HashMap()
+    val images: HashMap<String, Image> = HashMap()
 
+    @Value("gs://spring-bucket-trulsistre/my-file.txt")
+    lateinit var gcsFile: Resource
 
     @PostMapping("/products")
     fun insertProducts(@RequestBody products: ProductsPost) {
 
         val productList = mutableListOf<Product>()
+
 
         val storage = StorageOptions.getDefaultInstance().service
 
@@ -45,6 +54,7 @@ class ProductsCreationController @Autowired constructor(
             val category = getCategory(product)
             val subCategory = getSubCategory(product)
             val color = getColor(product, brand)
+            val image = getImage(product)
             val newProduct = Product(
                     name = product.name,
                     description = product.description,
@@ -52,13 +62,15 @@ class ProductsCreationController @Autowired constructor(
                     category = category,
                     subCategory = subCategory,
                     gender = gender,
-                    color = color
+                    color = color,
+                    image = image
             )
 
             productList.add(newProduct)
         }
         productRepository.saveAll(productList)
     }
+
 
     data class ProductsPost(
             val productCollection: List<ProductPostClass>
@@ -71,8 +83,22 @@ class ProductsCreationController @Autowired constructor(
             val brand: String,
             val description: String,
             val name: String,
-            val color: String
+            val color: String,
+            val image: String
     )
+
+    private fun getImage(product: ProductPostClass): Image {
+        var image = images[product.image]
+        if (image == null) {
+            image = imageRepository.findByImgUrl(product.image)
+            if (image == null) {
+                image = Image(imgUrl = product.image)
+                imageRepository.save(image)
+            }
+            images[product.color] = image
+        }
+        return image
+    }
 
     private fun getColor(product: ProductPostClass, brand: Brand): Color {
         var color = colors[product.color]
