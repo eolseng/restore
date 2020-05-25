@@ -1,5 +1,6 @@
 import React from "react";
 
+/* component imports */
 import WelcomeText from "./welcomeText";
 import Flow from "./flow";
 
