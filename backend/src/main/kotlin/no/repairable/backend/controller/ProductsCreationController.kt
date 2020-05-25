@@ -1,8 +1,5 @@
 package no.repairable.backend.controller
 
-import com.google.api.client.auth.oauth2.Credential
-import com.google.auth.Credentials
-import com.google.auth.oauth2.GoogleCredentials
 import com.google.cloud.storage.StorageOptions
 import no.repairable.backend.entity.*
 import no.repairable.backend.repository.*
@@ -20,17 +17,18 @@ class ProductsCreationController @Autowired constructor(
         private val genderRepository: GenderRepository,
         private val brandRepository: BrandRepository,
         private val categoryRepository: CategoryRepository,
-        private val subCategoryRepository: SubCategoryRepository
+        private val subCategoryRepository: SubCategoryRepository,
+        private val colorRepository: ColorRepository
 ) {
 
     val genders: HashMap<String, Gender> = HashMap()
     val brands: HashMap<String, Brand> = HashMap()
     val categories: HashMap<String, Category> = HashMap()
     val subCategories: HashMap<String, SubCategory> = HashMap()
+    val colors: HashMap<String, Color> = HashMap()
 
 
-
-   @PostMapping("/products")
+    @PostMapping("/products")
     fun insertProducts(@RequestBody products: ProductsPost) {
 
         val productList = mutableListOf<Product>()
@@ -38,25 +36,29 @@ class ProductsCreationController @Autowired constructor(
         val storage = StorageOptions.getDefaultInstance().service
 
         for (product in products.productCollection) {
+
             val brand = getBrand(product)
+
             // Skip rest if product already exists
             if (productRepository.existsByBrandAndName(brand, product.name)) continue
             val gender = getGender(product)
             val category = getCategory(product)
             val subCategory = getSubCategory(product)
+            val color = getColor(product, brand)
             val newProduct = Product(
                     name = product.name,
                     description = product.description,
                     brand = brand,
                     category = category,
                     subCategory = subCategory,
-                    gender = gender
+                    gender = gender,
+                    color = color
             )
+
             productList.add(newProduct)
         }
         productRepository.saveAll(productList)
     }
-
 
     data class ProductsPost(
             val productCollection: List<ProductPostClass>
@@ -68,8 +70,22 @@ class ProductsCreationController @Autowired constructor(
             val gender: String,
             val brand: String,
             val description: String,
-            val name: String
+            val name: String,
+            val color: String
     )
+
+    private fun getColor(product: ProductPostClass, brand: Brand): Color {
+        var color = colors[product.color]
+        if (color == null) {
+            color = colorRepository.findByBrandAndName(brand, product.name)
+            if (color == null) {
+                color = Color(name = product.color, brand = brand)
+                colorRepository.save(color)
+            }
+            colors[product.color] = color
+        }
+        return color
+    }
 
     private fun getGender(product: ProductPostClass): Gender {
         var gender = genders[product.gender]
