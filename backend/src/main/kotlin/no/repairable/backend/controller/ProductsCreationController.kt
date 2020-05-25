@@ -1,5 +1,9 @@
 package no.repairable.backend.controller
 
+import com.google.api.client.auth.oauth2.Credential
+import com.google.auth.Credentials
+import com.google.auth.oauth2.GoogleCredentials
+import com.google.cloud.storage.StorageOptions
 import no.repairable.backend.entity.*
 import no.repairable.backend.repository.*
 import org.springframework.beans.factory.annotation.Autowired
@@ -30,6 +34,8 @@ class ProductsCreationController @Autowired constructor(
     fun insertProducts(@RequestBody products: ProductsPost) {
 
         val productList = mutableListOf<Product>()
+
+        val storage = StorageOptions.getDefaultInstance().service
 
         for (product in products.productCollection) {
             val brand = getBrand(product)
