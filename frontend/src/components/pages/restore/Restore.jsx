@@ -1,34 +1,35 @@
-import React, {createContext, useContext, useEffect} from "react";
+import React, {useContext, useEffect} from "react";
 
-import {RestoreContext, RestoreContextProvider} from "./RestoreContext";
+import {RestoreContext} from "./RestoreContext";
+import BrandSelector from "./BrandSelector";
+import ProductCondition from "./ProductCondition";
+import DeliverySelector from "./DeliverySelector";
+import OrderConfirmation from "./OrderConfirmation";
 
 function Restore() {
 
-    return (
-        <RestoreContextProvider>
-            <ProductCondition/>
-        </RestoreContextProvider>
-    )
-}
-
-function ProductCondition() {
-
     const {state, dispatch} = useContext(RestoreContext);
 
-    const nextStep = () => dispatch({type: "incrementStep"});
-    const prevStep = () => dispatch({type: "decrementStep"});
-    const setBrandId = brandId => () => dispatch({type: "setBrandId", payload: brandId})
+    const maxSteps = 4;
+    useEffect(() => {
+        dispatch({type: "setMaxSteps", payload: 4})
+    }, [maxSteps]);
 
-    return (
-        <div>
-            <p>Step: {state.step}</p>
-            <p>Brand ID: {state.brandId}</p>
-            <button onClick={prevStep}>Previous Step!</button>
-            <button onClick={nextStep}>Next Step!</button>
-            <button onClick={setBrandId(1)}>Set Brand ID!</button>
 
-        </div>
-    )
+    switch (state.step) {
+        case 0:
+            return <BrandSelector/>
+        case 1:
+            return <ProductCondition/>
+        case 2:
+            return <ProductCondition/>
+        case 3:
+            return <DeliverySelector/>
+        case 4:
+            return <OrderConfirmation/>
+        default:
+            new Error("RestoreContext: Step not defined")
+    }
 }
 
 export default Restore;
