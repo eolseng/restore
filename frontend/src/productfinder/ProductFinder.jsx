@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { ProductFilter } from "./productFilter";
-import { ProductList } from "./productlist";
+import { ProductList } from "./productList";
 
 const client = require("../client"); // <3>
 
