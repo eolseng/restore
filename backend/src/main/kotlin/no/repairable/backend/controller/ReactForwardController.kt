@@ -14,8 +14,13 @@ class ReactForwardController {
 
     @GetMapping(
             "/",
-            "/hello",
-            "/product"
+            "/profile",
+            "/filter",
+            "/condition",
+            "/delivery",
+            "/confirmation",
+            "/product",
+            "/404"
     )
     fun getIndex(): String {
         return "index.html"

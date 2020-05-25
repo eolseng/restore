@@ -34,8 +34,9 @@ data class Product(
         val gender: Gender? = null,
 
         @ManyToMany(fetch = FetchType.LAZY)
-        val sizes: List<Size>? = null
+        val sizes: List<Size>? = null,
 
+        val imgUrl: String? = null
 )
 
 @Projection(
@@ -44,17 +45,15 @@ data class Product(
 )
 interface ExcerptProductProjection {
 
-        fun getId(): Long
-        fun getName(): String
-        fun getDescription(): String
-        @Value("#{target.brand.name}")
-        fun getBrand(): String
-        @Value("#{target.category.name}")
-        fun getCategory(): String
-        @Value("#{target.subCategory.name}")
-        fun getSubCategory(): String
-        @Value("#{target.gender.genderType}")
-        fun getGender(): Char
-        fun getSizes(): List<Size>
+    fun getId(): Long
+    fun getName(): String
+    fun getDescription(): String
+    @Value("#{target.brand.name}")
+    fun getBrand(): String
+    @Value("#{target.category.name}")
+    fun getCategory(): String
+    @Value("#{target.subCategory.name}")
+    fun getSubCategory(): String
+    fun getImgUrl(): String
 
 }

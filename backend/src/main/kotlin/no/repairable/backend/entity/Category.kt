@@ -19,7 +19,7 @@ data class Category(
         var name: String? = "",
 
         @OneToMany(mappedBy = "category", cascade = [(CascadeType.ALL)])
-        val category: List<Product> = mutableListOf()
+        val products: List<Product> = mutableListOf()
 )
 
 @Projection(
