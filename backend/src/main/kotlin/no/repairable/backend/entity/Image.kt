@@ -1,9 +1,9 @@
 package no.repairable.backend.entity
 
-import javax.persistence.Column
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
+import javax.persistence.*
 
+@Entity
+@Table(name = "image")
 class Image(
         @Id
         @GeneratedValue
