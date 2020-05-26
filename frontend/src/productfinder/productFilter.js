@@ -28,7 +28,7 @@ export function ProductFilter(props) {
                 className='product-filter-type'
                 addSearchParam={props.addSearchParam}
                 subPath={'subCategories'}
-                filterName={'subCategories'}
+                filterName={'subCategory'}
             ></CategoryFilter>
             <CategoryFilter
                 className='product-filter-type'
