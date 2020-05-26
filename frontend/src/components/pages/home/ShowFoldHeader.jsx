@@ -56,7 +56,7 @@ class ShowFoldHeader extends Component {
     isLittMerShownOrHidden() {
         if(this.state.showNoeAnnet || this.state.showNoe) {
             this.state.showNoeAnnet = false;
-            this.state.showLittMer = false;
+            this.state.showNoe = false;
         }
 
             this.setState({
