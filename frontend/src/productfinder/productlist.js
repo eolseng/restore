@@ -9,8 +9,8 @@ export function ProductList(props) {
      */
 
     const productList = props.products
-    const productCards = productList.embedded ? (
-        productList.embedded.products.map((product) => <ProductCard key={product.id} product={product} />)
+    const productCards = productList.embedded ? ( productList.embedded.products.map((product) => 
+        <ProductCard key={product.id} product={product} />)
     ) : (
         <div className='product-list-no-product'>Could not find any products.</div>
     )
