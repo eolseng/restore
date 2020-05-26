@@ -2,7 +2,7 @@ import React, {useContext, useEffect} from "react";
 
 import {RestoreContext} from "./RestoreContext";
 import BrandSelector from "./BrandSelector";
-import ProductCondition from "./ProductCondition";
+import ProductDescription from "./ProductDescription";
 import DeliverySelector from "./DeliverySelector";
 import OrderConfirmation from "./OrderConfirmation";
 import RestoreProgress from "./RestoreProgress";
@@ -25,10 +25,10 @@ function Restore() {
             component = <BrandSelector/>
             break;
         case 1:
-            component = <ProductCondition/>
+            component = <ProductDescription/>
             break;
         case 2:
-            component = <ProductCondition/>
+            component = <ProductDescription/>
             break;
         case 3:
             component = <DeliverySelector/>

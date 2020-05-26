@@ -3,8 +3,8 @@
 import React, {createContext, useReducer} from "react";
 
 const initialState = {
-    maxSteps: 0,
-    step: 0,
+    maxSteps: 1,
+    step: 1,
     brandId: null,
     productFilter: null,
     productId: null,
@@ -53,6 +53,6 @@ function RestoreContextProvider(props) {
     );
 }
 
-const RestoreContextConsumer = RestoreContext.Consumer;
+// const RestoreContextConsumer = RestoreContext.Consumer;
 
-export {RestoreContext, RestoreContextProvider, RestoreContextConsumer};
+export {RestoreContext, RestoreContextProvider};
