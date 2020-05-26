@@ -1,6 +1,8 @@
 import React from 'react'
 import { ProductCard } from './productCard'
 
+import '../css/pages/product-finder/product-list.css'
+
 export function ProductList(props) {
     /*
         Gets passed a LIST of Products as a prop and renders these as individual ProductCards in a container.
