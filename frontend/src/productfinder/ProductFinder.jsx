@@ -27,6 +27,7 @@ export function ProductFinder() {
     setParams([tmpSearchState]);
   };
 
+
   return (
     <div className='container-fluid'>
       <div className='container'>

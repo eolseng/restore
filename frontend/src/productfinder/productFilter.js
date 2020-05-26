@@ -18,6 +18,18 @@ export function ProductFilter(props) {
                 subPath={'brands'}
                 filterName={'brand'}
             ></CategoryFilter>
+            <CategoryFilter
+                className='product-filter-type'
+                addSearchParam={props.addSearchParam}
+                subPath={'genders'}
+                filterName={'genders'}
+            ></CategoryFilter>
+            <CategoryFilter
+                className='product-filter-type'
+                addSearchParam={props.addSearchParam}
+                subPath={'sizes'}
+                filterName={'sizes'}
+            ></CategoryFilter>
         </div>
     )
 }

@@ -12,21 +12,31 @@ export function CategoryFilter(props) {
         setSelected(value)
     }
 
+    //Returns the text of an filter alternative
+    const getAltText = (alt) => {
+        if (filterName === 'genders'){
+            return alt.genderType;
+        }
+        //By default, the 'name' of the alternative is what's displayed.
+        return alt.name
+    }
+
     const renderFilters = () => {
         let filters = data.embedded ? (
             data.embedded[subPath].map(function (filerAlt, index) {
+                const altText = getAltText(filerAlt)
                 return (
                     <div className='product-filter-content'>
                         <label className='product-filter-label'>
                             <input
                                 className='product-filter-input'
                                 type={'radio'}
-                                value={filerAlt.name}
-                                checked={filerAlt.name === selected}
+                                value={altText}
+                                checked={altText === selected}
                                 key={index}
-                                onClick={() => selectFilter(filerAlt.name)}
+                                onClick={() => selectFilter(altText)}
                             />
-                            {filerAlt.name}
+                            {altText}
                         </label>
                     </div>
                 )
