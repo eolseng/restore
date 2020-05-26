@@ -20,13 +20,22 @@ class ShowFoldHeader extends Component {
             <div className='under-fold container-fluid'>
                 <div className='home-header'>
                     <div className='container'>
-                        <button onClick={() => this.isNoeShownOrHidden()}>Noe</button>
-                        <button onClick={() => this.isNoeAnnetShownOrHidden()}>Noe annet</button>
-                        <button onClick={() => this.isLittMerShownOrHidden()}>Litt mer</button>
+                        <button onClick={() => this.isNoeShownOrHidden()}>Slik fungerer det</button>
+                        <button onClick={() => this.isNoeAnnetShownOrHidden()}>Våre tjenester</button>
+                        <button onClick={() => this.isLittMerShownOrHidden()}>Vår visjon</button>
                     </div>
-                    { this.state.showNoe ? <div className={""}>Noe</div> : null }
-                    { this.state.showNoeAnnet ? <div className={""}>Noe Annet</div> : null }
-                    { this.state.showLittMer ? <div className={""}>Litt mer</div> : null }
+                    { this.state.showNoe ? <div className={""}>
+                        <h3>Slik fungerer det</h3>
+                        <img src={require("../../../img/homePage/delivery_address.svg")} alt="unDraw"/>
+                        </div> : null }
+                    { this.state.showNoeAnnet ? <div className={""}>
+                        <h3>Våre tjenester</h3>
+                        <img src={require("../../../img/homePage/order_delivered.svg")} alt="unDraw"/>
+                        </div> : null }
+                    { this.state.showLittMer ? <div className={""}>
+                        <h3>Vår visjon</h3>
+                        <img src={require("../../../img/homePage/wishes_icyp.svg")} alt="unDraw"/>
+                        </div> : null }
                 </div>
             </div>
         )
