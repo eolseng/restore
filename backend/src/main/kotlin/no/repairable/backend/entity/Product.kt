@@ -36,11 +36,11 @@ data class Product(
         @ManyToMany(fetch = FetchType.LAZY)
         val sizes: List<Size>? = null,
 
-        @ManyToOne
-        val color : Color? = null,
+        @ManyToMany(mappedBy = "products")
+        val colors : List<Color>? = null,
 
-        @OneToMany
-        val image: Image? = null
+        @OneToMany(mappedBy = "product")
+        val images: MutableList<Image> = mutableListOf()
 )
 
 @Projection(
@@ -58,6 +58,7 @@ interface ExcerptProductProjection {
     fun getCategory(): String
     @Value("#{target.subCategory.name}")
     fun getSubCategory(): String
-    fun getImgUrl(): String
+    @Value("#{target.image.imgUrl}")
+    fun getImage(): String
 
 }

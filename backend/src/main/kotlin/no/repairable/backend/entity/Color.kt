@@ -1,8 +1,9 @@
 package no.repairable.backend.entity
 
 import javax.persistence.*
+
 @Entity
-@Table(name = "color")
+@Table(name = "Color")
 class Color(
         @Id
         @GeneratedValue
@@ -14,7 +15,7 @@ class Color(
         @ManyToOne
         val brand: Brand? = null,
 
-        @OneToMany(mappedBy = "color")
-        val products : List<Product>? = null
+        @ManyToMany
+        val products : MutableList<Product> = mutableListOf()
 
 )

@@ -3,7 +3,6 @@ package no.repairable.backend.controller
 
 import org.springframework.beans.factory.annotation.Value
 import com.google.cloud.storage.StorageOptions
-
 import no.repairable.backend.entity.*
 import no.repairable.backend.repository.*
 import org.springframework.beans.factory.annotation.Autowired
@@ -40,9 +39,7 @@ class ProductsCreationController @Autowired constructor(
     fun insertProducts(@RequestBody products: ProductsPost) {
 
         val productList = mutableListOf<Product>()
-
-
-        val storage = StorageOptions.getDefaultInstance().service
+        //val storage = StorageOptions.getDefaultInstance().service
 
         for (product in products.productCollection) {
 
@@ -53,20 +50,17 @@ class ProductsCreationController @Autowired constructor(
             val gender = getGender(product)
             val category = getCategory(product)
             val subCategory = getSubCategory(product)
-            val color = getColor(product, brand)
-            val image = getImage(product)
+
             val newProduct = Product(
                     name = product.name,
                     description = product.description,
                     brand = brand,
                     category = category,
                     subCategory = subCategory,
-                    gender = gender,
-                    color = color,
-                    image = image
+                    gender = gender
             )
-
             productList.add(newProduct)
+            createColorsAndImages(product, newProduct)
         }
         productRepository.saveAll(productList)
     }
@@ -83,34 +77,42 @@ class ProductsCreationController @Autowired constructor(
             val brand: String,
             val description: String,
             val name: String,
+            val colorImages: List<ColorImage>,
+            val sizes: List<String>
+    )
+
+    data class ColorImage(
             val color: String,
             val image: String
     )
 
-    private fun getImage(product: ProductPostClass): Image {
-        var image = images[product.image]
-        if (image == null) {
-            image = imageRepository.findByImgUrl(product.image)
-            if (image == null) {
-                image = Image(imgUrl = product.image)
-                imageRepository.save(image)
-            }
-            images[product.color] = image
-        }
-        return image
-    }
 
-    private fun getColor(product: ProductPostClass, brand: Brand): Color {
-        var color = colors[product.color]
-        if (color == null) {
-            color = colorRepository.findByBrandAndName(brand, product.name)
+    private fun createColorsAndImages(product: ProductPostClass, newProduct: Product) {
+
+        for (colorImage in product.colorImages) {
+
+            var color = colors[colorImage.color]
             if (color == null) {
-                color = Color(name = product.color, brand = brand)
-                colorRepository.save(color)
+                color = colorRepository.findByBrandAndName(newProduct.brand!!, colorImage.color)
+                if (color == null) {
+                    color = Color(name = colorImage.color, brand = newProduct.brand)
+                }
+                colors[colorImage.color]
             }
-            colors[product.color] = color
+
+            color.products.add(newProduct)
+            colorRepository.save(color)
+
+            var image = images[colorImage.image]
+            if (image == null) {
+                image = imageRepository.findByImgUrl(colorImage.image)
+                if (image == null) {
+                    image = Image(imgUrl = colorImage.image, color = color, product = newProduct)
+                    imageRepository.save(image)
+                }
+                images[colorImage.image] = image
+            }
         }
-        return color
     }
 
     private fun getGender(product: ProductPostClass): Gender {

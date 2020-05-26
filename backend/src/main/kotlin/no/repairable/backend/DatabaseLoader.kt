@@ -29,7 +29,7 @@ class DatabaseLoader @Autowired constructor(
         saveSubCat()
         saveCategory()
         saveSize()
-        saveProducts()
+        //saveProducts()
     }
 
     fun saveGender() {
