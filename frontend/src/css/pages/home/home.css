@@ -1,5 +1,11 @@
-.home-wrapper
-.above-fold {}
+.home-wrapper {}
+.above-fold {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
 .above-fold-text-wrapper {}
 .above-fold-text-wrapper h1 {}
 .above-fold-text-wrapper p {}

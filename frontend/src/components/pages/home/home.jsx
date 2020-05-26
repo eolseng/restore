@@ -23,7 +23,7 @@ function Home() {
                             </Link>
                         </div>
                         <div className='above-fold-img-wrapper col-sm-6'>
-                            <img src={require('../../../img/placeholder.png')} alt={'Hero'} />
+                            <img src={require('../../../img/homePage/check_boxes.svg')} alt={'Hero'} />
                         </div>
                     </div>
                 </div>
