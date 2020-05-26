@@ -51,22 +51,12 @@ button {
     padding: 2rem 1rem;
 }
 
-.container {
-    max-width: var(--width-large);
-    margin: 0 auto;
-}
-
 /* Typografi */
 
 h1, h2, h3, h4, h5 {
     font-family: 'Noto Serif', serif;
     letter-spacing: 1.1px;
     color: var(--title-color);
-}
-
-.main-title {
-    font-size: 6.75rem;
-    line-height: 108.5px;
 }
 
 h1 {

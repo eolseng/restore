@@ -1,0 +1,10 @@
+.home-wrapper
+.above-fold {}
+.above-fold-text-wrapper {}
+.above-fold-text-wrapper h1 {}
+.above-fold-text-wrapper p {}
+.above-fold-text-wrapper .cta-button {}
+.above-fold-img-wrapper {}
+.above-fold-img-wrapper img {
+    width: 100%;
+}
