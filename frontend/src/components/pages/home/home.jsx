@@ -3,8 +3,8 @@ import React from 'react'
 /** CSS Imports */
 import '../../../css/pages/home/home.css'
 import { Link } from 'react-router-dom'
+import ShowFoldHeader from "./ShowFoldHeader";
 
-function showContent() {}
 
 function Home() {
     return (
@@ -28,26 +28,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className='under-fold container-fluid'>
-                <div className='home-header'>
-                    <div className='container'>
-                        <button onClick={showContent}>Noe</button>
-                        <button onClick={showContent}>Noe annet</button>
-                        <button onClick={showContent}>Litt mer</button>
-                    </div>
-                </div>
-                <div className='container'>
-                    <div className='tab-1'>
-                        <p>Noe</p>
-                    </div>
-                    <div className='tab-2'>
-                        <p>Noe annet</p>
-                    </div>
-                    <div className='tab-3'>
-                        <p>Litt mer</p>
-                    </div>
-                </div>
-            </div>
+            <ShowFoldHeader />
         </div>
     )
 }
