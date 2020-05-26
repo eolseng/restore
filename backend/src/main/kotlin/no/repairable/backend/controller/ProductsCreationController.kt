@@ -31,6 +31,7 @@ class ProductsCreationController @Autowired constructor(
     val subCategories: HashMap<String, SubCategory> = HashMap()
     val colors: HashMap<String, Color> = HashMap()
     val images: HashMap<String, Image> = HashMap()
+    val productsMap: HashMap<String, Product> = HashMap()
 
     @Value("gs://spring-bucket-trulsistre/my-file.txt")
     lateinit var gcsFile: Resource
@@ -38,7 +39,7 @@ class ProductsCreationController @Autowired constructor(
     @PostMapping("/products")
     fun insertProducts(@RequestBody products: ProductsPost) {
 
-        val productList = mutableListOf<Product>()
+        //val productList = mutableListOf<Product>()
         //val storage = StorageOptions.getDefaultInstance().service
 
         for (product in products.productCollection) {
@@ -46,7 +47,8 @@ class ProductsCreationController @Autowired constructor(
             val brand = getBrand(product)
 
             // Skip rest if product already exists
-            if (productRepository.existsByBrandAndName(brand, product.name)) continue
+            if (productsMap.contains(product.name))
+                continue
             val gender = getGender(product)
             val category = getCategory(product)
             val subCategory = getSubCategory(product)
@@ -59,10 +61,14 @@ class ProductsCreationController @Autowired constructor(
                     subCategory = subCategory,
                     gender = gender
             )
-            productList.add(newProduct)
+            productsMap[product.name] = newProduct
             createColorsAndImages(product, newProduct)
         }
-        productRepository.saveAll(productList)
+
+        productRepository.saveAll(productsMap.values)
+        colorRepository.saveAll(colors.values)
+
+        imageRepository.saveAll(images.values)
     }
 
 
@@ -90,25 +96,21 @@ class ProductsCreationController @Autowired constructor(
     private fun createColorsAndImages(product: ProductPostClass, newProduct: Product) {
 
         for (colorImage in product.colorImages) {
-
             var color = colors[colorImage.color]
             if (color == null) {
                 color = colorRepository.findByBrandAndName(newProduct.brand!!, colorImage.color)
                 if (color == null) {
                     color = Color(name = colorImage.color, brand = newProduct.brand)
                 }
-                colors[colorImage.color]
+                colors[colorImage.color] = color
             }
-
             color.products.add(newProduct)
-            colorRepository.save(color)
 
             var image = images[colorImage.image]
             if (image == null) {
                 image = imageRepository.findByImgUrl(colorImage.image)
                 if (image == null) {
                     image = Image(imgUrl = colorImage.image, color = color, product = newProduct)
-                    imageRepository.save(image)
                 }
                 images[colorImage.image] = image
             }

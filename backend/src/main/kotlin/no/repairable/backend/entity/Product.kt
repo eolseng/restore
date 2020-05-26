@@ -58,7 +58,4 @@ interface ExcerptProductProjection {
     fun getCategory(): String
     @Value("#{target.subCategory.name}")
     fun getSubCategory(): String
-    @Value("#{target.image.imgUrl}")
-    fun getImage(): String
-
 }
