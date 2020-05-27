@@ -1,7 +1,3 @@
-/***** Main wrapper *****/
-
-.home-wrapper {}
-
 /***** Above the fold *****/
 
 .above-fold {
@@ -78,13 +74,9 @@
 
 /* Text */
 
-.above-fold-text-wrapper {}
-
 .above-fold-text-wrapper h1 {
     margin-bottom: 1.5rem;
 }
-
-.above-fold-text-wrapper p {}
 
 /* Button */
 
@@ -219,8 +211,6 @@
     align-items: center;
 }
 
-.under-fold .content-container {}
-
 .under-fold .content {
     display: flex;
     flex-direction: row;
@@ -233,10 +223,6 @@
 .under-fold .text-wrapper {
     padding-left: 4rem;
 }
-
-.under-fold .text-wrapper h3 {}
-
-.under-fold .text-wrapper p {}
 
 .under-fold .text-wrapper ol {
     margin: 0;
@@ -259,8 +245,6 @@
 }
 
 /* Image */
-
-.under-fold .img-container {}
 
 .under-fold .img-container img {
     width: 100%;
