@@ -1,86 +1,32 @@
 package no.repairable.backend
 
-import no.repairable.backend.entity.*
-import no.repairable.backend.repository.*
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
+import com.fasterxml.jackson.module.kotlin.registerKotlinModule
+import no.repairable.backend.controller.ProductsCreationController
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
+import java.io.File
 
 @Component
 class DatabaseLoader @Autowired constructor(
-        private val productRepository: ProductRepository,
-        private val genderRepository: GenderRepository,
-        private val sizeRepository: SizeRepository,
-        private val brandRepository: BrandRepository,
-        private val categoryRepository: CategoryRepository,
-        private val subCategoryRepository: SubCategoryRepository
+        private val productsCreationController: ProductsCreationController
 ) : CommandLineRunner {
 
-    lateinit var genders: List<Gender>
-    lateinit var brands: List<Brand>
-    lateinit var categories: List<Category>
-    lateinit var subCategories: List<SubCategory>
-    lateinit var sizes: List<Size>
-    lateinit var products: List<Product>
 
     override fun run(vararg args: String?) {
-        saveGender()
-        saveBrand()
-        saveSubCat()
-        saveCategory()
-        saveSize()
-        //saveProducts()
+        onStartDataBaseLoader()
     }
 
-    fun saveGender() {
-        genders = mutableListOf<Gender>().apply {
-            add(Gender(genderType = "male"))
-            add(Gender(genderType = "female"))
-        }
-        genderRepository.saveAll(genders)
-    }
+    fun onStartDataBaseLoader() {
+        val mapper = jacksonObjectMapper()
+        mapper.registerKotlinModule()
 
-    fun saveBrand() {
-        brands = mutableListOf<Brand>().apply {
-            add(Brand(name = "Helly Hansen"))
-            add(Brand(name = "Norrøna"))
-        }
-        brandRepository.saveAll(brands)
-    }
-
-    fun saveCategory() {
-        categories = mutableListOf<Category>().apply {
-            add(Category(name = "Jacket"))
-            add(Category(name = "Trousers"))
-        }
-        categoryRepository.saveAll(categories)
-    }
-
-    fun saveSubCat() {
-        subCategories = mutableListOf<SubCategory>().apply {
-            add(SubCategory(name = "Skiing"))
-            add(SubCategory(name = "Raining"))
-        }
-        subCategoryRepository.saveAll(subCategories)
-    }
-
-    fun saveSize() {
-        sizes = mutableListOf<Size>().apply {
-            add(Size(size = "small"))
-            add(Size(size = "medium"))
-            add(Size(size = "large"))
-        }
-        sizeRepository.saveAll(sizes)
-    }
-
-    fun saveProducts() {
-        products = mutableListOf<Product>().apply {
-            add(Product(name = "Skagen", description = "Jacket", gender = genders[0], brand = brands[0], subCategory = subCategories[0], category = categories[0], sizes = listOf(sizes[0], sizes[1])))
-            add(Product(name = "Yallah", description = "Flis", gender = genders[0], brand = brands[1], subCategory = subCategories[1], category = categories[1]))
-            add(Product(name = "Rælle", description = "Vest", gender = genders[1], brand = brands[0], subCategory = subCategories[1], category = categories[0]))
-            add(Product(name = "Fjoning", description = "Sigg +", gender = genders[1], brand = brands[1], subCategory = subCategories[0], category = categories[0]))
-            add(Product(name = "Jordmor", description = "Person", gender = genders[0], brand = brands[0], subCategory = subCategories[0], category = categories[1]))
-        }
-        productRepository.saveAll(products)
+        mapper.registerModule(JavaTimeModule())
+        val jsonString: String = File("./backend/src/main/resources/kotlinProducts.json").readText(Charsets.UTF_8)
+        val jsonText: ProductsCreationController.ProductsPost = mapper.readValue(jsonString)
+        productsCreationController.insertOnStartUp(jsonText)
     }
 }

@@ -71,6 +71,39 @@ class ProductsCreationController @Autowired constructor(
         imageRepository.saveAll(images.values)
     }
 
+    fun insertOnStartUp(products: ProductsPost) {
+
+        //val productList = mutableListOf<Product>()
+        //val storage = StorageOptions.getDefaultInstance().service
+
+        for (product in products.productCollection) {
+
+            val brand = getBrand(product)
+
+            // Skip rest if product already exists
+            if (productsMap.contains(product.name))
+                continue
+            val gender = getGender(product)
+            val category = getCategory(product)
+            val subCategory = getSubCategory(product)
+
+            val newProduct = Product(
+                    name = product.name,
+                    description = product.description,
+                    brand = brand,
+                    category = category,
+                    subCategory = subCategory,
+                    gender = gender
+            )
+            productsMap[product.name] = newProduct
+            createColorsAndImages(product, newProduct)
+        }
+
+        productRepository.saveAll(productsMap.values)
+        colorRepository.saveAll(colors.values)
+
+        imageRepository.saveAll(images.values)
+    }
 
     data class ProductsPost(
             val productCollection: List<ProductPostClass>
