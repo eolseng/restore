@@ -1,8 +1,12 @@
 package no.repairable.backend.controller
 
+
+import org.springframework.beans.factory.annotation.Value
+import com.google.cloud.storage.StorageOptions
 import no.repairable.backend.entity.*
 import no.repairable.backend.repository.*
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.core.io.Resource
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -16,28 +20,33 @@ class ProductsCreationController @Autowired constructor(
         private val genderRepository: GenderRepository,
         private val brandRepository: BrandRepository,
         private val categoryRepository: CategoryRepository,
-        private val subCategoryRepository: SubCategoryRepository
+        private val subCategoryRepository: SubCategoryRepository,
+        private val colorRepository: ColorRepository,
+        private val imageRepository: ImageRepository
 ) {
 
     val genders: HashMap<String, Gender> = HashMap()
     val brands: HashMap<String, Brand> = HashMap()
     val categories: HashMap<String, Category> = HashMap()
     val subCategories: HashMap<String, SubCategory> = HashMap()
+    val colors: HashMap<String, Color> = HashMap()
+    val images: HashMap<String, Image> = HashMap()
+    val productsMap: HashMap<String, Product> = HashMap()
 
-
-
-   @PostMapping("/products")
+    @PostMapping("/products")
     fun insertProducts(@RequestBody products: ProductsPost) {
 
-        val productList = mutableListOf<Product>()
-
         for (product in products.productCollection) {
+
             val brand = getBrand(product)
+
             // Skip rest if product already exists
-            if (productRepository.existsByBrandAndName(brand, product.name)) continue
+            if (productsMap.contains(product.name))
+                continue
             val gender = getGender(product)
             val category = getCategory(product)
             val subCategory = getSubCategory(product)
+
             val newProduct = Product(
                     name = product.name,
                     description = product.description,
@@ -46,11 +55,46 @@ class ProductsCreationController @Autowired constructor(
                     subCategory = subCategory,
                     gender = gender
             )
-            productList.add(newProduct)
+            productsMap[product.name] = newProduct
+            createColorsAndImages(product, newProduct)
         }
-        productRepository.saveAll(productList)
+
+        productRepository.saveAll(productsMap.values)
+        colorRepository.saveAll(colors.values)
+
+        imageRepository.saveAll(images.values)
     }
 
+    fun insertOnStartUp(products: ProductsPost) {
+
+        for (product in products.productCollection) {
+
+            val brand = getBrand(product)
+
+            // Skip rest if product already exists
+            if (productsMap.contains(product.name))
+                continue
+            val gender = getGender(product)
+            val category = getCategory(product)
+            val subCategory = getSubCategory(product)
+
+            val newProduct = Product(
+                    name = product.name,
+                    description = product.description,
+                    brand = brand,
+                    category = category,
+                    subCategory = subCategory,
+                    gender = gender
+            )
+            productsMap[product.name] = newProduct
+            createColorsAndImages(product, newProduct)
+        }
+
+        productRepository.saveAll(productsMap.values)
+        colorRepository.saveAll(colors.values)
+
+        imageRepository.saveAll(images.values)
+    }
 
     data class ProductsPost(
             val productCollection: List<ProductPostClass>
@@ -62,8 +106,40 @@ class ProductsCreationController @Autowired constructor(
             val gender: String,
             val brand: String,
             val description: String,
-            val name: String
+            val name: String,
+            val colorImages: List<ColorImage>,
+            val sizes: List<String>
     )
+
+    data class ColorImage(
+            val color: String,
+            val image: String
+    )
+
+
+    private fun createColorsAndImages(product: ProductPostClass, newProduct: Product) {
+
+        for (colorImage in product.colorImages) {
+            var color = colors[colorImage.color]
+            if (color == null) {
+                color = colorRepository.findByBrandAndName(newProduct.brand!!, colorImage.color)
+                if (color == null) {
+                    color = Color(name = colorImage.color, brand = newProduct.brand)
+                }
+                colors[colorImage.color] = color
+            }
+            color.products.add(newProduct)
+
+            var image = images[colorImage.image]
+            if (image == null) {
+                image = imageRepository.findByImgUrl(colorImage.image)
+                if (image == null) {
+                    image = Image(imgUrl = colorImage.image, color = color, product = newProduct)
+                }
+                images[colorImage.image] = image
+            }
+        }
+    }
 
     private fun getGender(product: ProductPostClass): Gender {
         var gender = genders[product.gender]

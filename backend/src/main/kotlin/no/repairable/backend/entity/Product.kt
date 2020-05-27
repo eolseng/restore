@@ -12,14 +12,14 @@ data class Product(
         @Id
         @GeneratedValue
         @Column(name = "id")
-        var id: Long? = null,
+        val id: Long? = null,
 
         @NotNull
         @Column(name = "name")
-        var name: String? = "",
+        val name: String? = "",
 
         @Column(name = "description")
-        var description: String? = null,
+        val description: String? = null,
 
         @ManyToOne(fetch = FetchType.LAZY)
         val category: Category? = null,
@@ -36,7 +36,11 @@ data class Product(
         @ManyToMany(fetch = FetchType.LAZY)
         val sizes: List<Size>? = null,
 
-        val imgUrl: String? = null
+        @ManyToMany(mappedBy = "products")
+        val colors : List<Color>? = null,
+
+        @OneToMany(mappedBy = "product")
+        val images: MutableList<Image> = mutableListOf()
 )
 
 @Projection(
@@ -54,6 +58,4 @@ interface ExcerptProductProjection {
     fun getCategory(): String
     @Value("#{target.subCategory.name}")
     fun getSubCategory(): String
-    fun getImgUrl(): String
-
 }

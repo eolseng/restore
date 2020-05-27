@@ -17,7 +17,12 @@ data class Brand(
         var name: String? = null,
 
         @OneToMany(mappedBy = "brand", cascade = [(CascadeType.ALL)])
+        val colors: List<Color>? = null,
+
+        @OneToMany(mappedBy = "brand", cascade = [(CascadeType.ALL)])
         val products: List<Product> = mutableListOf()
+
+
 )
 
 @Projection(
@@ -26,7 +31,7 @@ data class Brand(
 )
 interface ExcerptBrandProjection {
 
-        fun getId(): Long
-        fun getName(): String
+    fun getId(): Long
+    fun getName(): String
 
 }
