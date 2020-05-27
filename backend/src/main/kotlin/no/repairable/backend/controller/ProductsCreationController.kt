@@ -33,14 +33,8 @@ class ProductsCreationController @Autowired constructor(
     val images: HashMap<String, Image> = HashMap()
     val productsMap: HashMap<String, Product> = HashMap()
 
-    @Value("gs://spring-bucket-trulsistre/my-file.txt")
-    lateinit var gcsFile: Resource
-
     @PostMapping("/products")
     fun insertProducts(@RequestBody products: ProductsPost) {
-
-        //val productList = mutableListOf<Product>()
-        //val storage = StorageOptions.getDefaultInstance().service
 
         for (product in products.productCollection) {
 
@@ -72,9 +66,6 @@ class ProductsCreationController @Autowired constructor(
     }
 
     fun insertOnStartUp(products: ProductsPost) {
-
-        //val productList = mutableListOf<Product>()
-        //val storage = StorageOptions.getDefaultInstance().service
 
         for (product in products.productCollection) {
 
