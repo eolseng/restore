@@ -1,10 +1,10 @@
 import React from 'react'
-import { CategoryFilter } from './categoryFilter'
+import { ProductFilter } from './productFilter'
 import { SearchFilter } from './searchFilter'
 
-import '../../../../css/pages/product-finder/product-filter.css'
+import '../../../../css/pages/restore/product-finder/product-filter.css'
 
-export function ProductFilter(props) {
+export function ProductFilterContainer(props) {
     return (
         <div className='product-filter-wrapper col-sm-3'>
 
@@ -12,31 +12,31 @@ export function ProductFilter(props) {
                 className='product-filter-type'
                 addSearchParam={props.addSearchParam}
             />
-            <CategoryFilter
+            <ProductFilter
                 className='product-filter-type'
                 addSearchParam={props.addSearchParam}
                 subPath={'brands'}
                 filterName={'brand'}
             />
-            <CategoryFilter
+            <ProductFilter
                 className='product-filter-type'
                 addSearchParam={props.addSearchParam}
                 subPath={'genders'}
                 filterName={'genders'}
             />
-            <CategoryFilter
+            <ProductFilter
                 className='product-filter-type'
                 addSearchParam={props.addSearchParam}
                 subPath={'categories'}
                 filterName={'category'}
             />
-            <CategoryFilter
+            <ProductFilter
                 className='product-filter-type'
                 addSearchParam={props.addSearchParam}
                 subPath={'subCategories'}
                 filterName={'subCategory'}
             />
-            <CategoryFilter
+            <ProductFilter
                 className='product-filter-type'
                 addSearchParam={props.addSearchParam}
                 subPath={'sizes'}

@@ -10,7 +10,7 @@ import Filter from "./components/pages/filter/filter";
 import Condition from "./components/pages/condition/condition";
 import Delivery from "./components/pages/delivery/delivery";
 import Confirmation from "./components/pages/confirmation/confirmation";
-import Restore from "./components/pages/restore/Restore";
+import Restore from "./components/pages/restore/restore";
 /** CSS Imports */
 import "./css/style.css";
 /** Font Awesome Icons */
@@ -18,7 +18,7 @@ import {library} from "@fortawesome/fontawesome-svg-core";
 import {faBars, faEdit, faLaptop, faSave, faTimes,} from "@fortawesome/free-solid-svg-icons";
 import {faUserCircle} from "@fortawesome/free-regular-svg-icons";
 import {faFacebookSquare, faLinkedin, faTwitterSquare} from "@fortawesome/free-brands-svg-icons";
-import {RestoreContextProvider} from "./components/pages/restore/RestoreContext";
+import {RestoreContextProvider} from "./components/pages/restore/restoreContext";
 
 /** Font Awesome Icon Library */
 library.add(

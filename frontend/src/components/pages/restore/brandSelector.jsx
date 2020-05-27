@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {RestoreContext} from "./RestoreContext";
+import {RestoreContext} from "./restoreContext";
 
 function BrandSelector() {
 
@@ -7,7 +7,7 @@ function BrandSelector() {
 
     const nextStep = () => dispatch({type: "incrementStep"});
     const prevStep = () => dispatch({type: "decrementStep"});
-    const setBrandId = brandId => () => dispatch({type: "setBrandId", payload: brandId})
+    const setBrandId = brandId => () => dispatch({type: "setBrandId", payload: brandId});
 
     return (
         <div>

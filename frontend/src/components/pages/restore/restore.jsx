@@ -1,12 +1,12 @@
 import React, {useContext, useEffect} from "react";
 
-import {RestoreContext} from "./RestoreContext";
-import {ProductFinder} from "./productfinder/ProductFinder";
-import BrandSelector from "./BrandSelector";
-import ProductDescription from "./ProductDescription";
-import DeliverySelector from "./DeliverySelector";
-import OrderConfirmation from "./OrderConfirmation";
-import RestoreProgress from "./RestoreProgress";
+import {RestoreContext} from "./restoreContext";
+import {ProductFinder} from "./productFinder/productFinder";
+import BrandSelector from "./brandSelector";
+import ProductDescription from "./productDescription";
+import DeliverySelector from "./deliverySelector";
+import OrderConfirmation from "./orderConfirmation";
+import RestoreProgress from "./restoreProgress";
 
 /** CSS Imports */
 import "../../../css/pages/restore/restore.css";

@@ -17,7 +17,9 @@
     box-shadow: 0px 0px 4px 0px #00000030;
 }
 
-.product-card-image {}
+.product-card-image {
+    width: 200px;
+}
 
 .product-card-brand {
     padding: 1rem 0 0.5rem;

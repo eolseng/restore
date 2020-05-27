@@ -1,7 +1,7 @@
 import React from 'react'
-import { ProductCard } from './productCard'
+import {ProductCard} from './productCard'
 
-import '../../../../css/pages/product-finder/product-list.css'
+import '../../../../css/pages/restore/product-finder/product-list.css'
 
 export function ProductList(props) {
     /*
@@ -10,7 +10,7 @@ export function ProductList(props) {
 
     const productList = props.products
     const productCards = productList.embedded ? (
-        productList.embedded.products.map(product => <ProductCard key={product.id} product={product} />)
+        productList.embedded.products.map(product => <ProductCard key={product.id} product={product}/>)
     ) : (
         <div className={'product-list-no-product'}>Could not find any products.</div>
     )

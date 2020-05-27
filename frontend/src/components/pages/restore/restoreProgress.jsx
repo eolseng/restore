@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {RestoreContext} from "./RestoreContext";
+import {RestoreContext} from "./restoreContext";
 
 function RestoreProgress() {
 

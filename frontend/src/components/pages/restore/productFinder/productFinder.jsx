@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { ProductFilter } from "./productFilter";
+import { ProductFilterContainer } from "./productFilterContainer";
 import { ProductList } from "./productList";
 
 const client = require("../../../../client"); // <3>
@@ -32,7 +32,7 @@ export function ProductFinder() {
     <div className='container-fluid'>
       <div className='container'>
         <div className='row'>
-          <ProductFilter searchState={searchState} addSearchParam={addSearchParam}/>
+          <ProductFilterContainer searchState={searchState} addSearchParam={addSearchParam}/>
           <ProductList products={data} />
         </div>
       </div>

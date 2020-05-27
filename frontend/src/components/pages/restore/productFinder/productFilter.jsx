@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import React from 'react'
-import useFetch from './ProductFinder'
+import useFetch from './productFinder'
 
-export function CategoryFilter(props) {
+export function ProductFilter(props) {
     const { addSearchParam, subPath, filterName } = props
     const [{ data, isLoading, isError }, doFetch] = useFetch(subPath)
     const [selected, setSelected] = useState()
