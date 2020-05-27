@@ -8,6 +8,7 @@ const initialState = {
     brandId: null,
     productFilter: null,
     productId: null,
+    productColor: "p",
     productDescription: null,
     deliveryOptions: null
 };
@@ -32,6 +33,8 @@ const reducer = (state, action) => {
             return {...state, productFilter: action.payload};
         case "setProductId":
             return {...state, productId: action.payload, step: state.step + 1};
+        case "setProductColor":
+            return {...state, productColor: action.payload};
         case "setProductDescription":
             return {...state, productDescription: action.payload, step: state.step + 1};
         case "setDeliveryOptions":

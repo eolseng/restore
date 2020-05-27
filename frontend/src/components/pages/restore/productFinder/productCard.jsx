@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import {RestoreContext} from "../restoreContext";
 
 export function ProductCard(props) {
@@ -7,15 +7,46 @@ export function ProductCard(props) {
      */
 
     const {dispatch} = useContext(RestoreContext);
-    const setProductId = productId => () => dispatch({type: "setProductId", payload: productId});
     const product = props.product;
+    const imageIndex = props.imageIndex;
+    const mainImage = product.images[imageIndex];
+
+    const [displayImage, setDisplayImage] = useState(mainImage.imgUrl);
+    const [showAltImages, setShowAltImages] = useState(false);
+    const [currentColor, setCurrentColor] = useState(mainImage.colorName)
+
 
     return (
-        <div className={'product-card'} id={'product-card-id-' + product.id} onClick={setProductId(product.id)}>
-            <img className={'product-card-image'} src={product.images[0].imgUrl} alt={''}/>
-            <div className={'product-card-brand'}>{product.brand}</div>
+        <div className={'product-card'}
+             id={'product-card-id-' + product.id}
+             onClick={() => {
+                 dispatch({type: "setProductColor", payload: currentColor});
+                 dispatch({type: "setProductId", payload: product.id});
+             }}
+             onMouseEnter={() => setShowAltImages(true)}
+             onMouseLeave={() => setShowAltImages(false)}>
+
+            <img className={'product-card-image-main'} src={displayImage} alt={''}/>
+
+            {showAltImages && (
+                <div className={'product-card-image-alt-list'}>
+                    {product.images.map((image, index) => {
+                        return <img key={"ALT_IMAGE" + imageIndex + image.imgUrl}
+                                    className={"product-card-image-alt"}
+                                    onMouseEnter={() => {
+                                        setDisplayImage(image.imgUrl)
+                                        setCurrentColor(image.colorName)
+                                    }}
+                                    onMouseLeave={() => {
+                                        setDisplayImage(product.images[0].imgUrl)
+                                        setCurrentColor(mainImage.colorName)
+                                    }}
+                                    src={image.imgUrl}
+                                    alt={'Alternative colors'}/>
+                    })}
+                </div>
+            )}
             <div className={'product-card-name'}>{product.name}</div>
-            <div className={'product-card-color'}>{product.color}</div>
         </div>
     )
 }

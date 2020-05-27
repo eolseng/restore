@@ -16,6 +16,7 @@ function ProductDescription() {
             <p>Step: {state.step}</p>
             <p>Brand ID: {state.brandId}</p>
             <p>Product ID : {state.productId}</p>
+            <p>Product Color : {state.productColor}</p>
             <button onClick={prevStep}>Previous Step!</button>
             <button onClick={nextStep}>Next Step!</button>
             <button onClick={setProductDescription}>Set condition</button>

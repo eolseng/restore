@@ -3,12 +3,8 @@ package no.repairable.backend.entity
 import javax.persistence.*
 
 @Entity
-@Table(name = "Color")
+@Table(name = "color")
 class Color(
-        @Id
-        @GeneratedValue
-        @Column(name = "id")
-        val id: Long? = null,
 
         val name: String? = null,
 
@@ -16,6 +12,10 @@ class Color(
         val brand: Brand? = null,
 
         @ManyToMany
-        val products : MutableList<Product> = mutableListOf()
+        val products: MutableList<Product> = mutableListOf(),
 
+        @Id
+        @GeneratedValue
+        @Column(name = "id")
+        var id: Long? = null
 )
