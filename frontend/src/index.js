@@ -6,7 +6,7 @@ import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
 import Home from "./components/pages/home/home";
 import { ProductPage } from "./ProductPage";
-import Profile from "./components/pages/profile/profile";
+import { Profile } from "./components/pages/profile/profile";
 import Filter from "./components/pages/filter/filter";
 import Condition from "./components/pages/condition/condition";
 import Delivery from "./components/pages/delivery/delivery";
@@ -60,9 +60,7 @@ function App() {
             <Route exact path={"/"}>
               {Home}
             </Route>
-            <Route exact path={"/profile"}>
-              {Profile}
-            </Route>
+            <Route exact path="/profile" render={(props) => <Profile {...props}/>} />
             <Route exact path={"/filter"}>
               {Filter}
             </Route>

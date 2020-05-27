@@ -58,6 +58,8 @@
     width: 100%;
 }
 
-.discount-cards-container {
+.my-overview-cards-container {
+    display: flex;
     margin-top: 50px;
+
 }
