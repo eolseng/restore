@@ -1,17 +1,12 @@
 package no.repairable.backend.controller
 
-
-import org.springframework.beans.factory.annotation.Value
-import com.google.cloud.storage.StorageOptions
 import no.repairable.backend.entity.*
 import no.repairable.backend.repository.*
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.core.io.Resource
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
-
 
 @RestController
 @RequestMapping("api/insert")
