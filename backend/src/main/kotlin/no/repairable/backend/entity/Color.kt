@@ -17,5 +17,4 @@ class Color(
 
         @ManyToMany
         val products : MutableList<Product> = mutableListOf()
-
 )
