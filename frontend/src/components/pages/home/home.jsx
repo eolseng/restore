@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom'
+
+// import ShowFoldHeader from "./ShowFoldHeader";
 
 /** CSS Imports */
 import '../../../css/pages/home/home.css'
-import { Link } from 'react-router-dom'
-import ShowFoldHeader from "./ShowFoldHeader";
-
 
 function Home() {
+    const [renderedDiv, setRenderedDiv] = useState('')
+
+    function renderVision() {
+        setRenderedDiv(
+            <div className='container-fluid'>
+                <div className='container'>
+                    <div className='text-box'>
+                        <h3>Vår visjon</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, praesentium.</p>
+                    </div>
+                    <div className='img-container'>
+                        <img src='' alt='Vision' />
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div className='home-wrapper'>
             <div className='above-fold container-fluid'>
@@ -28,7 +46,12 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <ShowFoldHeader />
+            <div className='container-fluid'>
+                <div className='container'>
+                    <button onClick={renderVision}>Vår visjon</button>
+                </div>
+            </div>
+            {/* <ShowFoldHeader /> */}
         </div>
     )
 }
