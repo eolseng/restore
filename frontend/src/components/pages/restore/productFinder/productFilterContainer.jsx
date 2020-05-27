@@ -9,35 +9,35 @@ export function ProductFilterContainer(props) {
         <div className='product-filter-wrapper col-sm-3'>
 
             <SearchFilter
-                className='product-filter-type'
+                key={"SearchFilter"}
                 addSearchParam={props.addSearchParam}
             />
             <ProductFilter
-                className='product-filter-type'
+                key={"ProductFilterBrands"}
                 addSearchParam={props.addSearchParam}
                 subPath={'brands'}
                 filterName={'brand'}
             />
             <ProductFilter
-                className='product-filter-type'
+                key={"ProductFilterGenders"}
                 addSearchParam={props.addSearchParam}
                 subPath={'genders'}
                 filterName={'genders'}
             />
             <ProductFilter
-                className='product-filter-type'
+                key={"ProductFilterCategories"}
                 addSearchParam={props.addSearchParam}
                 subPath={'categories'}
                 filterName={'category'}
             />
             <ProductFilter
-                className='product-filter-type'
+                key={"ProductFilterSubCategories"}
                 addSearchParam={props.addSearchParam}
                 subPath={'subCategories'}
                 filterName={'subCategory'}
             />
             <ProductFilter
-                className='product-filter-type'
+                key={"ProductFilterSizes"}
                 addSearchParam={props.addSearchParam}
                 subPath={'sizes'}
                 filterName={'sizes'}

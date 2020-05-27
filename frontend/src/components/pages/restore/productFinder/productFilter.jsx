@@ -26,7 +26,7 @@ export function ProductFilter(props) {
             data.embedded[subPath].map(function (filerAlt, index) {
                 const altText = getAltText(filerAlt)
                 return (
-                    <div className='product-filter-content'>
+                    <div key={"container-"+ index} className='product-filter-content'>
                         <label className='product-filter-label'>
                             <input
                                 className='product-filter-input'
@@ -34,7 +34,7 @@ export function ProductFilter(props) {
                                 value={altText}
                                 checked={altText === selected}
                                 key={index}
-                                onClick={() => selectFilter(altText)}
+                                onChange={() => selectFilter(altText)}
                             />
                             {altText}
                         </label>

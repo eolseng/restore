@@ -86,7 +86,8 @@ export default function useFetch(subPath) {
       () => {
         //Todo: add page param.
         loadFromServer();
-      }, [loadFromServer] // Re-fetches when url is changed is changed.
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [params] // Re-fetches when url is changed is changed.
   );
 
   return [{ data, isLoading, isError }, setParams];
