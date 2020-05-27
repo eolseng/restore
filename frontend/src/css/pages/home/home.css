@@ -14,34 +14,54 @@
 
 /* Icon pos: absolute */
 
-.above-fold .user-icon {
+.above-fold-link {
     position: absolute;
     top: 16px;
     right: 32px;
-    color: var(--primary-color);
-    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
-.above-fold .user-icon:hover {
+.above-fold-link * {
+    color: var(--primary-color);
+    transition: color 0.2s linear;
+}
+
+.above-fold-link:hover * {
     color: var(--sec-color);
 }
 
+.above-fold-link span {
+    padding-left: 1rem;
+}
+
+.above-fold .user-icon {
+    font-size: 1.5rem;
+}
+
 .above-fold .down-icon-container {
+    width: 46px;
+    margin: 0 auto;
     padding: 1rem;
     position: absolute;
     bottom: 16px;
-    right: calc(100vw - 50%);
+    left: 0;
+    right: 0;
     animation: upDown 2s linear infinite;
-}
-
-.above-fold .down-icon-container:hover .down-icon {
-    color: #FEAF1A;
 }
 
 .above-fold .down-icon {
     color: #FFC834;
     font-size: 1rem;
     transform: scale(4, 1.5);
+    transition: color 0.2s linear;
+}
+
+.above-fold .down-icon-container:hover .down-icon {
+    color: #FEAF1A;
 }
 
 @keyframes upDown {
@@ -113,6 +133,10 @@
 }
 
 .under-fold .header-container {
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     box-shadow: none;
 }
 
@@ -150,11 +174,33 @@
 }
 
 .under-fold .header-right .header-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     color: var(--primary-color)
 }
 
 .under-fold .header-right .header-link:visited {
     color: var(--primary-color);
+}
+
+.header-link-user * {
+    color: var(--primary-color);
+    transition: color 0.2s linear;
+}
+
+.header-link-user:hover * {
+    color: var(--sec-color);
+}
+
+.header-link-user span {
+    padding-left: 1rem;
+}
+
+.under-fold .header-right .user-icon {
+    font-size: 1.5rem;
 }
 
 .under-fold .header-right .cta-button {
@@ -163,19 +209,10 @@
     font-size: 1rem;
 }
 
-.under-fold .header-right .user-icon {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-}
-
-.under-fold .header-right .user-icon:hover {
-    color: var(--sec-color);
-}
-
 /* Content */
 
 .under-fold .content-wrapper {
-    min-height: calc(100vh - 66px);
+    min-height: calc(100vh - 4rem);
     padding: 0;
     display: flex;
     align-items: center;
@@ -230,7 +267,70 @@
 
 /* Media: Tablet */
 
-@media screen and (max-width: 1000px) {}
+@media screen and (max-width: 1000px) {
+    .above-fold-text-wrapper {
+        margin-top: 2rem;
+    }
+    .above-fold-text-wrapper .button-link {
+        width: 100%;
+    }
+    .above-fold-img-wrapper {
+        padding: 2rem 0;
+    }
+    .above-fold .down-icon-container {
+        display: none;
+    }
+    .under-fold .header-container {
+        height: unset;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .under-fold .header-left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .under-fold .header-left span {
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+    .under-fold .header-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .under-fold .header-right .header-link:first-of-type {
+        order: 2;
+    }
+    .under-fold .header-right .header-link:last-of-type {
+        order: 1;
+    }
+    .under-fold .header-right .cta-button {
+        margin: 1rem 0 0;
+    }
+    .under-fold .content #bluprint-img {
+        order: 2;
+    }
+    .under-fold .content #blueprint-text {
+        order: 1;
+    }
+    .under-fold .img-container {
+        padding: 0 1rem 2rem 1rem;
+    }
+    .under-fold .text-wrapper {
+        padding: 2rem 1rem;
+    }
+    .under-fold .text-wrapper li {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+}
 
 /* Media: Mobile */
 

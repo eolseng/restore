@@ -17,7 +17,7 @@ import './css/style.css'
 
 /** Font Awesome Icons */
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faTimes, faLaptop, faSave, faEdit, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faTimes, faLaptop, faSave, faEdit, faChevronDown, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faFacebookSquare, faTwitterSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
@@ -30,6 +30,7 @@ library.add(
     faEdit,
     faUser,
     faChevronDown,
+    faSignInAlt,
     faFacebookSquare,
     faTwitterSquare,
     faLinkedin
