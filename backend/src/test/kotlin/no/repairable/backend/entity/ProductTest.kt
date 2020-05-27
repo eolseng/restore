@@ -22,15 +22,6 @@ class ProductTest @Autowired constructor(
         val productRepo: ProductRepository
 ) {
 
-//    DISABLED TEST BECAUSE IT GIVES 500!
-//    @Test
-//    @Throws(Exception::class)
-//    fun checkProductEndpoint() {
-//
-//        mockMvc.perform(MockMvcRequestBuilders.get("/api/products")).andDo(MockMvcResultHandlers.print())
-//                .andExpect(MockMvcResultMatchers.status().isOk)
-//                .andDo(MockMvcRestDocumentation.document("products"))
-//    }
 
     @Test
     @Throws(Exception::class)

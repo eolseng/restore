@@ -16,10 +16,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 @SpringBootTest
 @AutoConfigureRestDocs
 @AutoConfigureMockMvc
-class GenderTest(
-        @Autowired
-        private var mockMvc: MockMvc
-
+class GenderTest @Autowired constructor(
+        val mockMvc: MockMvc
 ) {
 
 

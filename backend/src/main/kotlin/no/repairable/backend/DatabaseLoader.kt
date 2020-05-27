@@ -20,7 +20,7 @@ class DatabaseLoader @Autowired constructor(
         mapper.registerKotlinModule()
 
         mapper.registerModule(JavaTimeModule())
-        val jsonString: String = File("./backend/src/main/resources/kotlinProducts.json").readText(Charsets.UTF_8)
+        val jsonString: String = File("../backend/src/main/resources/kotlinProducts.json").readText(Charsets.UTF_8)
         val jsonText: ProductsCreationController.ProductsPost = mapper.readValue(jsonString)
         productsCreationController.insertOnStartUp(jsonText)
     }
