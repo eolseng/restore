@@ -1,7 +1,4 @@
-"use strict";
-
 import React, { useState, useEffect } from "react";
-import { Link, withRouter } from "react-router-dom";
 import { ProductFilterContainer } from "./productFilterContainer";
 import { ProductList } from "./productList";
 
@@ -12,6 +9,7 @@ const root = "/api";
 
 export function ProductFinder() {
   const [searchState, setSearchState] = useState({});
+  // eslint-disable-next-line no-unused-vars
   const [{ data, isLoading, isError }, setParams] = useFetch("products");
 
   const addSearchParam = (searchVal, val) => {
@@ -43,19 +41,14 @@ export function ProductFinder() {
 export default function useFetch(subPath) {
   const [data, setData] = useState({});
   const [params, setParams] = useState({});
+  // eslint-disable-next-line no-unused-vars
   const [isError, setIsError] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [isLoading, setIsLoading] = useState(false);
   let schema = {};
 
-  useEffect(
-    () => {
-      //Todo: add page param.
-
-      loadFromServer();
-    },
-    [params] //Re-fetches when url is changed is changed.
-  );
-
+  // TODO: Fiks disabled eslint rot
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const loadFromServer = () => {
     follow(
       client, //Object used to make REST calls
@@ -89,30 +82,12 @@ export default function useFetch(subPath) {
       });
   };
 
+  useEffect(
+      () => {
+        //Todo: add page param.
+        loadFromServer();
+      }, [loadFromServer] // Re-fetches when url is changed is changed.
+  );
+
   return [{ data, isLoading, isError }, setParams];
 }
-
-/*
- const mockProductList = [
-     {
-         "id": 0,
-         "brand": "Helly Hansen",
-         "category": "Jacket",
-         "subCategory": "Sailing Jacket",
-         "name": "Skagen Offshore Jacket",
-         "description": "The best jacket ever.",
-         "imgUrl": "https://www.hellyhansen.com/media/catalog/product/3/3/33907_222-2-main.jpg",
-         "_links": {}
-     },
-     {
-         "id": 1,
-         "brand": "Helly Hansen",
-         "category": "Jacket",
-         "subCategory": "Sailing Jacket",
-         "name": "Salt Flag Jacket",
-         "description": "Almost the best jacket ever.",
-         "imgUrl": "https://www.hellyhansen.com/media/catalog/product/3/3/33909_603-2-main.jpg",
-         "_links": {}
-     }
- ]
- */

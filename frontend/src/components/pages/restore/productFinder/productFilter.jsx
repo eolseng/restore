@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import React from 'react'
+import React, {useState} from 'react'
 import useFetch from './productFinder'
 
 export function ProductFilter(props) {
     const { addSearchParam, subPath, filterName } = props
+    // eslint-disable-next-line no-unused-vars
     const [{ data, isLoading, isError }, doFetch] = useFetch(subPath)
     const [selected, setSelected] = useState()
 
@@ -22,7 +22,7 @@ export function ProductFilter(props) {
     }
 
     const renderFilters = () => {
-        let filters = data.embedded ? (
+        return data.embedded ? (
             data.embedded[subPath].map(function (filerAlt, index) {
                 const altText = getAltText(filerAlt)
                 return (
@@ -44,7 +44,6 @@ export function ProductFilter(props) {
         ) : (
             <div>{filterName} is loading...</div>
         )
-        return filters
     }
 
     return (

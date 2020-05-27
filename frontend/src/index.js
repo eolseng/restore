@@ -6,10 +6,6 @@ import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
 import Home from "./components/pages/home/home";
 import Profile from "./components/pages/profile/profile";
-import Filter from "./components/pages/filter/filter";
-import Condition from "./components/pages/condition/condition";
-import Delivery from "./components/pages/delivery/delivery";
-import Confirmation from "./components/pages/confirmation/confirmation";
 import Restore from "./components/pages/restore/restore";
 /** CSS Imports */
 import "./css/style.css";
