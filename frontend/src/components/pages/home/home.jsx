@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 // import ShowFoldHeader from "./ShowFoldHeader";
@@ -8,6 +8,38 @@ import '../../../css/pages/home/home.css'
 
 function Home() {
     const [renderedDiv, setRenderedDiv] = useState('')
+
+    function renderBlueprint() {
+        setRenderedDiv(
+            <div className='container-fluid'>
+                <div className='container'>
+                    <div className='text-box'>
+                        <h3>Slik fungerer det</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, praesentium.</p>
+                    </div>
+                    <div className='img-container'>
+                        <img src='' alt='Vision' />
+                    </div>
+                </div>
+            </div>
+        )
+    }
+    
+    function renderServices() {
+        setRenderedDiv(
+            <div className='container-fluid'>
+                <div className='container'>
+                    <div className='text-box'>
+                        <h3>Våre tjenester</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, praesentium.</p>
+                    </div>
+                    <div className='img-container'>
+                        <img src='' alt='Vision' />
+                    </div>
+                </div>
+            </div>
+        )
+    }
 
     function renderVision() {
         setRenderedDiv(
@@ -48,10 +80,16 @@ function Home() {
             </div>
             <div className='container-fluid'>
                 <div className='container'>
+                    <button onClick={renderBlueprint}>Slik fungerer det</button>
+                    <button onClick={renderServices}>Våre tjenester</button>
                     <button onClick={renderVision}>Vår visjon</button>
                 </div>
             </div>
-            {/* <ShowFoldHeader /> */}
+            <div className='container-fluid'>
+                <div className='container'>
+                    <div>{renderedDiv}</div>
+                </div>
+            </div>
         </div>
     )
 }
