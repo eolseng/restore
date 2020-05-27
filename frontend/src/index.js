@@ -17,12 +17,23 @@ import './css/style.css'
 
 /** Font Awesome Icons */
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faTimes, faLaptop, faSave, faEdit } from '@fortawesome/free-solid-svg-icons'
-import { faUserCircle } from '@fortawesome/free-regular-svg-icons'
+import { faBars, faTimes, faLaptop, faSave, faEdit, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faFacebookSquare, faTwitterSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 /** Font Awesome Icon Library */
-library.add(faBars, faTimes, faLaptop, faSave, faEdit, faUserCircle, faFacebookSquare, faTwitterSquare, faLinkedin)
+library.add(
+    faBars,
+    faTimes,
+    faLaptop,
+    faSave,
+    faEdit,
+    faUser,
+    faChevronDown,
+    faFacebookSquare,
+    faTwitterSquare,
+    faLinkedin
+)
 
 function notFound() {
     return (
@@ -34,17 +45,16 @@ function notFound() {
 }
 
 function App() {
-
-  const path = window.location.pathname;
+    const path = window.location.pathname
 
     return (
         <React.StrictMode>
             <BrowserRouter>
                 <div id='main-container'>
-                  {path !== "/" && <Header />}
+                    {path !== '/' && <Header />}
                     <Switch>
                         {/* Husk å legge inn routen i no.repairable.backend.controller.ReactForwardController */}
-                        <Route component={Home} exact path={'/'}/>
+                        <Route component={Home} exact path={'/'} />
                         <Route exact path={'/profile'}>
                             {Profile}
                         </Route>
