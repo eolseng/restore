@@ -1,21 +1,23 @@
 import React, {useState} from 'react'
 
 export function SearchFilter(props) {
-    const {addSearchParam} = props
-    let [tmpInputText, setTmpInputText] = useState("")
-    let delayTimer;
+
+    const executionDelayInMs = 500;
+
+    const {addSearchParam} = props;
+    let [tmpInputText, setTmpInputText] = useState("");
+    let [delayTimeout, setDelayTimeout] = useState(0);
 
     const doSearch = (txt) => {
-        setTmpInputText(txt)
-        clearTimeout(delayTimer)
-        setTimeout(function () {
-            addSearchParam('name', txt)
-        }, 500)
+        setTmpInputText(txt);
+        clearTimeout(delayTimeout);
+        setDelayTimeout(setTimeout(() => addSearchParam('name', txt), executionDelayInMs));
     }
 
-    return <div>
-        <input type="text" value={tmpInputText} placeholder="Search for product..." onChange={e => doSearch(e.target.value)}>
-
-        </input>
-    </div>
+    return (
+        <input type="text"
+               value={tmpInputText}
+               placeholder="Search for product..."
+               onChange={e => doSearch(e.target.value)}/>
+        )
 }
