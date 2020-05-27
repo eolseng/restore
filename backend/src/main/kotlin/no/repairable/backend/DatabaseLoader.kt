@@ -6,6 +6,7 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import no.repairable.backend.controller.ProductsCreationController
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
 import java.io.File
 import javax.annotation.PostConstruct
@@ -13,8 +14,13 @@ import javax.annotation.PostConstruct
 @Component
 class DatabaseLoader @Autowired constructor(
         private val productsCreationController: ProductsCreationController
-) {
-    @PostConstruct
+) : CommandLineRunner {
+
+
+    override fun run(vararg args: String?) {
+        onStartDataBaseLoader()
+    }
+
     fun onStartDataBaseLoader() {
         val mapper = jacksonObjectMapper()
         mapper.registerKotlinModule()
