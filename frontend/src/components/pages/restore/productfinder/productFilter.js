@@ -2,7 +2,7 @@ import React from 'react'
 import { CategoryFilter } from './categoryFilter'
 import { SearchFilter } from './searchFilter'
 
-import '../css/pages/product-finder/product-filter.css'
+import '../../../../css/pages/product-finder/product-filter.css'
 
 export function ProductFilter(props) {
     return (

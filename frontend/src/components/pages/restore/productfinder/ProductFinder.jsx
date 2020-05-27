@@ -5,9 +5,9 @@ import { Link, withRouter } from "react-router-dom";
 import { ProductFilter } from "./productFilter";
 import { ProductList } from "./productList";
 
-const client = require("../client"); // <3>
+const client = require("../../../../client"); // <3>
 
-const follow = require("../api/follow"); // function to hop multiple links by "rel"
+const follow = require("../../../../api/follow"); // function to hop multiple links by "rel"
 const root = "/api";
 
 export function ProductFinder() {
@@ -32,7 +32,7 @@ export function ProductFinder() {
     <div className='container-fluid'>
       <div className='container'>
         <div className='row'>
-          <ProductFilter searchState={searchState} addSearchParam={addSearchParam}></ProductFilter>
+          <ProductFilter searchState={searchState} addSearchParam={addSearchParam}/>
           <ProductList products={data} />
         </div>
       </div>

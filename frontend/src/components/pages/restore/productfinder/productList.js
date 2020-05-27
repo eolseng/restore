@@ -1,7 +1,7 @@
 import React from 'react'
 import { ProductCard } from './productCard'
 
-import '../css/pages/product-finder/product-list.css'
+import '../../../../css/pages/product-finder/product-list.css'
 
 export function ProductList(props) {
     /*
