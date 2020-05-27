@@ -1,0 +1,36 @@
+.restore-progress-items {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.restore-progress-item {
+    margin: 5px;
+    padding: 10px;
+
+    color: #555555;
+}
+
+.restore-progress-navigation-button {
+    margin: 5px;
+    padding: 10px;
+
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+.restore-progress-navigation-button:hover {
+    cursor: pointer;
+}
+
+.restore-progress-item-active {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.restore-progress-item-past {
+    border-bottom: 2px solid #555555;
+}
+
+.restore-progress-item-past:hover {
+    cursor: pointer;
+}

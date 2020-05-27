@@ -51,11 +51,13 @@ interface ExcerptProductProjection {
 
     fun getId(): Long
     fun getName(): String
-    fun getDescription(): String
     @Value("#{target.brand.name}")
     fun getBrand(): String
     @Value("#{target.category.name}")
     fun getCategory(): String
     @Value("#{target.subCategory.name}")
     fun getSubCategory(): String
+
+    fun getImages(): List<Image>
+
 }
