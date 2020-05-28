@@ -36,12 +36,6 @@ export function ProductFilterContainer(props) {
                 subPath={'subCategories'}
                 filterName={'subCategory'}
             />
-            <ProductFilter
-                key={"ProductFilterSizes"}
-                addSearchParam={props.addSearchParam}
-                subPath={'sizes'}
-                filterName={'size'}
-            />
         </div>
     )
 }

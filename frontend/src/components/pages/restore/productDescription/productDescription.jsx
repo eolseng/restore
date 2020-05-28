@@ -7,7 +7,6 @@ import "../../../../css/pages/restore/productDescription/productDescription.css"
 function ProductDescription() {
 
     const {state, dispatch} = useContext(RestoreContext);
-
     const [product, setProduct] = useState(null);
     const [currentImage, setCurrentImage] = useState(null);
     const [selectedColor, setSelectedColor] = useState(null);
@@ -56,17 +55,9 @@ function ProductDescription() {
             })
     }, [state.productId, state.productLink, state.productColor])
 
-    function isSelectedColor(id) {
-        if (id === selectedColor) {
-            return "selected";
-        } else {
-            return "";
-        }
-    }
-
-    function isSelectedSize(id) {
-        if (id === selectedSize) {
-            return "selected";
+    function isSelected(id) {
+        if (id === selectedColor || id === selectedSize) {
+            return "selected-item";
         } else {
             return "";
         }
@@ -86,9 +77,9 @@ function ProductDescription() {
                         <div className={"product-description-colors"}>
                             {product.images.map(image => {
                                 return (
-                                    <div className={"product-description-image-alternatives"}
+                                    <div className={"product-description-image-alternative"}
                                          key={"altImg-" + image.imgUrl}>
-                                        <img className={"product-description-image-alt " + isSelectedColor(image.colorId)}
+                                        <img className={"product-description-image-alt " + isSelected(image.colorId)}
                                              src={image.imgUrl}
                                              alt={'Alternative color - ' + image.colorName}
                                              onClick={() => {
@@ -109,8 +100,10 @@ function ProductDescription() {
                         <div id={"sizes-select"}>
                             {product.sizes.map(size => {
                                 return <div key={size.id}
-                                            onClick={() => setSelectedSize(size.id)}
-                                            className={"product-description-size " + isSelectedSize(size.id)}>{size.name}</div>
+                                            className={"product-description-size " + isSelected(size.id)}
+                                            onClick={() => setSelectedSize(size.id)}>
+                                    {size.name}
+                                </div>
                             })}
                         </div>
                     </div>
