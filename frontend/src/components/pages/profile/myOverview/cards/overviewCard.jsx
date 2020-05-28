@@ -8,13 +8,13 @@ export function OverviewCard(props) {
     const discount = props.discounts;
 
     return (
-        <div className="overview-card-container col-12">
-            <button className="overview-card-discounts overview-card-button col-12 card">
+        <div className="card-container col-12">
+            <button className="card-discounts card-button col-12 card">
                 <div>Logo</div>
                 <div>Rabatter</div>
                 <div>Antall rabattkort: {discount.count}</div>
             </button>
-            <button className="overview-card-orders overview-card-button col-12 card">
+            <button className="card-orders card-button col-12 card">
                 <div>Logo</div>
                 <div>Ordre</div>
                 <div>

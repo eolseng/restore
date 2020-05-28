@@ -1,10 +1,10 @@
-.overview-card-container {
+.card-container {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
 }
 
-.overview-card-discounts, .overview-card-orders {
+.card-discounts, .card-orders {
     height: 200px !important;
 }
 
@@ -17,8 +17,33 @@
     border-radius: 0.5rem;
     box-shadow: 0 1px 5px 1px #00000040;
 }
+.card-discount {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 5px 1px #00000040;
+}
 
-.overview-card-button:hover {
+.card-button:hover {
     box-shadow: 0 2px 5px 2px #00000060;
     cursor: pointer;
+}
+
+.discount-text {
+    font-size: 12px;
+}
+
+.card-brand-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-estimate-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
