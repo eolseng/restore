@@ -35,8 +35,6 @@ class ProductRepositoryTest @Autowired constructor(
         assertThat(found2.id == productTestData2.id)
         assertThat(found2.id != found.id)
 
-        productRepo.findAll().get(0).sizes?.map { size: Size -> size.size }
-
+        productRepo.findAll().get(0).sizes.map { size: Size -> size.name }
     }
-
 }

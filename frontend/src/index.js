@@ -5,7 +5,8 @@ import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
 import Home from "./components/pages/home/home";
-import Profile from "./components/pages/profile/profile";
+
+import {Profile} from "./components/pages/profile/profile";
 import Restore from "./components/pages/restore/restore";
 import {RestoreContextProvider} from "./components/pages/restore/restoreContext";
 
@@ -53,9 +54,7 @@ function App() {
                     <Switch>
                         {/* Husk å legge inn routen i no.repairable.backend.controller.ReactForwardController */}
                         <Route component={Home} exact path={'/'} />
-                        <Route exact path={'/profile'}>
-                            {Profile}
-                        </Route>
+                        <Route exact path="/profile" render={(props) => <Profile {...props}/>} />
                         <Route exact path={"/restore"}>
                             <RestoreContextProvider>
                                 <Restore/>
