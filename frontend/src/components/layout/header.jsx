@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+/*import React, { useState } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import logo from '../../img/logo/restore.png'
 
-/** CSS Imports */
+/** CSS Imports *//*
 import '../../css/layout/header.css'
 
 import Progress from './progressbar'
@@ -60,20 +60,21 @@ function Header() {
                     icon={['fas', 'bars']}
                     /*onClick="showMenu()"*/
                 />
-                {/* Må legge inn funksjonalitet på burger ikonet hvis vi skal ha det med videre. Må også legge inn
-                funkjonalitet på at den er display: none og at den kommer frem når den skal*/}
-                {/* Icon to profile page*/}
-                <Link to='./profile' className='link'>
+         //       {/* Må legge inn funksjonalitet på burger ikonet hvis vi skal ha det med videre. Må også legge inn
+        //        funkjonalitet på at den er display: none og at den kommer frem når den skal*/}
+               // {/* Icon to profile page*/}
+                /*<Link to='./profile' className='link'>
                     <FontAwesomeIcon className='' icon={['far', 'user']} />
                 </Link>
                 <Link to='' className='link'>
                     Logg inn / Registrer
                 </Link>{' '}
                 {/* Må legge inn riktig adresse under to="" når
-                 siden er åppe logginn */}
-            </div>
+              //   siden er åppe logginn */}
+          /*  </div>
         </div>
     )
 }
 
 export default withRouter(Header)
+*/
