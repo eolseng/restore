@@ -20,8 +20,8 @@ class ProductsCreationController @Autowired constructor(
         private val subCategoryRepository: SubCategoryRepository,
         private val colorRepository: ColorRepository,
         private val imageRepository: ImageRepository,
-        private val sizeRepository: SizeRepository,
-        private val actualProductRepository: ActualProductRepository
+        private val sizeRepository: SizeRepository
+
 ) {
 
     val genders: HashMap<String, Gender> = HashMap()
@@ -67,27 +67,31 @@ class ProductsCreationController @Autowired constructor(
         sizeRepository.saveAll(sizeMap.values)
         productRepository.saveAll(productsMap.values)
         colorRepository.saveAll(colors.values)
+
+
         imageRepository.saveAll(images.values)
     }
 
-    @PostMapping("/create_actual_product")
-    fun insertActualProduct(@RequestBody product: ActualProductData) {
-        val color = colorRepository.findByName(product.color)!!
-        val size = sizeRepository.findByName(product.size)!!
-        val chosenProduct = productRepository.findById(product.id).orElse(null)
-        val actualProduct = ActualProduct(color = color, size = size, product = chosenProduct)
-        actualProductRepository.save(actualProduct)
-    }
+    private fun getSizes(product: ProductPostClass, newProduct: Product) {
+        for (currentSize in product.sizes) {
+            var size: Size? = sizeMap[currentSize]
+            if (size == null) {
+                size = sizeRepository.findByName(currentSize)
+                if (size == null) {
+                    size = Size(name = currentSize)
+                }
+                sizeMap[currentSize] = size
+            }
 
-    data class ActualProductData(
-            val id: Long,
-            val size: String,
-            val color: String
-    )
+            size.products.add(newProduct)
+            newProduct.sizes.add(size)
+        }
+    }
 
     data class ProductsPost(
             val productCollection: List<ProductPostClass>
     )
+
 
     data class ProductPostClass(
             val category: String,
@@ -126,22 +130,6 @@ class ProductsCreationController @Autowired constructor(
                 }
                 images[colorImage.image] = image
             }
-        }
-    }
-
-    private fun getSizes(product: ProductPostClass, newProduct: Product) {
-        for (currentSize in product.sizes) {
-            var size: Size? = sizeMap[currentSize]
-            if (size == null) {
-                size = sizeRepository.findByName(currentSize)
-                if (size == null) {
-                    size = Size(name = currentSize)
-                }
-                sizeMap[currentSize] = size
-            }
-
-            size.products.add(newProduct)
-            newProduct.sizes.add(size)
         }
     }
 

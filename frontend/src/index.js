@@ -8,15 +8,16 @@ import Home from "./components/pages/home/home";
 
 import {Profile} from "./components/pages/profile/profile";
 import Restore from "./components/pages/restore/restore";
+import {RestoreContextProvider} from "./components/pages/restore/restoreContext";
 
 /** CSS Imports */
-import "./css/style.css";
+import './css/style.css'
+
 /** Font Awesome Icons */
-import {library} from "@fortawesome/fontawesome-svg-core";
-import {faBars, faEdit, faLaptop, faSave, faTimes,} from "@fortawesome/free-solid-svg-icons";
-import {faUserCircle} from "@fortawesome/free-regular-svg-icons";
-import {faFacebookSquare, faLinkedin, faTwitterSquare} from "@fortawesome/free-brands-svg-icons";
-import {RestoreContextProvider} from "./components/pages/restore/restoreContext";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faBars, faTimes, faLaptop, faSave, faEdit, faChevronDown, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
+import {faFacebookSquare, faTwitterSquare, faLinkedin, faInstagramSquare} from '@fortawesome/free-brands-svg-icons'
 
 /** Font Awesome Icon Library */
 library.add(
@@ -25,11 +26,14 @@ library.add(
     faLaptop,
     faSave,
     faEdit,
-    faUserCircle,
+    faUser,
+    faChevronDown,
+    faSignInAlt,
     faFacebookSquare,
     faTwitterSquare,
-    faLinkedin
-);
+    faLinkedin,
+    faInstagramSquare
+)
 
 function notFound() {
     return (
@@ -37,20 +41,20 @@ function notFound() {
             <h2>NOT FOUND: 404</h2>
             <p>ERROR: the page you requested in not available.</p>
         </div>
-    );
+    )
 }
 
 function App() {
+    const path = window.location.pathname
+
     return (
         <React.StrictMode>
             <BrowserRouter>
                 <div id='main-container'>
-                    <Header/>
+                    {path !== '/' && <Header />}
                     <Switch>
                         {/* Husk å legge inn routen i no.repairable.backend.controller.ReactForwardController */}
-                        <Route exact path={"/"}>
-                            {Home}
-                        </Route>
+                        <Route component={Home} exact path={'/'} />
                         <Route exact path="/profile" render={(props) => <Profile {...props}/>} />
                         <Route exact path={"/restore"}>
                             <RestoreContextProvider>
@@ -67,4 +71,4 @@ function App() {
     );
 }
 
-ReactDOM.render(<App/>, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'))
