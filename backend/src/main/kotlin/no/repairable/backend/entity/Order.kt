@@ -18,6 +18,7 @@ data class Order (
         @NotNull
         @ManyToOne
         val user: User,
+
         //TODO: Create class for deliveryType
         val deliveryType: String
 )

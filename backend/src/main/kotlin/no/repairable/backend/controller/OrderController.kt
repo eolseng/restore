@@ -20,7 +20,7 @@ class OrderController @Autowired constructor(
         private val userRepository: UserRepository
 ) {
 
-    @PostMapping("/create-order")
+    @PostMapping("")
     fun createNewOrder(@RequestBody order: OrderData) {
 
         val productsInOrder : MutableList<ActualProduct> = mutableListOf()
@@ -28,12 +28,12 @@ class OrderController @Autowired constructor(
         for (product in order.actualProducts) {
             val color = colorRepository.findByName(product.color)!!
             val size = sizeRepository.findByName(product.size)!!
-            val chosenProduct = productRepository.findById(product.id).orElse(null)
+            val chosenProduct = productRepository.findById(product.id).get()
             val actualProduct = ActualProduct(color = color, size = size, product = chosenProduct)
             actualProductRepository.save(actualProduct)
             productsInOrder.add(actualProduct)
         }
-        val user  = userRepository.findById(order.userID).orElse(null)!!
+        val user  = userRepository.findById(order.userID).get()
         val newOrder = Order(id = order.userID, actualProducts = productsInOrder, deliveryType = order.deliveryType, user = user)
         orderRepository.save(newOrder)
     }
