@@ -5,7 +5,6 @@ import no.repairable.backend.entity.ExcerptGenderProjection
 import no.repairable.backend.entity.Gender
 import no.repairable.backend.entity.QGender
 import org.springframework.data.jpa.repository.JpaRepository
-import org.springframework.data.jpa.repository.Query
 import org.springframework.data.querydsl.QuerydslPredicateExecutor
 import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer
 import org.springframework.data.querydsl.binding.QuerydslBindings
