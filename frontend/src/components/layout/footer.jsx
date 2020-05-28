@@ -7,7 +7,6 @@ import "../../css/layout/footer.css";
 
 function Footer() {
   return (
-      <div>
     <div className='footer-container'>
       {/* Restore logo*/}
       <div className='footer-content col-3'>
@@ -21,42 +20,37 @@ function Footer() {
       {/* Information*/}
       <div className='footer-content col-3'>
         <div className='footer-wrapper'>
-          <h4 className='footer-wrapper-content'>Kontakt</h4>
-          <Link to={"./FAQ"}>
-            <h5 className='footer-wrapper-content'>testmail@restore.com</h5>
-          </Link>
-          <h5 className='footer-wrapper-content'>tlf: 222 22 222</h5>
+          <h4 className='footer-wrapper-content'>KONTAKT</h4>
+            <h5 className='footer-wrapper-content kontakt-info'>hei@repairable.no</h5>
+          <h5 className='footer-wrapper-content kontakt-info'>+47 407 23 912  (9-15)</h5>
         </div>
       </div>
 
       {/* Contact info*/}
       <div className='footer-content col-3 social-media-style'>
         <div className='footer-wrapper'>
-          <h4 className='footer-wrapper-content'>Våre partnere:</h4>
-          <Link to=''>
-            <FontAwesomeIcon className='' icon={["fab", "facebook-square"]} />
-          </Link>
-          <Link to=''>
-            <FontAwesomeIcon className='' icon={["fab", "instagram-square"]} />
-          </Link>
+          <h4 className='footer-wrapper-content'>VÅRE PARTNERE</h4>
+            <div className={"logo-container"}>
+          <img id="hh-logo" src={require("../../img/logo/hh-logo.png")} alt={"logo"}/>
+          <img id="swix-logo" src={require("../../img/logo/swix-logo.png")} alt={"logo"}/>
+            </div>
         </div>
       </div>
 
       {/* Sosial Media*/}
       <div className='footer-content col-3 social-media-style'>
         <div className='footer-wrapper'>
-          <h4 className='footer-wrapper-content'>Følg oss</h4>
+          <h4 className='footer-wrapper-content'>FØLG OSS</h4>
           <div className='socialMediaIcons'>
             <Link to=''>
-              <FontAwesomeIcon className='' icon={["fab", "facebook-square"]} />
+              <FontAwesomeIcon className='footerIcon' icon={["fab", "facebook-square"]} />
             </Link>
             <Link to=''>
-              <FontAwesomeIcon className='' icon={["fab", "instagram-square"]} />
+              <FontAwesomeIcon className='footerIcon' icon={["fab", "instagram-square"]} />
             </Link>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
