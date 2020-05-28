@@ -16,7 +16,7 @@ data class Size (
         var size: String = "",
 
         @ManyToMany(mappedBy = "sizes")
-        var products: List<Product>? = null
+        var products: MutableList<Product> = mutableListOf()
 )
 
 @Projection(
