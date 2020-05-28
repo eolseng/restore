@@ -9,13 +9,25 @@ const root = "/api";
 
 export function ProductFinder() {
   const [searchState, setSearchState] = useState({});
-  // eslint-disable-next-line no-unused-vars
-  const [{ data, isLoading, isError }, setParams] = useFetch("products");
+  const [{ data}, setParams] = useFetch("products");
+  const [navLinks, setNavLinks] = useState([])
+
+
+  useEffect(() => {
+    updateNavLinks()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data.embedded]) //Update nav links every time data changes.
+
 
   const addSearchParam = (searchVal, val) => {
     //Copy values of previous search state
     let tmpSearchState = { ...searchState };
     tmpSearchState[searchVal] = val;
+
+    //GOTO page 0 as there's an change in filtering.
+    if (searchVal !== 'page'){
+      tmpSearchState["page"] = 0
+    }
 
     //Todo: Merge setSearchState and setParams.
     //Update search state
@@ -26,12 +38,45 @@ export function ProductFinder() {
   };
 
 
+
+  const handleNavPage = (pageNum) =>{
+    addSearchParam("page", pageNum)
+  }
+
+
+  const updateNavLinks = () => {
+    let links = []
+    //Is undefined before first API fetch is completed.
+    if (typeof data.page !== 'undefined') {
+      let i;
+      for (i = data.page.number - 2; i < data.page.totalPages + 2; i++) {
+        if (i < 0) {
+          continue
+        }
+        if (i >= data.page.totalPages) {
+          continue
+        }
+        if (links.length > 7) {
+          break
+        }
+        //Can't use onClick 'i' as 'i' is dynamic and causes wrong onClick argument.
+        const onClickId = i;
+        links.push(<button key={"navPage" + onClickId}
+                              onClick={() => handleNavPage(onClickId)}>{i === data.page.number ? "x" : i}</button>);
+      }
+    }
+    setNavLinks(links)
+  }
+
+
+
   return (
     <div className='container-fluid'>
       <div className='container'>
         <div className='row'>
           <ProductFilterContainer searchState={searchState} addSearchParam={addSearchParam}/>
-          <ProductList products={data} />
+          <ProductList products={data} addSearchParam={addSearchParam} />
+          <div>{navLinks}</div>
         </div>
       </div>
     </div>
@@ -40,12 +85,13 @@ export function ProductFinder() {
 
 export default function useFetch(subPath) {
   const [data, setData] = useState({});
-  const [params, setParams] = useState({});
+  const [params, setParams] = useState([{size:20}]); //Note: redundant with size:20, but shows how to change N products per page.
   // eslint-disable-next-line no-unused-vars
   const [isError, setIsError] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [isLoading, setIsLoading] = useState(false);
   let schema = {};
+
 
   // TODO: Fiks disabled eslint rot
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -78,6 +124,7 @@ export default function useFetch(subPath) {
           attributes: Object.keys(schema),
           embedded: productCollection.entity._embedded,
           links: productCollection.entity._links,
+          page: productCollection.entity.page
         });
       });
   };
