@@ -79,9 +79,6 @@ function Home() {
                         Vårt mål er å skape en kultur for kjøp og salg av gjenbruksklær. Det vil vi gjøre ved å
                         oppfordre deg som bruker til å benytte deg av vår panteløsning, slik at vi på sikt minsker de store mengdene av Norges klesforbruk.
                     </p>
-                    <p>
-                        
-                    </p>
                 </div>
                 <div className='img-container col-sm-6'>
                     <img src={require('../../../img/homePage/wishes_icyp.svg')} alt='Our services' />
