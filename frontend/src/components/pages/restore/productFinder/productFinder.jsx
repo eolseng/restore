@@ -9,7 +9,7 @@ const root = "/api";
 
 export function ProductFinder() {
   const [searchState, setSearchState] = useState({});
-  const [{ data, isLoading, isError }, setParams] = useFetch("products");
+  const [{ data}, setParams] = useFetch("products");
   const [navLinks, setNavLinks] = useState([])
 
 
