@@ -67,25 +67,7 @@ class ProductsCreationController @Autowired constructor(
         sizeRepository.saveAll(sizeMap.values)
         productRepository.saveAll(productsMap.values)
         colorRepository.saveAll(colors.values)
-
-
         imageRepository.saveAll(images.values)
-    }
-
-    private fun getSizes(product: ProductPostClass, newProduct: Product) {
-        for (currentSize in product.sizes) {
-            var size: Size? = sizeMap[currentSize]
-            if (size == null) {
-                size = sizeRepository.findByName(currentSize)
-                if (size == null) {
-                    size = Size(name = currentSize)
-                }
-                sizeMap[currentSize] = size
-            }
-
-            size.products.add(newProduct)
-            newProduct.sizes.add(size)
-        }
     }
 
     @PostMapping("/create_actual_product")
@@ -106,7 +88,6 @@ class ProductsCreationController @Autowired constructor(
     data class ProductsPost(
             val productCollection: List<ProductPostClass>
     )
-
 
     data class ProductPostClass(
             val category: String,
@@ -145,6 +126,22 @@ class ProductsCreationController @Autowired constructor(
                 }
                 images[colorImage.image] = image
             }
+        }
+    }
+
+    private fun getSizes(product: ProductPostClass, newProduct: Product) {
+        for (currentSize in product.sizes) {
+            var size: Size? = sizeMap[currentSize]
+            if (size == null) {
+                size = sizeRepository.findByName(currentSize)
+                if (size == null) {
+                    size = Size(name = currentSize)
+                }
+                sizeMap[currentSize] = size
+            }
+
+            size.products.add(newProduct)
+            newProduct.sizes.add(size)
         }
     }
 
