@@ -30,18 +30,20 @@ function Footer() {
       </div>
 
       {/* Contact info*/}
-      <div className='footer-content col-3'>
+      <div className='footer-content col-3 social-media-style'>
         <div className='footer-wrapper'>
-          <h4 className='footer-wrapper-content'>Repairable App</h4>
-          <h5 className='footer-wrapper-content'>
-            <Link to={"./"}>something@restore.com</Link> {/* epost link*/}
-          </h5>
-          <h5 className='footer-wrapper-content'>Tlf: 22 22 22 22</h5>
+          <h4 className='footer-wrapper-content'>Våre partnere:</h4>
+          <Link to=''>
+            <FontAwesomeIcon className='' icon={["fab", "facebook-square"]} />
+          </Link>
+          <Link to=''>
+            <FontAwesomeIcon className='' icon={["fab", "instagram-square"]} />
+          </Link>
         </div>
       </div>
 
       {/* Sosial Media*/}
-      <div className='footer-content col-3' id="social-media-style">
+      <div className='footer-content col-3 social-media-style'>
         <div className='footer-wrapper'>
           <h4 className='footer-wrapper-content'>Følg oss</h4>
           <div className='socialMediaIcons'>
