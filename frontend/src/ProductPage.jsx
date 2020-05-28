@@ -14,7 +14,7 @@ export class ProductPage extends React.Component{
 
     componentDidMount() { // <2>
         this.loadFromServer(this.state.pageSize);
-        console.log("Did mount!")
+        console.log("Did mount!!")
     }
 
 

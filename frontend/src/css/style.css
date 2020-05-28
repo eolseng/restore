@@ -21,6 +21,7 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -34,7 +35,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a, button, input[type="submit"] {
+a, button, .link, input[type="submit"] {
     cursor: pointer;
 }
 
@@ -44,6 +45,25 @@ button {
     font-weight: 400;
 }
 
+.cta-button {
+    padding: 1rem 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #fff;
+    background: var(--cta-color);
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: 0px 2px 4px 0px #00000030;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.cta-button:hover {
+    background: var(--cta-color-accent);
+    box-shadow: 0px 2px 6px 0px #00000030;
+}
+
 /* Containers */
 
 .container-fluid {
@@ -51,22 +71,12 @@ button {
     padding: 2rem 1rem;
 }
 
-.container {
-    max-width: var(--width-large);
-    margin: 0 auto;
-}
-
 /* Typografi */
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 1.1px;
     color: var(--title-color);
-}
-
-.main-title {
-    font-size: 6.75rem;
-    line-height: 108.5px;
 }
 
 h1 {
@@ -86,19 +96,19 @@ h3 {
 
 h4 {
     font-size: 1.25rem;
-    line-height: 29px;
+    line-height: 28px;
 }
 
 h5 {
-    font-size: 0.69rem;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 18px;
 }
 
 p {
     font-family: 'Lato', sans-serif;
     font-size: 1.125rem;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 29px;
     color: var(--text-color);
 }
 
@@ -122,7 +132,7 @@ p a:hover, p a:active {
 
 /* Media: Tablet */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 750px) {
     /* Containers */
     .container-fluid {
         padding: 1rem;

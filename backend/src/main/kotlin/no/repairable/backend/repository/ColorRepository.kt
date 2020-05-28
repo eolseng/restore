@@ -9,4 +9,5 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource
 interface ColorRepository : JpaRepository<Color, Long>
 {
     fun findByBrandAndName(brand: Brand,name:String) : Color?
+    fun findByName(name:String) : Color?
 }

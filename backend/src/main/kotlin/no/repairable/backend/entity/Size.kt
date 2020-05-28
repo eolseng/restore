@@ -13,19 +13,19 @@ data class Size (
 
         //@NotNull
         @Column(name = "size")
-        var size: String = "",
+        var name: String = "",
 
         @ManyToMany(mappedBy = "sizes")
-        var products: List<Product>? = null
+        var products: MutableList<Product> = mutableListOf()
 )
 
 @Projection(
         name = "excerpt",
-        types = [Brand::class]
+        types = [Size::class]
 )
 interface ExcerptSizeProjection {
 
         fun getId(): Long
-        fun getSize(): String
+        fun getName(): String
 
 }
