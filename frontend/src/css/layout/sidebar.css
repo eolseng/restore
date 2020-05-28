@@ -1,170 +1,83 @@
-/* This is the main stylesheet with all generic styles that are used on every page */
-
-/* Commons */
-
-:root {
-    /* Colors */
-    --primary-color: #2391D3;
-    --sec-color: #022C3F;
-    --comp-color: #FA4A64;
-    --comp-color-accent: #FF6F16;
-    --cta-color: #2BA358;
-    --cta-color-accent: #40B36C;
-    --title-color: #151515;
-    --text-color: #121212;
-    --bg-primary-color: #ffffff;
-    --bg-secondary-color: #FFF9E9;
-    /* Widths */
-    --width-large: 1100px;
-    --width-small: 900px;
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px;
 }
 
-html {
-    font-size: 16px;
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+    background: #373a47;
 }
 
-body {
-    position: relative;
-    margin: 0;
-    padding: 0;
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+    background: #a90000;
 }
 
-* {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
 }
 
-a, button, input[type="submit"] {
-    cursor: pointer;
+/* Color/shape of close button cross */
+.bm-cross {
+    background: #bdc3c7;
 }
-
-button {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.125rem;
-    font-weight: 400;
-}
-
-a {
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-/* Containers */
-
-.container-fluid {
-    width: 100%;
-    padding: 2rem 1rem;
-    /* Is here befor content is high enough */
-    min-height: calc(100vh - 200px);
-}
-
-/* Trying out Bootstrap instead of this container */
 
 /*
-.container {
-    max-width: var(--width-large);
-    margin: 0 auto;
-} */
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+}
 
-/* Typografi */
+/* General sidebar styles */
+.bm-menu {
+    background: #373a47;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+}
 
-h1, h2, h3, h4, h5 {
-    /* font-family: 'Noto Serif', serif; */
+
+/* Wrapper for item list */
+.bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+    display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu-item{
+    margin: 20px;
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1.1px;
-    color: var(--title-color);
-}
-
-.main-title {
-    font-size: 6.75rem;
-    line-height: 108.5px;
-}
-
-h1 {
-    font-size: 3.8rem;
-    line-height: 67.5px;
-}
-
-h2 {
-    font-size: 2.8rem;
-    line-height: 49.5px;
-}
-
-h3 {
-    font-size: 2rem;
-    line-height: 35.5px;
-}
-
-h4 {
-    font-size: 1.25rem;
-    line-height: 28px;
-}
-
-h5 {
-    font-size: 0.75rem;
-    line-height: 18px;
-}
-
-p {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.125rem;
-    font-weight: 400;
-    line-height: 22px;
-    color: var(--text-color);
-}
-
-.semibold {
-    font-weight: 600;
-}
-
-.bold {
-    font-weight: 800;
-}
-
-p a {
-    color: #1789d5;
+    font-size: 1em;
+    color: #E7F3F5;
     text-decoration: none;
 }
 
-p a:hover, p a:active {
-    color: #1268a1;
-    text-decoration: underline;
+.profile-icon{
+    margin-right: 5px;
 }
 
-/* Media: Tablet */
-
-@media screen and (max-width: 750px) {
-    /* Containers */
-    .container-fluid {
-        padding: 1rem;
-    }
-    /* Typografi */
-    h1 {
-        margin: 1.5rem 0;
-        font-size: 2rem;
-        line-height: 35.5px;
-    }
-    h2 {
-        margin: 1.375rem 0;
-        font-size: 1.5rem;
-        line-height: 29px;
-    }
-    h3 {
-        margin: 1.25rem 0;
-        font-size: 1.17rem;
-        line-height: 29px;
-    }
-    h4 {
-        margin: 1.125rem 0;
-        font-size: 1.05rem;
-        line-height: 25px;
-    }
-    p {
-        font-size: 16px;
-        line-height: 20px;
-    }
+#logo {
+    padding: 0 20px;
 }
 
-/* Media: Mobile */
-
-@media screen and (max-width: 750px) {}
+#logo-img {
+    height: 3rem;
+    padding-top: 0.5rem;
+}
