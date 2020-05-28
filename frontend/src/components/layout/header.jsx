@@ -66,7 +66,7 @@ function Header() {
                 <Link to='./profile' className='link'>
                     <FontAwesomeIcon className='' icon={['far', 'user']} />
                 </Link>
-                <Link to='' className='link'>
+                <Link to='./login' className='link'>
                     Logg inn / Registrer
                 </Link>{' '}
                 {/* Må legge inn riktig adresse under to="" når
