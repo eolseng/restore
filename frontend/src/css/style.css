@@ -69,8 +69,6 @@ button {
 .container-fluid {
     width: 100%;
     padding: 2rem 1rem;
-    /* Is here befor content is high enough */
-    min-height: calc(100vh - 200px);
 }
 
 /* Typografi */
