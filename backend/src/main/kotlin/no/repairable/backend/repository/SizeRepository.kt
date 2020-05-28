@@ -20,6 +20,6 @@ interface SizeRepository : JpaRepository<Size, Long>,
             bindings.bind(String::class.java).first { path: StringPath, value: String? -> path.containsIgnoreCase(value) }
         }
 
-    fun findBySize(name:String) : Size?
+    fun findByName(name:String) : Size?
 
 }

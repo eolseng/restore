@@ -21,6 +21,6 @@ interface GenderRepository : JpaRepository<Gender, Long>,
         bindings.bind(String::class.java).first { path: StringPath, value: String? -> path.containsIgnoreCase(value) }
     }
 
-    fun findGenderByGenderType(inputGender: String): Gender?
+    fun findByName(name: String): Gender?
 
 }

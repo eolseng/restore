@@ -13,7 +13,7 @@ data class Size (
 
         //@NotNull
         @Column(name = "size")
-        var size: String = "",
+        var name: String = "",
 
         @ManyToMany(mappedBy = "sizes")
         var products: MutableList<Product> = mutableListOf()
@@ -26,6 +26,6 @@ data class Size (
 interface ExcerptSizeProjection {
 
         fun getId(): Long
-        fun getSize(): String
+        fun getName(): String
 
 }

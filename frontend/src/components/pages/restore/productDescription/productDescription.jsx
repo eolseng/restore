@@ -96,7 +96,7 @@ function ProductDescription() {
                         <label>Choose size:
                             <select name={"sizes"} id={"sizes-select"} onChange={handleSizeChange}>
                                 {product.sizes.map(size => {
-                                    return <option key={size.id} value={size.id}>{size.size}</option>
+                                    return <option key={size.id} value={size.id}>{size.name}</option>
                                 })}
                             </select>
                         </label>
