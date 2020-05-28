@@ -14,7 +14,7 @@ class Image(
         val imgUrl: String? = null,
 
         @ManyToOne
-        val color:Color? = null,
+        val color: Color? = null,
 
         @ManyToOne
         var product: Product? = null

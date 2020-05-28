@@ -20,8 +20,8 @@ class ProductsCreationController @Autowired constructor(
         private val subCategoryRepository: SubCategoryRepository,
         private val colorRepository: ColorRepository,
         private val imageRepository: ImageRepository,
-        private val sizeRepository: SizeRepository,
-        private val actualProductRepository: ActualProductRepository
+        private val sizeRepository: SizeRepository
+
 ) {
 
     val genders: HashMap<String, Gender> = HashMap()
@@ -87,21 +87,6 @@ class ProductsCreationController @Autowired constructor(
             newProduct.sizes.add(size)
         }
     }
-
-    @PostMapping("/create_actual_product")
-    fun insertActualProduct(@RequestBody product: ActualProductData) {
-        val color = colorRepository.findByName(product.color)!!
-        val size = sizeRepository.findBySize(product.size)!!
-        val chosenProduct = productRepository.findById(product.id).orElse(null)
-        val actualProduct = ActualProduct(color = color, size = size, product = chosenProduct)
-        actualProductRepository.save(actualProduct)
-    }
-
-    data class ActualProductData(
-            val id: Long,
-            val size: String,
-            val color: String
-    )
 
     data class ProductsPost(
             val productCollection: List<ProductPostClass>
