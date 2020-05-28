@@ -7,6 +7,7 @@ import Footer from "./components/layout/footer";
 import Home from "./components/pages/home/home";
 
 import {Profile} from "./components/pages/profile/profile";
+import {Login} from "./components/pages/login/login";
 import Restore from "./components/pages/restore/restore";
 import {RestoreContextProvider} from "./components/pages/restore/restoreContext";
 
@@ -56,6 +57,7 @@ function App() {
                         {/* Husk å legge inn routen i no.repairable.backend.controller.ReactForwardController */}
                         <Route component={Home} exact path={'/'} />
                         <Route exact path="/profile" render={(props) => <Profile {...props}/>} />
+                        <Route exact path="/login" render={(props) => <Login {...props}/>} />
                         <Route exact path={"/restore"}>
                             <RestoreContextProvider>
                                 <Restore/>
