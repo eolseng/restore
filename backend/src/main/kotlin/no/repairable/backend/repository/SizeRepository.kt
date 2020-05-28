@@ -12,12 +12,14 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource
 
 @RepositoryRestResource(excerptProjection = ExcerptSizeProjection::class)
 interface SizeRepository : JpaRepository<Size, Long>,
-        QuerydslPredicateExecutor<Size>,
-        QuerydslBinderCustomizer<QSize> {
+    QuerydslPredicateExecutor<Size>,
+    QuerydslBinderCustomizer<QSize> {
 
-    @JvmDefault
-    override fun customize(bindings: QuerydslBindings, root: QSize) {
-        bindings.bind(String::class.java).first { path: StringPath, value: String? -> path.containsIgnoreCase(value) }
-    }
+        @JvmDefault
+        override fun customize(bindings: QuerydslBindings, root: QSize) {
+            bindings.bind(String::class.java).first { path: StringPath, value: String? -> path.containsIgnoreCase(value) }
+        }
+
+    fun findBySize(name:String) : Size?
 
 }

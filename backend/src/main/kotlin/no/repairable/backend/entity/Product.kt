@@ -34,7 +34,7 @@ data class Product(
         val gender: Gender? = null,
 
         @ManyToMany(fetch = FetchType.LAZY)
-        val sizes: List<Size>? = null,
+        var sizes: MutableList<Size> = mutableListOf(),
 
         @ManyToMany(mappedBy = "products")
         val colors: List<Color>? = null,
