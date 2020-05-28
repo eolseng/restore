@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 
 /* Css imports */
 import "../../../css/pages/profile/profile.css";
