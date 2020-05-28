@@ -201,15 +201,13 @@ class ProductsCreationController @Autowired constructor(
 
     private fun getBaseColor(colorName: String): BaseColor {
 
-        println("LOOKING FOR: " + colorName)
         // Check if full name is a match
         var baseColor = baseColorMap[colorName]
         if (baseColor == null) {
-            println("SEARCHING SUB STRINGS")
             // Search for substrings that match a BaseColor
             val subStrings = colorName.toLowerCase().split(" ", "/")
             for (sub in subStrings) {
-                if (baseColorMap.containsKey(sub)){
+                if (baseColorMap.containsKey(sub)) {
                     baseColor = baseColorMap[sub]
                     break
                 }
@@ -219,8 +217,6 @@ class ProductsCreationController @Autowired constructor(
         if (baseColor == null) {
             println("COULD NOT FIND " + colorName)
             baseColorRepository.findAll()[0]
-        } else{
-            println("FOUND: " + baseColor.name)
         }
         return baseColor!!
     }
