@@ -16,9 +16,10 @@ function Home() {
             <div id='bluprint-text' className='text-wrapper col-sm-6'>
                 <h3>Slik fungerer det</h3>
                 <ol>
-                    <li>Send / lever brukte plagg til oss</li>
-                    <li>Få en verdivurdering på plagget</li>
-                    <li>Motta Store Credit i din profil</li>
+                    <li>Opprett anonym profil</li>
+                    <li>Få verdivurdering på klær på forhånd</li>
+                    <li>Send inn/lever klær</li>
+                    <li>Motta poeng i Store Credit i din profil</li>
                 </ol>
             </div>
         </div>
@@ -33,8 +34,9 @@ function Home() {
                 <div id='bluprint-text' className='text-wrapper col-sm-6'>
                     <h3>Slik fungerer det</h3>
                     <ol>
-                        <li>Send / lever brukte plagg til oss</li>
-                        <li>Få en verdivurdering på plagget</li>
+                        <li>Opprett anonym profil</li>
+                        <li>Få verdivurdering på klær på forhånd</li>
+                        <li>Send inn/lever klær</li>
                         <li>Motta Store Credit i din profil</li>
                     </ol>
                 </div>
@@ -48,12 +50,17 @@ function Home() {
             <div className='row content'>
                 <div className='text-wrapper col-sm-6'>
                     <h3>Våre tjenester</h3>
-                    <p>Noe</p>
                     <p>
-                        Som takk for at du sender inn dine brukte klær til oss får du Store Credit basert på plaggets
-                        tilstand. På denne måten får alle parter noe igjen for at du leverer inn dine brukte klær til
-                        oss
+                        Etter du har sendt oss dine brukte klær vil disse bli repartert/renset hos oss i 
+                        Repairble og sendt til samarbeidspartnernes butikker slik at disse kan bli solgt på nytt i deres bruktavdeling.
                     </p>
+                    <p>
+                        Som takk for at du sender inn dine brukte klær til oss får du poeng i din Store Credit basert på plaggets
+                        tilstand og verdi. På denne måten får alle parter noe igjen for at du leverer inn dine brukte klær til
+                        oss.
+                    </p>
+                    <p>Din profil vil være anonym og poengene du samler kan brukes til kjøp av nye plagg hos våre partnere</p>
+
                 </div>
                 <div className='img-container col-sm-6'>
                     <img src={require('../../../img/homePage/order_delivered.svg')} alt='Our services' />
@@ -70,12 +77,10 @@ function Home() {
                     <h3>Vår visjon</h3>
                     <p>
                         Vårt mål er å skape en kultur for kjøp og salg av gjenbruksklær. Det vil vi gjøre ved å
-                        oppfordre deg som bruker til å sende inn plagg til oss.
+                        oppfordre deg som bruker til å benytte deg av vår panteløsning, slik at vi på sikt minsker de store mengdene av Norges klesforbruk.
                     </p>
                     <p>
-                        Vi sender brukte klær i god stand til butikkenes merker slik at disse kan bli solgt på nytt i
-                        deres bruktavdelinger. Samtidig som du bidrar til et bedre miljø vil du kunne få muligheten til
-                        å kjøpe noe nytt med gavekortene du får. Slik minsker vi på sikt store mengder av klesforbruket.
+                        
                     </p>
                 </div>
                 <div className='img-container col-sm-6'>
@@ -103,13 +108,12 @@ function Home() {
                 <div className='container'>
                     <div className='row'>
                         <div className='above-fold-text-wrapper col-sm-6'>
-                            <h1>Restore - Tise, bare bedre</h1>
+                            <h1>Restore - pant dine klær i dag</h1>
                             <p>
-                                Send inn / lever dine brukte klær og motta Store Credit hos våre samarbeidspartnere.
-                                Spar tiden du ellers ville brukt på å undersøke priser, beskrive dine plagg og avtale
-                                møtested med kjøper. <br />
-                                Vi gjør jobben for deg!
+                                Send inn eller lever dine brukte klær og motta poeng i din profil. Bruk poengene på nye eller brukte klær hos våre samarbeidspartnere.
+                                Spar tiden du ellers ville brukt på å undersøke priser og selge dine brukte klær til andre. <br />
                             </p>
+                            <b>Vi gjør jobben for deg- du sender inn brukte klær og mottar poeng til å kjøpe nye klær!</b>
                             <div className='button-container'>
                                 <Link className='button-link' to='/filter'>
                                     <button className='cta-button'>Start nå</button>
@@ -117,7 +121,7 @@ function Home() {
                             </div>
                         </div>
                         <div className='above-fold-img-wrapper col-sm-6'>
-                            <img src={require('../../../img/homePage/hero-final.svg')} alt={'Hero'} />
+                            <img src={require('../../../img/homePage/final-hero.svg')} alt={'Hero'} />
                         </div>
                     </div>
                 </div>
