@@ -9,7 +9,6 @@ const root = "/api";
 
 export function ProductFinder() {
   const [searchState, setSearchState] = useState({});
-  // eslint-disable-next-line no-unused-vars
   const [{ data, isLoading, isError }, setParams] = useFetch("products");
 
   const addSearchParam = (searchVal, val) => {
@@ -31,7 +30,7 @@ export function ProductFinder() {
       <div className='container'>
         <div className='row'>
           <ProductFilterContainer searchState={searchState} addSearchParam={addSearchParam}/>
-          <ProductList products={data} />
+          <ProductList products={data} page={data.page} addSearchParam={addSearchParam} />
         </div>
       </div>
     </div>
@@ -40,12 +39,13 @@ export function ProductFinder() {
 
 export default function useFetch(subPath) {
   const [data, setData] = useState({});
-  const [params, setParams] = useState({});
+  const [params, setParams] = useState([{size:20}]); //Note: redundant with size:20, but shows how to change N products per page.
   // eslint-disable-next-line no-unused-vars
   const [isError, setIsError] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [isLoading, setIsLoading] = useState(false);
   let schema = {};
+
 
   // TODO: Fiks disabled eslint rot
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -78,6 +78,7 @@ export default function useFetch(subPath) {
           attributes: Object.keys(schema),
           embedded: productCollection.entity._embedded,
           links: productCollection.entity._links,
+          page: productCollection.entity.page
         });
       });
   };
