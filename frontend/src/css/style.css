@@ -69,6 +69,8 @@ button {
 .container-fluid {
     width: 100%;
     padding: 2rem 1rem;
+    /* Is here befor content is high enough */
+    min-height: calc(100vh - 200px);
 }
 
 /* Typografi */
@@ -96,12 +98,12 @@ h3 {
 
 h4 {
     font-size: 1.25rem;
-    line-height: 29px;
+    line-height: 28px;
 }
 
 h5 {
-    font-size: 0.69rem;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 18px;
 }
 
 p {
@@ -132,7 +134,7 @@ p a:hover, p a:active {
 
 /* Media: Tablet */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 750px) {
     /* Containers */
     .container-fluid {
         padding: 1rem;

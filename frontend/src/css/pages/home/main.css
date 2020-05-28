@@ -1,0 +1,43 @@
+/* Main */
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+#root {
+    height: 100vh;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.button-container {
+    margin: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 4rem;
+    background: linear-gradient(rgb(27, 154, 177), #168A9E);
+    color: #FFF;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 0.2rem;
+}
+
+.cta-button:hover {
+    background: linear-gradient(rgb(25, 134, 156), #177085);
+    cursor: pointer;
+}
+
+.title {
+    margin-top: 0;
+}
