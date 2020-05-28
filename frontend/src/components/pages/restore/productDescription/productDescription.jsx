@@ -56,8 +56,20 @@ function ProductDescription() {
             })
     }, [state.productId, state.productLink, state.productColor])
 
-    function handleSizeChange(e) {
-        setSelectedSize(e.target.value)
+    function isSelectedColor(id) {
+        if (id === selectedColor) {
+            return "selected";
+        } else {
+            return "";
+        }
+    }
+
+    function isSelectedSize(id) {
+        if (id === selectedSize) {
+            return "selected";
+        } else {
+            return "";
+        }
     }
 
     if (product) {
@@ -76,7 +88,7 @@ function ProductDescription() {
                                 return (
                                     <div className={"product-description-image-alternatives"}
                                          key={"altImg-" + image.imgUrl}>
-                                        <img className={"product-description-image-alt"}
+                                        <img className={"product-description-image-alt " + isSelectedColor(image.colorId)}
                                              src={image.imgUrl}
                                              alt={'Alternative color - ' + image.colorName}
                                              onClick={() => {
@@ -93,13 +105,14 @@ function ProductDescription() {
                     </div>
 
                     <div className={"product-description-sizes"}>
-                        <label>Choose size:
-                            <select name={"sizes"} id={"sizes-select"} onChange={handleSizeChange}>
-                                {product.sizes.map(size => {
-                                    return <option key={size.id} value={size.id}>{size.name}</option>
-                                })}
-                            </select>
-                        </label>
+                        <h4>Choose size:</h4>
+                        <div id={"sizes-select"}>
+                            {product.sizes.map(size => {
+                                return <div key={size.id}
+                                            onClick={() => setSelectedSize(size.id)}
+                                            className={"product-description-size " + isSelectedSize(size.id)}>{size.name}</div>
+                            })}
+                        </div>
                     </div>
 
                 </div>
