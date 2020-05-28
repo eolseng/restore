@@ -7,7 +7,7 @@ import '../../../css/pages/home/home.css'
 
 function Home() {
     const [activeNavMenuIdx, setActiveNavMenuIdx] = useState(0)
-    const [userIsLoggedIn, setUserIsLoggedIn] = useState(true)
+    const [userIsLoggedIn] = useState(true)
     const [renderedDiv, setRenderedDiv] = useState(
         <div className='row content'>
             <div id='bluprint-img' className='img-container col-sm-6'>
