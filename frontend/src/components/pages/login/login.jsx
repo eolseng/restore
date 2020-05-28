@@ -18,9 +18,10 @@ export function Login() {
         setLoginValue({userName: e.target.value});
     }
 
+    /*
     function handlePasswordChange(e) {
         setLoginValue({password: e.target.value})
-    }
+    } */
 
     function handleSubmit(e) {
         alert("Velkommen " + loginValue.userName + " til Restore, og takk for at du tenker på miljøet.");
