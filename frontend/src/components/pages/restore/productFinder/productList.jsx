@@ -10,8 +10,11 @@ export function ProductList(props) {
 
     const productList = props.products
     const productCards = productList.embedded ? (
-        productList.embedded.products.map(product => <ProductCard key={product.id} product={product}/>)
-    ) : (
+        productList.embedded.products.map(product =>
+            product.images.map((image, index) =>
+                // Render a card for each color of the product
+                <ProductCard key={"IMG_KEY" + image.imgUrl} product={product} imageIndex={index}/>
+            ))) : (
         <div className={'product-list-no-product'}>Could not find any products.</div>
     )
 
