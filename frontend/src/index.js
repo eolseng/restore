@@ -5,18 +5,10 @@ import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
 import Home from "./components/pages/home/home";
-<<<<<<< HEAD
-import { ProductPage } from "./ProductPage";
-import { Profile } from "./components/pages/profile/profile";
-import Filter from "./components/pages/filter/filter";
-import Condition from "./components/pages/condition/condition";
-import Delivery from "./components/pages/delivery/delivery";
-import Confirmation from "./components/pages/confirmation/confirmation";
 
-=======
-import Profile from "./components/pages/profile/profile";
+import {Profile} from "./components/pages/profile/profile";
 import Restore from "./components/pages/restore/restore";
->>>>>>> fd84e666c95a30f8632144fd532801089ee23b18
+
 /** CSS Imports */
 import "./css/style.css";
 /** Font Awesome Icons */
