@@ -11,6 +11,8 @@ data class Order (
         @GeneratedValue
         @Column(name = "id")
         val id: Long? = null,
+
+        @OneToMany
         val actualProducts: MutableList<ActualProduct> = mutableListOf(),
 
         @NotNull
