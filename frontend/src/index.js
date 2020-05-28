@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 
-import Header from "./components/layout/header";
+import Sidebar from "./components/layout/sidebar";
 import Footer from "./components/layout/footer";
 import Home from "./components/pages/home/home";
 
@@ -14,9 +14,9 @@ import {RestoreContextProvider} from "./components/pages/restore/restoreContext"
 import './css/style.css'
 
 /** Font Awesome Icons */
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faTimes, faLaptop, faSave, faEdit, faChevronDown, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
-import { faUser } from '@fortawesome/free-regular-svg-icons'
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {faBars, faTimes, faLaptop, faSave, faEdit, faChevronDown, faSignInAlt} from '@fortawesome/free-solid-svg-icons'
+import {faUser} from '@fortawesome/free-regular-svg-icons'
 import {faFacebookSquare, faTwitterSquare, faLinkedin, faInstagramSquare} from '@fortawesome/free-brands-svg-icons'
 
 /** Font Awesome Icon Library */
@@ -46,29 +46,36 @@ function notFound() {
 
 function App() {
     const path = window.location.pathname
+    const outerContainerId = "outer-container";
+    const pageWrapId = "page-wrap";
 
     return (
         <React.StrictMode>
             <BrowserRouter>
-                <div id='main-container'>
-                    {path !== '/' && <Header />}
-                    <Switch>
-                        {/* Husk å legge inn routen i no.repairable.backend.controller.ReactForwardController */}
-                        <Route component={Home} exact path={'/'} />
-                        <Route exact path="/profile" render={(props) => <Profile {...props}/>} />
-                        <Route exact path={"/restore"}>
-                            <RestoreContextProvider>
-                                <Restore/>
-                            </RestoreContextProvider>
-                        </Route>
-                        <Route path='/404' component={notFound}/>
-                        <Redirect to='/404'/>
-                    </Switch>
-                    <Footer/>
+                <div id={outerContainerId} style={{height: '100%'}}>
+                    <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"}/>
+                    <main id={pageWrapId}>
+                        <div id='main-container'>
+                            {path !== '/'}
+                            <Switch>
+                                {/* Husk å legge inn routen i no.repairable.backend.controller.ReactForwardController */}
+                                <Route component={Home} exact path={'/'}/>
+                                <Route exact path="/profile" render={(props) => <Profile {...props}/>}/>
+                                <Route exact path={"/restore"}>
+                                    <RestoreContextProvider>
+                                        <Restore/>
+                                    </RestoreContextProvider>
+                                </Route>
+                                <Route path='/404' component={notFound}/>
+                                <Redirect to='/404'/>
+                            </Switch>
+                            <Footer/>
+                        </div>
+                    </main>
                 </div>
             </BrowserRouter>
         </React.StrictMode>
     );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App/>, document.getElementById('root'))
