@@ -27,7 +27,7 @@ class OrderController @Autowired constructor(
 
         for (product in order.actualProducts) {
             val color = colorRepository.findByName(product.color)!!
-            val size = sizeRepository.findBySize(product.size)!!
+            val size = sizeRepository.findByName(product.size)!!
             val chosenProduct = productRepository.findById(product.id).orElse(null)
             val actualProduct = ActualProduct(color = color, size = size, product = chosenProduct)
             actualProductRepository.save(actualProduct)
