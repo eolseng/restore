@@ -18,29 +18,11 @@ export function ProductList(props) {
     )
 
 
-    const handleNavPage = (pageNum) =>{
-        props.addSearchParam("page", pageNum)
-    }
-
-    const navLinks = [];
-    //Is undefined before first API fetch is completed.
-    if (typeof props.page !== 'undefined'){
-        let i;
-        for (i = props.page.number - 2; i < props.page.number + 2; i++) {
-            if (i < 0){continue}
-            if (i >= props.page.totalPages){continue}
-
-            //Can't use onClick 'i' as 'i' is dynamic and causes wrong onClick argument.
-            const onClickId = i;
-            navLinks.push(<button key={"navPage" + onClickId}  onClick={() => handleNavPage(onClickId)}>{onClickId}</button>);
-        }
-    }
 
 
     return (
         <div className='product-list-wrapper col-sm-9'>
             <div className='product-list'>{productCards}</div>
-            <div>{navLinks}</div>
         </div>
     )
 }
