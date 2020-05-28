@@ -16,9 +16,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 @SpringBootTest
 @AutoConfigureRestDocs
 @AutoConfigureMockMvc
-class CategoryTest(
-        @Autowired
-        private var mockMvc: MockMvc
+class CategoryTest @Autowired constructor(
+        val mockMvc: MockMvc
 ) {
 
 
