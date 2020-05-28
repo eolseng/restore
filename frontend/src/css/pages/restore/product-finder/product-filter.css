@@ -28,3 +28,31 @@
     padding: 0.5rem 0;
     width: 100%;
 }
+
+.search-bar {
+    margin: 10px 0;
+    background: none;
+    border-bottom: 1px solid var(--sec-color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 200px;
+    height: 30px;
+    color: var(--text-color);
+}
+
+.search-bar:focus {
+    outline: none;
+    border-bottom: 1px solid var(--sec-color);
+}
+
+.search-button {
+    color: var(--sec-color)
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
