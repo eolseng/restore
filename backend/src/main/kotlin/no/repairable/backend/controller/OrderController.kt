@@ -36,8 +36,6 @@ class OrderController @Autowired constructor(
         val user  = userRepository.findById(order.userID).orElse(null)!!
         val newOrder = Order(id = order.userID, actualProducts = productsInOrder, deliveryType = order.deliveryType, user = user)
         orderRepository.save(newOrder)
-
-
     }
 
     data class OrderData(
