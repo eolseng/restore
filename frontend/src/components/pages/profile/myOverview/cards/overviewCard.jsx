@@ -8,7 +8,7 @@ export function OverviewCard(props) {
     const discount = props.discounts;
 
     return (
-        <div className="card-container col-12">
+        <div>
             <button className="card-discounts card-button col-12 card">
                 <div>Logo</div>
                 <div>Rabatter</div>
