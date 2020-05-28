@@ -42,7 +42,7 @@ class ProductsCreationController @Autowired constructor(
 
     fun insertOnStartUp(products: ProductsPost) {
 
-        if(baseColorMap.isEmpty()){
+        if (baseColorMap.isEmpty()) {
             fetchBaseColors()
         }
 
@@ -122,7 +122,8 @@ class ProductsCreationController @Autowired constructor(
             if (color == null) {
                 color = colorRepository.findByBrandAndName(newProduct.brand!!, colorImage.color)
                 if (color == null) {
-                    color = Color(name = colorImage.color, brand = newProduct.brand)
+                    val baseColor = getBaseColor(colorImage.color)
+                    color = Color(name = colorImage.color, brand = newProduct.brand, baseColor = baseColor)
                 }
                 colors[colorImage.color] = color
             }
@@ -196,6 +197,32 @@ class ProductsCreationController @Autowired constructor(
         for (baseColor in baseColors) {
             baseColorMap[baseColor.name] = baseColor
         }
+    }
+
+    private fun getBaseColor(colorName: String): BaseColor {
+
+        println("LOOKING FOR: " + colorName)
+        // Check if full name is a match
+        var baseColor = baseColorMap[colorName]
+        if (baseColor == null) {
+            println("SEARCHING SUB STRINGS")
+            // Search for substrings that match a BaseColor
+            val subStrings = colorName.toLowerCase().split(" ", "/")
+            for (sub in subStrings) {
+                if (baseColorMap.containsKey(sub)){
+                    baseColor = baseColorMap[sub]
+                    break
+                }
+            }
+        }
+
+        if (baseColor == null) {
+            println("COULD NOT FIND " + colorName)
+            baseColorRepository.findAll()[0]
+        } else{
+            println("FOUND: " + baseColor.name)
+        }
+        return baseColor!!
     }
 
 }

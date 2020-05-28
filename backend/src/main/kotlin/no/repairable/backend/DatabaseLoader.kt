@@ -24,7 +24,7 @@ class DatabaseLoader @Autowired constructor(
     }
 
     private fun insertBaseColors() {
-        val baseColorNames: List<String> = mutableListOf("other", "red", "blue", "navy", "white", "black", "green", "yellow", "brown", "orange", "pink", "purple", "phantom", "magnet", "micro chip", "norwegian mix", "bluebell", "nimbus cloud", "olive", "aubergine", "fire")
+        val baseColorNames: List<String> = mutableListOf("other", "grey", "red", "blue", "navy", "white", "black", "green", "yellow", "brown", "orange", "pink", "purple", "phantom", "magnet", "micro chip", "norwegian mix", "bluebell", "nimbus cloud", "olive", "aubergine", "fire")
         val baseColors = mutableListOf<BaseColor>()
         for (name in baseColorNames) {
             val baseColor = BaseColor(name = name)
