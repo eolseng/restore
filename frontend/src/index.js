@@ -18,7 +18,7 @@ import "./css/style.css";
 import {library} from "@fortawesome/fontawesome-svg-core";
 import {faBars, faEdit, faLaptop, faSave, faTimes,} from "@fortawesome/free-solid-svg-icons";
 import {faUserCircle} from "@fortawesome/free-regular-svg-icons";
-import {faFacebookSquare, faLinkedin, faTwitterSquare} from "@fortawesome/free-brands-svg-icons";
+import {faFacebookSquare, faInstagramSquare, faLinkedin, faTwitterSquare} from "@fortawesome/free-brands-svg-icons";
 import {RestoreContextProvider} from "./components/pages/restore/RestoreContext";
 
 /** Font Awesome Icon Library */
@@ -31,7 +31,9 @@ library.add(
     faUserCircle,
     faFacebookSquare,
     faTwitterSquare,
-    faLinkedin
+    faInstagramSquare,
+    faLinkedin,
+
 );
 
 function notFound() {

@@ -11,10 +11,11 @@
     padding: 5px;
 }
 
-/*
+
 .socialMediaIcons {
     flex-direction: row;
-} */
+    padding: 5px ;
+}
 
 .footer-content {
     display: flex;
@@ -35,4 +36,8 @@
 
 .footer-content-img {
     width: 13rem;
+}
+
+#social-media-style {
+    height: 100%;
 }
