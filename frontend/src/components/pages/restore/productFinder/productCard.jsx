@@ -13,7 +13,7 @@ export function ProductCard(props) {
     const mainImage = product.images[imageIndex];
 
     const [displayImage, setDisplayImage] = useState(mainImage.imgUrl);
-    const [currentColor, setCurrentColor] = useState(mainImage.colorName)
+    const [currentColor, setCurrentColor] = useState(mainImage.colorName);
     const [showAltImages, setShowAltImages] = useState(false);
 
     return (
@@ -22,6 +22,8 @@ export function ProductCard(props) {
              onClick={() => {
                  dispatch({type: "setProductColor", payload: currentColor});
                  dispatch({type: "setProductId", payload: product.id});
+                 dispatch({type: "setProductLink", payload: product._links.self.href});
+                 dispatch({type: "incrementStep"});
              }}
              onMouseEnter={() => setShowAltImages(true)}
              onMouseLeave={() => setShowAltImages(false)}>

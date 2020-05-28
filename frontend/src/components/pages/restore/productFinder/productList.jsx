@@ -14,9 +14,7 @@ export function ProductList(props) {
             product.images.map((image, index) =>
                 // Render a card for each color of the product
                 <ProductCard key={"IMG_KEY" + image.imgUrl} product={product} imageIndex={index}/>
-            )
-        )
-    ) : (
+            ))) : (
         <div className={'product-list-no-product'}>Could not find any products.</div>
     )
 

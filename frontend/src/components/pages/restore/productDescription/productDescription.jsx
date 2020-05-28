@@ -30,31 +30,35 @@ function ProductDescription() {
     // Fetch product from API
     useEffect(() => {
         async function fetchProduct() {
-            const url = '/api/products/' + state.productId;
-            await fetch(url)
+            return await fetch(state.productLink)
                 .then(res => res.json())
-                .then(res => {
-                    const emb = res._embedded;
-                    const product = {
-                        id: state.productId,
-                        name: res.name,
-                        description: res.description,
-                        brand: emb.brand,
-                        category: emb.category,
-                        subCategory: emb.subCategory,
-                        gender: emb.gender,
-                        sizes: emb.sizes,
-                        colors: emb.colors,
-                        images: emb.images
-                    }
-                    setProduct(product)
-                    const image = product.images.find(image => image.colorName === state.productColor)
-                    setCurrentImage(image.imgUrl)
-                    setSelectedColor(image.colorId)
-                })
         }
+
         fetchProduct()
-    }, [state.productId, state.productColor])
+            .then(res => {
+                const emb = res._embedded;
+                const product = {
+                    id: state.productId,
+                    name: res.name,
+                    description: res.description,
+                    brand: emb.brand,
+                    category: emb.category,
+                    subCategory: emb.subCategory,
+                    gender: emb.gender,
+                    sizes: emb.sizes,
+                    colors: emb.colors,
+                    images: emb.images
+                }
+                setProduct(product)
+                const image = product.images.find(image => image.colorName === state.productColor)
+                setCurrentImage(image.imgUrl)
+                setSelectedColor(image.colorId)
+            })
+    }, [state.productId, state.productLink, state.productColor])
+
+    function handleSizeChange(e) {
+        setSelectedSize(e.target.value)
+    }
 
     if (product) {
         console.log(product)
@@ -89,11 +93,13 @@ function ProductDescription() {
                     </div>
 
                     <div className={"product-description-sizes"}>
-                        <select name={"sizes"} id={"sizes-select"}>
-                            {product.sizes.map(size => {
-                                return <option key={size} value={size}>size</option>
-                            })}
-                        </select>
+                        <label>Choose size:
+                            <select name={"sizes"} id={"sizes-select"} onChange={handleSizeChange}>
+                                {product.sizes.map(size => {
+                                    return <option key={size.id} value={size.id}>{size.size}</option>
+                                })}
+                            </select>
+                        </label>
                     </div>
 
                 </div>
