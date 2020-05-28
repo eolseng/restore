@@ -82,7 +82,6 @@ function MyOverview() {
         setIsRenderOverview(false);
         setRendered(
             <div className="my-overview-cards-container">
-                {/*<div>Ordresidensiden</div>*/}
                 {orders.map((orderData, index) => (
                     <OrdersCard key={orderData.id} index={index} orderData={orderData}/>))}
             </div>
