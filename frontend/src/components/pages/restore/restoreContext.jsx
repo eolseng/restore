@@ -7,7 +7,9 @@ const initialState = {
     step: 1,
     brandId: null,
     productFilter: null,
+    productLink: null,
     productId: null,
+    productColor: null,
     productDescription: null,
     deliveryOptions: null
 };
@@ -27,15 +29,19 @@ const reducer = (state, action) => {
         case "decrementStep":
             return {...state, step: state.step > 0 ? state.step - 1 : 0};
         case "setBrandId":
-            return {...state, brandId: action.payload, step: state.step + 1};
+            return {...state, brandId: action.payload};
         case "setProductFilter":
             return {...state, productFilter: action.payload};
+        case "setProductLink":
+            return {...state, productLink: action.payload};
         case "setProductId":
-            return {...state, productId: action.payload, step: state.step + 1};
+            return {...state, productId: action.payload};
+        case "setProductColor":
+            return {...state, productColor: action.payload};
         case "setProductDescription":
-            return {...state, productDescription: action.payload, step: state.step + 1};
+            return {...state, productDescription: action.payload};
         case "setDeliveryOptions":
-            return {...state, deliveryOptions: action.payload, step: state.step + 1};
+            return {...state, deliveryOptions: action.payload};
         default:
             return;
     }

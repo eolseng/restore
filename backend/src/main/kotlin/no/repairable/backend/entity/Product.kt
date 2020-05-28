@@ -37,7 +37,7 @@ data class Product(
         var sizes: MutableList<Size> = mutableListOf(),
 
         @ManyToMany(mappedBy = "products")
-        val colors : List<Color>? = null,
+        val colors: List<Color>? = null,
 
         @OneToMany(mappedBy = "product")
         val images: MutableList<Image> = mutableListOf()
@@ -48,16 +48,7 @@ data class Product(
         types = [Product::class]
 )
 interface ExcerptProductProjection {
-
     fun getId(): Long
     fun getName(): String
-    @Value("#{target.brand.name}")
-    fun getBrand(): String
-    @Value("#{target.category.name}")
-    fun getCategory(): String
-    @Value("#{target.subCategory.name}")
-    fun getSubCategory(): String
-
     fun getImages(): List<Image>
-
 }

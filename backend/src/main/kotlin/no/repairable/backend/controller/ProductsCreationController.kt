@@ -76,9 +76,9 @@ class ProductsCreationController @Autowired constructor(
         for (currentSize in product.sizes) {
             var size: Size? = sizeMap[currentSize]
             if (size == null) {
-                size = sizeRepository.findBySize(currentSize)
+                size = sizeRepository.findByName(currentSize)
                 if (size == null) {
-                    size = Size(size = currentSize)
+                    size = Size(name = currentSize)
                 }
                 sizeMap[currentSize] = size
             }
@@ -136,9 +136,9 @@ class ProductsCreationController @Autowired constructor(
     private fun getGender(product: ProductPostClass): Gender {
         var gender = genders[product.gender]
         if (gender == null) {
-            gender = genderRepository.findGenderByGenderType(product.gender)
+            gender = genderRepository.findByName(product.gender)
             if (gender == null) {
-                gender = Gender(genderType = product.gender)
+                gender = Gender(name = product.gender)
                 genderRepository.save(gender)
             }
             genders[product.gender] = gender

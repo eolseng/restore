@@ -1,5 +1,7 @@
 import React from "react";
 
+/* css imports */
+import "../../css/layout/progressbar.css"
 
 function Progress({ progress}) {
     const progressShow = window.location.pathname;
