@@ -3,7 +3,7 @@ import React, {useContext, useEffect} from "react";
 import {RestoreContext} from "./restoreContext";
 import {ProductFinder} from "./productFinder/productFinder";
 import BrandSelector from "./brandSelector";
-import ProductDescription from "./productDescription";
+import ProductDescription from "./productDescription/productDescription";
 import DeliverySelector from "./deliverySelector";
 import OrderConfirmation from "./orderConfirmation";
 import RestoreProgress from "./restoreProgress";

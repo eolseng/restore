@@ -2,6 +2,7 @@ import React, {useContext, useState} from 'react'
 import {RestoreContext} from "../restoreContext";
 
 export function ProductCard(props) {
+
     /*
         Gets passed an individual Product as a prop and renders it.
      */
@@ -12,9 +13,8 @@ export function ProductCard(props) {
     const mainImage = product.images[imageIndex];
 
     const [displayImage, setDisplayImage] = useState(mainImage.imgUrl);
-    const [showAltImages, setShowAltImages] = useState(false);
     const [currentColor, setCurrentColor] = useState(mainImage.colorName)
-
+    const [showAltImages, setShowAltImages] = useState(false);
 
     return (
         <div className={'product-card'}

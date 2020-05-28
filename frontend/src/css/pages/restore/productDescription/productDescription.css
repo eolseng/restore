@@ -1,0 +1,14 @@
+.product-description {
+    margin: auto;
+    padding: 25px;
+
+    border: 1px solid black;
+}
+
+.product-description-image-main {
+    width: 400px;
+}
+
+.product-description-image-alt {
+    width: 150px;
+}

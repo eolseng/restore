@@ -8,7 +8,7 @@ const initialState = {
     brandId: null,
     productFilter: null,
     productId: null,
-    productColor: "p",
+    productColor: null,
     productDescription: null,
     deliveryOptions: null
 };

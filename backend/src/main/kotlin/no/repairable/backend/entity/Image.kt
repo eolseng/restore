@@ -32,6 +32,8 @@ class Image(
 interface ExcerptImageProjection {
     fun getId(): Long
 
+    fun getImgUrl(): String
+
     @Value("#{target.product.name}")
     fun getProductName(): String
 

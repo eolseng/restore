@@ -21,7 +21,7 @@ data class Size (
 
 @Projection(
         name = "excerpt",
-        types = [Brand::class]
+        types = [Size::class]
 )
 interface ExcerptSizeProjection {
 
