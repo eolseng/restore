@@ -30,7 +30,9 @@ export function ProductCard(props) {
 
             <img className={'product-card-image-main'} src={displayImage} alt={''}/>
 
-            {showAltImages && (
+            <div className={'product-card-name'}>{product.name}</div>
+
+            {/* {showAltImages && ( */}
                 <div className={'product-card-image-alt-list'}>
                     {product.images.map((image, index) => {
                         return <img key={"ALT_IMAGE" + imageIndex + image.imgUrl}
@@ -47,8 +49,7 @@ export function ProductCard(props) {
                                     alt={'Alternative colors'}/>
                     })}
                 </div>
-            )}
-            <div className={'product-card-name'}>{product.name}</div>
+            {/* )} */}
         </div>
     )
 }
