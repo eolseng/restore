@@ -3,7 +3,7 @@ package no.repairable.backend.entity
 import javax.persistence.*
 
 @Entity
-@Table(name = "Color")
+@Table(name = "color")
 class Color(
         @Id
         @GeneratedValue

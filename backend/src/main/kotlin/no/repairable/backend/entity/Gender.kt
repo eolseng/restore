@@ -14,7 +14,7 @@ data class Gender(
 
        // @NotNull
         @Column(name = "gender")
-        var genderType: String? = null,
+        var name: String? = null,
 
         @OneToMany(mappedBy = "gender", cascade = [(CascadeType.ALL)])
         val products: List<Product> = mutableListOf()
@@ -27,6 +27,6 @@ data class Gender(
 interface ExcerptGenderProjection {
 
         fun getId(): Long
-        fun getGenderType(): String
+        fun getName(): String
 
 }
