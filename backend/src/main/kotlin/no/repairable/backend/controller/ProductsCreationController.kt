@@ -20,7 +20,8 @@ class ProductsCreationController @Autowired constructor(
         private val subCategoryRepository: SubCategoryRepository,
         private val colorRepository: ColorRepository,
         private val imageRepository: ImageRepository,
-        private val sizeRepository: SizeRepository
+        private val sizeRepository: SizeRepository,
+        private val baseColorRepository: BaseColorRepository
 
 ) {
 
@@ -32,6 +33,7 @@ class ProductsCreationController @Autowired constructor(
     val images: HashMap<String, Image> = HashMap()
     val productsMap: HashMap<String, Product> = HashMap()
     val sizeMap: HashMap<String, Size> = HashMap()
+    val baseColorMap: HashMap<String, BaseColor> = HashMap()
 
     @PostMapping("/products")
     fun insertProducts(@RequestBody products: ProductsPost) {
@@ -39,6 +41,10 @@ class ProductsCreationController @Autowired constructor(
     }
 
     fun insertOnStartUp(products: ProductsPost) {
+
+        if(baseColorMap.isEmpty()){
+            fetchBaseColors()
+        }
 
         for (product in products.productCollection) {
 
@@ -184,4 +190,12 @@ class ProductsCreationController @Autowired constructor(
         }
         return subCategory
     }
+
+    private fun fetchBaseColors() {
+        val baseColors = baseColorRepository.findAll()
+        for (baseColor in baseColors) {
+            baseColorMap[baseColor.name] = baseColor
+        }
+    }
+
 }

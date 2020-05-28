@@ -10,7 +10,7 @@ data class BaseColor(
         @Id
         @GeneratedValue
         var id: Long? = null,
-        var name: String? = null,
+        var name: String,
         @OneToMany(mappedBy = "baseColor")
         val colors: MutableList<Color> = mutableListOf()
 
