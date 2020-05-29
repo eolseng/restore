@@ -35,7 +35,7 @@ export function LoginForm() {
             <form onSubmit={handleSubmit}>
                 <label className="login-label">
                     <div className="login-password">
-                        Brukernavn (e-post)
+                        Brukernavn
                     </div>
                     <input type="text" className="input-field" placeholder="Brukernavn" value={loginValue.userName}
                            onChange={handleUserNameChange}/>
@@ -47,9 +47,7 @@ export function LoginForm() {
                     />
                     {/*onChange={handlePasswordChange}*/}
                 </label>
-                <Link to="">
-                    <input type="submit" value="LOGG INN" className="submit p"/>
-                </Link>
+                <input type="submit" value="LOGG INN" className="submit p"/>
             </form>
         </div>
     )

@@ -8,6 +8,7 @@ import Home from "./components/pages/home/home";
 
 import {Profile} from "./components/pages/profile/profile";
 import {Login} from "./components/pages/login/login";
+import {Register} from "./components/pages/login/register";
 import Restore from "./components/pages/restore/restore";
 import {RestoreContextProvider} from "./components/pages/restore/restoreContext";
 
@@ -55,12 +56,13 @@ function App() {
         <React.StrictMode>
             <BrowserRouter>
                 <div id='main-container'>
-                    {path !== '/' && <Header/> && path !== '/restore' && <Header />}
+                    {/*{path !== '/' && <Header/> && path !== '/restore' && <Header />}*/}
                     <Switch>
                         {/* Husk å legge inn routen i no.repairable.backend.controller.ReactForwardController */}
                         <Route component={Home} exact path={'/'} />
                         <Route exact path="/profile" render={(props) => <Profile {...props}/>} />
                         <Route exact path="/login" render={(props) => <Login {...props}/>} />
+                        <Route exact path="/register" render={(props) => <Register {...props}/>} />
                         <Route exact path={"/restore"}>
                             <RestoreContextProvider>
                                 <Restore/>
