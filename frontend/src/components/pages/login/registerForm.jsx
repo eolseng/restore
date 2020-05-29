@@ -19,10 +19,10 @@ export function RegisterForm() {
             validatePassword: false
         }
     ]);
-
+/*
     function handleUserNameChange(e) {
         setRegisterValue({userName: e.target.value});
-    }
+    }*/
 
     /*
     function handlePasswordChange(e) {
@@ -66,7 +66,7 @@ export function RegisterForm() {
                         E-post - Blir brukernavn
                     </div>
                     <input type="text" className="register-input-field" placeholder="E-post"
-                           value={registerValue.email} onChange={handleUserNameChange}/>
+                           value={registerValue.email} onChange={""}/>
                     <div className="login-password">
                         <div>Passord</div>
                     </div>
