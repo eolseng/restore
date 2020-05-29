@@ -32,9 +32,9 @@ export function ProductCard(props) {
 
             <div className={'product-card-name'}>{product.name}</div>
 
-            {/* {showAltImages && ( */}
+            {showAltImages && (
                 <div className={'product-card-image-alt-list'}>
-                    {product.images.map((image, index) => {
+                    {product.images.map((image) => {
                         return <img key={"ALT_IMAGE" + imageIndex + image.imgUrl}
                                     className={"product-card-image-alt"}
                                     onMouseEnter={() => {
@@ -49,7 +49,7 @@ export function ProductCard(props) {
                                     alt={'Alternative colors'}/>
                     })}
                 </div>
-            {/* )} */}
+            )}
         </div>
     )
 }

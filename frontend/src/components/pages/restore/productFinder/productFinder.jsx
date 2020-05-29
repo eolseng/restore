@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { ProductFilterContainer } from './productFilterContainer'
-import { ProductList } from './productList'
+import React, {useEffect, useState} from 'react'
+import {ProductFilterContainer} from './productFilterContainer'
+import {ProductList} from './productList'
 
 const client = require('../../../../client') // <3>
 
@@ -9,7 +9,7 @@ const root = '/api'
 
 export function ProductFinder() {
     const [searchState, setSearchState] = useState({})
-    const [{ data }, setParams] = useFetch('products')
+    const [{data}, setParams] = useFetch('products')
     const [navLinks, setNavLinks] = useState([])
 
     useEffect(() => {
@@ -19,7 +19,7 @@ export function ProductFinder() {
 
     const addSearchParam = (searchVal, val) => {
         //Copy values of previous search state
-        let tmpSearchState = { ...searchState }
+        let tmpSearchState = {...searchState}
         tmpSearchState[searchVal] = val
 
         //GOTO page 0 as there's an change in filtering.
@@ -74,8 +74,8 @@ export function ProductFinder() {
         <div className='container-fluid'>
             <div className='container'>
                 <div className='row'>
-                    <ProductFilterContainer searchState={searchState} addSearchParam={addSearchParam} />
-                    <ProductList products={data} addSearchParam={addSearchParam} />
+                    <ProductFilterContainer searchState={searchState} addSearchParam={addSearchParam}/>
+                    <ProductList products={data} addSearchParam={addSearchParam}/>
                 </div>
                 <div className='row page-nav-button-wrapper'>
                     <div className='page-nav-button-container offset-sm-3'>{navLinks}</div>
@@ -87,7 +87,7 @@ export function ProductFinder() {
 
 export default function useFetch(subPath) {
     const [data, setData] = useState({})
-    const [params, setParams] = useState([{ size: 15 }]) //Note: redundant with size:15, but shows how to change N products per page.
+    const [params, setParams] = useState([{size: 15}]) //Note: redundant with size:15, but shows how to change N products per page.
     // eslint-disable-next-line no-unused-vars
     const [isError, setIsError] = useState(false)
     // eslint-disable-next-line no-unused-vars
@@ -103,7 +103,7 @@ export default function useFetch(subPath) {
             [
                 //Array of API relations to navigate through
                 //(In this case, looks in _links for relation (rel) 'products, finds it HREF and navigates too it.
-                { rel: subPath, params: params[0] },
+                {rel: subPath, params: params[0]},
             ]
         )
             .then(productCollection => {
@@ -111,7 +111,7 @@ export default function useFetch(subPath) {
                 return client({
                     method: 'GET',
                     path: productCollection.entity._links.profile.href,
-                    headers: { Accept: 'application/schema+json' },
+                    headers: {Accept: 'application/schema+json'},
                 }).then(pageSchema => {
                     //Collect meta-data about the response products like e.g if the product properties is string, readonly etc.
                     schema = pageSchema.entity
@@ -134,10 +134,10 @@ export default function useFetch(subPath) {
         () => {
             //Todo: add page param.
             loadFromServer()
-            // eslint-disable-next-line react-hooks/exhaustive-deps
         },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         [params] // Re-fetches when url is changed is changed.
     )
 
-    return [{ data, isLoading, isError }, setParams]
+    return [{data, isLoading, isError}, setParams]
 }
