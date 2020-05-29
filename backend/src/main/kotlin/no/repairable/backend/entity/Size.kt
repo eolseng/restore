@@ -4,7 +4,7 @@ import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 
 @Entity
-@Table(name = "Size")
+@Table(name = "size")
 data class Size (
         @Id
         @GeneratedValue

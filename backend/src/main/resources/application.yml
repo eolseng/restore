@@ -20,5 +20,5 @@ spring:
         base-path:
                   /api
     jpa:
-      show-sql: false
+      show-sql: true
 
