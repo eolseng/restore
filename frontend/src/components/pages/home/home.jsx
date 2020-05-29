@@ -94,8 +94,6 @@ function Home() {
         setActiveNavMenuIdx(2)
     }
 
-    const outerContainerId = "outer-container";
-    const pageWrapId = "page-wrap";
 
     return (
         <div className='home-wrapper'>
@@ -179,14 +177,11 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div id={outerContainerId} style={{height: '100%'}}>
-                    <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"}/>
-                    <main id={pageWrapId}>
-                        <div className='container-fluid content-wrapper'>
-                            <div className='container content-container'>{renderedDiv}</div>
-                        </div>
-                    </main>
+
+                <div className='container-fluid content-wrapper'>
+                    <div className='container content-container'>{renderedDiv}</div>
                 </div>
+
             </div>
         </div>
     )
