@@ -1,8 +1,7 @@
-package no.repairable.no.repairable.backend.repository
+package no.repairable.backend.repository
 
 import no.repairable.backend.entity.Product
 import no.repairable.backend.entity.Size
-import no.repairable.backend.repository.ProductRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired

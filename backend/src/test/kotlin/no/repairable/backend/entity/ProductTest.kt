@@ -1,4 +1,4 @@
-package no.repairable.no.repairable.backend.entity
+package no.repairable.backend.entity
 
 import no.repairable.backend.entity.Product
 import no.repairable.backend.repository.ProductRepository
@@ -21,7 +21,14 @@ class ProductTest @Autowired constructor(
         val mockMvc: MockMvc,
         val productRepo: ProductRepository
 ) {
+    @Test
+    @Throws(Exception::class)
+    fun checkProductsEndpoint() {
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/products"))
+                .andExpect(MockMvcResultMatchers.status().isOk)
+                .andDo(MockMvcRestDocumentation.document("products"))
 
+    }
 
     @Test
     @Throws(Exception::class)

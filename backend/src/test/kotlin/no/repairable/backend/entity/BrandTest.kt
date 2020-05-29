@@ -1,4 +1,4 @@
-package no.repairable.no.repairable.backend.entity
+package no.repairable.backend.entity
 
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -19,7 +19,7 @@ class BrandTest @Autowired constructor(
 
     @Test
     @Throws(Exception::class)
-    fun checkCategoryEndpoint() {
+    fun checkBrandsEndpoint() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/brands"))
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("brands"))
