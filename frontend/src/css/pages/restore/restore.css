@@ -1,3 +1,14 @@
+.restore-progress {
+    margin: 0 0 0.5rem 0;
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    /* border-bottom: 1px solid var(--sec-color); */
+    box-shadow: 0px 1px 4px #00000030;
+    z-index: 1;
+}
+
 .restore-progress-items {
     display: flex;
     justify-content: space-evenly;
@@ -6,29 +17,38 @@
 .restore-progress-item {
     margin: 5px;
     padding: 10px;
-
-    color: #555555;
+    color: var(--sec-color);
 }
 
 .restore-progress-navigation-button {
     margin: 5px;
-    padding: 10px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    color: var(--sec-color);
+    border-radius: 0.2rem;
+    /* border: 1px solid black; */
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
 
-    border-radius: 100%;
-    border: 1px solid black;
+.restore-progress-navigation-button .arrow-icon{
+    margin: 0 0.5rem;
+    padding: 0;
 }
 
 .restore-progress-navigation-button:hover {
-    cursor: pointer;
+    color: var(--cta-color-accent);
 }
 
 .restore-progress-item-active {
-    color: black;
-    border-bottom: 2px solid black;
+    color: #FEAF1A;
+    border-bottom: 2px solid #FEAF1A;
 }
 
 .restore-progress-item-past {
-    border-bottom: 2px solid #555555;
+    color: var(--cta-color);
+    border-bottom: 2px solid var(--cta-color-accent);
 }
 
 .restore-progress-item-past:hover {
