@@ -55,7 +55,7 @@ function App() {
         <React.StrictMode>
             <BrowserRouter>
                 <div id='main-container'>
-                    {path !== '/' || path !== '/restore' && <Header />}
+                    {path !== '/' && <Header/> && path !== '/restore' && <Header />}
                     <Switch>
                         {/* Husk å legge inn routen i no.repairable.backend.controller.ReactForwardController */}
                         <Route component={Home} exact path={'/'} />
