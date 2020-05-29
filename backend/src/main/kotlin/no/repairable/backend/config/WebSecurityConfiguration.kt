@@ -10,6 +10,10 @@ open class WebSecurityConfiguration : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity)
     {
         http.csrf().disable()
+                .formLogin().loginPage("/index.html")
+                .loginProcessingUrl("/perform_login")
+                .defaultSuccessUrl("/homepage.html",true)
+                .failureUrl("/index.html?error=true")
     }
 
 }
