@@ -11,9 +11,13 @@ data class ActualProduct(
         @GeneratedValue
         @Column(name = "id")
         val id: Long? = null,
+
         @NotNull
         @ManyToOne
         var product: Product,
+
+        @ManyToOne
+        val order: Order? = null,
 
         @NotNull
         @ManyToOne
