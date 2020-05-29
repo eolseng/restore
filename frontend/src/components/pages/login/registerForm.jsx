@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {Link} from "react-router-dom";
 
 /* css imports */
 import "../../../css/pages/login/register.css"
@@ -33,6 +32,18 @@ export function RegisterForm() {
     function handleSubmit(e) {
 
         e.preventDefault();
+        setRegisterValue(
+            {
+                firstName: "",
+                surName: "",
+                address: "",
+                phoneNr: "",
+                email: "",
+                userName: "",
+                password: "",
+                validatePassword: false
+            }
+        )
     }
 
     // Css
@@ -51,16 +62,6 @@ export function RegisterForm() {
                     </div>
                     <input type="text" className="register-input-field" placeholder="Etternavn"
                            value={registerValue.surName} onChange={""}/>
-                    <div className="login-password">
-                        Adresse
-                    </div>
-                    <input type="text" className="register-input-field" placeholder="Adresse"
-                           value={registerValue.address} onChange={""}/>
-                    <div className="login-password">
-                        Telefon nr
-                    </div>
-                    <input type="text" className="register-input-field" placeholder="Telefon nr"
-                           value={registerValue.phoneNr} onChange={""}/>
                     <div className="login-password">
                         E-post - Blir brukernavn
                     </div>
