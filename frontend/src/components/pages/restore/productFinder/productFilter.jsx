@@ -17,23 +17,26 @@ export function ProductFilter(props) {
         return alt.name
     }
 
+    function isSelected(altText) {
+        if (altText === selected) {
+            return " product-filter-selected"
+        } else {
+            return ""
+        }
+    }
+
     const renderFilters = () => {
         return data.embedded ? (
             data.embedded[subPath].map(function (filerAlt, index) {
                 const altText = getAltText(filerAlt)
                 return (
-                    <div key={"container-" + index} className='product-filter-content'>
-                        <label className='product-filter-label'>
-                            <input
-                                className='product-filter-input'
-                                type={'radio'}
-                                value={altText}
-                                checked={altText === selected}
-                                key={index}
-                                onChange={() => selectFilter(altText)}
-                            />
+                    <div key={"container-" + index}
+                         className={'product-filter-content ' + isSelected(altText)}>
+                        <div className='product-filter-input'
+                             key={index}
+                             onClick={() => selectFilter(altText)}>
                             {altText}
-                        </label>
+                        </div>
                     </div>
                 )
             })
@@ -44,8 +47,9 @@ export function ProductFilter(props) {
 
     return (
         <div className='product-filter-type'>
-            <h5 className='product-filter-title'>{filterName}</h5>
+            <h5 className='product-filter-title'>{filterName.toUpperCase()}</h5>
             {renderFilters()}
+            <div className={'product-filter-clear'} onClick={() => selectFilter('')}>Clear</div>
         </div>
     )
 }
