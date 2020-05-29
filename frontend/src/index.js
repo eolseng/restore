@@ -49,7 +49,7 @@ function notFound() {
 }
 
 function App() {
-    const path = window.location.pathname
+   // const path = window.location.pathname
 
     return (
         <React.StrictMode>
