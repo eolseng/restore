@@ -24,7 +24,7 @@ export function SearchFilter(props) {
                onChange={e => doSearch(e.target.value)}
                className={"search-bar"}
         />
-        <FontAwesomeIcon icon={["fas", "search"]} className={"search-button"}/>
+        <FontAwesomeIcon icon={["fas", "search"]} className={"search-icon"}/>
         </div>
         )
 }

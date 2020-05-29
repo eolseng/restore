@@ -3,6 +3,11 @@
     border-right: 1px solid lightgray;
 }
 
+.product-filter-container {
+    position: sticky;
+    top: 6.65rem;
+}
+
 .product-filter-type {
     margin: 1rem 0;
 }
@@ -12,15 +17,8 @@
 }
 
 .product-filter-content {
-    width: 16px;
-    height: 16px;
-
-    border: 1px solid var(--sec-color);
-    border-radius: 100%;
-    margin-right: 16px;
-    margin-top: 16px;
-
-    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .product-filter-content * {
@@ -28,8 +26,8 @@
 }
 
 .product-filter-input {
-    margin-right: 0.5rem;
-    margin-top: 0;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
 }
 
 .product-filter-label {
@@ -41,6 +39,13 @@
 
 /* searchFilter.jsx classes */
 
+.search-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .search-bar {
     margin: 10px 0;
     background: none;
@@ -49,7 +54,8 @@
     border-left: none;
     border-right: none;
     width: 200px;
-    height: 30px;
+    padding: 0.25rem 0;
+    font-size: 1.125rem;
     color: var(--text-color);
 }
 
@@ -58,13 +64,17 @@
     border-bottom: 1px solid var(--sec-color);
 }
 
-.search-button {
-    color: var(--sec-color)
+.search-icon {
+    height: 100%;
+    margin: 10px 0;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-size: 1.2rem;
+    color: #8d8d8d;
+    border-bottom: 1px solid var(--sec-color);
+    cursor: pointer;
 }
 
-.search-container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.search-bar:focus ~ .search-icon{
+    color: var(--sec-color);
 }
