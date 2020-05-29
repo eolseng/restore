@@ -35,7 +35,7 @@ export function ProductFilter(props) {
                         <div className='product-filter-input'
                              key={index}
                              onClick={() => selectFilter(altText)}>
-                            {altText}
+                            {altText.charAt(0).toUpperCase() + altText.slice(1)}
                         </div>
                     </div>
                 )
