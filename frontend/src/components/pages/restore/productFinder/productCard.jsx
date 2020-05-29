@@ -14,7 +14,7 @@ export function ProductCard(props) {
 
     const [displayImage, setDisplayImage] = useState(mainImage.imgUrl);
     const [currentColor, setCurrentColor] = useState(mainImage.colorName);
-    const [showAltImages, setShowAltImages] = useState(false);
+    const [showAltImages, setShowAltImages] = useState(true);
 
     return (
         <div className={'product-card'}
@@ -26,7 +26,7 @@ export function ProductCard(props) {
                  dispatch({type: "incrementStep"});
              }}
              onMouseEnter={() => setShowAltImages(true)}
-             onMouseLeave={() => setShowAltImages(false)}>
+             onMouseLeave={() => setShowAltImages(true)}>
 
             <img className={'product-card-image-main'} src={displayImage} alt={''}/>
 
