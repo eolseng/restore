@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.delivery-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.border-right {
+    border-right: 1px solid lightgray;
+}
+
+.border-bottom{
+    border-bottom: 1px solid lightgray;
+}
+
+h5 {
+    margin: 1.125rem 0;
+    font-size: 1rem;
+    line-height: 25px;
+}
+
+.image-size {
+    width: 220px;
+    height: 120px;
+}
+
+.delivery-input {
+    margin-bottom: 2rem;
+}
+
+hr {
+    border-top: 1px solid lightgray;
+    width: 250px;
+}
+
+.deliver-shop {
+    margin-top: 50px;
+}
+
+.delivery-render {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
