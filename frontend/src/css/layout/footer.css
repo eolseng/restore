@@ -1,7 +1,7 @@
 .footer-container {
     display: flex;
     flex-direction: row;
-    background-color: #F8F8F8;
+    background-color: #FFF;
     box-shadow: 1px 0px 4px #00000030;
     padding: 3.5rem 0;
 }
@@ -11,10 +11,9 @@
     padding: 5px;
 }
 
-
 .socialMediaIcons {
     flex-direction: row;
-    padding: 5px ;
+    padding: 5px;
 }
 
 .footer-content {
@@ -23,11 +22,15 @@
     align-items: center;
 }
 
-.footer-wrapper{
+.footer-wrapper {
     display: flex;
     flex-direction: column;
     margin: 0;
     height: 100%;
+}
+
+.footer-wrapper-link {
+    align-items: center;
 }
 
 .footer-wrapper-content {
@@ -36,8 +39,8 @@
     font-size: 1rem;
 }
 
-.footer-content-img {
-    width: 13rem;
+#logo-img {
+    width: 45%;
 }
 
 .logo-container {
@@ -63,3 +66,33 @@
 #swix-logo {
     width: 80px;
 }
+
+/* Media: Tablet */
+
+@media screen and (max-width: 750px) {
+    .footer-container {
+        width: 100%;
+        flex-direction: column;
+    }
+    .footer-content {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+    .footer-content-1 {
+        order: 4;
+    }
+    .footer-content-2 {
+        order: 3;
+    }
+    .footer-content-3 {
+        order: 1;
+    }
+    .footer-content-4 {
+        order: 2;
+    }
+}
+
+/* Media: Mobile */
+
+@media screen and (max-width: 750px) {}

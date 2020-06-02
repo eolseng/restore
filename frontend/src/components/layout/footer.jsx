@@ -9,16 +9,17 @@ function Footer() {
   return (
     <div className='footer-container'>
       {/* Restore logo*/}
-      <div className='footer-content col-3'>
-        <Link to=''>
+      <div className='footer-content footer-content-1 col-sm-3'>
+        <Link className="footer-wrapper footer-wrapper-link" to=''>
           {" "}
           {/* finne ut hvordan man går til en ekstern side */}
-          <img id='logo-img' src={require("../../img/logo/repairable.png")} alt='logo' />
+          <img id='logo-img' src={require("../../img/logo/logo.png")} alt='logo' />
+          {/* <img id='logo-img' src={require("../../img/logo/repairable.png")} alt='logo' /> */}
         </Link>
       </div>
 
       {/* Information*/}
-      <div className='footer-content col-3'>
+      <div className='footer-content footer-content-2 col-sm-3'>
         <div className='footer-wrapper'>
           <h4 className='footer-wrapper-content'>KONTAKT</h4>
             <h5 className='footer-wrapper-content kontakt-info'>hei@repairable.no</h5>
@@ -27,7 +28,7 @@ function Footer() {
       </div>
 
       {/* Contact info*/}
-      <div className='footer-content col-3 social-media-style'>
+      <div className='footer-content footer-content-3 col-sm-3 social-media-style'>
         <div className='footer-wrapper'>
           <h4 className='footer-wrapper-content'>VÅRE PARTNERE</h4>
             <div className={"logo-container"}>
@@ -38,7 +39,7 @@ function Footer() {
       </div>
 
       {/* Sosial Media*/}
-      <div className='footer-content col-3 social-media-style'>
+      <div className='footer-content footer-content-4 col-sm-3 social-media-style'>
         <div className='footer-wrapper'>
           <h4 className='footer-wrapper-content'>FØLG OSS</h4>
           <div className='socialMediaIcons'>
