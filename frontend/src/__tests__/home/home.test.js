@@ -38,6 +38,18 @@ test('start button clicked and navigates to restore', ()  => {
     expect(window.location.pathname).toEqual('/restore')
 });
 
+test('start button2 clicked and navigates to restore', ()  => {
+    const { getByTestId } = render(
+        <BrowserRouter>
+            <Home />
+        </BrowserRouter>
+    );
+
+    fireEvent.click(getByTestId('start-button2'));
+
+    expect(window.location.pathname).toEqual('/restore')
+});
+
 test('login button clicked and navigates to login page', () => {
     const { getByTestId } = render(
         <BrowserRouter>
@@ -49,6 +61,22 @@ test('login button clicked and navigates to login page', () => {
 
     expect(window.location.pathname).toEqual('/login')
 });
+
+test('login button2 clicked and navigates to login page', () => {
+    const { getByTestId } = render(
+        <BrowserRouter>
+            <Home />
+        </BrowserRouter>
+    );
+
+    fireEvent.click(getByTestId('login-button2'));
+
+    expect(window.location.pathname).toEqual('/login')
+});
+
+
+
+
 
 
 
