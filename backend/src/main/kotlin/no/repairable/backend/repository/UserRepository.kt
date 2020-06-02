@@ -9,7 +9,7 @@ import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer
 import org.springframework.data.querydsl.binding.QuerydslBindings
 import org.springframework.data.rest.core.annotation.RepositoryRestResource
 
-@RepositoryRestResource
+@RepositoryRestResource(exported = false)
 interface UserRepository : JpaRepository<User, Long>,
         QuerydslPredicateExecutor<User>,
         QuerydslBinderCustomizer<QUser> {
@@ -18,4 +18,6 @@ interface UserRepository : JpaRepository<User, Long>,
     override fun customize(bindings: QuerydslBindings, root: QUser) {
         bindings.bind(String::class.java).first { path: StringPath, value: String? -> path.containsIgnoreCase(value) }
     }
+
+    fun findByUserName(name: String) : User
 }
