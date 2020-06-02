@@ -21,51 +21,23 @@ open class WebSecurityConfiguration @Autowired constructor(
     @Throws(Exception::class)
     override fun configure(http: HttpSecurity)
     {
-        http.csrf().disable()
-                .formLogin().loginPage("/login")
-                .loginProcessingUrl("/perform_login")
-                .defaultSuccessUrl("/restore",true)
-                .failureUrl("/index.html?error=true")
+        http
+                .authorizeRequests()
+                .antMatchers("/built/**", "/main.css").permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .formLogin()
+                .defaultSuccessUrl("/", true)
+                    .loginPage("/index.html")
+                    .loginProcessingUrl("/loginapi")
+                    .failureUrl("/index.html/login?error=true")
+                    .permitAll()
+                    .and()
+                .httpBasic()
+                .and()
+                .csrf().disable()
     }
 
 
-    @Bean
-    @Throws(java.lang.Exception::class)
-    override fun userDetailsServiceBean(): UserDetailsService? {
-        return super.userDetailsServiceBean()
-    }
-
-    @Bean
-    @Throws(java.lang.Exception::class)
-    override fun authenticationManagerBean(): AuthenticationManager? {
-        return super.authenticationManagerBean()
-    }
-
-
-    override fun configure(auth: AuthenticationManagerBuilder) { /*
-            Here, we need to tell Spring Security how to access the SQL database
-            to check the username and the hashed password when trying to authenticate
-            a user.
-         */
-        try {
-            auth.jdbcAuthentication()
-                    .dataSource(dataSource)
-                    .usersByUsernameQuery(
-                            "SELECT username, password, enabled " +
-                                    "FROM users " +
-                                    "WHERE username = ?"
-                    )
-                    .authoritiesByUsernameQuery(
-                            "SELECT x.username, y.roles " +
-                                    "FROM users x, user_entity_roles y " +
-                                    "WHERE x.username = ? and y.user_entity_username = x.username "
-                    ) /*
-                        Note: in BCrypt, the "password" field also contains the salt
-                     */
-                    .passwordEncoder(passwordEncoder)
-        } catch (e: java.lang.Exception) {
-            throw RuntimeException(e)
-        }
-    }
 
 }

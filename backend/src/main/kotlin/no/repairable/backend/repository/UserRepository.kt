@@ -19,7 +19,7 @@ interface UserRepository : JpaRepository<User, Long>,
         bindings.bind(String::class.java).first { path: StringPath, value: String? -> path.containsIgnoreCase(value) }
     }
 
-    fun findByUserName(name: String) : User
+    fun findByUsername(name: String) : User
 
-    fun existsByUserName(name: String) : Boolean
+    fun existsByUsername(name: String) : Boolean
 }

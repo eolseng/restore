@@ -5,16 +5,20 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.security.crypto.password.PasswordEncoder
 import java.util.*
 import javax.persistence.*
+import javax.validation.constraints.NotBlank
 
 @Entity
 @Table(name = "user")
 class User(
         val firstName: String?,
         val lastName:String?,
-        val userName:String?,
 
-        @JsonIgnore
-        var password:String?
+        @get:NotBlank
+        var username: String?,
+
+
+        @get:NotBlank
+        var password: String?
 
         //val roles: List<String> = mutableListOf()
 

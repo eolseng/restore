@@ -21,12 +21,16 @@ class DatabaseLoader @Autowired constructor(
         private val baseColorRepository: BaseColorRepository,
         private val userService: UserService
 ) {
+
     @PostConstruct
     fun onStartDataBaseLoader() {
-        insertBaseColors()
-        insertBaseProducts()
+       // insertBaseColors()
+       // insertBaseProducts()
+        insertUser()
     }
 
+
+    /*
     private fun insertBaseColors() {
         val baseColorNames: List<String> = mutableListOf("other", "grey", "red", "blue", "navy", "white", "black", "green", "yellow", "brown", "orange", "pink", "purple", "phantom", "magnet", "micro chip", "norwegian mix", "bluebell", "nimbus cloud", "olive", "aubergine", "fire")
         val baseColors = mutableListOf<BaseColor>()
@@ -46,6 +50,7 @@ class DatabaseLoader @Autowired constructor(
         val jsonText: ProductsCreationController.ProductsPost = mapper.readValue(jsonString)
         productsCreationController.insertOnStartUp(jsonText)
     }
+    */
 
     private fun insertUser(){
         //Test user

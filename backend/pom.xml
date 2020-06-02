@@ -25,6 +25,8 @@
 
         <asciidoctor.version>1.5.8</asciidoctor.version>
         <querydsl.version>4.2.2</querydsl.version>
+        <version.restassured>4.1.2</version.restassured>
+
 
         <!-- Frontend Build Properties -->
         <frontend-src-dir>../frontend</frontend-src-dir>
@@ -122,6 +124,26 @@
             <scope>test</scope>
         </dependency>
 
+
+        <dependency>
+            <!-- to test REST APIs -->
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${version.restassured}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>${version.restassured}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>xml-path</artifactId>
+            <version>${version.restassured}</version>
+            <scope>test</scope>
+        </dependency>
 
         <!-- Test dependencies -->
         <dependency>
