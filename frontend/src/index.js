@@ -5,6 +5,7 @@ import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
 import Home from "./components/pages/home/home";
+import HomeMobile from "./components/pages/home/homeMobile";
 import Sidebar from "./components/layout/sidebar";
 //https://github.com/haldarmahesh/use-mobile-detect-hook
 import useMobileDetect from "use-mobile-detect-hook";
@@ -54,7 +55,7 @@ function App() {
     const pageWrapId = "page-wrap";
     const detectMobile = useMobileDetect();
 
-    if (detectMobile.isMobile()) {
+    if (!detectMobile.isMobile()) {
         return (
             <React.StrictMode>
                 <BrowserRouter>
@@ -65,7 +66,7 @@ function App() {
                                 {path !== '/'}
                                 <Switch>
                                     {/* Husk å legge inn routen i no.repairable.backend.controller.ReactForwardController */}
-                                    <Route component={Home} exact path={'/'}/>
+                                    <Route component={HomeMobile} exact path={'/'}/>
                                     <Route exact path="/profile" render={(props) => <Profile {...props}/>}/>
                                     <Route exact path={"/restore"}>
                                         <RestoreContextProvider>

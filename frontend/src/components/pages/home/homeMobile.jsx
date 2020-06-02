@@ -5,7 +5,8 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 /** CSS Imports */
 import '../../../css/pages/home/home.css'
 
-function Home() {
+
+function HomeMobile() {
     const [activeNavMenuIdx, setActiveNavMenuIdx] = useState(0)
     const [userIsLoggedIn] = useState(true)
     const [renderedDiv, setRenderedDiv] = useState(
@@ -97,17 +98,6 @@ function Home() {
     return (
         <div className='home-wrapper'>
             <div className='above-fold container-fluid'>
-                {userIsLoggedIn ? (
-                    <Link className='above-fold-link' to='/profile'>
-                        <FontAwesomeIcon className='user-icon' icon={['far', 'user']}/>
-                        <span>Hei UserName</span>
-                    </Link>
-                ) : (
-                    <Link className='above-fold-link' to='/login'>
-                        <FontAwesomeIcon className='user-icon' icon={['fas', 'sign-in-alt']}/>
-                        <span>Logg inn / Registrer deg</span>
-                    </Link>
-                )}
                 <div className='container'>
                     <div className='row'>
                         <div className='above-fold-text-wrapper col-sm-6'>
@@ -137,6 +127,11 @@ function Home() {
             </div>
             <div className='under-fold'>
                 <div id='anchor' className='container-fluid header-wrapper'>
+
+
+
+
+
                     <div className='container header-container'>
                         <div className='header-left'>
                             <span
@@ -175,6 +170,10 @@ function Home() {
                             )}
                         </div>
                     </div>
+
+
+
+
                 </div>
 
                 <div className='container-fluid content-wrapper'>
@@ -186,4 +185,4 @@ function Home() {
     )
 }
 
-export default Home
+export default HomeMobile
