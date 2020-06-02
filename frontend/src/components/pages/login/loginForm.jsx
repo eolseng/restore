@@ -43,10 +43,11 @@ export function LoginForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-            const data = new FormData(event.currentTarget)
-            fetch('/perform_login', {
+         const payload = { username: "foo", password: "bar" };
+
+        fetch('/perform_login', {
                 method: 'POST',
-                body: new URLSearchParams(event.currentTarget)
+                body: JSON.stringify(payload)
             })
                 .then(v => {
                     if(v.redirected) window.location = v.url
@@ -99,7 +100,7 @@ export function LoginForm() {
         <div className="login-container">
             <h3>Logg Inn</h3>
             <p>Fyll inn brukernavn og passord</p>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} >
                 <label className="login-label">
                     <div className="login-password">
                         Brukernavn (e-post)

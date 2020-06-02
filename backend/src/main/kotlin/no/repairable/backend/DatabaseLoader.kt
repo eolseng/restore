@@ -6,7 +6,9 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import no.repairable.backend.controller.ProductsCreationController
 import no.repairable.backend.entity.BaseColor
+import no.repairable.backend.entity.User
 import no.repairable.backend.repository.BaseColorRepository
+import no.repairable.backend.repository.UserRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 import java.io.File
@@ -15,7 +17,8 @@ import javax.annotation.PostConstruct
 @Component
 class DatabaseLoader @Autowired constructor(
         private val productsCreationController: ProductsCreationController,
-        private val baseColorRepository: BaseColorRepository
+        private val baseColorRepository: BaseColorRepository,
+        private val userRepository: UserRepository
 ) {
     @PostConstruct
     fun onStartDataBaseLoader() {
@@ -41,5 +44,11 @@ class DatabaseLoader @Autowired constructor(
         val jsonString: String = File("../backend/src/main/resources/kotlinProducts.json").readText(Charsets.UTF_8)
         val jsonText: ProductsCreationController.ProductsPost = mapper.readValue(jsonString)
         productsCreationController.insertOnStartUp(jsonText)
+    }
+
+    private fun insertUser(){
+        //Test user
+        val user = User("Ola", "Nordmann", "Foo", "Bar");
+        userRepository.save(user)
     }
 }
