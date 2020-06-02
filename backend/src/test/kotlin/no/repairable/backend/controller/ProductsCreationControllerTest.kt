@@ -1,0 +1,3 @@
+package no.repairable.no.repairable.backend.controller
+
+class ProductsCreationControllerTest

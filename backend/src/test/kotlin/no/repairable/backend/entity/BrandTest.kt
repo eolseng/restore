@@ -19,7 +19,7 @@ class BrandTest @Autowired constructor(
 
     @Test
     @Throws(Exception::class)
-    fun checkBrandsEndpoint() {
+    fun `checking status ok for brands endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/brands"))
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("brands"))

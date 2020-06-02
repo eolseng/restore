@@ -25,7 +25,7 @@ class CategoryTest @Autowired constructor(
 
     @Test
     @Throws(Exception::class)
-    fun checkCategoryEndpoint() {
+    fun `checking status ok for category endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/categories"))
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("categories"))

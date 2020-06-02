@@ -8,8 +8,6 @@
 :operation-curl-request-title: Example request
 :operation-http-response-title: Example response
 
-This is an example output for a service running at http://localhost:8080:
-
 == GET Requests
 
 ==== api/products
