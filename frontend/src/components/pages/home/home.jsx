@@ -132,19 +132,19 @@ function Home() {
                         <div className='header-left'>
                             <span
                                 className={activeNavMenuIdx === 0 ? 'active-nav-button' : null}
-                                onClick={renderBlueprint}
+                                onClick={renderBlueprint} data-testid="how-it-works"
                             >
                                 Slik fungerer det
                             </span>
                             <span
                                 className={activeNavMenuIdx === 1 ? 'active-nav-button' : null}
-                                onClick={renderServices}
+                                onClick={renderServices} data-testid="our-services"
                             >
                                 Våre tjenester
                             </span>
                             <span
                                 className={activeNavMenuIdx === 2 ? 'active-nav-button' : null}
-                                onClick={renderVision}
+                                onClick={renderVision} data-testid="our-vision"
                             >
                                 Vår visjon
                             </span>

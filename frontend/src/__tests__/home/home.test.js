@@ -74,10 +74,50 @@ test('login button2 clicked and navigates to login page', () => {
     expect(window.location.pathname).toEqual('/login')
 });
 
+test('renderDiv when homepage launch', () => {
+    const { getByTestId } = render(
+        <BrowserRouter>
+            <Home/>
+        </BrowserRouter>
+    );
 
+    expect(getByTestId('render-div')).toHaveTextContent('Slik fungerer det')
+});
 
+test('renderDiv when "Våre tjenester" button is clicked', () => {
+    const { getByTestId } = render(
+        <BrowserRouter>
+            <Home/>
+        </BrowserRouter>
+    );
 
+    fireEvent.click(getByTestId('our-services'));
 
+    expect(getByTestId('render-div')).toHaveTextContent('Våre tjenester')
+});
 
+test('renderDiv when "Vår visjon" button is clicked', () => {
+    const { getByTestId } = render(
+        <BrowserRouter>
+            <Home/>
+        </BrowserRouter>
+    );
+
+    fireEvent.click(getByTestId('our-vision'));
+
+    expect(getByTestId('render-div')).toHaveTextContent('Vår visjon')
+});
+
+test('renderDiv when "Slik fungerer det" button is clicked', () => {
+    const { getByTestId } = render(
+        <BrowserRouter>
+            <Home/>
+        </BrowserRouter>
+    );
+
+    fireEvent.click(getByTestId('how-it-works'));
+
+    expect(getByTestId('render-div')).toHaveTextContent('Slik fungerer det')
+});
 
 
