@@ -95,7 +95,7 @@ function MyOverview() {
                 <div className="discounts col-3 justify-content border-right" id={2} onClick={renderDiscounts}>Rabatter</div>
                 <div className="orders col-3 justify-content border-right" id={3} onClick={renderOrders}>Ordre</div>
                 <div className="register col-3 justify-content">
-                    <Link to="./filter">
+                    <Link to="./restore">
                         <button className="profile-button">Registrer plagg</button>
                     </Link>
                 </div>
