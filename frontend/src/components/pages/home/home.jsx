@@ -99,7 +99,7 @@ function Home() {
                 ) : (
                     <Link className='above-fold-link' to='/login'>
                         <FontAwesomeIcon className='user-icon' icon={['fas', 'sign-in-alt']} />
-                        <span>Logg inn / Registrer deg</span>
+                        <span data-testid="login-button">Logg inn / Registrer deg</span>
                     </Link>
                 )}
                 <div className='container'>

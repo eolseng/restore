@@ -26,7 +26,7 @@ test('display restore', () => {
     expect(h1).toBeInTheDocument();
 });
 
-test('startbutton clicked and redirect to restore', ()  => {
+test('start button clicked and navigates to restore', ()  => {
     const { getByTestId } = render(
         <BrowserRouter>
             <Home />
@@ -36,6 +36,18 @@ test('startbutton clicked and redirect to restore', ()  => {
     fireEvent.click(getByTestId('start-button'));
 
     expect(window.location.pathname).toEqual('/restore')
+});
+
+test('login button clicked and navigates to login page', () => {
+    const { getByTestId } = render(
+        <BrowserRouter>
+            <Home />
+        </BrowserRouter>
+    );
+
+    fireEvent.click(getByTestId('login-button'));
+
+    expect(window.location.pathname).toEqual('/login')
 });
 
 
