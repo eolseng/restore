@@ -136,8 +136,9 @@
 
 .under-fold .header-left {
     width: 50%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .under-fold .header-left span {
