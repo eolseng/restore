@@ -21,7 +21,7 @@ class UserService(
                 return false
             }
 
-            val user = User("foo","bar", username, password)
+            val user = User("foo","bar", username, hash)
 
             userRepository.save(user)
 

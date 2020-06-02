@@ -9,6 +9,7 @@ import no.repairable.backend.entity.BaseColor
 import no.repairable.backend.entity.User
 import no.repairable.backend.repository.BaseColorRepository
 import no.repairable.backend.repository.UserRepository
+import no.repairable.backend.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 import java.io.File
@@ -18,7 +19,7 @@ import javax.annotation.PostConstruct
 class DatabaseLoader @Autowired constructor(
         private val productsCreationController: ProductsCreationController,
         private val baseColorRepository: BaseColorRepository,
-        private val userRepository: UserRepository
+        private val userService: UserService
 ) {
     @PostConstruct
     fun onStartDataBaseLoader() {
@@ -48,7 +49,6 @@ class DatabaseLoader @Autowired constructor(
 
     private fun insertUser(){
         //Test user
-        val user = User("Ola", "Nordmann", "Foo", "Bar");
-        userRepository.save(user)
+        userService.createUser("foo", "bar")
     }
 }
