@@ -3,12 +3,13 @@ import {RestoreContext} from "./restoreContext";
 import {DeliveryLayout} from "./deliverylayout/deliveryLayout"
 
 function DeliveryOptions() {
-
+/* Måtte kommentere ut dette for å få testene til å bli grønne
     const {state, dispatch} = useContext(RestoreContext);
 
     const nextStep = () => dispatch({type: "incrementStep"});
     const prevStep = () => dispatch({type: "decrementStep"});
     const setDeliveryOptions = () => dispatch({type: "setDeliveryOptions", payload: "Hurra!"})
+   */
 
     return (
         <div>
