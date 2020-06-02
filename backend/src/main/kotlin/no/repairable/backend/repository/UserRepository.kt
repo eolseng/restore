@@ -20,4 +20,6 @@ interface UserRepository : JpaRepository<User, Long>,
     }
 
     fun findByUserName(name: String) : User
+
+    fun existsByUserName(name: String) : Boolean
 }
