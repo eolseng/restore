@@ -108,7 +108,7 @@
 /***** Under the fold *****/
 
 .under-fold {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Header */
