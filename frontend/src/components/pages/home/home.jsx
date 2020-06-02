@@ -112,8 +112,8 @@ function Home() {
                             </p>
                             <b>Vi gjør jobben for deg- du sender inn brukte klær og mottar poeng til å kjøpe nye klær!</b>
                             <div className='button-container'>
-                                <Link className='button-link' to='/restore'>
-                                    <button className='cta-button'>Start nå</button>
+                                <Link className='button-link' data-testid="start-button-link" to='/restore'>
+                                    <button className='cta-button' data-testid="start-button">Start nå</button>
                                 </Link>
                             </div>
                         </div>
