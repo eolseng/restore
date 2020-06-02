@@ -28,10 +28,10 @@ function Home() {
     function renderBlueprint() {
         setRenderedDiv(
             <div className='row content'>
-                <div id='bluprint-img' className='img-container col-sm-6'>
+                <div id='blueprint-img' className='img-container col-sm-6'>
                     <img src={require('../../../img/homePage/delivery_address.svg')} alt='How it works' />
                 </div>
-                <div id='bluprint-text' className='text-wrapper col-sm-6'>
+                <div id='blueprint-text' className='text-wrapper col-sm-6'>
                     <h3>Slik fungerer det</h3>
                     <ol>
                         <li>Opprett anonym profil</li>

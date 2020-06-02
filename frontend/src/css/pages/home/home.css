@@ -108,7 +108,7 @@
 /***** Under the fold *****/
 
 .under-fold {
-    min-height: 100vh;
+    height: 100vh;
 }
 
 /* Header */
@@ -206,10 +206,11 @@
 /* Content */
 
 .under-fold .content-wrapper {
-    min-height: calc(100vh - 4rem);
+    height: 100%;
     padding: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .under-fold .content {
@@ -222,6 +223,10 @@
 /* Text */
 
 .under-fold .text-wrapper {
+    padding-right: 4rem;
+}
+
+.under-fold #blueprint-text {
     padding-left: 4rem;
 }
 
@@ -300,7 +305,7 @@
     .under-fold .header-right .cta-button {
         margin: 1rem 0 0;
     }
-    .under-fold .content #bluprint-img {
+    .under-fold .content #blueprint-img {
         order: 2;
     }
     .under-fold .content #blueprint-text {
@@ -310,6 +315,9 @@
         padding: 0 1rem 2rem 1rem;
     }
     .under-fold .text-wrapper {
+        padding: 2rem 1rem;
+    }
+    .under-fold #blueprint-text {
         padding: 2rem 1rem;
     }
     .under-fold .text-wrapper li {
