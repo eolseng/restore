@@ -1,0 +1,30 @@
+.register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 520px;
+    width: 320px;
+    background-color: #00000010;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 5px 1px lightgrey;
+}
+
+.register-margin {
+    margin: 30px 0;
+}
+
+.register-input-field {
+    height: 1.8rem;
+    width: 14rem;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.register-firstname {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+

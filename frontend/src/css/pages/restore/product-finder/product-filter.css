@@ -21,6 +21,10 @@
     align-items: center;
 }
 
+.product-filter-selected {
+    border: 1px solid gold;
+}
+
 .product-filter-content * {
     cursor: pointer;
 }
