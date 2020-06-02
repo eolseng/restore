@@ -3,15 +3,22 @@ import ReactDOM from "react-dom";
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 
 import Header from "./components/layout/header";
+
 import Footer from "./components/layout/footer";
 import Home from "./components/pages/home/home";
-import HomeMobile from "./components/pages/home/homeMobile";
+import HomeMobile from "./components/pages/homeMobile/homeMobile";
 import Sidebar from "./components/layout/sidebar";
 //https://github.com/haldarmahesh/use-mobile-detect-hook
 import useMobileDetect from "use-mobile-detect-hook";
+
 import {Profile} from "./components/pages/profile/profile";
-import Restore from "./components/pages/restore/restore";
+import {Services} from "./components/pages/homeMobile/services";
+import {Vision} from "./components/pages/homeMobile/vision";
+import {Blueprint} from "./components/pages/homeMobile/blueprint";
 import {RestoreContextProvider} from "./components/pages/restore/restoreContext";
+
+import Restore from "./components/pages/restore/restore";
+
 
 
 /** CSS Imports */
@@ -67,6 +74,9 @@ function App() {
                                 <Switch>
                                     {/* Husk å legge inn routen i no.repairable.backend.controller.ReactForwardController */}
                                     <Route component={HomeMobile} exact path={'/'}/>
+                                    <Route exact path={'/services'} render={(props) => <Services {...props}/>}/>
+                                    <Route exact path={'/vision'} render={(props) => <Vision {...props}/>}/>
+                                    <Route exact path={'/blueprint'} render={(props) => <Blueprint {...props}/>}/>
                                     <Route exact path="/profile" render={(props) => <Profile {...props}/>}/>
                                     <Route exact path={"/restore"}>
                                         <RestoreContextProvider>
