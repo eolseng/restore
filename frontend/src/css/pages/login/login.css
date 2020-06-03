@@ -59,7 +59,10 @@
     transition: all 0.2s linear;
 }
 
-.login-submit:hover {}
+.login-submit:hover {
+    background: var(--cta-color-accent);
+    box-shadow: 0px 2px 6px 0px #00000030;
+}
 
 /* Log in page */
 
