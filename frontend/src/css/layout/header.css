@@ -1,0 +1,48 @@
+/* Header */
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 4rem;
+    background-color: #fff;
+    box-shadow: 1px 0px 4px #00000030;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#logo {
+    padding: 0 20px;
+}
+
+#logo-img {
+    height: 3rem;
+    padding-top: 0.5rem;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link:hover {
+    cursor: pointer;
+    color: #168A9E;
+}
+
+.progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
