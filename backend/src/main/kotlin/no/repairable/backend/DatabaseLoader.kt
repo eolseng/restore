@@ -6,13 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.CommandLineRunner
 import org.springframework.core.annotation.Order
 import org.springframework.stereotype.Component
-import javax.annotation.PostConstruct
 
 @Order(1)
 @Component
 class DatabaseLoader @Autowired constructor(
         private val baseColorRepository: BaseColorRepository
-) : CommandLineRunner{
+) : CommandLineRunner {
 
     override fun run(vararg args: String?) {
         insertBaseColors()
