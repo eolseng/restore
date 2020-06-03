@@ -18,7 +18,6 @@ class SizeTest @Autowired constructor(
 ) {
 
     @Test
-    @Throws(Exception::class)
     fun  `checking status ok for sizes endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/sizes"))
                 .andExpect(MockMvcResultMatchers.status().isOk)

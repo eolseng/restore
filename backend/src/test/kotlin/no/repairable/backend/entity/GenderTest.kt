@@ -22,7 +22,6 @@ class GenderTest @Autowired constructor(
 
 
     @Test
-    @Throws(Exception::class)
     fun  `checking status ok for gender endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/genders")).andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk)

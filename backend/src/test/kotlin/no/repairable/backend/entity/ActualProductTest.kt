@@ -18,7 +18,6 @@ class ActualProductTest @Autowired constructor(
 ) {
 
     @Test
-    @Throws(Exception::class)
     fun `checking status ok for actualProducts endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/actualProducts"))
                 .andExpect(MockMvcResultMatchers.status().isOk)

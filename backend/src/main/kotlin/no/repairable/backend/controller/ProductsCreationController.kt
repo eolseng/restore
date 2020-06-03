@@ -4,10 +4,9 @@ package no.repairable.backend.controller
 import no.repairable.backend.entity.*
 import no.repairable.backend.repository.*
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.http.HttpStatus
+import org.springframework.web.bind.annotation.*
+
 
 
 @RestController
@@ -35,11 +34,13 @@ class ProductsCreationController @Autowired constructor(
     val sizeMap: HashMap<String, Size> = HashMap()
     val baseColorMap: HashMap<String, BaseColor> = HashMap()
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/products")
     fun insertProducts(@RequestBody products: ProductsPost) {
         insertOnStartUp(products)
     }
 
+    //used to insert products both on startup and when doing post request
     fun insertOnStartUp(products: ProductsPost) {
 
         if (baseColorMap.isEmpty()) {
@@ -73,8 +74,6 @@ class ProductsCreationController @Autowired constructor(
         sizeRepository.saveAll(sizeMap.values)
         productRepository.saveAll(productsMap.values)
         colorRepository.saveAll(colors.values)
-
-
         imageRepository.saveAll(images.values)
     }
 
@@ -88,7 +87,6 @@ class ProductsCreationController @Autowired constructor(
                 }
                 sizeMap[currentSize] = size
             }
-
             size.products.add(newProduct)
             newProduct.sizes.add(size)
         }
@@ -97,7 +95,6 @@ class ProductsCreationController @Autowired constructor(
     data class ProductsPost(
             val productCollection: List<ProductPostClass>
     )
-
 
     data class ProductPostClass(
             val category: String,

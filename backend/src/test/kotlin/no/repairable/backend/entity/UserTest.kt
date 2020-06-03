@@ -18,7 +18,6 @@ class UserTest @Autowired constructor(
 ) {
 
     @Test
-    @Throws(Exception::class)
     fun  `checking status ok for users endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/users"))
                 .andExpect(MockMvcResultMatchers.status().isOk)

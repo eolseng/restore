@@ -18,7 +18,6 @@ class ColorTest @Autowired constructor(
 ) {
 
     @Test
-    @Throws(Exception::class)
     fun  `checking status ok for color endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/colors"))
                 .andExpect(MockMvcResultMatchers.status().isOk)

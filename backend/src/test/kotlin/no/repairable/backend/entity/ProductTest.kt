@@ -21,7 +21,6 @@ class ProductTest @Autowired constructor(
         val productRepo: ProductRepository
 ) {
     @Test
-    @Throws(Exception::class)
     fun `checking if products endpoint is online`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/products"))
                 .andExpect(MockMvcResultMatchers.status().isOk)
@@ -29,7 +28,6 @@ class ProductTest @Autowired constructor(
     }
 
     @Test
-    @Throws(Exception::class)
     fun `testing query on products endpoint`() {
         productRepo.save(Product(name = "Test"))
         mockMvc.perform(MockMvcRequestBuilders.get("/api/products/search/findByName?name=Test")).andDo(MockMvcResultHandlers.print())

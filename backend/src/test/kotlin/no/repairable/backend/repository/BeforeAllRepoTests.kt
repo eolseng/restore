@@ -2,7 +2,6 @@ package no.repairable.no.repairable.backend.repository
 
 import no.repairable.backend.entity.*
 import no.repairable.backend.repository.*
-import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.TestInstance
 import org.springframework.beans.factory.annotation.Autowired
