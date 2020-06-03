@@ -40,7 +40,6 @@ export function LoginForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-         const payload = { "username": "foo", "password": "bar" };
 
         const data = new FormData(event.target);
 
