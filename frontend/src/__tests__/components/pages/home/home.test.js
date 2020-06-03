@@ -1,7 +1,7 @@
 import React from "react";
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Home from '../../components/pages/home/home';
+import Home from '../../../../components/pages/home/home';
 import {BrowserRouter} from "react-router-dom";
 
 afterEach(cleanup)
