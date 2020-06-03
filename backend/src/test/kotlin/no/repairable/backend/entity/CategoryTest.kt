@@ -30,14 +30,4 @@ class CategoryTest @Autowired constructor(
                 .andDo(MockMvcRestDocumentation.document("categories"))
 
     }
-/*
-    @Test
-    @Throws(Exception::class)
-    fun checkFirstCategory() {
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/categories/1")).andDo(MockMvcResultHandlers.print())
-                .andExpect(MockMvcResultMatchers.status().isOk)
-                .andDo(MockMvcRestDocumentation.document("categories"))
-    }
-*/
-
 }
