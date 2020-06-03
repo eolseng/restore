@@ -57,6 +57,7 @@
     box-shadow: 0px 2px 4px 0px #00000030;
     cursor: pointer;
     transition: all 0.2s linear;
+    -webkit-appearance: none;
 }
 
 .login-submit:hover {
