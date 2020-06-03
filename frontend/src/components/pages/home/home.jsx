@@ -104,8 +104,8 @@ function Home() {
                     </Link>
                 ) : (
                     <Link className='above-fold-link' to='/login'>
-                        <FontAwesomeIcon className='user-icon' icon={['fas', 'sign-in-alt']}/>
-                        <span>Logg inn / Registrer deg</span>
+                        <FontAwesomeIcon className='user-icon' icon={['fas', 'sign-in-alt']} />
+                        <span data-testid='login-button'>Logg inn / Registrer deg</span>
                     </Link>
                 )}
                 <div className='container'>
@@ -121,8 +121,8 @@ function Home() {
                             <b>Vi gjør jobben for deg- du sender inn brukte klær og mottar poeng til å kjøpe nye
                                 klær!</b>
                             <div className='button-container'>
-                                <Link className='button-link' to='/restore'>
-                                    <button className='cta-button'>Start nå</button>
+                                <Link className='button-link' data-testid="start-button-link" to='/restore'>
+                                    <button className='cta-button' data-testid='start-button'>Start nå</button>
                                 </Link>
                             </div>
                         </div>
@@ -141,26 +141,26 @@ function Home() {
                         <div className='header-left'>
                             <span
                                 className={activeNavMenuIdx === 0 ? 'active-nav-button' : null}
-                                onClick={renderBlueprint}
+                                onClick={renderBlueprint} data-testid="how-it-works"
                             >
                                 Slik fungerer det
                             </span>
                             <span
                                 className={activeNavMenuIdx === 1 ? 'active-nav-button' : null}
-                                onClick={renderServices}
+                                onClick={renderServices} data-testid="our-services"
                             >
                                 Våre tjenester
                             </span>
                             <span
                                 className={activeNavMenuIdx === 2 ? 'active-nav-button' : null}
-                                onClick={renderVision}
+                                onClick={renderVision} data-testid="our-vision"
                             >
                                 Vår visjon
                             </span>
                         </div>
                         <div className='header-right'>
                             <Link className='header-link' to='/restore'>
-                                <button className='cta-button'>Start nå</button>
+                                <button className='cta-button' data-testid='start-button2'>Start nå</button>
                             </Link>
                             {userIsLoggedIn ? (
                                 <Link className='header-link header-link-user' to='/profile'>
@@ -169,8 +169,8 @@ function Home() {
                                 </Link>
                             ) : (
                                 <Link className='header-link header-link-user' to='/login'>
-                                    <FontAwesomeIcon className='user-icon' icon={['fas', 'sign-in-alt']}/>
-                                    <span>Logg inn</span>
+                                    <FontAwesomeIcon className='user-icon' icon={['fas', 'sign-in-alt']} />
+                                    <span data-testid='login-button2'>Logg inn</span>
                                 </Link>
                             )}
                         </div>
@@ -178,7 +178,7 @@ function Home() {
                 </div>
 
                 <div className='container-fluid content-wrapper'>
-                    <div className='container content-container'>{renderedDiv}</div>
+                    <div className='container content-container' data-testid="render-div">{renderedDiv}</div>
                 </div>
 
             </div>
