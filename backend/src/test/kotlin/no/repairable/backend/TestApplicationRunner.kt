@@ -3,7 +3,7 @@ package no.repairable.no.repairable.backend
 import no.repairable.RestoreApplication
 import org.springframework.boot.runApplication
 
-class LocalApplicationRunner
+class TestApplicationRunner
 
 fun main() {
     runApplication<RestoreApplication>("--spring.profiles.active=test")
