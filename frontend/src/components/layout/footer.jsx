@@ -11,7 +11,7 @@ function Footer() {
             <div className='container'>
                 <div className='row'>
                     {/* Restore logo*/}
-                    <div className='col-sm-3'>
+                    <div id="footer-wrapper-1" className='col-sm-3'>
                         <div className='footer-content'>
                             <Link className='footer-logo-wrapper' to=''>
                                 <img className='footer-logo' src={require('../../img/logo/logo.png')} alt='logo' />
@@ -20,7 +20,7 @@ function Footer() {
                     </div>
 
                     {/* Information*/}
-                    <div className='col-sm-3'>
+                    <div id="footer-wrapper-2" className='col-sm-3'>
                         <div className='footer-content'>
                             <h4 className='footer-title'>KONTAKT</h4>
                             <h5 className='footer-text'>hei@repairable.no</h5>
@@ -29,7 +29,7 @@ function Footer() {
                     </div>
 
                     {/* Contact info*/}
-                    <div className='col-sm-3'>
+                    <div id="footer-wrapper-3" className='col-sm-3'>
                         <div className='footer-content'>
                             <h4 className='footer-title'>VÅRE PARTNERE</h4>
                             <div className='footer-partner-container'>
@@ -48,7 +48,7 @@ function Footer() {
                     </div>
 
                     {/* Sosial Media*/}
-                    <div className='col-sm-3'>
+                    <div id="footer-wrapper-4" className='col-sm-3'>
                         <div className='footer-content'>
                             <h4 className='footer-title'>FØLG OSS</h4>
                             <div className='footer-icon-container'>
