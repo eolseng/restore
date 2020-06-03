@@ -5,7 +5,7 @@ import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 
 @Entity
-@Table(name = "color")
+@Table(name = "colors")
 class Color(
         @Id
         @GeneratedValue

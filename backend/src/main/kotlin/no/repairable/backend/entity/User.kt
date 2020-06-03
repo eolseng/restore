@@ -3,7 +3,7 @@ package no.repairable.backend.entity
 import javax.persistence.*
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 data class User (
         @Id
         @GeneratedValue

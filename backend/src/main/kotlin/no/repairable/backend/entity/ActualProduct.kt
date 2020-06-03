@@ -5,7 +5,7 @@ import javax.persistence.*
 
 
 @Entity
-@Table(name = "actual_product")
+@Table(name = "actual_products")
 data class ActualProduct(
         @Id
         @GeneratedValue
