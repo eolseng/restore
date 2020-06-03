@@ -51,6 +51,7 @@ export function LoginForm() {
                 body:data
             })
                 .then(v => {
+                    //Todo: Can't access response codes due to bad redirections.
                     if(v.redirected) window.location = v.url
                 })
                 .catch(e => console.warn(e))
@@ -79,6 +80,8 @@ export function LoginForm() {
                 </label>
                 <input type="submit" value="LOGG INN" className="submit p"/>
             </form>
+
+
         </div>
     )
 }

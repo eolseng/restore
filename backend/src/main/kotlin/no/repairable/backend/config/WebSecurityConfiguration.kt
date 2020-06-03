@@ -24,13 +24,10 @@ open class WebSecurityConfiguration @Autowired constructor(
         http
                 .authorizeRequests()
                 .antMatchers("/built/**", "/main.css").permitAll()
-                .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .defaultSuccessUrl("/", true)
-                    .loginPage("/index.html")
                     .loginProcessingUrl("/loginapi")
-                    .failureUrl("/index.html/login?error=true")
                     .permitAll()
                     .and()
                 .httpBasic()
