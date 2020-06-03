@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import {RestoreContext} from "./restoreContext";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function RestoreProgress() {
 
