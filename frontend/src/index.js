@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 
-import Header from "./components/layout/header";
-
 import Footer from "./components/layout/footer";
 import Home from "./components/pages/home/home";
 import HomeMobile from "./components/pages/homeMobile/homeMobile";
@@ -16,9 +14,9 @@ import {Services} from "./components/pages/homeMobile/services";
 import {Vision} from "./components/pages/homeMobile/vision";
 import {Blueprint} from "./components/pages/homeMobile/blueprint";
 import {RestoreContextProvider} from "./components/pages/restore/restoreContext";
-
+import {Login} from "./components/pages/login/login";
+import {Register} from "./components/pages/login/register";
 import Restore from "./components/pages/restore/restore";
-
 
 /** CSS Imports */
 import './css/style.css'
@@ -75,7 +73,7 @@ function App() {
     const pageWrapId = "page-wrap";
     const detectMobile = useMobileDetect();
 
-    if (!detectMobile.isMobile()) {
+    if (detectMobile.isMobile()) {
         return (
             <React.StrictMode>
                 <BrowserRouter>
