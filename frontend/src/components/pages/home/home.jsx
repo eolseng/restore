@@ -7,7 +7,7 @@ import '../../../css/pages/home/home.css'
 
 function Home() {
     const [activeNavMenuIdx, setActiveNavMenuIdx] = useState(0)
-    const [userIsLoggedIn] = useState(true)
+    const [userIsLoggedIn] = useState(false)
     const [renderedDiv, setRenderedDiv] = useState(
         <div className='row content'>
             <div id='bluprint-img' className='img-container col-sm-6'>
@@ -159,7 +159,7 @@ function Home() {
                             </span>
                         </div>
                         <div className='header-right'>
-                            <Link className='header-link' to='/filter'>
+                            <Link className='header-link' to='/restore'>
                                 <button className='cta-button'>Start nå</button>
                             </Link>
                             {userIsLoggedIn ? (

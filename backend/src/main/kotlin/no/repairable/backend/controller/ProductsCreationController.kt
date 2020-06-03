@@ -20,7 +20,8 @@ class ProductsCreationController @Autowired constructor(
         private val subCategoryRepository: SubCategoryRepository,
         private val colorRepository: ColorRepository,
         private val imageRepository: ImageRepository,
-        private val sizeRepository: SizeRepository
+        private val sizeRepository: SizeRepository,
+        private val baseColorRepository: BaseColorRepository
 
 ) {
 
@@ -32,6 +33,7 @@ class ProductsCreationController @Autowired constructor(
     val images: HashMap<String, Image> = HashMap()
     val productsMap: HashMap<String, Product> = HashMap()
     val sizeMap: HashMap<String, Size> = HashMap()
+    val baseColorMap: HashMap<String, BaseColor> = HashMap()
 
     @PostMapping("/products")
     fun insertProducts(@RequestBody products: ProductsPost) {
@@ -39,6 +41,10 @@ class ProductsCreationController @Autowired constructor(
     }
 
     fun insertOnStartUp(products: ProductsPost) {
+
+        if (baseColorMap.isEmpty()) {
+            fetchBaseColors()
+        }
 
         for (product in products.productCollection) {
 
@@ -116,7 +122,8 @@ class ProductsCreationController @Autowired constructor(
             if (color == null) {
                 color = colorRepository.findByBrandAndName(newProduct.brand!!, colorImage.color)
                 if (color == null) {
-                    color = Color(name = colorImage.color, brand = newProduct.brand)
+                    val baseColor = getBaseColor(colorImage.color)
+                    color = Color(name = colorImage.color, brand = newProduct.brand, baseColor = baseColor)
                 }
                 colors[colorImage.color] = color
             }
@@ -184,4 +191,34 @@ class ProductsCreationController @Autowired constructor(
         }
         return subCategory
     }
+
+    private fun fetchBaseColors() {
+        val baseColors = baseColorRepository.findAll()
+        for (baseColor in baseColors) {
+            baseColorMap[baseColor.name] = baseColor
+        }
+    }
+
+    private fun getBaseColor(colorName: String): BaseColor {
+
+        // Check if full name is a match
+        var baseColor = baseColorMap[colorName]
+        if (baseColor == null) {
+            // Search for substrings that match a BaseColor
+            val subStrings = colorName.toLowerCase().split(" ", "/")
+            for (sub in subStrings) {
+                if (baseColorMap.containsKey(sub)) {
+                    baseColor = baseColorMap[sub]
+                    break
+                }
+            }
+        }
+
+        if (baseColor == null) {
+            println("COULD NOT FIND " + colorName)
+            baseColorRepository.findAll()[0]
+        }
+        return baseColor!!
+    }
+
 }

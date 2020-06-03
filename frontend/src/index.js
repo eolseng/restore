@@ -20,13 +20,23 @@ import {RestoreContextProvider} from "./components/pages/restore/restoreContext"
 import Restore from "./components/pages/restore/restore";
 
 
-
 /** CSS Imports */
 import './css/style.css'
 
 /** Font Awesome Icons */
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {faBars, faTimes, faLaptop, faSave, faEdit, faChevronDown, faSignInAlt} from '@fortawesome/free-solid-svg-icons'
+import {
+    faBars,
+    faTimes,
+    faLaptop,
+    faSave,
+    faEdit,
+    faChevronDown,
+    faSignInAlt,
+    faSearch,
+    faArrowLeft,
+    faArrowRight
+} from '@fortawesome/free-solid-svg-icons'
 import {faUser} from '@fortawesome/free-regular-svg-icons'
 import {faFacebookSquare, faTwitterSquare, faLinkedin, faInstagramSquare} from '@fortawesome/free-brands-svg-icons'
 
@@ -41,6 +51,9 @@ library.add(
     faUser,
     faChevronDown,
     faSignInAlt,
+    faSearch,
+    faArrowLeft,
+    faArrowRight,
     faFacebookSquare,
     faTwitterSquare,
     faLinkedin,
@@ -100,11 +113,13 @@ function App() {
             <React.StrictMode>
                 <BrowserRouter>
                     <div id='main-container'>
-                        {path !== '/' && Header}
+                        {/*{path !== '/' && <Header/> && path !== '/restore' && <Header />}*/}
                         <Switch>
                             {/* Husk å legge inn routen i no.repairable.backend.controller.ReactForwardController */}
                             <Route component={Home} exact path={'/'}/>
                             <Route exact path="/profile" render={(props) => <Profile {...props}/>}/>
+                            <Route exact path="/login" render={(props) => <Login {...props}/>}/>
+                            <Route exact path="/register" render={(props) => <Register {...props}/>}/>
                             <Route exact path={"/restore"}>
                                 <RestoreContextProvider>
                                     <Restore/>
