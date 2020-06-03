@@ -15,7 +15,7 @@ export function Login() {
             <div className="login-margin">
                 <LoginForm/>
                 <div className="login-register">
-                    <Link to="">Registrer bruker</Link>
+                    <Link to="./register">Registrer bruker</Link>
                 </div>
             </div>
         </div>

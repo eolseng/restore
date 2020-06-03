@@ -11,12 +11,14 @@ import no.repairable.backend.repository.BaseColorRepository
 import no.repairable.backend.repository.UserRepository
 import no.repairable.backend.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.core.io.ResourceLoader
 import org.springframework.stereotype.Component
-import java.io.File
+import java.io.BufferedReader
 import javax.annotation.PostConstruct
 
 @Component
 class DatabaseLoader @Autowired constructor(
+        private val resourceLoader: ResourceLoader,
         private val productsCreationController: ProductsCreationController,
         private val baseColorRepository: BaseColorRepository,
         private val userService: UserService
@@ -43,11 +45,11 @@ class DatabaseLoader @Autowired constructor(
 
     private fun insertBaseProducts() {
         val mapper = jacksonObjectMapper()
-        mapper.registerKotlinModule()
-
-        mapper.registerModule(JavaTimeModule())
-        val jsonString: String = File("../backend/src/main/resources/kotlinProducts.json").readText(Charsets.UTF_8)
-        val jsonText: ProductsCreationController.ProductsPost = mapper.readValue(jsonString)
+                .registerKotlinModule()
+                .registerModule(JavaTimeModule())
+        val productsFile = resourceLoader.getResource("classpath:kotlinProducts.json")
+        val content = productsFile.inputStream.bufferedReader().use(BufferedReader::readText)
+        val jsonText: ProductsCreationController.ProductsPost = mapper.readValue(content)
         productsCreationController.insertOnStartUp(jsonText)
     }
     */

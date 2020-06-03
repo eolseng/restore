@@ -58,7 +58,6 @@ export function LoginForm() {
     }
 
 
-
     return(
         <div className="login-container">
             <h3>Logg Inn</h3>
@@ -80,8 +79,6 @@ export function LoginForm() {
                 </label>
                 <input type="submit" value="LOGG INN" className="submit p"/>
             </form>
-
-
         </div>
     )
 }
