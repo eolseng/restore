@@ -3,8 +3,9 @@ package no.repairable.backend.repository
 import no.repairable.no.repairable.backend.repository.BeforeAllRepoTests
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
+import org.springframework.test.context.ActiveProfiles
 
-
+@ActiveProfiles("test")
 @DataJpaTest
 class ProductRepositoryTests : BeforeAllRepoTests() {
 
