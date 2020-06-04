@@ -119,7 +119,7 @@ function ProductDescription() {
                                     </div>
                                 </div>
                             </div>
-                            <button className="popup-button cta-button" onClick={setProductDescription}>Legg til</button>
+                            <button id="btnLeggTil" className="popup-button cta-button" onClick={setProductDescription}>Legg til</button>
                         </div>
                     </div>
                 </div>
