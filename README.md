@@ -3,8 +3,8 @@
 ## For å kjøre prosjektet (Development Mode):
 * Naviger til 'backend' modulen
 * Kjør `mvn clean install`
-* Kjør `mvn spring-boot:run`
-* API serveren skal nå kjøre på `localhost:8080` - sjekk med `localhost:808/api/v1/helloworld`
+* Kjør `mvn spring-boot:run -Dspring-boot.run.profiles=dev` ELLER start `src/main/kotlin/no/repairable/DevApplicationRunner.kt`
+* API serveren skal nå kjøre på `localhost:8080` - sjekk med `localhost:808/api/v1/products`
 * Åpne et nytt Terminal-vindu
 * Naviger til 'frontend' mappen
 * Kjør `yarn install`
