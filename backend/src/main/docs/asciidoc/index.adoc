@@ -8,18 +8,52 @@
 :operation-curl-request-title: Example request
 :operation-http-response-title: Example response
 
-This is an example output for a service running at http://localhost:8080:
-
-== Requests
+== GET Requests
 
 ==== api/products
 include::{snippets}/products/http-request.adoc[]
 include::{snippets}/products/http-response.adoc[]
 
-==== api/gender
+==== api/genders
 include::{snippets}/genders/http-request.adoc[]
 include::{snippets}/genders/http-response.adoc[]
 
 ==== api/categories
 include::{snippets}/categories/http-request.adoc[]
 include::{snippets}/categories/http-response.adoc[]
+
+==== api/subCategories
+include::{snippets}/subCategories/http-request.adoc[]
+include::{snippets}/subCategories/http-response.adoc[]
+
+==== api/brands
+include::{snippets}/brands/http-request.adoc[]
+include::{snippets}/brands/http-response.adoc[]
+
+==== api/colors
+include::{snippets}/colors/http-request.adoc[]
+include::{snippets}/colors/http-response.adoc[]
+
+==== api/images
+include::{snippets}/images/http-request.adoc[]
+include::{snippets}/images/http-response.adoc[]
+
+==== api/sizes
+include::{snippets}/sizes/http-request.adoc[]
+include::{snippets}/sizes/http-response.adoc[]
+
+==== api/users
+include::{snippets}/users/http-request.adoc[]
+include::{snippets}/users/http-response.adoc[]
+
+==== api/actualProducts
+include::{snippets}/actualProducts/http-request.adoc[]
+include::{snippets}/actualProducts/http-response.adoc[]
+
+==== api/orders
+include::{snippets}/orders/http-request.adoc[]
+include::{snippets}/orders/http-response.adoc[]
+
+==== api/baseColors
+include::{snippets}/baseColors/http-request.adoc[]
+include::{snippets}/baseColors/http-response.adoc[]
