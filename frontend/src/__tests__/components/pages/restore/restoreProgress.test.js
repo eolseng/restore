@@ -28,22 +28,22 @@ test('is rendered', () => {
 
     const { getByTestId } = renderRestoreProgress(value);
 
-    expect(getByTestId('prev-step')).toBeInTheDocument()
-    expect(getByTestId('1.Step')).toBeInTheDocument()
-    expect(getByTestId('2.Step')).toBeInTheDocument()
-    expect(getByTestId('3.Step')).toBeInTheDocument()
-    expect(getByTestId('4.Step')).toBeInTheDocument()
-    expect(getByTestId('next-step')).toBeInTheDocument()
+    expect(getByTestId('1.step')).toBeInTheDocument()
+    expect(getByTestId('2.step')).toBeInTheDocument()
+    expect(getByTestId('3.step')).toBeInTheDocument()
+    expect(getByTestId('4.step')).toBeInTheDocument()
 });
 
 test('element to contain text', () => {
     const { getByTestId } = renderRestoreProgress(value);
 
-    expect(getByTestId('prev-step')).toHaveTextContent('Tilbake')
-    expect(getByTestId('1.Step')).toHaveTextContent('1. Finn produkt')
-    expect(getByTestId('2.Step')).toHaveTextContent('2. Beskriv produkt')
-    expect(getByTestId('3.Step')).toHaveTextContent('3. Velg leveringsmetode')
-    expect(getByTestId('4.Step')).toHaveTextContent('4. Bekreftelse')
-    expect(getByTestId('next-step')).toHaveTextContent('Neste')
+    expect(getByTestId('step-1')).toHaveTextContent('1')
+    expect(getByTestId('find-product')).toHaveTextContent('Finn produkt')
+    expect(getByTestId('step-2')).toHaveTextContent('2')
+    expect(getByTestId('describe-product')).toHaveTextContent('Beskriv produkt')
+    expect(getByTestId('step-3')).toHaveTextContent('3')
+    expect(getByTestId('delivery-selection')).toHaveTextContent('Velg leveringsmetode')
+    expect(getByTestId('step-4')).toHaveTextContent('4')
+    expect(getByTestId('confirmation')).toHaveTextContent('Bekreftelse')
 });
 
