@@ -1,4 +1,4 @@
-package no.repairable.no.repairable.backend
+package no.repairable.backend
 
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
@@ -7,7 +7,6 @@ import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import no.repairable.backend.controller.ProductsCreationController
 import no.repairable.backend.entity.ActualProduct
 import no.repairable.backend.entity.BaseColor
-import no.repairable.backend.entity.Color
 import no.repairable.backend.repository.*
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.CommandLineRunner
