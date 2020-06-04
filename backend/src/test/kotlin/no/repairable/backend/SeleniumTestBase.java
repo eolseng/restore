@@ -89,6 +89,10 @@ public abstract class SeleniumTestBase {
 
         try{Thread.sleep(1000);} catch (Exception e){}
 
+        po.clickFirstSizeOption();
+
+        try{Thread.sleep(1000);} catch (Exception e){}
+
         po.clickAddProduct();
 
         try{Thread.sleep(1000);} catch (Exception e){}

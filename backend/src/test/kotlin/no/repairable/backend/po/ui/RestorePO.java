@@ -40,6 +40,10 @@ public class RestorePO extends LayoutPO {
         }
 
 
+    public void clickFirstSizeOption(){
+        getDriver().findElements(By.className("product-description-size")).get(0).click();
+    }
+
     public void clickAddProduct(){
         clickAndWait("btnLeggTil");
     }
