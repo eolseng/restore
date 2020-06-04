@@ -1,10 +1,10 @@
 import React from "react";
-import { render, cleanup, fireEvent } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import {RestoreContext} from "../../../../components/pages/restore/restoreContext";
 import RestoreProgress from "../../../../components/pages/restore/restoreProgress";
 
-afterEach(cleanup)
+afterEach(cleanup);
 
 // A function that can be used in many tests
 function renderRestoreProgress(value) {
@@ -17,7 +17,7 @@ function renderRestoreProgress(value) {
 
 // Mock state that i the same as the original with the values needed and can be used in many tests
 const state = {
-    maxSteps: 1,
+    maxSteps: 4,
     step: 1,
     brandId: null,
 };
@@ -28,22 +28,28 @@ test('is rendered', () => {
 
     const { getByTestId } = renderRestoreProgress(value);
 
-    expect(getByTestId('1.step')).toBeInTheDocument()
-    expect(getByTestId('2.step')).toBeInTheDocument()
-    expect(getByTestId('3.step')).toBeInTheDocument()
-    expect(getByTestId('4.step')).toBeInTheDocument()
+    expect(getByTestId('1.step')).toBeInTheDocument();
+    expect(getByTestId('2.step')).toBeInTheDocument();
+    expect(getByTestId('3.step')).toBeInTheDocument();
+    expect(getByTestId('4.step')).toBeInTheDocument();
 });
 
 test('element to contain text', () => {
     const { getByTestId } = renderRestoreProgress(value);
 
-    expect(getByTestId('step-1')).toHaveTextContent('1')
-    expect(getByTestId('find-product')).toHaveTextContent('Finn produkt')
-    expect(getByTestId('step-2')).toHaveTextContent('2')
-    expect(getByTestId('describe-product')).toHaveTextContent('Beskriv produkt')
-    expect(getByTestId('step-3')).toHaveTextContent('3')
-    expect(getByTestId('delivery-selection')).toHaveTextContent('Velg leveringsmetode')
-    expect(getByTestId('step-4')).toHaveTextContent('4')
-    expect(getByTestId('confirmation')).toHaveTextContent('Bekreftelse')
+    expect(getByTestId('step-1')).toHaveTextContent('1');
+    expect(getByTestId('find-product')).toHaveTextContent('Finn produkt');
+    expect(getByTestId('step-2')).toHaveTextContent('2');
+    expect(getByTestId('describe-product')).toHaveTextContent('Beskriv produkt');
+    expect(getByTestId('step-3')).toHaveTextContent('3');
+    expect(getByTestId('delivery-selection')).toHaveTextContent('Velg leveringsmetode');
+    expect(getByTestId('step-4')).toHaveTextContent('4');
+    expect(getByTestId('confirmation')).toHaveTextContent('Bekreftelse');
+});
+
+test('if step 2 text is color black when its not activ', () => {
+    const { getByTestId } = renderRestoreProgress(value);
+
+    expect(getByTestId('2.step')).toHaveStyle(`color: var(--sec-color)`);
 });
 
