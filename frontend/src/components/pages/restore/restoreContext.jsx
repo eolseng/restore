@@ -4,14 +4,14 @@ import React, {createContext, useReducer} from "react";
 
 const initialState = {
     maxSteps: 1,
-    step: 3,
+    step: 1,
     brandId: null,
     productFilter: null,
     productLink: null,
     productId: null,
     productColor: null,
     productDescription: null,
-    deliveryOptions: null
+    deliveryOption: null
 };
 
 const RestoreContext = createContext(initialState);
@@ -40,8 +40,8 @@ const reducer = (state, action) => {
             return {...state, productColor: action.payload};
         case "setProductDescription":
             return {...state, productDescription: action.payload};
-        case "setDeliveryOptions":
-            return {...state, deliveryOptions: action.payload};
+        case "setDeliveryOption":
+            return {...state, deliveryOption: action.payload};
         default:
             return;
     }

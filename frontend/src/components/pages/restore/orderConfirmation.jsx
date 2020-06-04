@@ -15,8 +15,8 @@ function OrderConfirmation() {
             <p>Step: {state.step}</p>
             <p>Brand ID: {state.brandId}</p>
             <p>Product ID : {state.productId}</p>
-            <p>Product Description : {state.productDescription}</p>
-            <p>Delivery Options : {state.deliveryOptions}</p>
+            <p>Product Description : {state.productDescription.color}</p>
+            <p>Delivery Options : {state.deliveryOption}</p>
             <button onClick={prevStep}>Previous Step!</button>
             <button onClick={nextStep}>Next Step!</button>
         </div>
