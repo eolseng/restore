@@ -8,7 +8,9 @@ function ProductDescription() {
     const {state, dispatch} = useContext(RestoreContext)
     const [product, setProduct] = useState(null)
     const [currentImage, setCurrentImage] = useState(null)
-    const [selectedColor, setSelectedColor] = useState(null)
+    const [selectedColorName, setSelectedColorName] = useState(state.productColor)
+    const [selectedSizeName, setSelectedSizeName] = useState(null)
+    const [selectedColorId, setSelectedColorId] = useState(null)
     const [selectedSize, setSelectedSize] = useState(null)
     const [sizeError, setSizeError] = useState(false)
 
@@ -17,16 +19,17 @@ function ProductDescription() {
             setSizeError(true)
         }
 
-        if (!selectedColor || !selectedSize) {
-            // TODO: Må vise feilmelding!
+        if (!selectedColorId || !selectedSize) {
             console.log('HAR IKKE VALGT FARGE ELLER STØRRELSE!')
             return
         }
 
         const payload = {
-            color: selectedColor,
+            color: selectedColorId,
             size: selectedSize,
         }
+        dispatch({type: 'setProductSize', payload: selectedSizeName})
+        dispatch({type: 'setProductColor', payload: selectedColorName})
         dispatch({type: 'setProductDescription', payload: payload})
         dispatch({type: 'incrementStep'})
 
@@ -55,12 +58,12 @@ function ProductDescription() {
             setProduct(product)
             const image = product.images.find(image => image.colorName === state.productColor)
             setCurrentImage(image.imgUrl)
-            setSelectedColor(image.colorId)
+            setSelectedColorId(image.colorId)
         })
     }, [state.productId, state.productLink, state.productColor])
 
     function isSelected(id) {
-        if (id === selectedColor || id === selectedSize) {
+        if (id === selectedColorId || id === selectedSize) {
             return 'selected-item'
         } else {
             return ''
@@ -97,7 +100,8 @@ function ProductDescription() {
                                                         alt={'Alternative color - ' + image.colorName}
                                                         onClick={() => {
                                                             setCurrentImage(image.imgUrl)
-                                                            setSelectedColor(image.colorId)
+                                                            setSelectedColorId(image.colorId)
+                                                            setSelectedColorName(image.colorName)
                                                         }}
                                                     />
                                                     <div className={'product-description-image-alt-name'}>
@@ -118,6 +122,7 @@ function ProductDescription() {
                                                     key={size.id}
                                                     className={'product-description-size ' + isSelected(size.id)}
                                                     onClick={() => {
+                                                        setSelectedSizeName(size.name)
                                                         setSelectedSize(size.id)
                                                         setSizeError(false)
                                                     }}
