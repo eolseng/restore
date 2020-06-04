@@ -1,6 +1,9 @@
-.container {
+.delivery-selection-container {
+    min-height: calc(100vh - 363px);
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .delivery-selection {
