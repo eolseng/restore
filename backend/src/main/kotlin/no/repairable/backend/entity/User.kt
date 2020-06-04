@@ -12,7 +12,7 @@ data class User (
         val firstName: String,
         val lastName:String,
         val userName:String,
-        val password:String
-        //@OneToMany(mappedBy = "user")
-        //val orders:MutableList<Order> = mutableListOf()
+        val password:String,
+        @OneToMany(mappedBy = "user")
+        val orders:MutableList<Order> = mutableListOf()
 )
