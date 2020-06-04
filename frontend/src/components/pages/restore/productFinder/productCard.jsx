@@ -17,7 +17,7 @@ export function ProductCard(props) {
 
     return (
         <div className={'product-card'}
-             id={'product-card-id-' + product.id}
+             id={'product-card-id-' + product.id} data-testid={'displayCard'}
              onClick={() => {
                  dispatch({type: "setProductColor", payload: currentColor});
                  dispatch({type: "setProductId", payload: product.id});
@@ -36,7 +36,7 @@ export function ProductCard(props) {
                                     setCurrentColor(image.colorName)
                                 }}
                                 onMouseLeave={() => {
-                                    setDisplayImage(product.images[0].imgUrl)
+                                    setDisplayImage(mainImage.imgUrl)
                                     setCurrentColor(mainImage.colorName)
                                 }}
                                 src={image.imgUrl}

@@ -6,7 +6,7 @@ import javax.persistence.*
 import javax.validation.constraints.Size
 
 @Entity
-@Table(name = "category")
+@Table(name = "categories")
 data class Category(
         @Id
         @GeneratedValue

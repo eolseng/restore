@@ -3,7 +3,7 @@ package no.repairable.backend.entity
 import javax.persistence.*
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 data class User (
         @Id
         @GeneratedValue
@@ -12,7 +12,7 @@ data class User (
         val firstName: String,
         val lastName:String,
         val userName:String,
-        val password:String
-        //@OneToMany(mappedBy = "user")
-        //val orders:MutableList<Order> = mutableListOf()
+        val password:String,
+        @OneToMany(mappedBy = "user")
+        val orders:MutableList<Order> = mutableListOf()
 )

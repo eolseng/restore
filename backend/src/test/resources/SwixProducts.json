@@ -1,0 +1,4943 @@
+{
+  "productCollection": [
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "magnet",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12381-12200.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Multifunksjonell!",
+      "name": "Quest component jkt Ms"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12315-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "olympian blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12315-72107.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Premium høyintensitet!",
+      "name": "Swix Triac 3.0 jacket M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "royal blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12691-72000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Lett langrennsjakke med stretch-panel i ryggen",
+      "name": "Invincible jkt. Mens"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12932-124002.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12932-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Premium vindbeskyttelse!",
+      "name": "Paragon GTX Infinium jacket M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy/ swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12952-75101.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "olympian blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12952-72107.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Til intens vintertrening!",
+      "name": "Quantum performance jacket M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12271-75100_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "royal blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12271-72000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12271-99990_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Varm langrennsjakke!",
+      "name": "PowderX jkt. Mens"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12331-90015.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Høy funksjon og høy synlighet",
+      "name": "Radiant jacket M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "micro chip",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12991-12103.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12991-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "For høyt tempo!",
+      "name": "Race jkt Ms"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12043-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12043-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Helårs beskyttelse!",
+      "name": "Surmount all weather shell jacket M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12953-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "olympian blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12953-72107.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12953-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Soft stretch performance",
+      "name": "Dynamic jkt. Mens"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12873-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12873-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Vind og vannavisende produkt av mikrofiber ski bekledning med komfortabelt tricot fòr ",
+      "name": "Tracx jacket M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "fiery red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12921-99992.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12921-12400.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Lett softshell",
+      "name": "Carbon light softshell jacket M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12471-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12471-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Teknisk turklassiker",
+      "name": "Blizzard Anorak M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13154-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "fiery red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13154-99992.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "En meget varm og komfortabel unisex  primaloftparkas for kalde vinterdager, før, etter eller under langrenn.",
+      "name": "Surmount Primaloft parka U"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12313-12400.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Superlett anorakk til trening!",
+      "name": "Quest tech anorak M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "estate blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12311-72105.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "norwegian mix",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12311-90900_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Langrennsklassiker!",
+      "name": "Star XC jacket Ms"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "royal blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12671-72000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "L",
+        "XL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Allsidig microfiberjakke!",
+      "name": "Star Advanced jkt. Mens"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy/blue sea",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12934-75104.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Daresay; best there is…",
+      "name": "Paramount tech wool jacket M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13151-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "new navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13151-75000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13151-90000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Tynn dunjakke!",
+      "name": "Dynamic down jacket M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12273-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12273-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Lettvekts isolasjon!",
+      "name": "Surmount Primaloft jacket M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "olympian blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/15131-72107.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/15131-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Optimal langrennsjakke!",
+      "name": "ProFit Revolution jkt. Mens"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12341-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "majolica blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12341-76208_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Komfortabel softshell!",
+      "name": "Cross jacket Ms"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12261-90015.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Multifunksjonell synlighetsjakke!",
+      "name": "Radiant Jacket Mens"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12314-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "En topp lettvekt softshell jakke for langrennstrening. ",
+      "name": "Focus jacket M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13153-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "fiery red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13153-99992.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "For nordiske forhold!",
+      "name": "Surmount down jacket U"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12874-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12874-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Ski og treningsbekledning av vind og vannavisende mikrofiber, med komfortabelt og isolerende tricot fôr og funksjonelle stretch paneler",
+      "name": "Trails jacket M"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12981-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Allsidig langrennsjakke for alle menn",
+      "name": "Start jkt Ms"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12401-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Allsidighet på 1ste klasse",
+      "name": "Motion Premium Jacket M"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/11241-90015.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Synlig året rundt!",
+      "name": "Radiant vest Ms"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/11291-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "olympian blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/11291-72107.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Premium ski-vest!",
+      "name": "Swix Triac 3.0 vest Ms"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12391br-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Allsidighet på 1ste klasse",
+      "name": "Motion Premium vest Birken M"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/11281-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Superelastisk isolasjon!",
+      "name": "Swix Triac 3.0 warm vest Ms"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12272-751002.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12272-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Lettvekts isolasjon!",
+      "name": "Surmount Primaloft vest M"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/11283-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Isolerende vest!",
+      "name": "Endure warm vest M"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12391-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Allsidighet på 1ste klasse",
+      "name": "Motion Premium vest M"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "yellow",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/11231-50000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XXS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Gjør treningen tryggere!",
+      "name": "Flash Reflective vest Unisex"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22291-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Tettsittende kvalitet!",
+      "name": "Swix Triac 3.0 pants M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22301-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22301-75100_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Populær klassiker!",
+      "name": "Star XC pants Ms"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22333-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Lettvekts isolasjon!",
+      "name": "Surmount Primaloft pants M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22292-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Clever and Innovative",
+      "name": "Quest modular tech knickers M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "grey melange",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22111-11200.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Myk og komfortabel!",
+      "name": "Swix sweat pants unisex"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22261-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Varm tights til utetrening!",
+      "name": "Motion windblock tights M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22332-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Lettvekts varme!",
+      "name": "Surmount Primaloft knickers M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/41951-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark olive",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/41951-48000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Ny favoritt!",
+      "name": "Motion Premium tights M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22823-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy/ swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22823-75101.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Et referanse-produkt som er beregnet på høyintensitets langrennstrening, laget av en meget elastisk, vindbestandig softshell. ",
+      "name": "Quantum performance pant M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/23561-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/23561-75100_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Komfortabel bukse som holder deg varm på de kaldeste dagene.",
+      "name": "PowderX Pants Ms"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "fiery red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32261-99992.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32261-12400.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Høypuls  treningsprodukt",
+      "name": "Carbon tights M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/25111-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/25111-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "new navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/25111-75000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Optimal langrennsbukse!",
+      "name": "ProFit Revolution pant Mens"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32641-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark olive",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32641-48000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Allsidighet på 1ste klasse",
+      "name": "Motion Adventure pant M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22983-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Ski og treningsbekledning av vind og vannavisende mikrofiber, med komfortabelt og isolerende tricot fôr og funksjonelle stretch paneler",
+      "name": "Trails pant M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22321-75100_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Ski touring classics",
+      "name": "Blizzard Pants Ms"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22813-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Daresay; best there is…",
+      "name": "Paramount Tech Wool Pants M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22351-75100_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22351-12400_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "For høyt tempo!",
+      "name": "Race pant Ms"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22311-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22311-12400_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom/ black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22311-12401.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Klassisk softshell!",
+      "name": "Cross pants Ms"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32221-90015_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Tryggere trening!",
+      "name": "Radiant Tights Men"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/25121-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Vindtett og vanntett skibukse",
+      "name": "S1 Pant  Ms"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22293-10000-front.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "En svært elastisk, varmeisolerende tights for kalde treningsdager",
+      "name": "Focus Tights M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22341-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Allsidig langrennsbukse!",
+      "name": "Start pant Ms"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22951-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Helårs turbukse!",
+      "name": "Epic pant Mens"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32231-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Perfekt til utetrening!",
+      "name": "Motion tights M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22824-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy/ swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22824-75101.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Soft stretch performance",
+      "name": "Dynamic pant Mens"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/25211-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Optimal i kaldt vær!",
+      "name": "Swix Triac pants Mens"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32151-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Bli sett!",
+      "name": "Vistech O2 tights long Mens"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22431-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Teknisk langrensturplagg",
+      "name": "Blizzard Pants M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22812-124002.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Premium kvalitet!",
+      "name": "Paragon GTX Infinium Pants M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22263-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "En svært elastisk, varmeisolerende tights for kalde treningsdager",
+      "name": "Endure warm tights M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22264-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "En isolerende treningstights for vinteren.",
+      "name": "Dynamic warm tights M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22984-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Vind og vannavisende produkt av mikrofiber ski bekledning med komfortabelt tricot fòr ",
+      "name": "Tracx pant M"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22322-751002.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "En hel-års vanntett og vindtett skall-bukse med stretch. ",
+      "name": "Surmount all weather shell pants M"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40861-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "fiery red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40861-99992.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40861-12400.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Høypuls  treningsprodukt",
+      "name": "Carbon t-shirt M"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "blue sea",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40961-72102.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40961-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40961-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy/ bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40961-75106.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "estate blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40961-72105.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "micro chip",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40961-12103.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Til hverdag og trening!",
+      "name": "Motion Sport t-shirt M"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "dark aubergine",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40931-94303.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40931-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "micro chip",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40931-12103.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Hurtigtørkende og komfortabel",
+      "name": "Motion Adventure t-shirt M"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40951-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40951-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Hurtigtørkende og komfortabel",
+      "name": "Motion Performance t-shirt M"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40691-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40691-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40691-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Big Swix logo!",
+      "name": "Swix big logo t-shirt M"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40941-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Tørr følelse mot huden!",
+      "name": "Motion Active t-shirt M"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "dark navy/ silver",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40991-75107.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "estate blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40991-72105.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Allsidighet på 1ste klasse",
+      "name": "Motion Tech Wool t-shirt M"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40981-90015.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Trygg komfort!",
+      "name": "Radiant Performance t-shirt M"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40271-00000_computedimageurl2.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "new navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40271-75000_computedimageurl2.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Klassisk piquet!",
+      "name": "Spotlight piquet Mens"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40591-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "grey melange",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40591-11200.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Big logo t-shirt!",
+      "name": "Swix t-shirt M"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "dark navy/ bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40961br-75106.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Til hverdag og trening!",
+      "name": "Motion Sport t-shirt Birken M"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0220-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Lett konkurransehanske med mulighet for integrering med SWIX SPPS-system",
+      "name": "Swix Triac 3.0 SPPS glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0813-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "For kalde hender!",
+      "name": "Powder Glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0200-90015.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "11",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Synlighet og grep",
+      "name": "Radiant glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0672-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0672-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0672-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Moderne retro!",
+      "name": "Blizzard Heritage Mitt"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0281-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "7/S",
+        "8/M",
+        "9/L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Alt i ett-hanske!",
+      "name": "AtlasX Glove-Mitt Mens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0963-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0963-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "7/S",
+        "8/M",
+        "9/L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Vindtett med touch-screen funksjon!",
+      "name": "Marka Glove Mens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h3031-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "7/S",
+        "8/M"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Varm og vindtett!",
+      "name": "Uvdal GTX Mitt Mens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0815-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Lett og varm!",
+      "name": "Star XC Glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0873-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0873-12400.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "7/S",
+        "8/M",
+        "9/L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Klassisk og varm!",
+      "name": "Cross Glove Ms"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0230-00000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Tynn og vindtett langrennshanske!",
+      "name": "Dynamic glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0250-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "11",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Optimal til konkurranse!",
+      "name": "Race glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0247-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0247-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Lett og funksjonell!",
+      "name": "Focus Glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0251-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "7/S",
+        "9/L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Til ekstra kalde dager!",
+      "name": "TaurusX GWS Mitt Mens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0971-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "11",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Sitter som støpt!",
+      "name": "AtlasX Glove-Mitt M"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0784-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "11",
+        "12",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Varm hanskevott!",
+      "name": "Endure Split mitt"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0320-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "11",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Ski-elitens valg!",
+      "name": "Swix Triac 3.0 glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0951-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "7/S",
+        "8/M",
+        "9/L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Optimalisert for Triac 3.0 stav!",
+      "name": "Swix Triac Warm Glove Mens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0812-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Optimal konkurransehanske!",
+      "name": "Paramount Glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0300-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0300-12400.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "11",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Synlighetsreflekser og suverent grep",
+      "name": "Carbon glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0293-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "12/3XL",
+        "7/S",
+        "8/M",
+        "9/L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Holder hendene varme!",
+      "name": "Endure Glove M"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0280-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0280-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Prisgunstig allroundhanske!",
+      "name": "Tracx Glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0780-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Varm og vannavvisende!",
+      "name": "Split mitt"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "magnet",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h2141-12200.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "6/XS",
+        "7/S",
+        "8/M",
+        "9/L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Mellomlag i ull!",
+      "name": "Endure Liner Glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0961-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "majolica blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0961-76208_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "11/XXL",
+        "9/L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Varm og vindtett!",
+      "name": "HydraX Glove Mens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0814-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Perfekt passform!",
+      "name": "Paragon Glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h3021-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "7/S",
+        "8/M",
+        "9/L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Varm og vanntett!",
+      "name": "Uvdal GTX Glove Mens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black/phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0221-10150_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "norwegian mix",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0221-90900_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "7/S",
+        "8/M",
+        "9/L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Optimal konkurransehanske!",
+      "name": "CompetitionX GWS Glove Mens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0941-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "7/S",
+        "8/M",
+        "9/L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Optimalisert for Triac 3.0 stav!",
+      "name": "Swix Triac Light Glove Mens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0260-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "6/XS",
+        "7/S",
+        "8/M",
+        "9/L"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Genial overtrekksvott!",
+      "name": "NovaX GWS Over Mitt Unisex"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0270-90015_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "11",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "herre",
+      "brand": "swix",
+      "description": "Perfeksjon!",
+      "name": "Radiant glove"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "majolica blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/15136-76208_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "olympian blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/15136-72107.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/15136-99990_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Optimal langrennsjakke!",
+      "name": "ProFit Revolution jkt. Womens"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "nimbus cloud",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12938-12500.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12938-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Premium vindbeskyttelse!",
+      "name": "Paragon GTX Infinium jacket W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12317-12400.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Superlett anorak til trening!",
+      "name": "Quest tech anorak W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "micro chip",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12996-12103.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12996-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "For høyt tempo",
+      "name": "Race jkt Ws"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12336-90015.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Høy funksjon og høy synlighet",
+      "name": "Radiant jacket W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12278-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12278-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Lettvekts isolasjon!",
+      "name": "Surmount Primaloft jacket W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "norwegian mix",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12276-90900_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12276-90000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12276-00025_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Varm langrennsjakke!",
+      "name": "PowderX jkt. Womens"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "bluebell",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12346-72108.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark aubergine",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12346-94303.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "fire",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12346-57000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "majolica blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12346-76208_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Komfortabel softshell!",
+      "name": "Cross jacket Ws"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13156-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "new navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13156-75000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13156-90000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Tynn dunjakke!",
+      "name": "Dynamic down jacket W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13153-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "fiery red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13153-99992.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "For nordiske forhold!",
+      "name": "Surmount down jacket U"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12958-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy/ swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12958-75101.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12958-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Soft stretch performance",
+      "name": "Dynamic jkt. Womens"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12406-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "nimbus cloud",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12406-12500.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Allsidighet på 1ste klasse",
+      "name": "Motion Premium Jacket W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12476-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12476-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12476-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Teknisk turklassiker",
+      "name": "Blizzard Anorak W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12048-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12048-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Helårs beskyttelse!",
+      "name": "Surmount all weather shell jacket W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13154-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "fiery red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/13154-99992.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "En meget varm og komfortabel unisex  primaloftparkas for kalde vinterdager, før, etter eller under langrenn.",
+      "name": "Surmount Primaloft parka U"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12926-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "fiery red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12926-99992.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Lett softshell",
+      "name": "Carbon light softshell jacket W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12318-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12318-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "En topp lettvekt softshell jakke for langrenns trening. ",
+      "name": "Focus jacket W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12947-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Most versatile alrounder",
+      "name": "Marka softshield jacket W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "magnet",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12386-12200.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Multifunksjonell!",
+      "name": "Quest component jkt Ws"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12939-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Daresay; best there is…",
+      "name": "Paramount tech wool jacket W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12047-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Ski touring classics",
+      "name": "Blizzard jacket W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12319-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12319-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Premium høyintensitet!",
+      "name": "Swix Triac 3.0 jacket W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12836-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "L"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Slitesterk jakke!",
+      "name": "InvincibleX jkt. Womens"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "norwegian mix",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12316-90900_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Langrennsklassiker!",
+      "name": "Star XC jacket Ws"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12957-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12957-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Til intens vintertrening!",
+      "name": "Quantum performance jacket W"
+    },
+    {
+      "category": "jakker",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12266-90015.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Multifunksjonell synlighetsjakke!",
+      "name": "Radiant Jacket Women's"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12277-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12277-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Lettvekts isolasjon!",
+      "name": "Surmount Primaloft vest W"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12396br-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Allsidighet på 1ste klasse",
+      "name": "Motion Premium vest Birken W"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12396-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "nimbus cloud",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12396-12500.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Allsidighet på 1ste klasse",
+      "name": "Motion Premium Vest W"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/11288-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Isolerende vest!",
+      "name": "Endure warm vest W"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/12256-90015.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Synlig året rundt!",
+      "name": "Radiant vest W"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/11296-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/11296-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Premium ski-vest!",
+      "name": "Swix Triac 3.0 vest Ws"
+    },
+    {
+      "category": "vester",
+      "colorImages": [
+        {
+          "color": "yellow",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/11231-50000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XXS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Gjør treningen tryggere!",
+      "name": "Flash Reflective vest Unisex"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22326-75100_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Ski touring classics",
+      "name": "Blizzard Pants Ws"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22356-75100_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22356-12400_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "For høyt tempo!",
+      "name": "Race pant Ws"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "nimbus cloud",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22817-12500.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22817-12400.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Premium kvalitet!",
+      "name": "Paragon GTX Infinium pants W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22306-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22306-75100_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Populær klassiker!",
+      "name": "Star XC pants Ws"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22316-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom/ black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22316-12401.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Klassisk softshell!",
+      "name": "Cross pants Ws"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22818-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Daresay; best there is…",
+      "name": "Paramount tech wool pants W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22266-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Varm tights til utetrening!",
+      "name": "Motion windblock tights W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32636-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark olive",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32636-48000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Allsidighet på 1ste klasse",
+      "name": "Motion Adventure shorts W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32226-90015_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Tryggere trening!",
+      "name": "Radiant Tights Women"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark aubergine",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/41956-94303.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/41956-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark olive",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/41956-48000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "magnet",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/41956-12200.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Ny favoritt!",
+      "name": "Motion Premium tights W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32646-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark olive",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32646-48000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Allsidighet på 1ste klasse",
+      "name": "Motion Adventure pant W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22338-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22338-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Lettvekts isolasjon!",
+      "name": "Surmount Primaloft pants W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22827-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy/ swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22827-75101.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Til intens vintertrening!",
+      "name": "Quantum performance pant W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/41966-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Allsidighet på 1ste klasse",
+      "name": "Motion Premium cropped tights W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22346-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Allsidig langrennsbukse!",
+      "name": "Start pant Ws"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "fiery red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32266-99992.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32266-12400.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Høypuls  treningsprodukt",
+      "name": "Carbon tights W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22337-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Lettvekts varme!",
+      "name": "Surmount Primaloft knickers W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22267-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "En isolerende treningstights for vinteren.",
+      "name": "Dynamic warm tights W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "grey melange",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22226-11200.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Komfortabel collegekjole!",
+      "name": "Swix dress W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22297-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Clever and Innovative",
+      "name": "Quest modular tech knickers W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/23566-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/23566-75100_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/23566-00025_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Vår varmeste langrennsbukse!",
+      "name": "PowderX Pants Ws"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22956-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Helårs turbukse!",
+      "name": "Epic pant Womens"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "new navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40196-75000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Myk bomullsbukse!",
+      "name": "Restitution sweatpant Womens"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/25116-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/25116-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "new navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/25116-75000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Optimal langrennsbukse!",
+      "name": "ProFit Revolution pant Womens"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22828-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy/snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22828-75103.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Soft stretch performance",
+      "name": "Dynamic pant Womens"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/32196-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "M",
+        "L"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Full bevegelsesfrihet!",
+      "name": "High speed mesh tights Womens"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22269-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "En svært elastisk, varmeisolerende tights for kalde treningsdager",
+      "name": "Endure Warm Tights W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22327-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "En hel-års vanntett og vindtett skall-bukse med stretch. ",
+      "name": "Surmount all weather shell pants W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22436-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Teknisk langrensturplagg",
+      "name": "Blizzard Pants W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22298-10000-front.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "En svært elastisk, varmeisolerende tights for kalde treningsdager",
+      "name": "Focus tights W"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/25126-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Vindtett og vanntett skibukse",
+      "name": "S1 Pant Ws"
+    },
+    {
+      "category": "bukser og tights",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/22819-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Most versatile alrounder",
+      "name": "Marka softshield pant W"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "bluebell",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40936-72108.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark olive",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40936-48000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "micro chip",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40936-12103.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Hurtigtørkende og komfortabel",
+      "name": "Motion Adventure t-shirt W"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40966br-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Til hverdag og trening!",
+      "name": "Motion Sport t-shirt Birken W"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40696-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40696-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40696-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Big Swix logo!",
+      "name": "Swix big logo t-shirt W"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40596-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Big logo t-shirt!",
+      "name": "Swix t-shirt W"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40876-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "fiery red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40876-99992.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Høypuls  treningsprodukt",
+      "name": "Carbon singlet W"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40956-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40956-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Hurtigtørkende og komfortabel",
+      "name": "Motion Performance t-shirt W"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40166-00000_computedimageurl2.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "washed red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40166-90011_computedimageurl2.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Organisk bomull!",
+      "name": "Relax cotton T-shirt Womens"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "bluebell",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40966-72108.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40966-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark aubergine",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40966-94303.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40966-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dusk blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40966-72104.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "estate blue",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40966-72105.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Til hverdag og trening!",
+      "name": "Motion Sport t-shirt W"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "nimbus cloud",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40946-12500.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Multipurpose activity",
+      "name": "Motion Active t-shirt W"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40986-90015.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Trygg komfort!",
+      "name": "Radiant Performance t-shirt W"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "fiery red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40866-99992.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "micro chip",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40866-12103.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Høypuls  treningsprodukt",
+      "name": "Carbon t-shirt W"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "bluebell",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40996-72108.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy/ silver",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40996-75107.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Allsidighet på 1ste klasse",
+      "name": "Motion Tech Wool t-shirt W"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40976-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Hurtigtørkende og komfortabel",
+      "name": "Motion Performance singlet W"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "new navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40277-75000_computedimageurl2.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Klassisk piquet!",
+      "name": "Spotlight piquet Womens"
+    },
+    {
+      "category": "t-skjorter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/40266-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "L",
+        "XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Lett t-shirt!",
+      "name": "Excite t-shirt Womens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "magnet",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0876-12200_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "6"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Stretchy og slitesterk!",
+      "name": "Pollux glove Ws"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0220-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Lett konkurransehanske med mulighet for integrering med SWIX SPPS-system",
+      "name": "Swix Triac 3.0 SPPS glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0966-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "magnet",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0966-12200_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "9/XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Varm og vindtett!",
+      "name": "MiraX Glove Womens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0200-90015.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "11",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Synlighet og grep",
+      "name": "Radiant glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0672-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "snow white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0672-00025.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "swix red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0672-99990.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Moderne retro!",
+      "name": "Blizzard Heritage Mitt"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "dark aubergine",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0877-94303.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0877-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0877-12400.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "6/S",
+        "7/M",
+        "8/L",
+        "9/XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Klassisk og varm!",
+      "name": "Cross glove Ws"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0230-00000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Tynn og vindtett langrennshanske!",
+      "name": "Dynamic glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0250-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "11",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Optimal til konkurranse!",
+      "name": "Race glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0247-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0247-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Lett og funksjonell!",
+      "name": "Focus Glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0976-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Sitter som støpt!",
+      "name": "AtlasX Glove-Mitt W"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "norwegian mix",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0226-90900.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "6/S",
+        "7/M",
+        "8/L",
+        "9/XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Optimal konkurransehanske!",
+      "name": "CompetitionX GWS Glove Womens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0320-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "11",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Ski-elitens valg!",
+      "name": "Swix Triac 3.0 glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "bright white",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0300-00000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "phantom",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0300-12400.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "11",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Synlighetsreflekser og suverent grep",
+      "name": "Carbon glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0670-75100_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "magnet",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0670-12200_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "5",
+        "8",
+        "9"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "En fôret tur- og fritidsvott",
+      "name": "Blizzard mitt"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0286-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "6/S",
+        "7/M",
+        "8/L",
+        "9/XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Alt i ett-hanske!",
+      "name": "AtlasX Glove-Mitt Womens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0956-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "6/S",
+        "7/M",
+        "8/L",
+        "9/XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Optimalisert for Triac 3.0 stav!",
+      "name": "Swix Triac Warm Glove Womens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0280-10000.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        },
+        {
+          "color": "dark navy",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0280-75100.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Prisgunstig allroundhanske!",
+      "name": "Tracx Glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0946-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "6/S",
+        "7/M",
+        "8/L",
+        "9/XL"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Optimalisert for Triac 3.0 stav!",
+      "name": "Swix Triac Light Glove Womens"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "magnet",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h2141-12200.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "6/XS",
+        "7/S",
+        "8/M",
+        "9/L"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Mellomlag i ull!",
+      "name": "Endure Liner Glove"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "black",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0260-10000_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10/XL",
+        "11/XXL",
+        "6/XS",
+        "7/S",
+        "8/M",
+        "9/L"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Genial overtrekksvott!",
+      "name": "NovaX GWS Over Mitt Unisex"
+    },
+    {
+      "category": "hansker og votter",
+      "colorImages": [
+        {
+          "color": "neon red",
+          "image": "https://www.swixsport.com/globalassets/inriver/resources/h0270-90015_computedimageurl.jpg?width=800&height=800&quality=80&f.sharpen=20"
+        }
+      ],
+      "subCategory": "na",
+      "sizes": [
+        "10",
+        "11",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "gender": "dame",
+      "brand": "swix",
+      "description": "Perfeksjon!",
+      "name": "Radiant glove"
+    }
+  ]
+}
