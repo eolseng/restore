@@ -72,7 +72,7 @@ export function ProductFinder() {
 
     return (
         <div className='container-fluid'>
-            <div className='container'>
+            <div className='container product-container'>
                 <div className='row'>
                     <ProductFilterContainer searchState={searchState} addSearchParam={addSearchParam}/>
                     <ProductList products={data} addSearchParam={addSearchParam}/>

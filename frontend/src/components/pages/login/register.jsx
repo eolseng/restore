@@ -1,16 +1,15 @@
 import React from "react";
 
 /* css imports */
-import "../../../css/pages/login/register.css"
-import "../../../css/style.css"
+import "../../../css/pages/login/login.css"
 
 /* page imports */
 import {RegisterForm} from "./registerForm";
 
 export function Register() {
     return (
-        <div className="container-fluid login">
-            <div className="register-margin">
+        <div className="container-fluid login-container-fluid">
+            <div className="login-wrapper">
                 <RegisterForm/>
             </div>
         </div>

@@ -1,4 +1,4 @@
-package no.repairable.no.repairable.backend.entity
+package no.repairable.backend.entity
 
 
 import org.junit.jupiter.api.Test
@@ -23,8 +23,7 @@ class GenderTest @Autowired constructor(
 ) {
 
     @Test
-    @Throws(Exception::class)
-    fun checkGenderEndpoint() {
+    fun  `checking status ok for gender endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/genders")).andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("genders"))
