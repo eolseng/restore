@@ -70,6 +70,7 @@
 .size-error {
     margin-bottom: 0.5rem;
     border: 1px solid #ff000070;
+    border-radius: 0.2rem;
 }
 
 .error-message {
