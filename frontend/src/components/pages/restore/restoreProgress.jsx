@@ -26,28 +26,28 @@ function RestoreProgress() {
         <div className={"restore-progress"}>
             <div className={"restore-progress-items"}>
                 <div className={"restore-progress-navigation-button restore-progress-navigation-button-prev"}
-                     onClick={prevStep}>
+                     onClick={prevStep} data-testid='prev-step'>
                          <FontAwesomeIcon className="arrow-icon" icon={["fas", "arrow-left"]}/>
                     Tilbake
                 </div>
                 <div className={"restore-progress-item " + isPastStep(1) + isActiveStep(1)}
-                     onClick={goToStep(1)}>
+                     onClick={goToStep(1)} data-testid='1.Step'>
                     1. Finn produkt
                 </div>
                 <div className={"restore-progress-item " + isPastStep(2) + isActiveStep(2)}
-                     onClick={goToStep(2)}>
+                     onClick={goToStep(2)} data-testid='2.Step'>
                     2. Beskriv produkt
                 </div>
                 <div className={"restore-progress-item " + isPastStep(3) + isActiveStep(3)}
-                     onClick={goToStep(3)}>
+                     onClick={goToStep(3)} data-testid='3.Step'>
                     3. Velg leveringsmetode
                 </div>
                 <div className={"restore-progress-item " + isPastStep(4) + isActiveStep(4)}
-                     onClick={goToStep(4)}>
+                     onClick={goToStep(4)} data-testid='4.Step'>
                     4. Bekreftelse
                 </div>
                 <div className={"restore-progress-navigation-button restore-progress-navigation-button-next"}
-                     onClick={nextStep}>
+                     onClick={nextStep} data-testid='next-step'>
                     Neste
                     <FontAwesomeIcon className="arrow-icon" icon={["fas", "arrow-right"]}/>
                 </div>
