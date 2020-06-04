@@ -213,7 +213,7 @@ class ProductsCreationController @Autowired constructor(
 
         if (baseColor == null) {
             println("COULD NOT FIND " + colorName)
-            baseColorRepository.findAll()[0]
+            baseColor = baseColorRepository.findAll()[0]
         }
         return baseColor!!
     }
