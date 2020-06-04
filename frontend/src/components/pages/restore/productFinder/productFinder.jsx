@@ -75,7 +75,7 @@ export function ProductFinder() {
             <div className='container'>
                 <div className='row'>
                     <ProductFilterContainer searchState={searchState} addSearchParam={addSearchParam}/>
-                    <ProductList data-testid="mocktest" products={data} addSearchParam={addSearchParam}/>
+                    <ProductList products={data} addSearchParam={addSearchParam}/>
                 </div>
                 <div className='row page-nav-button-wrapper'>
                     <div className='page-nav-button-container offset-sm-3'>{navLinks}</div>
