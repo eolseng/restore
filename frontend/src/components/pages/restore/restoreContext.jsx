@@ -4,7 +4,7 @@ import React, {createContext, useReducer} from "react";
 
 const initialState = {
     maxSteps: 1,
-    step: 1,
+    step: 3,
     brandId: null,
     productFilter: null,
     productLink: null,

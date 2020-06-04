@@ -4,12 +4,12 @@ import {RestoreContext} from "./restoreContext";
 import {ProductFinder} from "./productFinder/productFinder";
 import BrandSelector from "./brandSelector";
 import ProductDescription from "./productDescription/productDescription";
-import DeliverySelector from "./deliverySelector";
 import OrderConfirmation from "./orderConfirmation";
 import RestoreProgress from "./restoreProgress";
 
 /** CSS Imports */
 import "../../../css/pages/restore/restore.css";
+import DeliveryOptions from "./deliveryOptions/deliveryOptions";
 
 function Restore() {
 
@@ -32,7 +32,7 @@ function Restore() {
             component = <ProductDescription/>
             break;
         case 3:
-            component = <DeliverySelector/>
+            component = <DeliveryOptions/>
             break;
         case 4:
             component = <OrderConfirmation/>
