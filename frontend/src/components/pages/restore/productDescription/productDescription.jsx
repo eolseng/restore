@@ -69,8 +69,8 @@ function ProductDescription() {
 
     if (product) {
         return (
-            <div className='container-fluid overlay'>
-                <div className='container'>
+            <div className='container-fluid'>
+                <div className='container product-description-container'>
                     <div className={'product-description'}>
                         <div className='product-description-left'>
                             <img
@@ -83,7 +83,7 @@ function ProductDescription() {
                             <h4 className="product-name">{product.name}</h4>
                             <div className={'product-description-selects'}>
                                 <div className={'product-description-color'}>
-                                    <h5>Choose a color:</h5>
+                                    <h5>Velg fargen på produktet:</h5>
                                     <div className={'product-description-colors'}>
                                         {product.images.map(image => {
                                             return (
@@ -110,7 +110,7 @@ function ProductDescription() {
                                 </div>
 
                                 <div className={'product-description-sizes'}>
-                                    <h5>Choose size:</h5>
+                                    <h5>Velg størrelsen på produktet:</h5>
                                     <div id={'sizes-select'} className={"sizes-select" + (sizeError ? " size-error" : "")}>
                                         {product.sizes.map(size => {
                                             return (
@@ -127,7 +127,7 @@ function ProductDescription() {
                                             )
                                         })}
                                     </div>
-                                    {sizeError ? <span>Vennligst velg en størrelse</span> : ""}
+                                    {sizeError ? <span className="error-message">Vennligst velg en størrelse</span> : ""}
                                 </div>
                             </div>
                             <button id="btnLeggTil" className="popup-button cta-button"
