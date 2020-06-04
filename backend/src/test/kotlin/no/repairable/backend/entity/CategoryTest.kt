@@ -9,6 +9,7 @@ import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDoc
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.restdocs.mockmvc.MockMvcRestDocumentation
+import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers
@@ -17,6 +18,7 @@ import java.io.ByteArrayOutputStream
 
 
 @SpringBootTest
+@ActiveProfiles("test")
 @AutoConfigureRestDocs
 @AutoConfigureMockMvc
 class CategoryTest @Autowired constructor(
@@ -30,4 +32,5 @@ class CategoryTest @Autowired constructor(
                 .andDo(MockMvcRestDocumentation.document("categories"))
 
     }
+
 }

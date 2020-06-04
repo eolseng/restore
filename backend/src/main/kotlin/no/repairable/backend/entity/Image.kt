@@ -5,7 +5,7 @@ import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 
 @Entity
-@Table(name = "image")
+@Table(name = "images")
 class Image(
 
         @Id
