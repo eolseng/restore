@@ -1,18 +1,20 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { withRouter } from 'react-router-dom'
-import { RestoreContext } from '../restoreContext'
+import React, {useContext, useEffect, useState} from 'react'
+import {withRouter} from 'react-router-dom'
+import {RestoreContext} from '../restoreContext'
 /** CSS Imports */
 import '../../../../css/pages/restore/productDescription/productDescription.css'
 
 function ProductDescription() {
-    const { state, dispatch } = useContext(RestoreContext)
+    const {state, dispatch} = useContext(RestoreContext)
     const [product, setProduct] = useState(null)
     const [currentImage, setCurrentImage] = useState(null)
     const [selectedColor, setSelectedColor] = useState(null)
     const [selectedSize, setSelectedSize] = useState(null)
 
     const setProductDescription = () => {
+
         if (!selectedColor || !selectedSize) {
+            // TODO: Må vise feilmelding!
             console.log('HAR IKKE VALGT FARGE ELLER STØRRELSE!')
             return
         }
@@ -21,7 +23,8 @@ function ProductDescription() {
             color: selectedColor,
             size: selectedSize,
         }
-        dispatch({ type: 'setProductDescription', payload: payload })
+        dispatch({type: 'setProductDescription', payload: payload})
+        dispatch({type: 'incrementStep'})
     }
 
     // Fetch product from API
@@ -60,7 +63,6 @@ function ProductDescription() {
     }
 
     if (product) {
-        console.log(product)
         return (
             <div className='container-fluid overlay'>
                 <div className='container'>
@@ -119,7 +121,9 @@ function ProductDescription() {
                                     </div>
                                 </div>
                             </div>
-                            <button id="btnLeggTil" className="popup-button cta-button" onClick={setProductDescription}>Legg til</button>
+                            <button id="btnLeggTil" className="popup-button cta-button"
+                                    onClick={setProductDescription}>Legg til
+                            </button>
                         </div>
                     </div>
                 </div>
