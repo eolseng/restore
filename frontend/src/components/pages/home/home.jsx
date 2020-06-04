@@ -122,7 +122,7 @@ function Home() {
                                 klær!</b>
                             <div className='button-container'>
                                 <Link className='button-link' data-testid="start-button-link" to='/restore'>
-                                    <button className='cta-button' data-testid='start-button'>Start nå</button>
+                                    <button id="startBtn" className='cta-button' data-testid='start-button'>Start nå</button>
                                 </Link>
                             </div>
                         </div>
@@ -141,7 +141,7 @@ function Home() {
                         <div className='header-left'>
                             <span
                                 className={activeNavMenuIdx === 0 ? 'active-nav-button' : null}
-                                onClick={renderBlueprint} data-testid="how-it-works"
+                                onClick={renderBlueprint} data-testid="how-it-works" id="btnHowItWorks"
                             >
                                 Slik fungerer det
                             </span>
