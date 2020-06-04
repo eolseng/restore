@@ -4,10 +4,8 @@ import no.repairable.backend.entity.ActualProduct
 import no.repairable.backend.entity.Order
 import no.repairable.backend.repository.*
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.http.HttpStatus
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("api/order")
@@ -20,8 +18,9 @@ class OrderController @Autowired constructor(
         private val userRepository: UserRepository
 ) {
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    fun createNewOrder(@RequestBody order: OrderData) {
+    fun createNewOrder(@RequestBody order: OrderDTO) {
 
         val productsInOrder : MutableList<ActualProduct> = mutableListOf()
 
@@ -38,13 +37,13 @@ class OrderController @Autowired constructor(
         orderRepository.save(newOrder)
     }
 
-    data class OrderData(
-            val actualProducts: List<ActualProductData>,
+    data class OrderDTO(
+            val actualProducts: List<ActualProductDTO>,
             val userID: Long,
             val deliveryType: String
     )
 
-    data class ActualProductData(
+    data class ActualProductDTO(
             val id: Long,
             val size: String,
             val color: String

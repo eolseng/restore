@@ -5,7 +5,7 @@ import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 
 @Entity
-@Table(name = "gender")
+@Table(name = "genders")
 data class Gender(
         @Id
         @GeneratedValue

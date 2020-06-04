@@ -5,7 +5,7 @@ import javax.persistence.*
 import javax.validation.constraints.NotNull
 
 @Entity
-@Table(name = "product")
+@Table(name = "products")
 data class Product(
 
         @Id
@@ -35,7 +35,7 @@ data class Product(
         @ManyToMany(fetch = FetchType.LAZY)
         var sizes: MutableList<Size> = mutableListOf(),
 
-        @ManyToMany(mappedBy = "products")
+        @ManyToMany(mappedBy = "products", fetch = FetchType.LAZY)
         val colors: List<Color>? = null,
 
         @OneToMany(mappedBy = "product")

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React, { useContext } from 'react'
 import { RestoreContext } from './restoreContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+=======
+import React, {useContext} from "react";
+import {RestoreContext} from "./restoreContext";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+>>>>>>> d5afc0b873eb293ce717f569ea13775ac5fb0bb0
 
 function RestoreProgress() {
     const { state, dispatch } = useContext(RestoreContext)
@@ -18,20 +24,17 @@ function RestoreProgress() {
         // Only activates if the index is less than the current step.
         if (index < state.step) dispatch({ type: 'setStep', payload: index })
     }
-    const prevStep = () => dispatch({ type: 'decrementStep' })
-    const nextStep = () => dispatch({ type: 'incrementStep' })
+    // const prevStep = () => dispatch({type: "decrementStep"});
 
     return (
-        <div className={'restore-progress'}>
-            <div className={'restore-progress-items'}>
-                <div
-                    className={'restore-progress-navigation-button restore-progress-navigation-button-prev'}
-                    onClick={prevStep}
-                >
-                    <FontAwesomeIcon className='arrow-icon' icon={['fas', 'arrow-left']} />
-                    Tilbake
-                </div>
-                <div className={'restore-progress-item ' + isPastStep(1) + isActiveStep(1)} onClick={goToStep(1)}>
+        <div className={"restore-progress"}>
+            <div className={"restore-progress-items"}>
+                {/*<div className={"restore-progress-navigation-button restore-progress-navigation-button-prev"}*/}
+                {/*     onClick={prevStep}>*/}
+                {/*         <FontAwesomeIcon className="arrow-icon" icon={["fas", "arrow-left"]}/>*/}
+                {/*    Tilbake*/}
+                {/*</div>*/}
+                <div className={"restore-progress-item " + isPastStep(1) + isActiveStep(1)} onClick={goToStep(1)}>
                     <div className='restore-progress-number'>
                         <span>1</span>
                     </div>
@@ -54,13 +57,6 @@ function RestoreProgress() {
                         <span>4</span>
                     </div>
                     <span className='restore-progress-text'>Bekreftelse</span>
-                </div>
-                <div
-                    className={'restore-progress-navigation-button restore-progress-navigation-button-next'}
-                    onClick={nextStep}
-                >
-                    Neste
-                    <FontAwesomeIcon className='arrow-icon' icon={['fas', 'arrow-right']} />
                 </div>
             </div>
         </div>

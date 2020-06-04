@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 /** CSS Imports */
 import '../../../css/pages/home/home.css'
@@ -11,7 +11,7 @@ function Home() {
     const [renderedDiv, setRenderedDiv] = useState(
         <div className='row content'>
             <div id='bluprint-img' className='img-container col-sm-6'>
-                <img src={require('../../../img/homePage/delivery_address.svg')} alt='How it works' />
+                <img src={require('../../../img/homePage/delivery_address.svg')} alt='How it works'/>
             </div>
             <div id='bluprint-text' className='text-wrapper col-sm-6'>
                 <h3>Slik fungerer det</h3>
@@ -76,7 +76,7 @@ function Home() {
                     </p>
                 </div>
                 <div className='img-container col-sm-6'>
-                    <img src={require('../../../img/homePage/order_delivered.svg')} alt='Our services' />
+                    <img src={require('../../../img/homePage/order_delivered.svg')} alt='Our services'/>
                 </div>
             </div>
         )
@@ -95,25 +95,26 @@ function Home() {
                     </p>
                 </div>
                 <div className='img-container col-sm-6'>
-                    <img src={require('../../../img/homePage/wishes_icyp.svg')} alt='Our services' />
+                    <img src={require('../../../img/homePage/wishes_icyp.svg')} alt='Our services'/>
                 </div>
             </div>
         )
         setActiveNavMenuIdx(2)
     }
 
+
     return (
         <div className='home-wrapper'>
             <div className='above-fold container-fluid'>
                 {userIsLoggedIn ? (
                     <Link className='above-fold-link' to='/profile'>
-                        <FontAwesomeIcon className='user-icon' icon={['far', 'user']} />
+                        <FontAwesomeIcon className='user-icon' icon={['far', 'user']}/>
                         <span>Hei UserName</span>
                     </Link>
                 ) : (
                     <Link className='above-fold-link' to='/login'>
                         <FontAwesomeIcon className='user-icon' icon={['fas', 'sign-in-alt']} />
-                        <span>Logg inn / Registrer deg</span>
+                        <span data-testid='login-button'>Logg inn / Registrer deg</span>
                     </Link>
                 )}
                 <div className='container'>
@@ -129,18 +130,18 @@ function Home() {
                                 Vi gjør jobben for deg- du sender inn brukte klær og mottar poeng til å kjøpe nye klær!
                             </b>
                             <div className='button-container'>
-                                <Link className='button-link' to='/restore'>
-                                    <button className='cta-button'>Start nå</button>
+                                <Link className='button-link' data-testid="start-button-link" to='/restore'>
+                                    <button className='cta-button' data-testid='start-button'>Start nå</button>
                                 </Link>
                             </div>
                         </div>
                         <div className='above-fold-img-wrapper col-sm-6'>
-                            <img src={require('../../../img/homePage/final-hero.svg')} alt={'Hero'} />
+                            <img src={require('../../../img/homePage/final-hero.svg')} alt={'Hero'}/>
                         </div>
                     </div>
                 </div>
                 <a href='#anchor' className='down-icon-container'>
-                    <FontAwesomeIcon className='down-icon' icon={['fa', 'chevron-down']} />
+                    <FontAwesomeIcon className='down-icon' icon={['fa', 'chevron-down']}/>
                 </a>
             </div>
             <div className='under-fold'>
@@ -149,44 +150,46 @@ function Home() {
                         <div className='header-left'>
                             <span
                                 className={activeNavMenuIdx === 0 ? 'active-nav-button' : null}
-                                onClick={renderBlueprint}
+                                onClick={renderBlueprint} data-testid="how-it-works"
                             >
                                 Slik fungerer det
                             </span>
                             <span
                                 className={activeNavMenuIdx === 1 ? 'active-nav-button' : null}
-                                onClick={renderServices}
+                                onClick={renderServices} data-testid="our-services"
                             >
                                 Våre tjenester
                             </span>
                             <span
                                 className={activeNavMenuIdx === 2 ? 'active-nav-button' : null}
-                                onClick={renderVision}
+                                onClick={renderVision} data-testid="our-vision"
                             >
                                 Vår visjon
                             </span>
                         </div>
                         <div className='header-right'>
                             <Link className='header-link' to='/restore'>
-                                <button className='cta-button'>Start nå</button>
+                                <button className='cta-button' data-testid='start-button2'>Start nå</button>
                             </Link>
                             {userIsLoggedIn ? (
                                 <Link className='header-link header-link-user' to='/profile'>
-                                    <FontAwesomeIcon className='user-icon' icon={['far', 'user']} />
+                                    <FontAwesomeIcon className='user-icon' icon={['far', 'user']}/>
                                     <span>UserName</span>
                                 </Link>
                             ) : (
                                 <Link className='header-link header-link-user' to='/login'>
                                     <FontAwesomeIcon className='user-icon' icon={['fas', 'sign-in-alt']} />
-                                    <span>Logg inn</span>
+                                    <span data-testid='login-button2'>Logg inn</span>
                                 </Link>
                             )}
                         </div>
                     </div>
                 </div>
+
                 <div className='container-fluid content-wrapper'>
-                    <div className='container content-container'>{renderedDiv}</div>
+                    <div className='container content-container' data-testid="render-div">{renderedDiv}</div>
                 </div>
+
             </div>
         </div>
     )
