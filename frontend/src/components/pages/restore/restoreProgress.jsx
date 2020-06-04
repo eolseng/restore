@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React, { useContext } from 'react'
 import { RestoreContext } from './restoreContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-=======
-import React, {useContext} from "react";
-import {RestoreContext} from "./restoreContext";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
->>>>>>> d5afc0b873eb293ce717f569ea13775ac5fb0bb0
 
 function RestoreProgress() {
     const { state, dispatch } = useContext(RestoreContext)
