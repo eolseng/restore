@@ -10,8 +10,12 @@ function ProductDescription() {
     const [currentImage, setCurrentImage] = useState(null)
     const [selectedColor, setSelectedColor] = useState(null)
     const [selectedSize, setSelectedSize] = useState(null)
+    const [sizeError, setSizeError] = useState(false)
 
     const setProductDescription = () => {
+        if (!selectedSize) {
+            setSizeError(true)
+        }
 
         if (!selectedColor || !selectedSize) {
             // TODO: Må vise feilmelding!
@@ -25,6 +29,7 @@ function ProductDescription() {
         }
         dispatch({type: 'setProductDescription', payload: payload})
         dispatch({type: 'incrementStep'})
+
     }
 
     // Fetch product from API
@@ -106,19 +111,23 @@ function ProductDescription() {
 
                                 <div className={'product-description-sizes'}>
                                     <h5>Choose size:</h5>
-                                    <div id={'sizes-select'} className="sizes-select">
+                                    <div id={'sizes-select'} className={"sizes-select" + (sizeError ? " size-error" : "")}>
                                         {product.sizes.map(size => {
                                             return (
                                                 <div
                                                     key={size.id}
                                                     className={'product-description-size ' + isSelected(size.id)}
-                                                    onClick={() => setSelectedSize(size.id)}
+                                                    onClick={() => {
+                                                        setSelectedSize(size.id)
+                                                        setSizeError(false)
+                                                    }}
                                                 >
                                                     {size.name}
                                                 </div>
                                             )
                                         })}
                                     </div>
+                                    {sizeError ? <span>Vennligst velg en størrelse</span> : ""}
                                 </div>
                             </div>
                             <button id="btnLeggTil" className="popup-button cta-button"
