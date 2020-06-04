@@ -67,9 +67,7 @@ class OrderControllerTest @Autowired constructor(
                 .content(objectMapper.writeValueAsString(jsonList)))
                 .andExpect(MockMvcResultMatchers.status().isCreated)
 
-
         val products = productRepository.findAll()
-
 
         val acutalP1 = OrderController.ActualProductDTO(id = products[0].id!!, size = "s", color = "blue")
         val acutalP2 = OrderController.ActualProductDTO(id = products[1].id!!, size = "m", color = "blue")
@@ -77,7 +75,6 @@ class OrderControllerTest @Autowired constructor(
 
         order = OrderController.OrderDTO(userID = user.id!!, actualProducts = acutalProductList, deliveryType = "HeltHjem")
     }
-
 
     @Test
     fun `try POST without body on product creation endpoint`() {
@@ -133,6 +130,5 @@ class OrderControllerTest @Autowired constructor(
                 .asJsonObject["actualProducts"]
                 .asJsonArray
         assert(actualRepoSizeAfterInsertion == convertedObject.size())
-
     }
 }
