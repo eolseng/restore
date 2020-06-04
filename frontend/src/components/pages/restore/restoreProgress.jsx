@@ -51,7 +51,7 @@ function RestoreProgress() {
                         <div className='restore-progress-number'>
                             <span>4</span>
                         </div>
-                        <span className='restore-progress-text'>Bekreftelse</span>
+                        <span className='restore-progress-text'>Bekreft ordre</span>
                     </div>
                 </div>
             </div>

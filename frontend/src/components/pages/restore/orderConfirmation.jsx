@@ -1,19 +1,20 @@
-import React, {useContext, useEffect, useState} from "react";
-import {RestoreContext} from "./restoreContext";
+import React, { useContext, useEffect, useState } from 'react'
+import { RestoreContext } from './restoreContext'
 
-import heltHjem from "../../../img/heltHjem/Helt-hjem.png";
-import posten from "../../../img/logo/posten.png";
+import '../../../css/pages/restore/orderConfirmation/orderConfirmation.css'
+
+import heltHjem from '../../../img/heltHjem/Helt-hjem.png'
+import posten from '../../../img/logo/posten.png'
 
 function OrderConfirmation() {
-
-    const {state} = useContext(RestoreContext);
+    const { state } = useContext(RestoreContext)
     const [imageLink, setImageLink] = useState(null)
 
     const confirmOrder = () => {
-        alert('Jævlig kult gutta')
+        alert('Bekreftelse kommer her')
     }
 
-    const deliveryOption = <img src={state.deliveryOption === "HeltHjem" ? heltHjem : posten}/>
+    const deliveryOption = <img className="confirmation-delivery-option" src={state.deliveryOption === 'HeltHjem' ? heltHjem : posten} />
 
     // Fetch product from API
     useEffect(() => {
@@ -44,19 +45,25 @@ function OrderConfirmation() {
         <div className='container-fluid'>
             <div className={'container confirmation-container'}>
                 <div className={'confirmation'}>
-                    <div className={'col-sm-6'}>
-                        <img src={imageLink}/>
+                    <div className={'confirmation-image-container'}>
+                        <img className='confirmation-image' src={imageLink} />
                     </div>
-                    <div className={'col-sm-6'}>
-                        <div className={''}>{state.productName}</div>
-                        <div className={'confirmation-color'}>{state.productColor}</div>
-                        <div className={'confirmation-size'}>{state.productSize}</div>
-                        <div className={'confirmation-delivery-option'}>
-                            Leveres med:
+                    <div className={'confirmation-info-container'}>
+                        <h5 className="confirmation-description-title">Modell:</h5>
+                        <h4 className={'confirmation-name'}>{state.productName}</h4>
+                        <h5 className="confirmation-description-title">Farge:</h5>
+                        <p className={'confirmation-color'}>{state.productColor}</p>
+                        <h5 className="confirmation-description-title">Størrelse:</h5>
+                        <p className={'confirmation-size'}>{state.productSize}</p>
+                        <div className={'confirmation-delivery-option-container'}>
+                            <h5 className="confirmation-description-title">Leveres med:</h5>
                             {deliveryOption}
                         </div>
-                        <button className={'delivery-options-button cta-button'}
-                                onClick={confirmOrder}>Bekreft ordre</button>
+                        <div className='delivery-options-button-container'>
+                            <button className={'delivery-options-button cta-button'} onClick={confirmOrder}>
+                                Bekreft ordre
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,8 +71,7 @@ function OrderConfirmation() {
     )
 }
 
-export default OrderConfirmation;
-
+export default OrderConfirmation
 
 // const jasså = <div>
 //     <h1>OrderConfirmation</h1>
