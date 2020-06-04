@@ -1,0 +1,29 @@
+.delivery-options-container {
+    min-height: calc(100vh - 363px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.delivery-options-select-title {
+
+}
+
+.delivery-options-select{
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.delivery-options-name {
+    font-weight: 800;
+}
+
+.delivery-options-image {
+    max-width: 100%;
+    max-height: 150px;
+}
+
+.selected-delivery-option {
+    border: 1px solid gold;
+}
