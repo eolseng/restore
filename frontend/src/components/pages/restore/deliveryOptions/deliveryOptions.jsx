@@ -8,7 +8,7 @@ import posten from '../../../../img/logo/posten.png'
 
 function DeliveryOptions() {
     const { dispatch } = useContext(RestoreContext)
-    const [selectedOption, setSelectedOption] = useState('Posten')
+    const [selectedOption, setSelectedOption] = useState('HeltHjem')
 
     const confirmDeliveryOption = () => {
         dispatch({ type: 'setDeliveryOption', payload: selectedOption })

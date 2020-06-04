@@ -18,7 +18,7 @@ import React, {createContext, useReducer} from "react";
 
 const initialState = {
     maxSteps: 1,
-    step: 3,
+    step: 4,
     brandId: null,
     productFilter: null,
     productLink: "http://localhost:8080/api/products/59",
@@ -30,7 +30,7 @@ const initialState = {
         size: 33,
         color: 255
     },
-    deliveryOption: null
+    deliveryOption: "HeltHjem"
 };
 
 const RestoreContext = createContext(initialState);
