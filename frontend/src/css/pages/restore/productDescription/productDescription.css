@@ -36,6 +36,7 @@
 }
 
 .product-description-colors {
+    padding: 0.5rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -53,7 +54,7 @@
 }
 
 .product-description-image-alt {
-    width: 110px;
+    width: 100px;
     padding: 0.5rem 0.5rem 0;
 }
 
