@@ -1,7 +1,7 @@
 import React from "react";
 import {render} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import {ProductCard} from "../../components/pages/restore/productFinder/productCard";
+import {ProductCard} from "../../../../../components/pages/restore/productFinder/productCard";
 
 test('Render product card', () => {
         const name = "test_name"
