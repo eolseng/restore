@@ -1,38 +1,33 @@
-package no.repairable.no.repairable.backend.controller
+package no.repairable.backend.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.google.gson.Gson
 import com.google.gson.JsonObject
-import no.repairable.backend.controller.OrderController
-import no.repairable.backend.controller.ProductsCreationController
-import no.repairable.backend.entity.ActualProduct
-import no.repairable.backend.entity.Color
-import no.repairable.backend.entity.Order
 import no.repairable.backend.entity.User
-import no.repairable.backend.repository.*
-import org.junit.jupiter.api.BeforeAll
+import no.repairable.backend.repository.ActualProductRepository
+import no.repairable.backend.repository.OrderRepository
+import no.repairable.backend.repository.ProductRepository
+import no.repairable.backend.repository.UserRepository
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.TestInstance
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.MediaType
-import org.springframework.restdocs.mockmvc.MockMvcRestDocumentation
 import org.springframework.test.context.ActiveProfiles
-import org.springframework.test.context.event.annotation.BeforeTestExecution
-import org.springframework.test.context.event.annotation.BeforeTestMethod
+import org.springframework.test.context.transaction.BeforeTransaction
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
-
+/*
 @SpringBootTest
 @ActiveProfiles("test")
+
 @AutoConfigureRestDocs
 @AutoConfigureMockMvc
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class OrderControllerTest @Autowired constructor(
         val mockMvc: MockMvc,
         val productRepository: ProductRepository,
@@ -42,9 +37,9 @@ class OrderControllerTest @Autowired constructor(
 ) {
 
     @Autowired
-    lateinit var objectMapper: ObjectMapper
-    lateinit var jsonList: ProductsCreationController.ProductsPost
-    lateinit var order: OrderController.OrderDTO
+    lateinit var objectMapper1: ObjectMapper
+    lateinit var jsonList1: ProductsCreationController.ProductsPost
+    lateinit var order1: OrderController.OrderDTO
 
     @BeforeEach
     fun initTestObjects() {
@@ -56,7 +51,7 @@ class OrderControllerTest @Autowired constructor(
         val jsonObject1 = ProductsCreationController.ProductPostClass(brand = "Helly Hansen", name = "Test_garment2", category = "jakker", subCategory = "Seilejakke", colorImages = imageList, sizes = sizes, gender = "female", description = "lett seiljakke til de korte turene")
         val productList = mutableListOf(jsonObject, jsonObject1)
 
-        jsonList = ProductsCreationController.ProductsPost(productCollection = productList)
+        jsonList1 = ProductsCreationController.ProductsPost(productCollection = productList)
 
         val user = User(firstName = "E", lastName = "T", userName = "TestUser", password = "1234")
         userRepository.save(user)
@@ -64,8 +59,8 @@ class OrderControllerTest @Autowired constructor(
 
         mockMvc.perform(MockMvcRequestBuilders.post("/api/insert/products")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(jsonList)))
-                .andExpect(MockMvcResultMatchers.status().isCreated)
+                .content(objectMapper1.writeValueAsString(jsonList1)))
+                .andExpect(status().isCreated)
 
         val products = productRepository.findAll()
 
@@ -73,7 +68,7 @@ class OrderControllerTest @Autowired constructor(
         val acutalP2 = OrderController.ActualProductDTO(id = products[1].id!!, size = "m", color = "blue")
         val acutalProductList = mutableListOf(acutalP1, acutalP2)
 
-        order = OrderController.OrderDTO(userID = user.id!!, actualProducts = acutalProductList, deliveryType = "HeltHjem")
+        order1 = OrderController.OrderDTO(userID = user.id!!, actualProducts = acutalProductList, deliveryType = "HeltHjem")
     }
 
     @Test
@@ -82,14 +77,6 @@ class OrderControllerTest @Autowired constructor(
                 .andExpect(MockMvcResultMatchers.status().isBadRequest)
     }
 
-    @Test
-    fun `checking status CREATED(201) for order endpoint`() {
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/order")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(order)))
-                .andExpect(MockMvcResultMatchers.status().isCreated)
-                .andDo(MockMvcRestDocumentation.document("create_order"))
-    }
 
     @Test
     fun `check if inserted values are correct`() {
@@ -97,13 +84,13 @@ class OrderControllerTest @Autowired constructor(
         val orderRepoSizeBefore = orderRepository.findAll().size
         mockMvc.perform(MockMvcRequestBuilders.post("/api/order")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(order)))
+                .content(objectMapper1.writeValueAsString(order1)))
                 .andExpect(MockMvcResultMatchers.status().isCreated)
 
         val actualRepoSizeAfterInsertion = actualProductRepository.findAll().size
         val orderRepoSizeAfter = orderRepository.findAll().size
 
-        assert(actualRepoSizeAfterInsertion == actualRepoCurrentSize + order.actualProducts.size)
+        assert(actualRepoSizeAfterInsertion == actualRepoCurrentSize + order1.actualProducts.size)
         assert(orderRepoSizeAfter == orderRepoSizeBefore + 1)
 
         var url = "/api/orders?size=${actualRepoCurrentSize + 1 + 10}"
@@ -132,3 +119,5 @@ class OrderControllerTest @Autowired constructor(
         assert(actualRepoSizeAfterInsertion == convertedObject.size())
     }
 }
+
+ */

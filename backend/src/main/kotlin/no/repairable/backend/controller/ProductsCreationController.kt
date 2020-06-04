@@ -75,6 +75,7 @@ class ProductsCreationController @Autowired constructor(
         productRepository.saveAll(productsMap.values)
         colorRepository.saveAll(colors.values)
         imageRepository.saveAll(images.values)
+
     }
 
     private fun getSizes(product: ProductPostClass, newProduct: Product) {
