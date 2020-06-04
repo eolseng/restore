@@ -1,20 +1,19 @@
-import React, {useState} from "react";
-import {Link} from "react-router-dom";
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 /* css imports */
-import "../../../css/pages/login/login.css"
-import "../../../css/style.css"
+import '../../../css/pages/login/login.css'
 
 export function LoginForm() {
     const [loginValue, setLoginValue] = useState([
         {
-            userName: "",
-            password: ""
-        }
-    ]);
+            userName: '',
+            password: '',
+        },
+    ])
 
     function handleUserNameChange(e) {
-        setLoginValue({userName: e.target.value});
+        setLoginValue({ userName: e.target.value })
     }
 
     /*
@@ -23,31 +22,43 @@ export function LoginForm() {
     } */
 
     function handleSubmit(e) {
-        alert("Velkommen " + loginValue.userName + " til Restore, og takk for at du tenker på miljøet.");
-        e.preventDefault();
-        setLoginValue({userName: "", password: ""})
+        alert('Velkommen ' + loginValue.userName + ', takk for at du tenker på miljøet og vil være en del av Restore.')
+        e.preventDefault()
+        setLoginValue({ userName: '', password: '' })
     }
 
-    return(
-        <div className="login-container">
-            <h3>Logg Inn</h3>
-            <p>Fyll inn brukernavn og passord</p>
+    return (
+        <div className='login-container'>
+            <h4 className='login-title'>Logg Inn</h4>
+            <p className='login-text'>Fyll inn brukernavn og passord</p>
             <form onSubmit={handleSubmit}>
-                <label className="login-label">
-                    <div className="login-password">
-                        Brukernavn
-                    </div>
-                    <input type="text" className="input-field" placeholder="Brukernavn" value={loginValue.userName}
-                           onChange={handleUserNameChange}/>
-                    <div className="login-password">
-                        <div>Passord</div>
-                        <Link to="">Glemt passord</Link>
-                    </div>
-                    <input type="text" className="input-field" placeholder="Passord" value={loginValue.password}
-                    />
-                    {/*onChange={handlePasswordChange}*/}
+                <label className='login-label' for='login-name'>
+                    Brukernavn
                 </label>
-                <input type="submit" value="LOGG INN" className="submit p"/>
+                <input
+                    type='text'
+                    id='login-name'
+                    className='login-input'
+                    placeholder='Ditt navn'
+                    autoComplete="name"
+                    value={loginValue.userName}
+                    onChange={handleUserNameChange}
+                />
+                <div className='login-link-container'>
+                    <label className='login-label' for='login-name'>
+                        Passord
+                    </label>
+                    <Link className="login-link" to=''>Glemt passord?</Link>
+                </div>
+                <input
+                    type='text'
+                    id='login-password'
+                    className='login-input'
+                    placeholder='Ditt passord'
+                    autoComplete="current-password"
+                    value={loginValue.password}
+                />
+                <input type='submit' value='Logg inn' className='login-submit' />
             </form>
         </div>
     )

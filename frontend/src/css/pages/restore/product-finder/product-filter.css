@@ -9,11 +9,15 @@
 }
 
 .product-filter-type {
-    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-filter-title {
-    margin-bottom: 0.5rem;
+    margin: 1rem 2rem 0.5rem 0;
+    padding-bottom: 0.5rem;
+    font-size: 0.85rem;
+    border-bottom: 1px solid lightgray;
 }
 
 .product-filter-content {
@@ -21,24 +25,40 @@
     align-items: center;
 }
 
-.product-filter-selected {
-    border: 1px solid gold;
-}
-
 .product-filter-content * {
     cursor: pointer;
 }
 
 .product-filter-input {
-    margin-right: 1rem;
-    margin-top: 0.2rem;
+    margin: 0.5rem 0 0 0.5rem;
 }
 
-.product-filter-label {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 0;
-    width: 100%;
+.product-filter-input:hover {
+    text-decoration: underline;
+}
+
+.product-filter-selected {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.product-filter-selected:hover {
+    text-decoration: none !important;
+}
+
+.product-filter-clear {
+    margin: 0.75rem 2rem 0 0;
+    align-self: flex-end;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.product-filter-clear:hover {
+    text-decoration: underline;
+}
+
+.product-filter-clear:active {
+    font-weight: 700;
 }
 
 /* searchFilter.jsx classes */
@@ -51,16 +71,14 @@
 }
 
 .search-bar {
-    margin: 10px 0;
-    background: none;
-    border-bottom: 1px solid var(--sec-color);
-    border-top: none;
-    border-left: none;
-    border-right: none;
     width: 200px;
-    padding: 0.25rem 0;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem 0;
     font-size: 1.125rem;
     color: var(--text-color);
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background: none;
 }
 
 .search-bar:focus {
@@ -70,15 +88,16 @@
 
 .search-icon {
     height: 100%;
-    margin: 10px 0;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
+    margin: 0 0 1rem 0;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
     font-size: 1.2rem;
     color: #8d8d8d;
-    border-bottom: 1px solid var(--sec-color);
+    border-bottom: 1px solid lightgray;
     cursor: pointer;
 }
 
 .search-bar:focus ~ .search-icon{
     color: var(--sec-color);
+    border-bottom: 1px solid var(--sec-color);
 }

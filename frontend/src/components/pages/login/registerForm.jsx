@@ -1,25 +1,22 @@
-import React, {useState} from "react";
+import React, { useState } from 'react'
 
 /* css imports */
-import "../../../css/pages/login/register.css"
-import "../../../css/pages/login/login.css"
-import "../../../css/style.css"
+import '../../../css/pages/login/login.css'
 
 export function RegisterForm() {
-
     const [registerValue, setRegisterValue] = useState([
         {
-            firstName: "",
-            surName: "",
-            address: "",
-            phoneNr: "",
-            email: "",
-            userName: "",
-            password: "",
-            validatePassword: false
-        }
-    ]);
-/*
+            firstName: '',
+            surName: '',
+            address: '',
+            phoneNr: '',
+            email: '',
+            userName: '',
+            password: '',
+            validatePassword: false,
+        },
+    ])
+    /*
     function handleUserNameChange(e) {
         setRegisterValue({userName: e.target.value});
     }*/
@@ -30,57 +27,85 @@ export function RegisterForm() {
     } */
 
     function handleSubmit(e) {
-
-        e.preventDefault();
-        setRegisterValue(
-            {
-                firstName: "",
-                surName: "",
-                address: "",
-                phoneNr: "",
-                email: "",
-                userName: "",
-                password: "",
-                validatePassword: false
-            }
-        )
+        e.preventDefault()
+        setRegisterValue({
+            firstName: '',
+            surName: '',
+            address: '',
+            phoneNr: '',
+            email: '',
+            userName: '',
+            password: '',
+            validatePassword: false,
+        })
     }
 
     // Css
-    return(
-        <div className="register-container">
-            <h4>Registrer deg</h4>
+    return (
+        <div className='login-container'>
+            <h4 className='login-title'>Registrer deg</h4>
+            <p className='login-text'>Fyll inn den nødvendige informasjonen</p>
             <form onSubmit={handleSubmit}>
-                <label className="login-label">
-                    <div className="register-firstname">
-                        Fornavn
-                    </div>
-                    <input type="text" className="register-input-field" placeholder="Fornavn"
-                           value={registerValue.firstName} onChange={""}/>
-                    <div className="login-password">
-                        Etternavn
-                    </div>
-                    <input type="text" className="register-input-field" placeholder="Etternavn"
-                           value={registerValue.surName} onChange={""}/>
-                    <div className="login-password">
-                        E-post - Blir brukernavn
-                    </div>
-                    <input type="text" className="register-input-field" placeholder="E-post"
-                           value={registerValue.email} onChange={""}/>
-                    <div className="login-password">
-                        <div>Passord</div>
-                    </div>
-                    <input type="text" className="register-input-field" placeholder="Passord"
-                           value={registerValue.password}/> {/*onChange={handlePasswordChange}*/}
-                    <div className="login-password">
-                        <div>Bekreft Passord</div>
-                    </div>
-                    <input type="text" className="register-input-field" placeholder="Bekreft Passord"
-                           value={registerValue.password}/>
+                <label className='login-label' for='register-first-name'>
+                    Fornavn
                 </label>
-                <input type="submit" value="REGISTRER" className="submit p"/>
+                <input
+                    type='text'
+                    id='register-first-name'
+                    className='login-input'
+                    placeholder='Ditt fornavn'
+                    autoComplete='given-name'
+                    value={registerValue.firstName}
+                    onChange={''}
+                />
+                <label className='login-label' for='register-last-name'>
+                    Etternavn
+                </label>
+                <input
+                    type='text'
+                    id='register-last-name'
+                    className='login-input'
+                    placeholder='Ditt etternavn'
+                    autoComplete='family-name'
+                    value={registerValue.surName}
+                    onChange={''}
+                />
+                <label className='login-label' for='register-email'>
+                    E-post
+                </label>
+                <input
+                    type='text'
+                    id='register-email'
+                    className='login-input'
+                    placeholder='Din e-post'
+                    autoComplete='email'
+                    value={registerValue.email}
+                    onChange={''}
+                />
+                <label className='login-label' for='register-password'>
+                    Passord
+                </label>
+                <input
+                    type='text'
+                    id='register-password'
+                    className='login-input'
+                    placeholder='Ditt passord'
+                    autoComplete='new-password'
+                    value={registerValue.password}
+                />
+                <label className='login-label' for='register-confirm-password'>
+                    Bekreft passord
+                </label>
+                <input
+                    type='text'
+                    id='register-confirm-password'
+                    className='login-input'
+                    placeholder='Bekreft ditt passord'
+                    autoComplete='new-password'
+                    value={registerValue.password}
+                />
+                <input type='submit' value='Registrer' className='login-submit' />
             </form>
         </div>
     )
-
 }

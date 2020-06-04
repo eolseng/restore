@@ -136,8 +136,9 @@
 
 .under-fold .header-left {
     width: 50%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .under-fold .header-left span {
@@ -205,10 +206,11 @@
 /* Content */
 
 .under-fold .content-wrapper {
-    min-height: calc(100vh - 4rem);
+    min-height: calc(100vh - 66px);
     padding: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .under-fold .content {
@@ -221,6 +223,10 @@
 /* Text */
 
 .under-fold .text-wrapper {
+    padding-right: 4rem;
+}
+
+.under-fold #blueprint-text {
     padding-left: 4rem;
 }
 
@@ -230,7 +236,7 @@
 }
 
 .under-fold .text-wrapper li {
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     counter-increment: list;
     list-style-type: none;
     font-size: 20px;
@@ -250,14 +256,34 @@
     width: 100%;
 }
 
+/* Cta-button */
+
+.under-fold .cta-button-container {
+    margin-top: 2.5rem;
+    display: flex;
+    
+}
+.under-fold .cta-button-link {
+    width: 50%;
+}
+.under-fold .cta-button {
+    width: 100%;
+}
+
 /* Media: Tablet */
 
 @media screen and (max-width: 1000px) {
+    .above-fold {
+        padding: 1rem 0 !important;
+    }
     .above-fold-text-wrapper {
         margin-top: 2rem;
     }
+    .above-fold-text-wrapper .button-container {
+        margin-top: 1.5rem;
+    }
     .above-fold-text-wrapper .button-link {
-        width: 100%;
+        width: 75%;
     }
     .above-fold-img-wrapper {
         padding: 2rem 0;
@@ -299,21 +325,37 @@
     .under-fold .header-right .cta-button {
         margin: 1rem 0 0;
     }
-    .under-fold .content #bluprint-img {
+    .under-fold .content-wrapper {
+        min-height: unset;
+    }
+    .under-fold .content #blueprint-img {
         order: 2;
     }
     .under-fold .content #blueprint-text {
         order: 1;
     }
     .under-fold .img-container {
-        padding: 0 1rem 2rem 1rem;
+        padding: 2rem 1rem 2rem 1rem;
     }
     .under-fold .text-wrapper {
+        padding: 2rem 1rem;
+    }
+    .under-fold #blueprint-text {
         padding: 2rem 1rem;
     }
     .under-fold .text-wrapper li {
         margin: 0.5rem 0;
         font-size: 1rem;
+    }
+    .under-fold .cta-button-container {
+        margin-top: 2rem;
+        justify-content: center;
+    }
+    .under-fold .cta-button-link {
+        width: 75%;
+    }
+    .under-fold .cta-button {
+        width: 100%;
     }
 }
 

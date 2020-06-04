@@ -1,58 +1,70 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /** CSS Imports */
-import "../../css/layout/footer.css";
+import '../../css/layout/footer.css'
 
 function Footer() {
-  return (
-    <div className='footer-container'>
-      {/* Restore logo*/}
-      <div className='footer-content col-3'>
-        <Link to=''>
-          {" "}
-          {/* finne ut hvordan man går til en ekstern side */}
-          <img id='logo-img' src={require("../../img/logo/repairable.png")} alt='logo' />
-        </Link>
-      </div>
+    return (
+        <div className='footer-container'>
+            <div className='container'>
+                <div className='row'>
+                    {/* Restore logo*/}
+                    <div id="footer-wrapper-1" className='col-sm-3'>
+                        <div className='footer-content'>
+                            <Link className='footer-logo-wrapper' to=''>
+                                <img className='footer-logo' src={require('../../img/logo/logo.png')} alt='logo' />
+                            </Link>
+                        </div>
+                    </div>
 
-      {/* Information*/}
-      <div className='footer-content col-3'>
-        <div className='footer-wrapper'>
-          <h4 className='footer-wrapper-content'>KONTAKT</h4>
-            <h5 className='footer-wrapper-content kontakt-info'>hei@repairable.no</h5>
-          <h5 className='footer-wrapper-content kontakt-info'>+47 407 23 912  (9-15)</h5>
-        </div>
-      </div>
+                    {/* Information*/}
+                    <div id="footer-wrapper-2" className='col-sm-3'>
+                        <div className='footer-content'>
+                            <h4 className='footer-title'>KONTAKT</h4>
+                            <h5 className='footer-text'>hei@repairable.no</h5>
+                            <h5 className='footer-text'>+47 407 23 912 (9-15)</h5>
+                        </div>
+                    </div>
 
-      {/* Contact info*/}
-      <div className='footer-content col-3 social-media-style'>
-        <div className='footer-wrapper'>
-          <h4 className='footer-wrapper-content'>VÅRE PARTNERE</h4>
-            <div className={"logo-container"}>
-          <img id="hh-logo" src={require("../../img/logo/hh-logo.png")} alt={"logo"}/>
-          <img id="swix-logo" src={require("../../img/logo/swix-logo.png")} alt={"logo"}/>
+                    {/* Contact info*/}
+                    <div id="footer-wrapper-3" className='col-sm-3'>
+                        <div className='footer-content'>
+                            <h4 className='footer-title'>VÅRE PARTNERE</h4>
+                            <div className='footer-partner-container'>
+                                <img
+                                    className='footer-partner'
+                                    src={require('../../img/logo/hh-logo.png')}
+                                    alt={'logo'}
+                                />
+                                <img
+                                    className='footer-partner'
+                                    src={require('../../img/logo/swix-logo.png')}
+                                    alt={'logo'}
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Sosial Media*/}
+                    <div id="footer-wrapper-4" className='col-sm-3'>
+                        <div className='footer-content'>
+                            <h4 className='footer-title'>FØLG OSS</h4>
+                            <div className='footer-icon-container'>
+                                <Link to='footer-icon-wrapper'>
+                                    <FontAwesomeIcon className='footer-icon' icon={['fab', 'facebook-square']} />
+                                </Link>
+                                <Link to='footer-icon-wrapper'>
+                                    <FontAwesomeIcon className='footer-icon' icon={['fab', 'instagram-square']} />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-
-      {/* Sosial Media*/}
-      <div className='footer-content col-3 social-media-style'>
-        <div className='footer-wrapper'>
-          <h4 className='footer-wrapper-content'>FØLG OSS</h4>
-          <div className='socialMediaIcons'>
-            <Link to=''>
-              <FontAwesomeIcon className='footerIcon' icon={["fab", "facebook-square"]} />
-            </Link>
-            <Link to=''>
-              <FontAwesomeIcon className='footerIcon' icon={["fab", "instagram-square"]} />
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    )
 }
 
-export default Footer;
+export default Footer

@@ -49,7 +49,7 @@ export function ProductFilter(props) {
         <div className='product-filter-type'>
             <h5 className='product-filter-title'>{filterName.toUpperCase()}</h5>
             {renderFilters()}
-            <div className={'product-filter-clear'} onClick={() => selectFilter('')}>Clear</div>
+            <div className={'product-filter-clear'} onClick={() => selectFilter('')}>Fjern</div>
         </div>
     )
 }
