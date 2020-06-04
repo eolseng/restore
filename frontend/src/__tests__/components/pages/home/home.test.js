@@ -1,8 +1,8 @@
 import React from "react";
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Home from '../../components/pages/home/home';
 import {BrowserRouter} from "react-router-dom";
+import Home from '../../../../components/pages/home/home';
 
 afterEach(cleanup)
 /*
@@ -11,7 +11,6 @@ test('should take snapshot', () => {
         <BrowserRouter>
             <Home/>
         </BrowserRouter>);
-
     expect(asFragment(<Home/>)).toMatchSnapshot()
 }); */
 
@@ -119,5 +118,3 @@ test('renderDiv when "Slik fungerer det" button is clicked', () => {
 
     expect(getByTestId('render-div')).toHaveTextContent('Slik fungerer det')
 });
-
-

@@ -12,8 +12,8 @@ function BrandSelector() {
     return (
         <div>
             <h1>BrandSelector</h1>
-            <p>Max Steps: {state.maxSteps}</p>
-            <p>Step: {state.step}</p>
+            <p data-testid='Max Steps'>Max Steps: {state.maxSteps}</p>
+            <p data-testid='step'>Step: {state.step}</p>
             <button onClick={prevStep}>Previous Step!</button>
             <button onClick={nextStep}>Next Step!</button>
             <button onClick={setBrandId(1)}>Set Brand ID!</button>

@@ -28,29 +28,33 @@ function RestoreProgress() {
                 {/*         <FontAwesomeIcon className="arrow-icon" icon={["fas", "arrow-left"]}/>*/}
                 {/*    Tilbake*/}
                 {/*</div>*/}
-                <div className={"restore-progress-item " + isPastStep(1) + isActiveStep(1)} onClick={goToStep(1)}>
+                <div className={"restore-progress-item " + isPastStep(1) + isActiveStep(1)}
+                     onClick={goToStep(1)} data-testid='1.step'>
                     <div className='restore-progress-number'>
-                        <span>1</span>
+                        <span data-testid='step-1'>1</span>
                     </div>
-                    <span className='restore-progress-text'>Finn produkt</span>
+                    <span className='restore-progress-text' data-testid='find-product'>Finn produkt</span>
                 </div>
-                <div className={'restore-progress-item ' + isPastStep(2) + isActiveStep(2)} onClick={goToStep(2)}>
+                <div className={'restore-progress-item ' + isPastStep(2) + isActiveStep(2)}
+                     onClick={goToStep(2)} data-testid='2.step'>
                     <div className='restore-progress-number'>
-                        <span>2</span>
+                        <span data-testid='step-2'>2</span>
                     </div>
-                    <span className='restore-progress-text'>Beskriv produkt</span>
+                    <span className='restore-progress-text' data-testid='describe-product'>Beskriv produkt</span>
                 </div>
-                <div className={'restore-progress-item ' + isPastStep(3) + isActiveStep(3)} onClick={goToStep(3)}>
+                <div className={'restore-progress-item ' + isPastStep(3) + isActiveStep(3)}
+                     onClick={goToStep(3)} data-testid='3.step'>
                     <div className='restore-progress-number'>
-                        <span>3</span>
+                        <span data-testid='step-3'>3</span>
                     </div>
-                    <span className='restore-progress-text'>Velg leveringsmetode</span>
+                    <span className='restore-progress-text' data-testid='delivery-selection'>Velg leveringsmetode</span>
                 </div>
-                <div className={'restore-progress-item ' + isPastStep(4) + isActiveStep(4)} onClick={goToStep(4)}>
+                <div className={'restore-progress-item ' + isPastStep(4) + isActiveStep(4)}
+                     onClick={goToStep(4)} data-testid='4.step'>
                     <div className='restore-progress-number'>
-                        <span>4</span>
+                        <span data-testid='step-4'>4</span>
                     </div>
-                    <span className='restore-progress-text'>Bekreftelse</span>
+                    <span className='restore-progress-text' data-testid='confirmation'>Bekreftelse</span>
                 </div>
             </div>
         </div>
