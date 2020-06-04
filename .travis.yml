@@ -1,11 +1,14 @@
 dist: trusty
+language: java
+jdk: openjdk11
 
 cache:
   directories:
     - .autoconf
     - $HOME/.m2
+    - frontend/node_modules
 
-matrix:
+jobs:
   include:
     - name: "Test frontend"
       language: node_js
@@ -13,7 +16,9 @@ matrix:
       before_script:
         - cd frontend
         - yarn install
-      script: yarn test --passWithNoTests
+      script:
+        - yarn run build
+        - yarn test --passWithNoTests
     - name: "Test backend"
       language: java
       jdk: openjdk11

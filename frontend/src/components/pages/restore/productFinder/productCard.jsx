@@ -17,7 +17,7 @@ export function ProductCard(props) {
 
     return (
         <div className={'product-card'}
-             id={'product-card-id-' + product.id}
+             id={'product-card-id-' + product.id} data-testid={'displayCard'}
              onClick={() => {
                  dispatch({type: "setProductColor", payload: currentColor});
                  dispatch({type: "setProductId", payload: product.id});

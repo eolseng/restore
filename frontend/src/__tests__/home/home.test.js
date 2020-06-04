@@ -73,11 +73,3 @@ test('login button2 clicked and navigates to login page', () => {
 
     expect(window.location.pathname).toEqual('/login')
 });
-
-
-
-
-
-
-
-
