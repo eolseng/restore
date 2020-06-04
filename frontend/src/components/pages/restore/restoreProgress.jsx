@@ -21,36 +21,38 @@ function RestoreProgress() {
     // const prevStep = () => dispatch({type: "decrementStep"});
 
     return (
-        <div className={"restore-progress"}>
-            <div className={"restore-progress-items"}>
-                {/*<div className={"restore-progress-navigation-button restore-progress-navigation-button-prev"}*/}
-                {/*     onClick={prevStep}>*/}
-                {/*         <FontAwesomeIcon className="arrow-icon" icon={["fas", "arrow-left"]}/>*/}
-                {/*    Tilbake*/}
-                {/*</div>*/}
-                <div className={"restore-progress-item " + isPastStep(1) + isActiveStep(1)} onClick={goToStep(1)}>
-                    <div className='restore-progress-number'>
-                        <span>1</span>
+        <div className={'restore-progress'}>
+            <div className='container'>
+                <div className={'restore-progress-items'}>
+                    {/*<div className={"restore-progress-navigation-button restore-progress-navigation-button-prev"}*/}
+                    {/*     onClick={prevStep}>*/}
+                    {/*         <FontAwesomeIcon className="arrow-icon" icon={["fas", "arrow-left"]}/>*/}
+                    {/*    Tilbake*/}
+                    {/*</div>*/}
+                    <div className={'restore-progress-item ' + isPastStep(1) + isActiveStep(1)} onClick={goToStep(1)}>
+                        <div className='restore-progress-number'>
+                            <span>1</span>
+                        </div>
+                        <span className='restore-progress-text'>Finn produkt</span>
                     </div>
-                    <span className='restore-progress-text'>Finn produkt</span>
-                </div>
-                <div className={'restore-progress-item ' + isPastStep(2) + isActiveStep(2)} onClick={goToStep(2)}>
-                    <div className='restore-progress-number'>
-                        <span>2</span>
+                    <div className={'restore-progress-item ' + isPastStep(2) + isActiveStep(2)} onClick={goToStep(2)}>
+                        <div className='restore-progress-number'>
+                            <span>2</span>
+                        </div>
+                        <span className='restore-progress-text'>Beskriv produkt</span>
                     </div>
-                    <span className='restore-progress-text'>Beskriv produkt</span>
-                </div>
-                <div className={'restore-progress-item ' + isPastStep(3) + isActiveStep(3)} onClick={goToStep(3)}>
-                    <div className='restore-progress-number'>
-                        <span>3</span>
+                    <div className={'restore-progress-item ' + isPastStep(3) + isActiveStep(3)} onClick={goToStep(3)}>
+                        <div className='restore-progress-number'>
+                            <span>3</span>
+                        </div>
+                        <span className='restore-progress-text'>Velg leveringsmetode</span>
                     </div>
-                    <span className='restore-progress-text'>Velg leveringsmetode</span>
-                </div>
-                <div className={'restore-progress-item ' + isPastStep(4) + isActiveStep(4)} onClick={goToStep(4)}>
-                    <div className='restore-progress-number'>
-                        <span>4</span>
+                    <div className={'restore-progress-item ' + isPastStep(4) + isActiveStep(4)} onClick={goToStep(4)}>
+                        <div className='restore-progress-number'>
+                            <span>4</span>
+                        </div>
+                        <span className='restore-progress-text'>Bekreftelse</span>
                     </div>
-                    <span className='restore-progress-text'>Bekreftelse</span>
                 </div>
             </div>
         </div>

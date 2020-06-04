@@ -2,32 +2,135 @@
     min-height: calc(100vh - 363px);
     display: flex;
     flex-direction: row;
-    justify-content: center;
+}
+
+.delivery-options-select {
+    padding-right: 2rem;
+    border-right: 1px solid lightgray;
+}
+
+.delivery-options-title {
+    font-size: 1.119rem;
+}
+
+.delivery-options-select-item {
+    margin: 0 0 2rem;
+    padding: 1rem 2rem;
+    position: relative;
+    display: flex;
     align-items: center;
-}
-
-.delivery-options-select-title {
-
-}
-
-.delivery-options-select{
-    margin: 1rem;
-    padding: 1rem;
-}
-
-.delivery-options-name {
-    font-weight: 800;
+    justify-content: center;
+    border-radius: 0.2rem;
+    box-shadow: 0px 1px 10px 1px #00000030;
+    background: #fff;
+    cursor: pointer;
 }
 
 .delivery-options-image {
     max-width: 100%;
     max-height: 150px;
+    margin-bottom: 1rem;
 }
 
 .selected-delivery-option {
-    border: 1px solid gold;
+    box-shadow: 0px 1px 10px 2px #00000050;
+}
+
+.selected-delivery-option:after {
+    content: "Valgt";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem 0;
+    text-align: center;
+    color: #FFF;
+    border-radius: 0 0 0.2rem 0.2rem;
+    background: var(--primary-color);
+
 }
 
 .delivery-options-info {
+    padding: 0 2rem;
+}
 
+.delivery-options-info-title {
+    text-align: center;
+}
+
+.delivery-options-info-content-wrapper {
+    padding: 0 2rem;
+}
+
+.delivery-options-info-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.helthjem-step {
+    padding: 0 1rem;
+}
+
+.helthjem-step-image {
+    width: 120px;
+    height: 160px;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.helthjem-step-image-1 {
+    background-image: url("https://static.helthjem.no/web/ikoner/icon-send-package-step1.svg");
+}
+.helthjem-step-image-2 {
+    background-image: url("https://static.helthjem.no/web/ikoner/icon-send-package-step2.svg");
+}
+.helthjem-step-image-3 {
+    background-image: url("https://static.helthjem.no/web/ikoner/icon-send-package-step3.svg");
+}
+
+.posten-step {
+    padding: 0 1rem;
+}
+
+.posten-step-image {
+    width: 120px;
+    height: 160px;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.posten-step-image-1 {
+    background-image: url("https://www.posten.no/sende/pakke/_/image/4a6c075e-1f86-4a3b-9af2-f24b1b7f75f4:c7f4fb1ccd40ea5c3b31c8188b8a665cdfeaa130/full/pakke.png");
+}
+.posten-step-image-2 {
+    background-image: url("https://www.posten.no/sende/pakke/_/image/b88d2b12-1f5a-41d8-adad-fbd2d8b63216:b541dad44ca3f48ae7c7df202ac4fbfb80c967f3/full/pakke-brev.png");
+}
+.posten-step-image-3 {
+    background-image: url("https://sending.posten.no/sende/img/weight/Medium.svg");
+}
+
+.step-title {
+    margin-bottom: 0rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.step-text {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.delivery-options-button-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content:center;
+}
+
+.delivery-option-button {
 }
