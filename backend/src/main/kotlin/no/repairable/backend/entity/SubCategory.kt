@@ -4,7 +4,7 @@ import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 
 @Entity
-@Table(name = "sub_category")
+@Table(name = "sub_categories")
 data class SubCategory(
         @Id
         @GeneratedValue

@@ -36,7 +36,7 @@ export function ProductCard(props) {
                                     setCurrentColor(image.colorName)
                                 }}
                                 onMouseLeave={() => {
-                                    setDisplayImage(product.images[0].imgUrl)
+                                    setDisplayImage(mainImage.imgUrl)
                                     setCurrentColor(mainImage.colorName)
                                 }}
                                 src={image.imgUrl}

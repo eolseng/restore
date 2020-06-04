@@ -4,7 +4,7 @@ import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 
 @Entity
-@Table(name = "base_color")
+@Table(name = "base_colors")
 data class BaseColor(
 
         @Id
