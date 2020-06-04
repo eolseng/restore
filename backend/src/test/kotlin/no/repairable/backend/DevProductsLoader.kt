@@ -5,8 +5,10 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import no.repairable.backend.controller.ProductsCreationController
+import no.repairable.backend.entity.ActualProduct
 import no.repairable.backend.entity.BaseColor
-import no.repairable.backend.repository.BaseColorRepository
+import no.repairable.backend.entity.Color
+import no.repairable.backend.repository.*
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.CommandLineRunner
 import org.springframework.context.annotation.Profile
@@ -21,12 +23,23 @@ import java.io.BufferedReader
 class DevProductsLoader @Autowired constructor(
         private val resourceLoader: ResourceLoader,
         private val productsCreationController: ProductsCreationController,
-        private val baseColorRepository: BaseColorRepository
+        private val baseColorRepository: BaseColorRepository,
+        private val productRepository: ProductRepository,
+        private val actualProductRepository: ActualProductRepository,
+        private val colorRepository: ColorRepository,
+        private val sizeRepository: SizeRepository
 ) : CommandLineRunner {
 
     override fun run(vararg args: String?) {
         insertSwixBaseColors()
         insertBaseProducts()
+
+        val product = productRepository.findAll()[0]
+        val color = colorRepository.findAll()[0]
+        val size = sizeRepository.findAll()[0]
+        val acProd = ActualProduct(product = product, color = color, size = size)
+        actualProductRepository.save(acProd)
+        println(actualProductRepository.findAll().size)
     }
 
     private fun insertSwixBaseColors() {
