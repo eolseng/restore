@@ -5,13 +5,14 @@ import '../../../css/pages/restore/orderConfirmation/orderConfirmation.css'
 
 import heltHjem from '../../../img/heltHjem/Helt-hjem.png'
 import posten from '../../../img/logo/posten.png'
+import {Link} from "react-router-dom";
 
 function OrderConfirmation() {
     const { state } = useContext(RestoreContext)
     const [imageLink, setImageLink] = useState(null)
 
     const confirmOrder = () => {
-        alert('Bekreftelse kommer her')
+        // TODO: Utfør POST-request mot Ordre-APIet
     }
 
     const deliveryOption = <img className="confirmation-delivery-option" src={state.deliveryOption === 'HeltHjem' ? heltHjem : posten} alt="Leveringsalternativ"/>
@@ -61,7 +62,7 @@ function OrderConfirmation() {
                         </div>
                         <div className='delivery-options-button-container'>
                             <button className={'delivery-options-button cta-button'} onClick={confirmOrder}>
-                                Bekreft ordre
+                                <Link to={'/thankyou'}>Bekreft ordre</Link>
                             </button>
                         </div>
                     </div>
