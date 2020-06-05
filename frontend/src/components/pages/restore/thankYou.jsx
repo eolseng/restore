@@ -13,9 +13,9 @@ function ThankYou() {
                     </div>
                     <div className='text-content'>
                         <h1>Tusen takk!</h1>
-                        <p>Tusen takk for at du har benyttet deg av Restore by Repairable.</p>
-                        <p>Du vil innen kort tid motta en epost med mer informasjon.</p>
-                        <p>Skulle du ha noen spørsmål tilknyttet din ordre? Send oss en epost på hei@repairable.no!</p>
+                        <p>Din ordre er nå registrert og du vil innen kort tid motta informasjon om veien videre.</p>
+                        <p>Dersom du skulle ha noen spørsmål tilknyttet din ordre, send oss gjerne en e-post på hei@repairable.no.</p>
+                        <p>Tusen takk for at du har benyttet deg av Restore by Repairable!</p>
                         <div className='continue-button-container'>
                     <Link to={'/'}>
                         <button className='continue-button cta-button'>Gå tilbake til hovedsiden</button>
