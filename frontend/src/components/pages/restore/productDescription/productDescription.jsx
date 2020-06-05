@@ -4,6 +4,11 @@ import { RestoreContext } from '../restoreContext'
 /** CSS Imports */
 import '../../../../css/pages/restore/productDescription/productDescription.css'
 
+/**
+ * Renders description about a product.
+ * @returns {*}
+ * @constructor
+ */
 function ProductDescription() {
     const { state, dispatch } = useContext(RestoreContext)
     const [product, setProduct] = useState(null)

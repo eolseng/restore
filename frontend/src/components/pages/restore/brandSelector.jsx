@@ -1,6 +1,12 @@
 import React, {useContext} from "react";
 import {RestoreContext} from "./restoreContext";
 
+
+/**
+ * Selects a brand
+ * @returns {*}
+ * @constructor
+ */
 function BrandSelector() {
 
     const {state, dispatch} = useContext(RestoreContext);

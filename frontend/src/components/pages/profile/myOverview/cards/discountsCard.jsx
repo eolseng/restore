@@ -1,6 +1,12 @@
 import React from "react";
 
 
+/**
+ * Displays discount coupon available for the user.
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
 export function DiscountsCard(props) {
 
     const discount = props.discountData;

@@ -1,6 +1,11 @@
 import React from "react";
 import '../../../css/pages/home/home.css'
 
+/**
+ * Renders services page (for mobile user)
+ * @returns {*}
+ * @constructor
+ */
 export function Services() {
 
     return (

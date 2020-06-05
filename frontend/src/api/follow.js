@@ -1,14 +1,28 @@
+
+/**
+ * Follows an API path
+ * @param rootPath Root path of api
+ * @param relArray Relative path to navigate too.
+ * */
 module.exports = function follow(api, rootPath, relArray) {
 	const root = api({
 		method: 'GET',
 		path: rootPath
 	});
 
+
 	return relArray.reduce(function(root, arrayItem) {
 		const rel = typeof arrayItem === 'string' ? arrayItem : arrayItem.rel;
 		return traverseNext(root, rel, arrayItem);
 	}, root);
 
+
+	/**
+	 * Traverses to next API path
+	 * @param root Root path of API
+	 * @param rel Next relative path
+	 * @param arrayItem Item array of array path
+	 * */
 	function traverseNext (root, rel, arrayItem) {
 		return root.then(function (response) {
 			if (hasEmbeddedRel(response.entity, rel)) {
@@ -33,6 +47,7 @@ module.exports = function follow(api, rootPath, relArray) {
 			}
 		});
 	}
+
 
 	function hasEmbeddedRel (entity, rel) {
 		return entity._embedded && entity._embedded.hasOwnProperty(rel);

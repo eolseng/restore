@@ -1,6 +1,12 @@
 import React, {useContext, useState} from 'react'
 import {RestoreContext} from "../restoreContext";
 
+/**
+ * Render's a single product in the product finder.
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
 export function ProductCard(props) {
 
     /*

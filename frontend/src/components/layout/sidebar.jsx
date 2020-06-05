@@ -5,8 +5,12 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 // import logo from "../../img/logo/restore.png";
 
 
-
-
+/**
+ * Renders the sidebar displayed on all sites.
+ * @param props Properties of the user.
+ * @returns {*}
+ * @constructor
+ */
 function Sidebar(props) {
 
         return (

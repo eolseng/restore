@@ -1,3 +1,7 @@
+/**
+ * Util for fetching from API
+ * copied from: https://spring.io/guides/tutorials/react-and-spring-data-rest/
+ */
 const rest = require('rest');
 
 const defaultRequest = require('rest/interceptor/defaultRequest');

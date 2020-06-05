@@ -51,6 +51,11 @@ const mockOrders = [
     }
 ];
 
+/**
+ * Renders overview of user's order's and discount's.
+ * @returns {*}
+ * @constructor
+ */
 function MyOverview() {
 
     const [discounts] = useState(mockDiscounts);

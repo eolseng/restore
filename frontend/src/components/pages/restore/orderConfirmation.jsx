@@ -7,6 +7,11 @@ import heltHjem from '../../../img/heltHjem/Helt-hjem.png'
 import posten from '../../../img/logo/posten.png'
 import { Link } from 'react-router-dom'
 
+/**
+ * Displays a confirmation for current order.
+ * @returns {*}
+ * @constructor
+ */
 function OrderConfirmation() {
     const { state } = useContext(RestoreContext)
     const [imageLink, setImageLink] = useState(null)

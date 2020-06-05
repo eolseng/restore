@@ -3,6 +3,11 @@ import React, { useState } from 'react'
 /* css imports */
 import '../../../css/pages/login/login.css'
 
+/**
+ * Form for registering new user.
+ * @returns {*}
+ * @constructor
+ */
 export function RegisterForm() {
     const [registerValue, setRegisterValue] = useState([
         {
@@ -26,6 +31,10 @@ export function RegisterForm() {
         setRegisterValue({password: e.target.value})
     } */
 
+    /**
+     * Submits new user details to API.
+     * @param e
+     */
     function handleSubmit(e) {
         e.preventDefault()
         setRegisterValue({

@@ -5,6 +5,11 @@ import {Link} from 'react-router-dom'
 import '../../../css/pages/home/home.css'
 
 
+/**
+ * Renders home page (for mobile user)
+ * @returns {*}
+ * @constructor
+ */
 function HomeMobile() {
 
 

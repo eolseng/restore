@@ -1,6 +1,12 @@
 import React from "react";
 
 
+/**
+ * Displays orders associated with the user.
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
 export function OrdersCard(props) {
 
     const order = props.orderData;

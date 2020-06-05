@@ -6,6 +6,11 @@ import "../../../../css/pages/profile/profile.css";
 /* image imports*/
 import profilePicture from "../../../../img/profilePicture/profile-picture.jpg";
 
+/**
+ * Renders user's properties.
+ * @returns {*}
+ * @constructor
+ */
 function MyProfile() {
 
     return (

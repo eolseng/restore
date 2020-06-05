@@ -5,6 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 /** CSS Imports */
 import '../../css/layout/footer.css'
 
+/**
+ * Returns the footer displayed on all pages.
+ */
 function Footer() {
     return (
         <div className='footer-container'>

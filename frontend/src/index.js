@@ -66,6 +66,11 @@ function notFound() {
     )
 }
 
+/**
+ * Root component of application
+ * @returns {*}
+ * @constructor
+ */
 function App() {
     const path = window.location.pathname;
     const outerContainerId = "outer-container";

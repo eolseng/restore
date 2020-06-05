@@ -6,6 +6,11 @@ import "../../../css/pages/login/login.css"
 /* page imports */
 import {RegisterForm} from "./registerForm";
 
+/**
+ * Container for register form.
+ * @returns {*}
+ * @constructor
+ */
 export function Register() {
     return (
         <div className="container-fluid login-container-fluid">

@@ -4,6 +4,9 @@ import { SearchFilter } from './searchFilter'
 
 import '../../../../css/pages/restore/product-finder/product-filter.css'
 
+/**
+ * Collection of filter's which should be rendered.
+ */
 export function ProductFilterContainer(props) {
     return (
         <div className='product-filter-wrapper col-sm-3'>
@@ -35,6 +38,12 @@ export function ProductFilterContainer(props) {
                     addSearchParam={props.addSearchParam}
                     subPath={'subCategories'}
                     filterName={'subCategory'}
+                />
+                <ProductFilter
+                    key={'ProductFilterBaseColors'}
+                    addSearchParam={props.addSearchParam}
+                    subPath={'baseColors'}
+                    filterName={'Colors'}
                 />
             </div>
         </div>

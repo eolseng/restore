@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component
 
 @Component
 class SpringDataRestCustomization : RepositoryRestConfigurerAdapter() {
+    /**
+     *Enables cross-origin request handling for localhost
+     */
     override fun configureRepositoryRestConfiguration(config: RepositoryRestConfiguration) {
         config.corsRegistry.addMapping("/**")
                 .allowedOrigins("http://localhost:3000")
