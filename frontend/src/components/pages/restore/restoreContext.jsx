@@ -18,19 +18,19 @@ import React, {createContext, useReducer} from "react";
 
 const initialState = {
     maxSteps: 1,
-    step: 4,
+    step: 2,
     brandId: null,
     productFilter: null,
     productLink: "http://localhost:8080/api/products/59",
     productId: 59,
     productName: "Endure warm vest M",
-    productSize: "M",
+    productSize: null,
     productColor: "dark navy",
     productDescription: {
         size: 33,
         color: 255
     },
-    deliveryOption: "HeltHjem"
+    deliveryOption: null
 };
 
 const RestoreContext = createContext(initialState);

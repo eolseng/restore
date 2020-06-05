@@ -14,7 +14,7 @@ function OrderConfirmation() {
         alert('Bekreftelse kommer her')
     }
 
-    const deliveryOption = <img className="confirmation-delivery-option" src={state.deliveryOption === 'HeltHjem' ? heltHjem : posten} />
+    const deliveryOption = <img className="confirmation-delivery-option" src={state.deliveryOption === 'HeltHjem' ? heltHjem : posten} alt="Leveringsalternativ"/>
 
     // Fetch product from API
     useEffect(() => {
@@ -46,7 +46,7 @@ function OrderConfirmation() {
             <div className={'container confirmation-container'}>
                 <div className={'confirmation'}>
                     <div className={'confirmation-image-container'}>
-                        <img className='confirmation-image' src={imageLink} />
+                        <img className='confirmation-image' src={imageLink} alt="Bilde av det valgte plagget" />
                     </div>
                     <div className={'confirmation-info-container'}>
                         <h5 className="confirmation-description-title">Modell:</h5>
