@@ -1,3 +1,7 @@
+.profile-container {
+    min-height: calc(100vh - 206px);
+}
+
 .justify-content {
     display: flex;
     justify-content: center;

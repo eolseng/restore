@@ -95,7 +95,7 @@ export function RegisterForm() {
                     Passord
                 </label>
                 <input
-                    type='text'
+                    type='password'
                     id='register-password'
                     className='login-input'
                     placeholder='Ditt passord'
@@ -106,7 +106,7 @@ export function RegisterForm() {
                     Bekreft passord
                 </label>
                 <input
-                    type='text'
+                    type='password'
                     id='register-confirm-password'
                     className='login-input'
                     placeholder='Bekreft ditt passord'

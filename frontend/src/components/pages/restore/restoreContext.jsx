@@ -13,9 +13,11 @@ const initialState = {
     productFilter: null,
     productLink: null,
     productId: null,
+    productName: null,
+    productSize: null,
     productColor: null,
     productDescription: null,
-    deliveryOptions: null
+    deliveryOption: null
 };
 
 const RestoreContext = createContext(initialState);
@@ -46,12 +48,16 @@ const reducer = (state, action) => {
             return {...state, productLink: action.payload};
         case "setProductId":
             return {...state, productId: action.payload};
+        case "setProductName":
+            return {...state, productName: action.payload};
         case "setProductColor":
             return {...state, productColor: action.payload};
+        case "setProductSize":
+            return {...state, productSize: action.payload};
         case "setProductDescription":
             return {...state, productDescription: action.payload};
-        case "setDeliveryOptions":
-            return {...state, deliveryOptions: action.payload};
+        case "setDeliveryOption":
+            return {...state, deliveryOption: action.payload};
         default:
             return;
     }

@@ -17,26 +17,25 @@ import {RestoreContextProvider} from "./components/pages/restore/restoreContext"
 import {Login} from "./components/pages/login/login";
 import {Register} from "./components/pages/login/register";
 import Restore from "./components/pages/restore/restore";
-
 /** CSS Imports */
 import './css/style.css'
-
 /** Font Awesome Icons */
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {
+    faArrowLeft,
+    faArrowRight,
     faBars,
-    faTimes,
+    faChevronDown,
+    faEdit,
     faLaptop,
     faSave,
-    faEdit,
-    faChevronDown,
-    faSignInAlt,
     faSearch,
-    faArrowLeft,
-    faArrowRight
+    faSignInAlt,
+    faTimes
 } from '@fortawesome/free-solid-svg-icons'
 import {faUser} from '@fortawesome/free-regular-svg-icons'
-import {faFacebookSquare, faTwitterSquare, faLinkedin, faInstagramSquare} from '@fortawesome/free-brands-svg-icons'
+import {faFacebookSquare, faInstagramSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons'
+import ThankYou from "./components/pages/restore/thankYou";
 
 
 /** Font Awesome Icon Library */
@@ -122,6 +121,7 @@ function App() {
                             <Route exact path="/profile" render={(props) => <Profile {...props}/>}/>
                             <Route exact path="/login" render={(props) => <Login {...props}/>}/>
                             <Route exact path="/register" render={(props) => <Register {...props}/>}/>
+                            <Route exact path={'/thankyou'} render={(props) => <ThankYou {...props}/>}/>
                             <Route exact path={"/restore"}>
                                 <RestoreContextProvider>
                                     <Restore/>
