@@ -51,7 +51,7 @@ export function LoginForm() {
                     <Link className="login-link" to=''>Glemt passord?</Link>
                 </div>
                 <input
-                    type='text'
+                    type='password'
                     id='login-password'
                     className='login-input'
                     placeholder='Ditt passord'
