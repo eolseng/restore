@@ -2,34 +2,17 @@
 
 import React, {createContext, useReducer} from "react";
 
-// const initialState = {
-//     maxSteps: 1,
-//     step: 1,
-//     brandId: null,
-//     productFilter: null,
-//     productLink: null,
-//     productId: null,
-//     productName: null,
-//     productSize: null,
-//     productColor: null,
-//     productDescription: null,
-//     deliveryOption: null
-// };
-
 const initialState = {
     maxSteps: 1,
-    step: 2,
+    step: 1,
     brandId: null,
     productFilter: null,
-    productLink: "http://localhost:8080/api/products/59",
-    productId: 59,
-    productName: "Endure warm vest M",
+    productLink: null,
+    productId: null,
+    productName: null,
     productSize: null,
-    productColor: "dark navy",
-    productDescription: {
-        size: 33,
-        color: 255
-    },
+    productColor: null,
+    productDescription: null,
     deliveryOption: null
 };
 

@@ -1,11 +1,11 @@
-import React, {useContext, useEffect, useState} from 'react'
-import {withRouter} from 'react-router-dom'
-import {RestoreContext} from '../restoreContext'
+import React, { useContext, useEffect, useState } from 'react'
+import { withRouter } from 'react-router-dom'
+import { RestoreContext } from '../restoreContext'
 /** CSS Imports */
 import '../../../../css/pages/restore/productDescription/productDescription.css'
 
 function ProductDescription() {
-    const {state, dispatch} = useContext(RestoreContext)
+    const { state, dispatch } = useContext(RestoreContext)
     const [product, setProduct] = useState(null)
     const [currentImage, setCurrentImage] = useState(null)
     const [selectedColorName, setSelectedColorName] = useState(state.productColor)
@@ -15,7 +15,7 @@ function ProductDescription() {
     const [sizeError, setSizeError] = useState(false)
 
     const setProductDescription = () => {
-        if (!selectedSize) {
+        if (!selectedSize) {
             setSizeError(true)
         }
 
@@ -28,11 +28,10 @@ function ProductDescription() {
             color: selectedColorId,
             size: selectedSize,
         }
-        dispatch({type: 'setProductSize', payload: selectedSizeName})
-        dispatch({type: 'setProductColor', payload: selectedColorName})
-        dispatch({type: 'setProductDescription', payload: payload})
-        dispatch({type: 'incrementStep'})
-
+        dispatch({ type: 'setProductSize', payload: selectedSizeName })
+        dispatch({ type: 'setProductColor', payload: selectedColorName })
+        dispatch({ type: 'setProductDescription', payload: payload })
+        dispatch({ type: 'incrementStep' })
     }
 
     // Fetch product from API
@@ -83,7 +82,7 @@ function ProductDescription() {
                             />
                         </div>
                         <div className='product-description-right'>
-                            <h4 className="product-name">{product.name}</h4>
+                            <h4 className='product-name'>{product.name}</h4>
                             <div className={'product-description-selects'}>
                                 <div className={'product-description-color'}>
                                     <h5>Velg fargen på produktet:</h5>
@@ -91,7 +90,10 @@ function ProductDescription() {
                                         {product.images.map(image => {
                                             return (
                                                 <div
-                                                    className={'product-description-image-alternative ' + isSelected(image.colorId)}
+                                                    className={
+                                                        'product-description-image-alternative ' +
+                                                        isSelected(image.colorId)
+                                                    }
                                                     key={'altImg-' + image.imgUrl}
                                                 >
                                                     <img
@@ -115,7 +117,10 @@ function ProductDescription() {
 
                                 <div className={'product-description-sizes'}>
                                     <h5>Velg størrelsen på produktet:</h5>
-                                    <div id={'sizes-select'} className={"sizes-select" + (sizeError ? " size-error" : "")}>
+                                    <div
+                                        id={'sizes-select'}
+                                        className={'sizes-select' + (sizeError ? ' size-error' : '')}
+                                    >
                                         {product.sizes.map(size => {
                                             return (
                                                 <div
@@ -132,12 +137,22 @@ function ProductDescription() {
                                             )
                                         })}
                                     </div>
-                                    {sizeError ? <span className="error-message">Vennligst velg en størrelse</span> : ""}
+                                    {sizeError ? (
+                                        <span className='error-message'>Vennligst velg en størrelse</span>
+                                    ) : (
+                                        ''
+                                    )}
                                 </div>
                             </div>
-                            <button id="btnLeggTil" className="popup-button cta-button"
-                                    onClick={setProductDescription}>Legg til
-                            </button>
+                            <div className='popup-button-container'>
+                                <button
+                                    id='btnLeggTil'
+                                    className='popup-button cta-button'
+                                    onClick={setProductDescription}
+                                >
+                                    Velg dette produktet
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
