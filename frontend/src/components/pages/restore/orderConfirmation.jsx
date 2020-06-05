@@ -5,7 +5,7 @@ import '../../../css/pages/restore/orderConfirmation/orderConfirmation.css'
 
 import heltHjem from '../../../img/heltHjem/Helt-hjem.png'
 import posten from '../../../img/logo/posten.png'
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 function OrderConfirmation() {
     const { state } = useContext(RestoreContext)
@@ -15,7 +15,13 @@ function OrderConfirmation() {
         // TODO: Utfør POST-request mot Ordre-APIet
     }
 
-    const deliveryOption = <img className="confirmation-delivery-option" src={state.deliveryOption === 'HeltHjem' ? heltHjem : posten} alt="Leveringsalternativ"/>
+    const deliveryOption = (
+        <img
+            className='confirmation-delivery-option'
+            src={state.deliveryOption === 'HeltHjem' ? heltHjem : posten}
+            alt='Leveringsalternativ'
+        />
+    )
 
     // Fetch product from API
     useEffect(() => {
@@ -47,23 +53,25 @@ function OrderConfirmation() {
             <div className={'container confirmation-container'}>
                 <div className={'confirmation'}>
                     <div className={'confirmation-image-container'}>
-                        <img className='confirmation-image' src={imageLink} alt="Bilde av det valgte plagget" />
+                        <img className='confirmation-image' src={imageLink} alt='Bilde av det valgte plagget' />
                     </div>
                     <div className={'confirmation-info-container'}>
-                        <h5 className="confirmation-description-title">Modell:</h5>
+                        <h5 className='confirmation-description-title'>Modell:</h5>
                         <h4 className={'confirmation-name'}>{state.productName}</h4>
-                        <h5 className="confirmation-description-title">Farge:</h5>
+                        <h5 className='confirmation-description-title'>Farge:</h5>
                         <p className={'confirmation-color'}>{state.productColor}</p>
-                        <h5 className="confirmation-description-title">Størrelse:</h5>
+                        <h5 className='confirmation-description-title'>Størrelse:</h5>
                         <p className={'confirmation-size'}>{state.productSize}</p>
                         <div className={'confirmation-delivery-option-container'}>
-                            <h5 className="confirmation-description-title">Leveres med:</h5>
+                            <h5 className='confirmation-description-title'>Leveres med:</h5>
                             {deliveryOption}
                         </div>
                         <div className='delivery-options-button-container'>
-                            <button className={'delivery-options-button cta-button'} onClick={confirmOrder}>
-                                <Link to={'/thankyou'}>Bekreft ordre</Link>
-                            </button>
+                            <Link to={'/thankyou'}>
+                                <button className={'delivery-options-button cta-button'} onClick={confirmOrder}>
+                                    Bekreft ordre
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
