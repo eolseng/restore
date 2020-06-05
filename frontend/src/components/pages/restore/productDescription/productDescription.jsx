@@ -150,7 +150,7 @@ function ProductDescription() {
                                     className='popup-button cta-button'
                                     onClick={setProductDescription}
                                 >
-                                    Velg dette produktet
+                                    Gå videre
                                 </button>
                             </div>
                         </div>
