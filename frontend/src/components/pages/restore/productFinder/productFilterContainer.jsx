@@ -31,16 +31,16 @@ export function ProductFilterContainer(props) {
                     filterName={'category'}
                 />
                 <ProductFilter
-                    key={'ProductFilterBaseColors'}
-                    addSearchParam={props.addSearchParam}
-                    subPath={'baseColors'}
-                    filterName={'Colors'}
-                />
-                <ProductFilter
                     key={'ProductFilterSubCategories'}
                     addSearchParam={props.addSearchParam}
                     subPath={'subCategories'}
                     filterName={'subCategory'}
+                />
+                <ProductFilter
+                    key={'ProductFilterBaseColors'}
+                    addSearchParam={props.addSearchParam}
+                    subPath={'baseColors'}
+                    filterName={'Colors'}
                 />
             </div>
         </div>
