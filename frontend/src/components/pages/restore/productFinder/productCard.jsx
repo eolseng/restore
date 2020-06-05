@@ -19,6 +19,7 @@ export function ProductCard(props) {
         <div className={'product-card'}
              id={'product-card-id-' + product.id} data-testid={'displayCard'}
              onClick={() => {
+                 dispatch({type: "setProductName", payload: product.name})
                  dispatch({type: "setProductColor", payload: currentColor});
                  dispatch({type: "setProductId", payload: product.id});
                  dispatch({type: "setProductLink", payload: product._links.self.href});

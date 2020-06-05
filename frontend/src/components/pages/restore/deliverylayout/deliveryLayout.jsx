@@ -17,7 +17,7 @@ export function DeliveryLayout() {
 
     return (
         <div className='container-fluid'>
-            <div className='container'>
+            <div className='container delivery-selection-container'>
                 <div className='delivery-selection col-3 border-right'>
                     <h5 className="border-bottom">Velg leveringsmetode</h5>
                     <img src={heltHjem} alt="heltHjem" className="image-size"/>

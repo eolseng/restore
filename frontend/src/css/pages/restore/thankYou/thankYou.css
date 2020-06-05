@@ -1,0 +1,35 @@
+.thankyou-container {
+    min-height: calc(100vh - 201px - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.thankyou-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.image-content {
+    margin-right: 2rem;
+}
+
+.thankyou-image {
+    width: 100%;
+}
+
+.text-content {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-content p {
+    margin: 0.5rem 0
+}
+
+.continue-button-container {
+    margin-top: 2rem;
+    display: flex;
+}
