@@ -7,6 +7,11 @@ import "../../../css/pages/login/login.css"
 /* page imports */
 import {LoginForm} from "./loginForm";
 
+/**
+ * Renders login component.
+ * @returns {*}
+ * @constructor
+ */
 export function Login() {
 
     return(

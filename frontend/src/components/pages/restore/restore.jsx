@@ -11,6 +11,11 @@ import RestoreProgress from "./restoreProgress";
 /** CSS Imports */
 import "../../../css/pages/restore/restore.css";
 
+/**
+ * Parent component for tracking state of a order.
+ * @returns {*}
+ * @constructor
+ */
 function Restore() {
 
     const {state, dispatch} = useContext(RestoreContext);

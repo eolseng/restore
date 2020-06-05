@@ -3,6 +3,12 @@ import React from "react";
 /* css imports */
 import "../../../../../css/pages/profile/overwiewCards/overviewCard.css"
 
+/**
+ * Renders the header of profile page with statistics of the user's orders & coupons.
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
 export function OverviewCard(props) {
 
     const discount = props.discounts;

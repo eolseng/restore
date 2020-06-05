@@ -1,6 +1,12 @@
 import React, {useState} from 'react'
 import useFetch from './productFinder'
 
+/**
+ * Fetches and renders all available filters.
+ * @param props Properties about the search & filter state.
+ * @returns {*}
+ * @constructor
+ */
 export function ProductFilter(props) {
     const {addSearchParam, subPath, filterName} = props
     // eslint-disable-next-line no-unused-vars
@@ -17,6 +23,11 @@ export function ProductFilter(props) {
         return alt.name
     }
 
+    /**
+     * If a filter is selected.
+     * @param altText
+     * @returns {string}
+     */
     function isSelected(altText) {
         if (altText === selected) {
             return " product-filter-selected"

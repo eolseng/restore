@@ -7,6 +7,11 @@ const client = require('../../../../client') // <3>
 const follow = require('../../../../api/follow') // function to hop multiple links by "rel"
 const root = '/api'
 
+/**
+ * Parent component of the product finder.
+ * @returns {*}
+ * @constructor
+ */
 export function ProductFinder() {
     const [searchState, setSearchState] = useState({})
     const [{data}, setParams] = useFetch('products')
@@ -17,6 +22,11 @@ export function ProductFinder() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data.embedded]) //Update nav links every time data changes.
 
+    /**
+     * Adds search param which is sent to API.
+     * @param searchVal
+     * @param val
+     */
     const addSearchParam = (searchVal, val) => {
         //Copy values of previous search state
         let tmpSearchState = {...searchState}
@@ -27,7 +37,6 @@ export function ProductFinder() {
             tmpSearchState['page'] = 0
         }
 
-        //Todo: Merge setSearchState and setParams.
         //Update search state
         setSearchState(tmpSearchState)
 
@@ -35,10 +44,14 @@ export function ProductFinder() {
         setParams([tmpSearchState])
     }
 
+
     const handleNavPage = pageNum => {
         addSearchParam('page', pageNum)
     }
 
+    /**
+     * Updates links for navigating through pages of products.
+     */
     const updateNavLinks = () => {
         let links = []
         //Is undefined before first API fetch is completed.
@@ -85,6 +98,11 @@ export function ProductFinder() {
     )
 }
 
+/**
+ * Fetches products from the API.
+ * @param subPath
+ * @returns {*[]}
+ */
 export default function useFetch(subPath) {
     const [data, setData] = useState({})
     const [params, setParams] = useState([{size: 15}]) //Note: redundant with size:15, but shows how to change N products per page.

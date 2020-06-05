@@ -2,6 +2,10 @@
 
 import React, {createContext, useReducer} from "react";
 
+/**
+ * Initial order state.
+ * @type {{productFilter: null, productId: null, brandId: null, productColor: null, maxSteps: number, step: number, productLink: null, productDescription: null, deliveryOptions: null}}
+ */
 const initialState = {
     maxSteps: 1,
     step: 1,
@@ -16,6 +20,12 @@ const initialState = {
 
 const RestoreContext = createContext(initialState);
 
+/**
+ * Traces step of current order.
+ * @param state
+ * @param action
+ * @returns {*}
+ */
 const reducer = (state, action) => {
     switch (action.type) {
         case "reset":

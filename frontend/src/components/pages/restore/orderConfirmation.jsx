@@ -1,6 +1,11 @@
 import React, {useContext} from "react";
 import {RestoreContext} from "./restoreContext";
 
+/**
+ * Displays a confirmation for current order.
+ * @returns {*}
+ * @constructor
+ */
 function OrderConfirmation() {
 
     const {state, dispatch} = useContext(RestoreContext);

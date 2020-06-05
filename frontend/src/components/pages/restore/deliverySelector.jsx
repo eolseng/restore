@@ -2,6 +2,11 @@ import React from "react";
 //import {RestoreContext} from "./restoreContext";
 import {DeliveryLayout} from "./deliverylayout/deliveryLayout"
 
+/**
+ * Parent component of delivery options.
+ * @returns {*}
+ * @constructor
+ */
 function DeliveryOptions() {
 /* Måtte kommentere ut dette for å få testene til å bli grønne
     const {state, dispatch} = useContext(RestoreContext);

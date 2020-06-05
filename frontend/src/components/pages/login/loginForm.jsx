@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom'
 /* css imports */
 import '../../../css/pages/login/login.css'
 
+/**
+ * Renders login form used for API login.
+ * @returns {*}
+ * @constructor
+ */
 export function LoginForm() {
     const [loginValue, setLoginValue] = useState([
         {
@@ -12,6 +17,10 @@ export function LoginForm() {
         },
     ])
 
+    /**
+     * Sets new username state
+     * @param e new username value
+     */
     function handleUserNameChange(e) {
         setLoginValue({ userName: e.target.value })
     }
@@ -21,6 +30,10 @@ export function LoginForm() {
         setLoginValue({password: e.target.value})
     } */
 
+    /**
+     * Submits the form to API
+     * @param e
+     */
     function handleSubmit(e) {
         alert('Velkommen ' + loginValue.userName + ', takk for at du tenker på miljøet og vil være en del av Restore.')
         e.preventDefault()

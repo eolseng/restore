@@ -3,6 +3,12 @@ import React, {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../../../../css/pages/restore/product-finder/product-filter.css'
 
+/**
+ * Renders a search bar with possibility to search for a product name.
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
 export function SearchFilter(props) {
 
     const executionDelayInMs = 500;
@@ -11,6 +17,10 @@ export function SearchFilter(props) {
     let [tmpInputText, setTmpInputText] = useState("");
     let [delayTimeout, setDelayTimeout] = useState(0);
 
+    /**
+     * Searches for product with delay to avoid fetching many times.
+     * @param txt
+     */
     const doSearch = (txt) => {
         setTmpInputText(txt);
         clearTimeout(delayTimeout);

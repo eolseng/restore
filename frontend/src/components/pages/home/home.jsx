@@ -5,6 +5,11 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 /** CSS Imports */
 import '../../../css/pages/home/home.css'
 
+/**
+ * Renders the home page
+ * @returns {*}
+ * @constructor
+ */
 function Home() {
     const [activeNavMenuIdx, setActiveNavMenuIdx] = useState(0)
     const [userIsLoggedIn] = useState(false)
@@ -30,6 +35,9 @@ function Home() {
         </div>
     )
 
+    /**
+     * Renders blueprint page on toggle
+     */
     function renderBlueprint() {
         setRenderedDiv(
             <div className='row content'>
@@ -55,6 +63,9 @@ function Home() {
         setActiveNavMenuIdx(0)
     }
 
+    /**
+     * Renders services page on toggle.
+     */
     function renderServices() {
         setRenderedDiv(
             <div className='row content'>
@@ -83,6 +94,9 @@ function Home() {
         setActiveNavMenuIdx(1)
     }
 
+    /**
+     * Renders vision page on toggle.
+     */
     function renderVision() {
         setRenderedDiv(
             <div className='row content'>

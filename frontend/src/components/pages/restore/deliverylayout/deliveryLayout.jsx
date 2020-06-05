@@ -6,7 +6,11 @@ import "../../../../css/style.css";
 import heltHjem from "../../../../img/heltHjem/Helt-hjem.png";
 import norgeskart from "../../../../img/heltHjem/norgeskart.jpeg";
 
-
+/**
+ * Render's deliver options for the new order.
+ * @returns {*}
+ * @constructor
+ */
 export function DeliveryLayout() {
 
     const [selected] = useState()

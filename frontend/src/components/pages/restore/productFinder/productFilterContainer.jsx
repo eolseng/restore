@@ -4,6 +4,9 @@ import { SearchFilter } from './searchFilter'
 
 import '../../../../css/pages/restore/product-finder/product-filter.css'
 
+/**
+ * Collection of filter's which should be rendered.
+ */
 export function ProductFilterContainer(props) {
     return (
         <div className='product-filter-wrapper col-sm-3'>

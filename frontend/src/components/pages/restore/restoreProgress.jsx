@@ -2,6 +2,11 @@ import React, { useContext } from 'react'
 import { RestoreContext } from './restoreContext'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+/**
+ * Displays progress bar of current order.
+ * @returns {*}
+ * @constructor
+ */
 function RestoreProgress() {
     const { state, dispatch } = useContext(RestoreContext)
 
