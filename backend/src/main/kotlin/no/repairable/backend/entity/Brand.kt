@@ -3,6 +3,12 @@ package no.repairable.backend.entity
 import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 
+/**
+ * Represents the brand of the Product.
+ * It contains the data about the different colors the brand is associated with and a list of all the products that the brand has sold
+ * @see no.repairable.backend.entity.Product
+ * @see no.repairable.backend.entity.Color
+ * */
 @Entity
 @Table(name = "brands")
 data class Brand(

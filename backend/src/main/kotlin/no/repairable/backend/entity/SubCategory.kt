@@ -3,6 +3,11 @@ package no.repairable.backend.entity
 import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 
+/**
+ * Represents a clothing sub category. eg. "Wind jackets" in the "Jackets" category
+ * It contains a list of all products in the sub category
+ * @see no.repairable.backend.entity.Product
+ */
 @Entity
 @Table(name = "sub_categories")
 data class SubCategory(

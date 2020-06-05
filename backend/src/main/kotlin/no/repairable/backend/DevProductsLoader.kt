@@ -16,6 +16,11 @@ import org.springframework.core.io.ResourceLoader
 import org.springframework.stereotype.Component
 import java.io.BufferedReader
 
+
+/***
+ * Inserts products scraped from swix.no
+ * This class is only used for population the data base for demonstration in the development environment
+ */
 @Profile("dev")
 @Order(2)
 @Component

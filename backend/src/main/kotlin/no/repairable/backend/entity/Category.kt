@@ -5,6 +5,11 @@ import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 import javax.validation.constraints.Size
 
+/**
+ * Represent the category a Product is in eg. "Jackets" or "Shoes"
+ * It contains a list of all the products that exists in the category
+ * @see no.repairable.backend.entity.Product
+ * */
 @Entity
 @Table(name = "categories")
 data class Category(
@@ -13,7 +18,6 @@ data class Category(
         @Column(name = "id")
         var id: Long? = null,
 
-        //@NotNull
         @Size(max = 256)
         @Column(name = "name")
         var name: String? = "",
