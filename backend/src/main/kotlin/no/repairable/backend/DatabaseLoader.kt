@@ -7,6 +7,9 @@ import org.springframework.boot.CommandLineRunner
 import org.springframework.core.annotation.Order
 import org.springframework.stereotype.Component
 
+/***
+ * Inserts base colors at app startup
+ */
 @Order(1)
 @Component
 class DatabaseLoader @Autowired constructor(
@@ -16,6 +19,7 @@ class DatabaseLoader @Autowired constructor(
     override fun run(vararg args: String?) {
         insertBaseColors()
     }
+
 
     private fun insertBaseColors() {
         val baseColorNames: List<String> = mutableListOf("other", "grey", "red", "blue", "navy", "white", "black", "green", "yellow", "brown", "orange", "pink", "purple")
