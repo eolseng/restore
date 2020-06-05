@@ -4,7 +4,7 @@ import '@testing-library/jest-dom/extend-expect';
 import {ProductCard} from "../../../../../components/pages/restore/productFinder/productCard";
 import {RestoreContext} from "../../../../../components/pages/restore/restoreContext";
 import RestoreProgress from "../../../../../components/pages/restore/restoreProgress";
-/*
+
 // A function that can be used in many tests
 function renderProductCard(value) {
     return render(
@@ -28,8 +28,9 @@ const mockProduct = {
         colorName: "hva enn jeg vil"
     }],
 }
-*/
+
 test('Render product card', () => {
+    /*
         const name = "test_name"
         const mockProduct = {
             id: 123,
@@ -45,7 +46,10 @@ test('Render product card', () => {
             }],
         }
 
-        const {getByText} = render(<ProductCard product={mockProduct} imageIndex={0}/>)
+        const {getByText} = render(<ProductCard product={mockProduct} imageIndex={0}/>) */
+
+        const {getByText} = renderProductCard(value)/>)
+
         expect(getByText(name)).toBeInTheDocument()
         // expect(getByText(mockProduct.id)).toBeInTheDocument()
     }
