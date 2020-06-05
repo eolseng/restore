@@ -3,6 +3,11 @@ package no.repairable.backend.entity
 import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 
+/**
+ * Represents a clothing size.
+ * An order can contain more than one ActualProduct.
+ * @see no.repairable.backend.entity.Product
+ */
 @Entity
 @Table(name = "sizes")
 data class Size (

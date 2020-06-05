@@ -4,6 +4,20 @@ import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 import javax.validation.constraints.NotNull
 
+
+/**
+ * Represents a product that the Brand accepts for resale through the Restore solution. It is used to classify the actual product that will be sent for resale by
+ * a customer.
+ *
+ * @see no.repairable.backend.entity.Category
+ * @see no.repairable.backend.entity.SubCategory
+ * @see no.repairable.backend.entity.Brand
+ * @see no.repairable.backend.entity.Gender
+ * @see no.repairable.backend.entity.Size
+ * @see no.repairable.backend.entity.Color
+ * @see no.repairable.backend.entity.Image
+ *
+ */
 @Entity
 @Table(name = "products")
 data class Product(

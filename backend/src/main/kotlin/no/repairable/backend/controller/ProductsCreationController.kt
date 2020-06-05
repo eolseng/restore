@@ -8,7 +8,9 @@ import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 
 
-
+/**
+ * Handles creation of products in the products database using POST request on endpoint api/insert
+ * */
 @RestController
 @RequestMapping("api/insert")
 class ProductsCreationController @Autowired constructor(
@@ -34,13 +36,23 @@ class ProductsCreationController @Autowired constructor(
     val sizeMap: HashMap<String, Size> = HashMap()
     val baseColorMap: HashMap<String, BaseColor> = HashMap()
 
+    /**
+     * method for listening to post requests on endpooint api/insert/products.
+     * This method creates and saves a list of products that is later used by the customer to find the clothing they want to send to restore
+     * @param products at data class corresponding to the incoming json object. This is parsed and saved on the server side database
+     * @see no.repairable.backend.entity.Product
+     */
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/products")
     fun insertProducts(@RequestBody products: ProductsPost) {
         insertOnStartUp(products)
     }
 
-    //used to insert products both on startup and when doing post request
+
+    /**
+     * The main method for parsing incoming json and then create objects containing the information supplied in the list of json objects.
+     * @param products a json list containing information about all products that will be created
+     */
     fun insertOnStartUp(products: ProductsPost) {
 
         if (baseColorMap.isEmpty()) {
@@ -93,10 +105,18 @@ class ProductsCreationController @Autowired constructor(
         }
     }
 
+    /**
+     * Data class used when reciving json files for creating new products in the products database
+     * this represents the mapping of the incoming json file
+     * */
     data class ProductsPost(
             val productCollection: List<ProductPostClass>
     )
 
+    /**
+     * Data class used when reciving json files for creating new products in the products database
+     * this represents the mapping of the incoming json file
+     * */
     data class ProductPostClass(
             val category: String,
             val subCategory: String,
@@ -107,12 +127,19 @@ class ProductsCreationController @Autowired constructor(
             val colorImages: List<ColorImage>,
             val sizes: List<String>
     )
-
+    /**
+     * Data class used when reciving json files for creating new products in the products database
+     * this represents the mapping of the incoming json file
+     * */
     data class ColorImage(
             val color: String,
             val image: String
     )
 
+    /**
+     * Method for connecting color and images for every product created. Every image object need to be associated to a color
+     * the product exists in.
+     * */
     private fun createColorsAndImages(product: ProductPostClass, newProduct: Product) {
 
         for (colorImage in product.colorImages) {

@@ -4,6 +4,11 @@ package no.repairable.backend.entity
 import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 
+/**
+ * Represents the gender that the product is meant for.
+ * It contains a list of all products for that gender
+ * @see no.repairable.backend.entity.Product
+ * */
 @Entity
 @Table(name = "genders")
 data class Gender(

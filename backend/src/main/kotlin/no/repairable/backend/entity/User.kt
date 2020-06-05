@@ -2,6 +2,11 @@ package no.repairable.backend.entity
 
 import javax.persistence.*
 
+/**
+ * Represents a user of the Restore solution. Currently only contains string for the different variables
+ * The user object is connected with all of the orders the user has created
+ * @see no.repairable.backend.entity.Order
+ */
 @Entity
 @Table(name = "users")
 data class User (

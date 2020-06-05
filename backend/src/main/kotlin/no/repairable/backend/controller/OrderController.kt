@@ -7,6 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 
+
+/**
+ * Handles all order-creation through the /api/order endpoint
+ * */
 @RestController
 @RequestMapping("api/order")
 class OrderController @Autowired constructor(
@@ -18,6 +22,12 @@ class OrderController @Autowired constructor(
         private val userRepository: UserRepository
 ) {
 
+    /**
+     * Creates a new order based on data supplied from frontend in a json object.
+     * An order contains a ActualProduct, the user id of the user that is logged in and what kind of delivery type they want to use
+     * @param order at data class corresponding to the incoming json object. This is parsed and saved on the server side database
+     * @see no.repairable.backend.entity.Order
+     * */
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
     fun createNewOrder(@RequestBody order: OrderDTO) {

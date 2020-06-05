@@ -4,6 +4,13 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.data.rest.core.config.Projection
 import javax.persistence.*
 
+/**
+ * Represent the color of a Product.
+ * It contains a list of all the products that exists in that color and also what brand that the color is owned by.
+ * @see no.repairable.backend.entity.BaseColor
+ * @see no.repairable.backend.entity.Brand
+ * @see no.repairable.backend.entity.Product
+ * */
 @Entity
 @Table(name = "colors")
 class Color(

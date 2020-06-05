@@ -26,15 +26,4 @@ class OrderTest @Autowired constructor(
                 .andDo(MockMvcRestDocumentation.document("orders"))
 
     }
-/*
-    @Test
-    fun `POST test order`() {
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/order"))
-                .andExpect(MockMvcResultMatchers.status().isCreated)
-                .andDo(MockMvcRestDocumentation.document("orders"))
-
-    }
-
-
- */
 }
