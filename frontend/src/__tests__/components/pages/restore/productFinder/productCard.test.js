@@ -1,9 +1,10 @@
 import React from "react";
-import {render} from '@testing-library/react';
+import {render, cleanup, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import {ProductCard} from "../../../../../components/pages/restore/productFinder/productCard";
 import {RestoreContext} from "../../../../../components/pages/restore/restoreContext";
-import RestoreProgress from "../../../../../components/pages/restore/restoreProgress";
+
+afterEach(cleanup);
 
 // A function that can be used in many tests
 function renderProductCard(value) {
@@ -14,6 +15,7 @@ function renderProductCard(value) {
     );
 }
 
+//Mocking data for product
 const name = "test_name"
 const mockProduct = {
     id: 123,
@@ -27,30 +29,19 @@ const mockProduct = {
         imgUrl: "somethingg.com",
         colorName: "hva enn jeg vil"
     }],
-}
+};
 
-test('Render product card', () => {
-    /*
-        const name = "test_name"
-        const mockProduct = {
-            id: 123,
-            _links: {
-                self: {
-                    href: "something.com"
-                }
-            },
-            name: name,
-            images: [{
-                imgUrl: "somethingg.com",
-                colorName: "hva enn jeg vil"
-            }],
-        }
+const state = {
+    maxSteps: 1,
+    step: 1,
+    brandId: null,
+};
 
-        const {getByText} = render(<ProductCard product={mockProduct} imageIndex={0}/>) */
+const value = [ {state}, {mockProduct} ];
 
-        const {getByText} = renderProductCard(value)/>)
+test('Render product card, and check that display card has attribute id', () => {
+    const { getByText, getByTestId} = renderProductCard(value);
 
-        expect(getByText(name)).toBeInTheDocument()
-        // expect(getByText(mockProduct.id)).toBeInTheDocument()
-    }
-)
+    expect(getByText(name)).toBeInTheDocument();
+    expect(getByTestId('displayCard')).toHaveAttribute('id')
+});
