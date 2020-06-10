@@ -3,11 +3,6 @@
     border-right: 1px solid lightgray;
 }
 
-.product-filter-container {
-    position: sticky;
-    top: 6.65rem;
-}
-
 .product-filter-type {
     display: flex;
     flex-direction: column;
@@ -97,7 +92,7 @@
     cursor: pointer;
 }
 
-.search-bar:focus ~ .search-icon{
+.search-bar:focus~.search-icon {
     color: var(--sec-color);
     border-bottom: 1px solid var(--sec-color);
 }
