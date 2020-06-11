@@ -27,23 +27,12 @@ import java.io.BufferedReader
 class DevProductsLoader @Autowired constructor(
         private val resourceLoader: ResourceLoader,
         private val productsCreationController: ProductsCreationController,
-        private val baseColorRepository: BaseColorRepository,
-        private val productRepository: ProductRepository,
-        private val actualProductRepository: ActualProductRepository,
-        private val colorRepository: ColorRepository,
-        private val sizeRepository: SizeRepository
+        private val baseColorRepository: BaseColorRepository
 ) : CommandLineRunner {
 
     override fun run(vararg args: String?) {
         insertSwixBaseColors()
         insertBaseProducts()
-
-        val product = productRepository.findAll()[0]
-        val color = colorRepository.findAll()[0]
-        val size = sizeRepository.findAll()[0]
-        val acProd = ActualProduct(product = product, color = color, size = size)
-        actualProductRepository.save(acProd)
-        println(actualProductRepository.findAll().size)
     }
 
     private fun insertSwixBaseColors() {
