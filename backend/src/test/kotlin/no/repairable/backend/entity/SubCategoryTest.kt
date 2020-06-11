@@ -20,7 +20,7 @@ class SubCategoryTest @Autowired constructor(
 ) {
 
     @Test
-    fun  `checking status ok for subCategory endpoint`() {
+    fun `checking status ok for subCategory endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/subCategories"))
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("subcategories"))

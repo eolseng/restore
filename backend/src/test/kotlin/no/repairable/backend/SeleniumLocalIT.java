@@ -33,14 +33,9 @@ public class SeleniumLocalIT extends SeleniumTestBase {
         assumeTrue(driver != null, "Cannot find/initialize Chrome driver");
     }
 
-    /*
-    @Autowired
-    private QuizService quizService;
-*/
-
     @AfterAll
-    public static void tearDown(){
-        if(driver != null){
+    public static void tearDown() {
+        if (driver != null) {
             driver.close();
         }
     }
@@ -59,7 +54,6 @@ public class SeleniumLocalIT extends SeleniumTestBase {
     protected int getServerPort() {
         return port;
     }
-
 
 
 }

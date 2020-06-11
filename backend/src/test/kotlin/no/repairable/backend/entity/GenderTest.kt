@@ -23,7 +23,7 @@ class GenderTest @Autowired constructor(
 ) {
 
     @Test
-    fun  `checking status ok for gender endpoint`() {
+    fun `checking status ok for gender endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/genders")).andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("genders"))

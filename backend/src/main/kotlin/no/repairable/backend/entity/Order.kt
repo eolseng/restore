@@ -11,7 +11,7 @@ import javax.persistence.*
  */
 @Entity
 @Table(name = "orders")
-data class Order (
+data class Order(
 
         @Id
         @GeneratedValue

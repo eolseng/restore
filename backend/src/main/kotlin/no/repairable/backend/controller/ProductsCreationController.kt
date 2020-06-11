@@ -127,6 +127,7 @@ class ProductsCreationController @Autowired constructor(
             val colorImages: List<ColorImage>,
             val sizes: List<String>
     )
+
     /**
      * Data class used when reciving json files for creating new products in the products database
      * this represents the mapping of the incoming json file

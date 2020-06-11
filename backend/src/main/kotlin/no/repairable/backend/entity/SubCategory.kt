@@ -22,7 +22,7 @@ data class SubCategory(
         @Column(name = "name")
         var name: String? = "",
 
-        @OneToMany(mappedBy = "subCategory",cascade = [(CascadeType.ALL)])
+        @OneToMany(mappedBy = "subCategory", cascade = [(CascadeType.ALL)])
         val products: List<Product> = mutableListOf()
 )
 
@@ -32,7 +32,7 @@ data class SubCategory(
 )
 interface ExcerptSubCategoryProjection {
 
-        fun getId(): Long
-        fun getName(): String
+    fun getId(): Long
+    fun getName(): String
 
 }

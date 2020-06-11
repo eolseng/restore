@@ -20,7 +20,7 @@ class OrderTest @Autowired constructor(
 ) {
 
     @Test
-    fun  `checking status ok for orders endpoint`() {
+    fun `checking status ok for orders endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/orders"))
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("orders"))

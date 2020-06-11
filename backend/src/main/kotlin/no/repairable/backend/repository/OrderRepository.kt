@@ -11,7 +11,7 @@ import org.springframework.data.querydsl.binding.QuerydslBindings
 import org.springframework.data.rest.core.annotation.RepositoryRestResource
 
 @RepositoryRestResource
-interface OrderRepository  : JpaRepository<Order, Long>,
+interface OrderRepository : JpaRepository<Order, Long>,
         QuerydslPredicateExecutor<Gender>,
         QuerydslBinderCustomizer<QOrder> {
 

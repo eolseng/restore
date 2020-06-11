@@ -5,9 +5,8 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import no.repairable.backend.controller.ProductsCreationController
-import no.repairable.backend.entity.ActualProduct
 import no.repairable.backend.entity.BaseColor
-import no.repairable.backend.repository.*
+import no.repairable.backend.repository.BaseColorRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.CommandLineRunner
 import org.springframework.context.annotation.Profile

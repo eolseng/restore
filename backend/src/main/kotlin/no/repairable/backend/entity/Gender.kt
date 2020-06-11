@@ -17,7 +17,7 @@ data class Gender(
         @Column(name = "id")
         var id: Long? = null,
 
-       // @NotNull
+        // @NotNull
         @Column(name = "gender")
         var name: String? = null,
 
@@ -31,7 +31,7 @@ data class Gender(
 )
 interface ExcerptGenderProjection {
 
-        fun getId(): Long
-        fun getName(): String
+    fun getId(): Long
+    fun getName(): String
 
 }

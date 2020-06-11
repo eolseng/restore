@@ -32,7 +32,7 @@ class OrderController @Autowired constructor(
     @PostMapping("")
     fun createNewOrder(@RequestBody order: OrderDTO) {
 
-        val productsInOrder : MutableList<ActualProduct> = mutableListOf()
+        val productsInOrder: MutableList<ActualProduct> = mutableListOf()
 
         for (product in order.actualProducts) {
             val color = colorRepository.findByName(product.color)!!
@@ -42,7 +42,7 @@ class OrderController @Autowired constructor(
             actualProductRepository.save(actualProduct)
             productsInOrder.add(actualProduct)
         }
-        val user  = userRepository.findById(order.userID).get()
+        val user = userRepository.findById(order.userID).get()
         val newOrder = Order(id = order.userID, actualProducts = productsInOrder, deliveryType = order.deliveryType, user = user)
         orderRepository.save(newOrder)
     }

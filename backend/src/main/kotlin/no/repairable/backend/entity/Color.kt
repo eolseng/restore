@@ -35,6 +35,7 @@ interface ExcerptColorProjection {
 
     fun getId(): Long
     fun getName(): String
+
     @Value("#{target.baseColor.name}")
     fun getBaseColor(): String
 

@@ -8,15 +8,15 @@ import org.openqa.selenium.WebDriver;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class IndexPO extends LayoutPO {
-    public IndexPO(PageObject other){
+    public IndexPO(PageObject other) {
         super(other);
     }
 
-    public IndexPO(WebDriver driver, String host, int port){
+    public IndexPO(WebDriver driver, String host, int port) {
         super(driver, host, port);
     }
 
-    public void toStartingPage(){
+    public void toStartingPage() {
         getDriver().get(host + ":" + port);
     }
 
@@ -26,12 +26,12 @@ public class IndexPO extends LayoutPO {
     }
 
 
-    public boolean isItemsDisplayed(){
+    public boolean isItemsDisplayed() {
         return getDriver().findElements(By.className("rowIdElement")).size() > 19;
     }
 
 
-    public RestorePO clickStart(){
+    public RestorePO clickStart() {
         clickAndWait("startBtn");
         RestorePO restorePO = new RestorePO(this);
         assertTrue(restorePO.isOnPage());
@@ -63,7 +63,6 @@ public class IndexPO extends LayoutPO {
         return po;
     }
     */
-
 
 
 }
