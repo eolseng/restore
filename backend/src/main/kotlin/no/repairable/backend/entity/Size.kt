@@ -10,7 +10,7 @@ import javax.persistence.*
  */
 @Entity
 @Table(name = "sizes")
-data class Size (
+data class Size(
         @Id
         @GeneratedValue
         @Column(name = "id")
@@ -30,7 +30,7 @@ data class Size (
 )
 interface ExcerptSizeProjection {
 
-        fun getId(): Long
-        fun getName(): String
+    fun getId(): Long
+    fun getName(): String
 
 }

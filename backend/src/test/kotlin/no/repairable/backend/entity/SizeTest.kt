@@ -20,7 +20,7 @@ class SizeTest @Autowired constructor(
 ) {
 
     @Test
-    fun  `checking status ok for sizes endpoint`() {
+    fun `checking status ok for sizes endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/sizes"))
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("sizes"))

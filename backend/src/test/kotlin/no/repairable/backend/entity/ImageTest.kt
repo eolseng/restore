@@ -20,7 +20,7 @@ class ImageTest @Autowired constructor(
 ) {
 
     @Test
-    fun  `checking status ok for images endpoint`() {
+    fun `checking status ok for images endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/images"))
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("images"))

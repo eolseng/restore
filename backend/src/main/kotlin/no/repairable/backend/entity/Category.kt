@@ -32,7 +32,7 @@ data class Category(
 )
 interface ExcerptCategoryProjection {
 
-        fun getId(): Long
-        fun getName(): String
+    fun getId(): Long
+    fun getName(): String
 
 }

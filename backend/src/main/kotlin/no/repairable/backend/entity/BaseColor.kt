@@ -26,7 +26,7 @@ data class BaseColor(
         types = [BaseColor::class]
 )
 interface ExcerptBaseColorProjection {
-        fun getId(): Long
-        fun getName(): String
-        fun getColors(): List<Color>
+    fun getId(): Long
+    fun getName(): String
+    fun getColors(): List<Color>
 }

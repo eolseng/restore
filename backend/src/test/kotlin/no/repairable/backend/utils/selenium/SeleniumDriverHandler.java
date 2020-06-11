@@ -47,14 +47,14 @@ public class SeleniumDriverHandler {
          */
 
         boolean isOk = setupDriverExecutable("chromedriver", "webdriver.chrome.driver");
-        if(! isOk){
+        if (!isOk) {
             return null;
         }
 
         return new ChromeDriver();
     }
 
-    public static WebDriver getFirefoxDriver(){
+    public static WebDriver getFirefoxDriver() {
         /*
             Need to have an updated Firefox, but also need
             to download and put the geckodriver in your own home dir.
@@ -73,7 +73,7 @@ public class SeleniumDriverHandler {
         desiredCapabilities.setCapability("marionette", true);
         desiredCapabilities.setJavascriptEnabled(true);
 
-        return  new FirefoxDriver(desiredCapabilities);
+        return new FirefoxDriver(desiredCapabilities);
     }
 
 }

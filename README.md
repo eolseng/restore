@@ -10,7 +10,6 @@
 * Kjør `yarn install`
 * Kjør `yarn start`
 * Standard nettleser vil nå åpne `localhost:3000` - denne vil refreshe når det gjøres endringer i filene i 'frontend' mappen
-* For øyeblikket vil du få opp meldingen 'Det fungerte!' hvis du får forbindelse med API-serveren, eller 'Det fungerer ikke' hvis du ikke får det. 
 * For å stenge ned tjenesten trykker du `control-C` i begge terminalvinduene
 
 ## For å bygge prosjektet:

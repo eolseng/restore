@@ -16,8 +16,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 @AutoConfigureRestDocs
 @AutoConfigureMockMvc
 class ActualProductTest @Autowired constructor(
-        val mockMvc: MockMvc)
-{
+        val mockMvc: MockMvc) {
 
     @Test
     fun `checking status ok for actualProducts endpoint`() {

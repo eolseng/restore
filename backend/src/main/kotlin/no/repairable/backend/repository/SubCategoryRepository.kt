@@ -20,5 +20,5 @@ interface SubCategoryRepository : JpaRepository<SubCategory, Long>,
         bindings.bind(String::class.java).first { path: StringPath, value: String? -> path.containsIgnoreCase(value) }
     }
 
-    fun findSubCategoriesByName(name:String) : SubCategory?
+    fun findSubCategoriesByName(name: String): SubCategory?
 }

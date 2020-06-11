@@ -10,6 +10,7 @@ import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
+
 @ActiveProfiles("test")
 @SpringBootTest
 @AutoConfigureRestDocs
@@ -19,7 +20,7 @@ class ColorTest @Autowired constructor(
 ) {
 
     @Test
-    fun  `checking status ok for color endpoint`() {
+    fun `checking status ok for color endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/colors"))
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("colors"))

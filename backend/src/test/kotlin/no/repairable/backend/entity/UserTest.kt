@@ -20,7 +20,7 @@ class UserTest @Autowired constructor(
 ) {
 
     @Test
-    fun  `checking status ok for users endpoint`() {
+    fun `checking status ok for users endpoint`() {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/users"))
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andDo(MockMvcRestDocumentation.document("users"))
